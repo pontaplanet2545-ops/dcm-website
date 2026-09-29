@@ -1,16 +1,13 @@
 {
-  "name": "dcm-wu-website",
+  "name": "dcm-website",
   "version": "1.0.0",
-  "description": "Walailak University Digital Content and Media website with AI chatbot",
+  "description": "Walailak University Digital Content and Media Website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "engines": {
-    "node": ">=18"
-  },
   "dependencies": {
-    "express": "^5.1.0",
-    "openai": "^5.12.2"
+    "@google/genai": "^1.0.0",
+    "express": "^4.21.2"
   }
 }
