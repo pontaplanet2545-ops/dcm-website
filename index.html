@@ -3,13 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Content & Media | Walailak University</title>
+
+<title>Digital Content and Media | Walailak University</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap');
 
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
+}
+
+:root{
+    --orange:#F28C28;
+    --orange-dark:#D96B00;
+    --orange-light:#FFF1DF;
+    --cream:#FFF9F2;
+    --dark:#242424;
+    --gray:#66717a;
+    --border:#eadfd4;
+    --white:#ffffff;
 }
 
 html{
@@ -17,11 +34,10 @@ html{
 }
 
 body{
-    margin:0;
-    font-family:'Noto Sans Thai',sans-serif;
-    color:#17324d;
-    background:#f5f9fd;
-    line-height:1.75;
+    font-family:"Noto Sans Thai",sans-serif;
+    background:#fff;
+    color:var(--dark);
+    line-height:1.7;
 }
 
 a{
@@ -29,1218 +45,2023 @@ a{
     color:inherit;
 }
 
-/* TOP BAR */
-.top{
-    background:#0756a3;
-    color:#fff;
-    padding:7px 6%;
-    font-size:13px;
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
+img{
+    max-width:100%;
+    display:block;
 }
 
-/* HEADER */
-.head{
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+    background:#2b2119;
+    color:#fff;
+    font-size:12px;
+}
+
+.topbar-inner{
+    max-width:1250px;
+    margin:auto;
+    padding:7px 5%;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
     background:#fff;
-    padding:17px 6%;
+    border-bottom:1px solid #eee5dd;
+    position:sticky;
+    top:0;
+    z-index:900;
+}
+
+.header-inner{
+    max-width:1250px;
+    margin:auto;
+    padding:16px 5%;
     display:flex;
     align-items:center;
-    gap:15px;
+    justify-content:space-between;
 }
 
 .logo{
-    width:58px;
-    height:58px;
-    object-fit:contain;
+    display:flex;
+    align-items:center;
+    gap:13px;
 }
 
-.brand{
-    flex:1;
+.logo-box{
+    width:52px;
+    height:52px;
+    background:var(--orange);
+    border-radius:13px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:16px;
+    font-weight:800;
 }
 
-.brand b{
+.logo-text h1{
+    color:#333;
+    font-size:19px;
+    font-weight:800;
+    line-height:1.2;
+}
+
+.logo-text span{
+    color:var(--orange-dark);
+    font-size:12px;
+}
+
+/* =========================
+   NAV
+========================= */
+
+nav{
+    background:var(--orange);
+    color:white;
+}
+
+.nav-inner{
+    max-width:1250px;
+    margin:auto;
+    padding:0 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links a{
     display:block;
-    font-size:21px;
-    color:#0756a3;
-}
-
-.brand span{
+    padding:14px 14px;
     font-size:13px;
-    color:#667788;
+    transition:.25s;
 }
 
-.menu{
+.nav-links a:hover,
+.nav-links a.active{
+    background:var(--orange-dark);
+}
+
+.menu-btn{
     display:none;
     border:0;
-    background:#0756a3;
+    background:none;
     color:#fff;
-    padding:9px 14px;
-    border-radius:9px;
-    font-family:inherit;
+    font-size:27px;
     cursor:pointer;
 }
 
-/* NAV */
-.nav{
-    background:#0a67bd;
-    color:#fff;
-}
+/* =========================
+   HERO
+========================= */
 
-.navin{
-    max-width:1250px;
-    margin:auto;
-    display:flex;
-    flex-wrap:wrap;
-}
-
-.nav a{
-    padding:13px 14px;
-    font-size:14px;
-    transition:.2s;
-}
-
-.nav a:hover,
-.nav a.on{
-    background:#064e91;
-}
-
-/* WRAPPER */
-.wrap{
-    max-width:1250px;
-    margin:auto;
-    padding:0 22px;
-}
-
-/* BREADCRUMB */
-.crumb{
-    padding:16px 0;
-    font-size:13px;
-    color:#718398;
-}
-
-/* HERO */
 .hero{
-    min-height:460px;
-    border-radius:24px;
-    overflow:hidden;
+    min-height:610px;
     position:relative;
-    background:#0756a3;
-}
-
-.hero img{
-    width:100%;
-    height:460px;
-    object-fit:cover;
-    opacity:.62;
-}
-
-.hero .txt{
-    position:absolute;
-    inset:0;
     display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:45px;
-    color:#fff;
+    align-items:center;
     background:
     linear-gradient(
         90deg,
-        rgba(3,49,96,.9),
-        rgba(3,49,96,.35),
-        rgba(3,49,96,.05)
-    );
+        rgba(38,24,14,.94) 0%,
+        rgba(38,24,14,.78) 42%,
+        rgba(38,24,14,.25) 100%
+    ),
+    url("https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM01-scaled.jpg");
+
+    background-size:cover;
+    background-position:center;
 }
 
-.hero h1{
-    margin:0 0 10px;
-    font-size:clamp(30px,5vw,55px);
-    line-height:1.25;
+.hero-inner{
+    max-width:1250px;
+    width:100%;
+    margin:auto;
+    padding:80px 5%;
 }
 
-.hero h1 span{
-    display:block;
-    color:#bfe4ff;
+.hero-content{
+    max-width:720px;
+    color:white;
+}
+
+.hero-label{
+    display:inline-block;
+    padding:7px 15px;
+    border:1px solid rgba(255,255,255,.5);
+    background:rgba(255,255,255,.12);
+    border-radius:30px;
+    font-size:12px;
+    margin-bottom:18px;
+}
+
+.hero h2{
+    font-size:58px;
+    line-height:1.1;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero h2 span{
+    color:#ffad4c;
 }
 
 .hero p{
-    max-width:760px;
-    margin:0 0 20px;
-    font-size:16px;
+    font-size:17px;
+    color:#f7eee6;
+    max-width:650px;
+    margin-bottom:30px;
 }
 
 .hero-buttons{
     display:flex;
-    gap:10px;
+    gap:12px;
     flex-wrap:wrap;
 }
 
 .btn{
     display:inline-block;
-    padding:11px 19px;
-    border-radius:999px;
+    padding:12px 24px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.btn-orange{
+    background:var(--orange);
+    color:white;
+}
+
+.btn-orange:hover{
+    background:var(--orange-dark);
+    transform:translateY(-2px);
+}
+
+.btn-white{
+    background:white;
+    color:#333;
+}
+
+.btn-white:hover{
+    transform:translateY(-2px);
+}
+
+/* =========================
+   QUICK STATS
+========================= */
+
+.stats{
+    position:relative;
+    margin-top:-55px;
+    z-index:5;
+}
+
+.stats-inner{
+    max-width:1100px;
+    margin:auto;
     background:#fff;
-    color:#0756a3;
+    border-radius:18px;
+    box-shadow:0 15px 45px rgba(60,35,15,.13);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    overflow:hidden;
+}
+
+.stat{
+    text-align:center;
+    padding:27px 15px;
+    border-right:1px solid #eee3d9;
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat strong{
+    display:block;
+    color:var(--orange-dark);
+    font-size:32px;
+    font-weight:800;
+}
+
+.stat span{
+    color:#707070;
+    font-size:13px;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.container{
+    max-width:1250px;
+    margin:auto;
+    padding:85px 5%;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 45px;
+}
+
+.section-heading small{
+    color:var(--orange-dark);
     font-weight:700;
+    letter-spacing:1px;
+    font-size:12px;
+}
+
+.section-heading h2{
+    font-size:34px;
+    margin:5px 0 10px;
+}
+
+.section-heading p{
+    color:var(--gray);
     font-size:14px;
 }
 
-.btn.blue{
-    background:#0b78d0;
-    color:#fff;
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:var(--cream);
 }
 
-/* SECTION */
-.sec{
-    padding:45px 0;
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
 }
 
-.title{
-    margin-bottom:22px;
+.about-image{
+    position:relative;
 }
 
-.title small{
-    color:#0b67bd;
+.about-image img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.image-label{
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    background:#fff;
+    padding:15px 20px;
+    border-radius:13px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.image-label strong{
+    color:var(--orange-dark);
+    display:block;
+    font-size:22px;
+}
+
+.image-label span{
+    color:#777;
+    font-size:12px;
+}
+
+.about-content small{
+    color:var(--orange-dark);
     font-weight:700;
 }
 
-.title h2{
-    margin:4px 0;
-    font-size:29px;
-    color:#17324d;
+.about-content h2{
+    font-size:34px;
+    margin:8px 0 18px;
 }
 
-.title p{
-    margin:0;
-    color:#66788a;
+.about-content p{
+    color:var(--gray);
+    font-size:15px;
+    margin-bottom:17px;
 }
 
-/* GRID */
-.grid{
+.check-list{
+    list-style:none;
+    margin:20px 0;
+}
+
+.check-list li{
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.check-list li::before{
+    content:"✓";
+    color:var(--orange);
+    font-weight:800;
+    margin-right:10px;
+}
+
+/* =========================
+   HIGHLIGHTS
+========================= */
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.highlight-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:28px;
+    transition:.25s;
+}
+
+.highlight-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(90,50,15,.1);
+}
+
+.card-number{
+    color:var(--orange);
+    font-size:13px;
+    font-weight:800;
+}
+
+.highlight-card h3{
+    font-size:19px;
+    margin:8px 0 10px;
+}
+
+.highlight-card p{
+    color:var(--gray);
+    font-size:13px;
+}
+
+/* =========================
+   LEARNING TRACKS
+========================= */
+
+.tracks{
+    background:#2c2118;
+    color:white;
+}
+
+.tracks .section-heading p{
+    color:#d9cfc5;
+}
+
+.tracks .section-heading h2{
+    color:white;
+}
+
+.track-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.track{
+    min-height:240px;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:17px;
+    padding:25px;
+    background:rgba(255,255,255,.05);
+    transition:.25s;
+}
+
+.track:hover{
+    background:rgba(242,140,40,.14);
+    transform:translateY(-5px);
+}
+
+.track-number{
+    color:#ffab4b;
+    font-size:12px;
+    font-weight:800;
+}
+
+.track h3{
+    font-size:18px;
+    margin:15px 0 10px;
+}
+
+.track p{
+    color:#cfc5bc;
+    font-size:13px;
+}
+
+/* =========================
+   CAREERS
+========================= */
+
+.career-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.career-card{
+    background:#fff;
+    border-radius:17px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    transition:.25s;
+}
+
+.career-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(70,40,10,.13);
+}
+
+.career-card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+}
+
+.career-content{
+    padding:21px;
+}
+
+.career-content span{
+    color:var(--orange-dark);
+    font-size:11px;
+    font-weight:800;
+}
+
+.career-content h3{
+    font-size:17px;
+    margin:5px 0;
+}
+
+.career-content p{
+    color:var(--gray);
+    font-size:12px;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-section{
+    background:var(--cream);
+}
+
+.timeline{
+    max-width:850px;
+    margin:auto;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#f2c79e;
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    width:50%;
+    padding:0 35px 45px;
+    position:relative;
+}
+
+.timeline-item:nth-child(even){
+    margin-left:50%;
+}
+
+.timeline-dot{
+    position:absolute;
+    width:15px;
+    height:15px;
+    background:var(--orange);
+    border-radius:50%;
+    top:8px;
+    right:-7px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+    left:-7px;
+}
+
+.timeline-box{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    border:1px solid var(--border);
+}
+
+.timeline-box small{
+    color:var(--orange-dark);
+    font-weight:800;
+}
+
+.timeline-box h3{
+    margin:5px 0;
+    font-size:18px;
+}
+
+.timeline-box p{
+    color:var(--gray);
+    font-size:13px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-.card{
-    background:#fff;
-    border:1px solid #e1ebf4;
-    border-radius:18px;
-    padding:22px;
-    box-shadow:0 7px 24px rgba(25,72,110,.06);
-}
-
-.card h3{
-    margin-top:0;
-    color:#0756a3;
-}
-
-.card p{
-    color:#617386;
-}
-
-.icon{
-    width:48px;
-    height:48px;
-    border-radius:14px;
-    background:#e9f4ff;
-    color:#0756a3;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:22px;
-    margin-bottom:12px;
-}
-
-/* STATS */
-.stat{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.stat .card{
-    text-align:center;
-}
-
-.num{
-    font-size:32px;
-    font-weight:800;
-    color:#0756a3;
-}
-
-/* IMAGE CARDS */
-.photo{
+.gallery img{
     width:100%;
-    height:220px;
+    height:260px;
     object-fit:cover;
-    border-radius:14px;
+    border-radius:16px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.02);
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+.faq-item{
+    border-bottom:1px solid var(--border);
+}
+
+.faq-question{
+    width:100%;
+    border:0;
+    background:white;
+    text-align:left;
+    padding:18px 5px;
+    font-family:inherit;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+}
+
+.faq-question span{
+    color:var(--orange);
+    font-size:20px;
+}
+
+.faq-answer{
+    display:none;
+    padding:0 5px 18px;
+    color:var(--gray);
+    font-size:13px;
+}
+
+.faq-item.open .faq-answer{
     display:block;
 }
 
-/* HIGHLIGHT */
-.highlight{
+/* =========================
+   CONTACT CTA
+========================= */
+
+.contact-cta{
     background:
-    linear-gradient(135deg,#0756a3,#2386d7);
-    color:#fff;
-    border-radius:22px;
-    padding:35px;
+    linear-gradient(120deg,#d96b00,#f28c28);
+    color:white;
 }
 
-.highlight h2{
-    margin-top:0;
-}
-
-.highlight p{
-    color:#e9f5ff;
-}
-
-/* CAREER */
-.career{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.career .card{
-    text-align:center;
-}
-
-/* CTA */
-.cta{
-    background:#eaf5ff;
-    border-radius:22px;
-    padding:35px;
-    text-align:center;
-}
-
-.cta h2{
-    color:#0756a3;
-}
-
-/* FOOTER */
-footer{
-    margin-top:50px;
-    background:#063d76;
-    color:#dcecff;
-    padding:40px 6%;
-}
-
-.footgrid{
-    max-width:1250px;
+.contact-grid{
+    max-width:1000px;
     margin:auto;
     display:grid;
-    grid-template-columns:2fr 1fr 1fr;
+    grid-template-columns:1fr 1fr;
     gap:30px;
-}
-
-footer h3{
-    color:#fff;
-    margin-top:0;
-}
-
-.copy{
-    max-width:1250px;
-    margin:25px auto 0;
-    padding-top:15px;
-    border-top:1px solid #ffffff25;
-    font-size:12px;
-}
-
-/* BACK BUTTON */
-.back{
-    position:fixed;
-    left:18px;
-    bottom:18px;
-    z-index:30;
-}
-
-.back button{
-    border:0;
-    border-radius:999px;
-    padding:10px 16px;
-    background:#fff;
-    color:#0756a3;
-    box-shadow:0 5px 18px #0002;
-    cursor:pointer;
-    font-family:inherit;
-}
-
-/* CHATBOT */
-.chat{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:350px;
-    max-width:calc(100vw - 30px);
-    background:#fff;
-    border:1px solid #dbe8f4;
-    border-radius:18px;
-    box-shadow:0 14px 40px #12456b30;
-    z-index:40;
-    overflow:hidden;
-}
-
-.chatHead{
-    background:#0756a3;
-    color:#fff;
-    padding:13px 16px;
-    display:flex;
-    justify-content:space-between;
     align-items:center;
 }
 
-.chatHead strong{
+.contact-grid h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.contact-grid p{
+    font-size:14px;
+    color:#fff3e7;
+}
+
+.contact-info{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.2);
+    padding:28px;
+    border-radius:17px;
+}
+
+.contact-info div{
+    margin-bottom:13px;
     font-size:14px;
 }
 
-.chatClose{
+.contact-info div:last-child{
+    margin-bottom:0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#211914;
+    color:white;
+}
+
+.footer-inner{
+    max-width:1250px;
+    margin:auto;
+    padding:55px 5% 30px;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-col h3{
+    font-size:17px;
+    margin-bottom:15px;
+}
+
+.footer-col p,
+.footer-col a{
+    color:#c8beb7;
+    font-size:12px;
+}
+
+.footer-col a{
+    display:block;
+    margin-bottom:7px;
+}
+
+.footer-col a:hover{
+    color:#ffab4b;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.1);
+    text-align:center;
+    color:#998d84;
+    padding:17px 5%;
+    font-size:11px;
+}
+
+/* =========================
+   CHATBOT
+========================= */
+
+.chat-button{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    width:62px;
+    height:62px;
+    border:none;
+    border-radius:50%;
+    background:var(--orange);
+    color:white;
+    font-size:25px;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(210,100,0,.35);
+    z-index:1000;
+}
+
+.chat-box{
+    position:fixed;
+    right:24px;
+    bottom:98px;
+    width:360px;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+    border:1px solid var(--border);
+    display:none;
+    z-index:999;
+}
+
+.chat-header{
+    background:var(--orange);
+    color:white;
+    padding:15px 17px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.chat-header strong{
+    font-size:14px;
+}
+
+.chat-close{
+    background:none;
     border:0;
-    background:transparent;
-    color:#fff;
-    font-size:18px;
+    color:white;
+    font-size:21px;
     cursor:pointer;
 }
 
-.chatBody{
-    height:310px;
-    overflow:auto;
-    padding:12px;
-    background:#f6faff;
+.chat-body{
+    height:330px;
+    padding:15px;
+    overflow-y:auto;
+    background:#fffaf5;
 }
 
-.msg{
-    padding:9px 11px;
+.bot-message,
+.user-message{
+    max-width:85%;
+    padding:9px 12px;
     border-radius:12px;
-    margin:7px 0;
-    max-width:90%;
-    font-size:13px;
-    white-space:pre-line;
+    font-size:12px;
+    margin-bottom:9px;
 }
 
-.bot{
-    background:#fff;
+.bot-message{
+    background:white;
+    border:1px solid var(--border);
+    color:#59636a;
 }
 
-.user{
-    background:#d9edff;
+.user-message{
     margin-left:auto;
+    background:var(--orange);
+    color:white;
 }
 
-.chatInput{
+.chat-input{
     display:flex;
-    border-top:1px solid #ddd;
+    border-top:1px solid var(--border);
 }
 
-.chatInput input{
+.chat-input input{
     flex:1;
     border:0;
-    padding:12px;
     outline:0;
+    padding:13px;
     font-family:inherit;
+    font-size:12px;
 }
 
-.chatInput button{
+.chat-input button{
+    width:55px;
     border:0;
-    background:#0756a3;
-    color:#fff;
-    padding:0 16px;
+    background:var(--orange);
+    color:white;
     cursor:pointer;
-    font-family:inherit;
 }
 
-.chat.closed{
-    width:auto;
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
-.chat.closed .chatBody,
-.chat.closed .chatInput{
-    display:none;
-}
+@media(max-width:950px){
 
-.chat.closed .chatHead{
-    border-radius:18px;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-
-    .menu{
-        display:block;
-    }
-
-    .navin{
+    .nav-links{
         display:none;
-    }
-
-    .nav.open .navin{
-        display:flex;
+        width:100%;
         flex-direction:column;
     }
 
-    .grid{
-        grid-template-columns:1fr 1fr;
+    .nav-links.show{
+        display:flex;
     }
 
-    .stat{
-        grid-template-columns:1fr 1fr;
+    .nav-inner{
+        flex-wrap:wrap;
     }
 
-    .career{
-        grid-template-columns:1fr 1fr;
+    .menu-btn{
+        display:block;
     }
 
-    .footgrid{
-        grid-template-columns:1fr 1fr;
+    .hero h2{
+        font-size:45px;
     }
 
-    .hero{
-        min-height:400px;
+    .stats-inner{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .hero img{
-        height:400px;
+    .highlight-grid,
+    .career-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .track-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr;
     }
 }
 
 @media(max-width:600px){
 
-    .top{
-        display:none;
+    .topbar-inner{
+        display:block;
+        text-align:center;
     }
 
-    .head{
-        padding:14px 5%;
+    .logo-text h1{
+        font-size:16px;
     }
 
-    .brand b{
-        font-size:17px;
-    }
-
-    .brand span{
-        font-size:11px;
-    }
-
-    .logo{
-        width:45px;
-        height:45px;
-    }
-
-    .grid,
-    .stat,
-    .career,
-    .footgrid{
-        grid-template-columns:1fr;
+    .logo-text span{
+        font-size:10px;
     }
 
     .hero{
-        min-height:470px;
-        border-radius:17px;
+        min-height:540px;
     }
 
-    .hero img{
-        height:470px;
+    .hero h2{
+        font-size:37px;
     }
 
-    .hero .txt{
-        padding:25px;
+    .hero p{
+        font-size:14px;
     }
 
-    .hero h1{
-        font-size:32px;
+    .stats{
+        margin-top:-30px;
+        padding:0 15px;
     }
 
-    .chat{
-        right:10px;
-        bottom:65px;
+    .stat strong{
+        font-size:25px;
     }
+
+    .container{
+        padding:60px 5%;
+    }
+
+    .section-heading h2{
+        font-size:27px;
+    }
+
+    .highlight-grid,
+    .career-grid,
+    .track-grid,
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .timeline::before{
+        left:7px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even){
+        width:100%;
+        margin-left:0;
+        padding-left:30px;
+        padding-right:0;
+    }
+
+    .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot{
+        left:0;
+        right:auto;
+    }
+
+    .chat-box{
+        right:12px;
+        width:calc(100% - 24px);
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- TOP BAR -->
-<div class="top">
-    <div>Walailak University · School of Informatics</div>
-    <div>Digital Content & Media</div>
+
+<div class="topbar">
+    <div class="topbar-inner">
+        <span>มหาวิทยาลัยวลัยลักษณ์</span>
+        <span>สำนักวิชาสารสนเทศศาสตร์ | Digital Content and Media</span>
+    </div>
 </div>
 
+
 <!-- HEADER -->
-<header class="head">
 
-    <!-- ใช้โลโก้จากมหาวิทยาลัย สามารถเปลี่ยนเป็นไฟล์โลโก้ของคุณเองได้ -->
-    <div class="logo"
-         style="display:flex;align-items:center;justify-content:center;
-                background:#eaf4ff;border-radius:14px;
-                color:#0756a3;font-weight:800;font-size:18px;">
-        WU
+<header>
+
+<div class="header-inner">
+
+<a href="index.html" class="logo">
+
+    <div class="logo-box">
+        DCM
     </div>
 
-    <div class="brand">
-        <b>Digital Content & Media</b>
-        <span>สาขาดิจิทัลคอนเทนต์และสื่อ · สำนักวิชาสารสนเทศศาสตร์ มหาวิทยาลัยวลัยลักษณ์</span>
+    <div class="logo-text">
+        <h1>Digital Content and Media</h1>
+        <span>สาขาดิจิทัลคอนเทนต์และสื่อ</span>
     </div>
 
-    <button class="menu"
-            onclick="document.getElementById('nav').classList.toggle('open')">
-        ☰ เมนู
-    </button>
+</a>
+
+</div>
 
 </header>
 
+
 <!-- NAVIGATION -->
-<nav class="nav" id="nav">
-    <div class="navin">
 
-        <a class="on" href="index.html">
-            หน้าหลัก
-        </a>
+<nav>
 
-        <a href="about.html">
-            เกี่ยวกับหลักสูตร
-        </a>
+<div class="nav-inner">
 
-        <a href="learning-outcomes.html">
-            ผลลัพธ์การเรียนรู้
-        </a>
+<button class="menu-btn" onclick="toggleMenu()">
+    ☰
+</button>
 
-        <a href="curriculum.html">
-            โครงสร้างหลักสูตร
-        </a>
+<ul class="nav-links" id="navLinks">
 
-        <a href="careers.html">
-            อาชีพ
-        </a>
+<li><a class="active" href="index.html">หน้าหลัก</a></li>
 
-        <a href="tuition.html">
-            ค่าใช้จ่าย
-        </a>
+<li><a href="about.html">เกี่ยวกับหลักสูตร</a></li>
 
-        <a href="further-study.html">
-            การศึกษาต่อ
-        </a>
+<li><a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a></li>
 
-        <a href="contact.html">
-            ติดต่อ
-        </a>
+<li><a href="curriculum.html">โครงสร้างหลักสูตร</a></li>
 
-    </div>
+<li><a href="careers.html">แนวทางอาชีพ</a></li>
+
+<li><a href="tuition.html">ค่าเล่าเรียน</a></li>
+
+<li><a href="further-study.html">การศึกษาต่อ</a></li>
+
+<li><a href="contact.html">ติดต่อ</a></li>
+
+</ul>
+
+</div>
+
 </nav>
 
 
-<main class="wrap">
+<!-- HERO -->
 
-    <!-- BREADCRUMB -->
-    <div class="crumb">
-        หน้าหลัก
-    </div>
+<section class="hero">
 
+<div class="hero-inner">
 
-    <!-- HERO -->
-    <section class="hero">
+<div class="hero-content">
 
-        <!-- ภาพจริงจากเว็บไซต์ DCM -->
-        <img
-            src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/426587007_1003327587800289_993978283766940360_n.jpg"
-            alt="กิจกรรมสาขาดิจิทัลคอนเทนต์และสื่อ">
+<div class="hero-label">
+    BACHELOR OF INFORMATION SCIENCE
+</div>
 
-        <div class="txt">
+<h2>
+    DIGITAL<br>
+    <span>CONTENT</span><br>
+    AND MEDIA
+</h2>
 
-            <h1>
-                Digital Content
-                <span>& Media</span>
-            </h1>
+<p>
+    หลักสูตรที่ผสมผสานความคิดสร้างสรรค์
+    เทคโนโลยีดิจิทัล การออกแบบ และการจัดการคอนเทนต์
+    เพื่อเตรียมความพร้อมสู่การทำงานในอุตสาหกรรมดิจิทัล
+</p>
 
-            <p>
-                หลักสูตรสารสนเทศศาสตรบัณฑิต
-                สาขาดิจิทัลคอนเทนต์และสื่อ
-                มหาวิทยาลัยวลัยลักษณ์
-            </p>
+<div class="hero-buttons">
 
-            <p>
-                เรียนรู้การออกแบบ ผลิต และจัดการดิจิทัลคอนเทนต์
-                พร้อมพัฒนาทักษะด้านเทคโนโลยี สื่อดิจิทัล
-                และการทำงานจริงในองค์กร
-            </p>
+<a href="about.html" class="btn btn-orange">
+    รู้จักหลักสูตร
+</a>
 
-            <div class="hero-buttons">
+<a href="curriculum.html" class="btn btn-white">
+    ดูโครงสร้างหลักสูตร
+</a>
 
-                <a class="btn" href="about.html">
-                    ดูรายละเอียดหลักสูตร
-                </a>
+</div>
 
-                <a class="btn blue" href="curriculum.html">
-                    ดูโครงสร้างหลักสูตร
-                </a>
+</div>
 
-            </div>
+</div>
 
-        </div>
-    </section>
+</section>
 
 
-    <!-- INTRO -->
-    <section class="sec">
+<!-- STATS -->
 
-        <div class="title">
+<section class="stats">
 
-            <small>ABOUT THE PROGRAM</small>
+<div class="stats-inner">
 
-            <h2>
-                เรียนอะไรใน Digital Content & Media?
-            </h2>
+<div class="stat">
+    <strong>123</strong>
+    <span>หน่วยกิตตลอดหลักสูตร</span>
+</div>
 
-            <p>
-                หลักสูตรที่ผสมผสานความรู้ด้านสารสนเทศ เทคโนโลยี
-                การออกแบบ และการผลิตสื่อดิจิทัล
-            </p>
+<div class="stat">
+    <strong>25,000</strong>
+    <span>บาท / ภาคการศึกษา</span>
+</div>
 
-        </div>
+<div class="stat">
+    <strong>8+</strong>
+    <span>เดือนประสบการณ์ปฏิบัติงาน</span>
+</div>
 
+<div class="stat">
+    <strong>4</strong>
+    <span>แนวทางประกอบอาชีพ</span>
+</div>
 
-        <div class="grid">
+</div>
 
-            <div class="card">
+</section>
 
-                <div class="icon">
-                    🎨
-                </div>
 
-                <h3>
-                    Digital Design
-                </h3>
+<!-- ABOUT -->
 
-                <p>
-                    เรียนรู้การออกแบบและพัฒนาดิจิทัลคอนเทนต์
-                    ให้ตอบสนองความต้องการของผู้ใช้งาน
-                </p>
+<section class="about">
 
-            </div>
+<div class="container">
 
+<div class="about-grid">
 
-            <div class="card">
+<div class="about-image">
 
-                <div class="icon">
-                    💻
-                </div>
+<img
+src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/426587007_1003327587800289_993978283766940360_n.jpg"
+alt="Digital Content and Media">
 
-                <h3>
-                    Digital Technology
-                </h3>
+<div class="image-label">
 
-                <p>
-                    ประยุกต์ใช้เทคโนโลยีสารสนเทศและเครื่องมือดิจิทัล
-                    ในการพัฒนาคอนเทนต์และบริการดิจิทัล
-                </p>
+<strong>DCM</strong>
 
-            </div>
+<span>
+Digital Content and Media
+</span>
 
+</div>
 
-            <div class="card">
+</div>
 
-                <div class="icon">
-                    📱
-                </div>
 
-                <h3>
-                    Digital Content
-                </h3>
+<div class="about-content">
 
-                <p>
-                    ออกแบบ ผลิต จัดการ และเผยแพร่คอนเทนต์
-                    สำหรับสื่อและองค์กรในยุคดิจิทัล
-                </p>
+<small>ABOUT THE PROGRAM</small>
 
-            </div>
+<h2>
+เรียนรู้จากความคิดสร้างสรรค์
+สู่โลกดิจิทัล
+</h2>
 
-        </div>
+<p>
+หลักสูตรสารสนเทศศาสตรบัณฑิต
+สาขาดิจิทัลคอนเทนต์และสื่อ
+มุ่งผลิตบัณฑิตให้มีสมรรถนะด้านดิจิทัลคอนเทนต์
+และสามารถใช้เทคโนโลยีสารสนเทศดิจิทัล
+ในการสร้างสรรค์และพัฒนางาน
+</p>
 
-    </section>
+<ul class="check-list">
 
+<li>การออกแบบและผลิต Digital Content</li>
 
-    <!-- STATS -->
-    <section class="sec">
+<li>การจัดการสื่อและสารสนเทศดิจิทัล</li>
 
-        <div class="title">
+<li>Digital Marketing Content</li>
 
-            <small>PROGRAM AT A GLANCE</small>
+<li>Digital Collection และ Digital GLAM</li>
 
-            <h2>
-                ข้อมูลหลักสูตรแบบสรุป
-            </h2>
+<li>เทคโนโลยีสำหรับการจัดการคอนเทนต์</li>
 
-        </div>
+</ul>
 
+<a href="about.html" class="btn btn-orange">
+    อ่านรายละเอียดหลักสูตร
+</a>
 
-        <div class="stat">
+</div>
 
-            <div class="card">
-                <div class="num">123</div>
-                <div>หน่วยกิต</div>
-            </div>
+</div>
 
-            <div class="card">
-                <div class="num">25,000</div>
-                <div>บาท / ภาคการศึกษา</div>
-            </div>
+</div>
 
-            <div class="card">
-                <div class="num">8+</div>
-                <div>เดือนประสบการณ์ทำงาน</div>
-            </div>
+</section>
 
-            <div class="card">
-                <div class="num">4</div>
-                <div>สายอาชีพตัวอย่าง</div>
-            </div>
 
-        </div>
+<!-- HIGHLIGHTS -->
 
-    </section>
+<section>
 
+<div class="container">
 
-    <!-- PROGRAM HIGHLIGHT -->
-    <section class="sec">
+<div class="section-heading">
 
-        <div class="highlight">
+<small>WHY DCM?</small>
 
-            <h2>
-                จุดเด่นของหลักสูตร
-            </h2>
+<h2>
+จุดเด่นของหลักสูตร
+</h2>
 
-            <p>
-                หลักสูตรเน้นการเรียนรู้ที่เชื่อมโยงกับการทำงานจริง
-                โดยนักศึกษาสามารถพัฒนาความรู้และทักษะด้านการออกแบบ
-                การผลิต การจัดการ และการเผยแพร่ดิจิทัลคอนเทนต์
-            </p>
+<p>
+เรียนทั้งด้านความรู้ ทักษะ เทคโนโลยี
+และประสบการณ์การทำงานจริง
+</p>
 
-            <p>
-                นอกจากนี้ยังมีการจัดการเรียนรู้ที่มุ่งพัฒนาทักษะ
-                การวิเคราะห์ การสังเคราะห์ การทำงานร่วมกับผู้อื่น
-                รวมถึงความรับผิดชอบและจริยธรรมทางวิชาการ
-            </p>
+</div>
 
-            <a class="btn" href="about.html">
-                อ่านจุดเด่นทั้งหมด →
-            </a>
 
-        </div>
+<div class="highlight-grid">
 
-    </section>
+<div class="highlight-card">
 
+<div class="card-number">01</div>
 
-    <!-- ACTIVITY IMAGES -->
-    <section class="sec">
+<h3>Digital Content</h3>
 
-        <div class="title">
+<p>
+เรียนรู้การออกแบบ พัฒนา และเผยแพร่
+คอนเทนต์ดิจิทัลให้ตอบสนองความต้องการของผู้ใช้
+</p>
 
-            <small>DCM ACTIVITIES</small>
+</div>
 
-            <h2>
-                บรรยากาศและกิจกรรมของสาขา
-            </h2>
 
-            <p>
-                ภาพกิจกรรมจากหน้าเว็บไซต์ของสาขาดิจิทัลคอนเทนต์และสื่อ
-            </p>
+<div class="highlight-card">
 
-        </div>
+<div class="card-number">02</div>
 
+<h3>Work-based Education</h3>
 
-        <div class="grid">
+<p>
+เรียนรู้จากประสบการณ์จริง
+พร้อมการปฏิบัติงานในองค์กร
+ทั้งในประเทศและต่างประเทศ
+</p>
 
-            <div class="card">
+</div>
 
-                <img
-                    class="photo"
-                    src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/426595157_1003333134466401_919233955751944485_n.jpg"
-                    alt="กิจกรรม DCM">
 
-                <h3>
-                    กิจกรรมการเรียนรู้
-                </h3>
+<div class="highlight-card">
 
-                <p>
-                    เรียนรู้ผ่านกิจกรรมและประสบการณ์ที่เกี่ยวข้องกับสายดิจิทัล
-                </p>
+<div class="card-number">03</div>
 
-            </div>
+<h3>Digital Technology</h3>
 
+<p>
+ประยุกต์ใช้เทคโนโลยีดิจิทัล
+เพื่อสร้างสื่อ บริการ และคอนเทนต์
+</p>
 
-            <div class="card">
+</div>
 
-                <img
-                    class="photo"
-                    src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/428357394_1003333084466406_6130191326911859572_n.jpg"
-                    alt="กิจกรรม DCM">
 
-                <h3>
-                    การทำงานร่วมกัน
-                </h3>
+<div class="highlight-card">
 
-                <p>
-                    ฝึกการสื่อสาร การทำงานเป็นทีม และการสร้างผลงานร่วมกัน
-                </p>
+<div class="card-number">04</div>
 
-            </div>
+<h3>Digital Citizenship</h3>
 
+<p>
+ส่งเสริมความรับผิดชอบ
+จริยธรรมทางวิชาการ และการเป็นพลเมืองดิจิทัล
+</p>
 
-            <div class="card">
+</div>
 
-                <img
-                    class="photo"
-                    src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM01-scaled.jpg"
-                    alt="กิจกรรม DCM">
 
-                <h3>
-                    ประสบการณ์นอกห้องเรียน
-                </h3>
+<div class="highlight-card">
 
-                <p>
-                    เปิดโอกาสให้นักศึกษาเรียนรู้จากกิจกรรมและสภาพแวดล้อมจริง
-                </p>
+<div class="card-number">05</div>
 
-            </div>
+<h3>Creative Design</h3>
 
-        </div>
+<p>
+พัฒนาทักษะด้านการออกแบบ
+การสื่อสาร และการนำเสนอผลงาน
+</p>
 
-    </section>
+</div>
 
 
-    <!-- CAREERS -->
-    <section class="sec">
+<div class="highlight-card">
 
-        <div class="title">
+<div class="card-number">06</div>
 
-            <small>CAREER PATH</small>
+<h3>Career Ready</h3>
 
-            <h2>
-                เรียนจบแล้วทำงานอะไรได้บ้าง?
-            </h2>
+<p>
+พัฒนาทักษะให้สอดคล้องกับ
+ความต้องการของอุตสาหกรรมดิจิทัล
+</p>
 
-        </div>
+</div>
 
+</div>
 
-        <div class="career">
+</div>
 
-            <div class="card">
+</section>
 
-                <div class="icon">
-                    ✍️
-                </div>
 
-                <h3>
-                    Digital Content Creator
-                </h3>
+<!-- LEARNING TRACKS -->
 
-                <p>
-                    สร้างและจัดการเนื้อหาดิจิทัล
-                </p>
+<section class="tracks">
 
-            </div>
+<div class="container">
 
+<div class="section-heading">
 
-            <div class="card">
+<small>LEARNING TRACKS</small>
 
-                <div class="icon">
-                    🌐
-                </div>
+<h2>
+กลุ่มวิชาที่สามารถต่อยอด
+</h2>
 
-                <h3>
-                    Web Content Manager
-                </h3>
+<p>
+เลือกพัฒนาความสนใจไปสู่สายงานที่ต้องการ
+</p>
 
-                <p>
-                    ดูแลและจัดการเนื้อหาบนเว็บไซต์
-                </p>
+</div>
 
-            </div>
 
+<div class="track-grid">
 
-            <div class="card">
+<div class="track">
 
-                <div class="icon">
-                    🗂️
-                </div>
+<div class="track-number">TRACK 01</div>
 
-                <h3>
-                    Digital Collection Developer
-                </h3>
+<h3>
+Online Learning Development
+</h3>
 
-                <p>
-                    พัฒนาดิจิทัลคอลเล็กชันและข้อมูลดิจิทัล
-                </p>
+<p>
+การพัฒนาสื่อและระบบสำหรับการเรียนรู้
+ในรูปแบบออนไลน์
+</p>
 
-            </div>
+</div>
 
 
-            <div class="card">
+<div class="track">
 
-                <div class="icon">
-                    🖥️
-                </div>
+<div class="track-number">TRACK 02</div>
 
-                <h3>
-                    Web Designer
-                </h3>
+<h3>
+Digital Marketing Content
+</h3>
 
-                <p>
-                    ออกแบบเว็บไซต์และประสบการณ์ดิจิทัล
-                </p>
+<p>
+การสร้างคอนเทนต์เพื่อการตลาดดิจิทัล
+และการสื่อสารกับกลุ่มเป้าหมาย
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-        <br>
+<div class="track">
 
-        <a class="btn"
-           style="background:#0756a3;color:#fff"
-           href="careers.html">
-            ดูรายละเอียดสายอาชีพ →
-        </a>
+<div class="track-number">TRACK 03</div>
 
-    </section>
+<h3>
+Digital Collections
+</h3>
 
+<p>
+การจัดการและพัฒนาคอลเล็กชัน
+และข้อมูลในรูปแบบดิจิทัล
+</p>
 
-    <!-- CURRICULUM -->
-    <section class="sec">
+</div>
 
-        <div class="card">
 
-            <div class="title">
+<div class="track">
 
-                <small>CURRICULUM</small>
+<div class="track-number">TRACK 04</div>
 
-                <h2>
-                    โครงสร้างหลักสูตร
-                </h2>
+<h3>
+Content Management Technology
+</h3>
 
-            </div>
+<p>
+เทคโนโลยีสำหรับการจัดการ
+และให้บริการคอนเทนต์ดิจิทัล
+</p>
 
-            <div class="grid">
+</div>
 
-                <div>
-                    <h3>หมวดวิชาศึกษาทั่วไป</h3>
-                    <p>
-                        26 หน่วยกิต
-                    </p>
-                </div>
+</div>
 
-                <div>
-                    <h3>หมวดวิชาเฉพาะ</h3>
-                    <p>
-                        91 หน่วยกิต
-                    </p>
-                </div>
+</div>
 
-                <div>
-                    <h3>วิชาเลือกเสรี</h3>
-                    <p>
-                        6 หน่วยกิต
-                    </p>
-                </div>
+</section>
 
-            </div>
 
-            <br>
+<!-- CAREERS -->
 
-            <a class="btn"
-               style="background:#0756a3;color:#fff"
-               href="curriculum.html">
-                ดูรายละเอียดโครงสร้าง →
-            </a>
+<section>
 
-        </div>
+<div class="container">
 
-    </section>
+<div class="section-heading">
 
+<small>CAREER PATH</small>
 
-    <!-- TUITION -->
-    <section class="sec">
+<h2>
+เรียนจบแล้วทำงานอะไร?
+</h2>
 
-        <div class="cta">
+<p>
+ตัวอย่างแนวทางประกอบอาชีพจากหลักสูตร
+</p>
 
-            <h2>
-                ค่าใช้จ่ายในการศึกษา
-            </h2>
+</div>
 
-            <p>
-                ค่าเล่าเรียนที่หน้าเว็บไซต์หลักสูตรระบุไว้
-            </p>
 
-            <div class="num">
-                25,000 บาท
-            </div>
+<div class="career-grid">
 
-            <p>
-                ต่อภาคการศึกษา
-            </p>
+<div class="career-card">
 
-            <a class="btn"
-               style="background:#0756a3;color:#fff"
-               href="tuition.html">
-                ดูรายละเอียดค่าใช้จ่าย
-            </a>
+<img
+src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
+alt="Content Creator">
 
-        </div>
+<div class="career-content">
 
-    </section>
+<span>01</span>
 
+<h3>
+Digital Content Creator
+</h3>
 
-    <!-- CTA -->
-    <section class="sec">
+<p>
+สร้างสรรค์และผลิตคอนเทนต์
+สำหรับช่องทางดิจิทัล
+</p>
 
-        <div class="highlight">
+</div>
 
-            <h2>
-                สนใจหลักสูตรนี้?
-            </h2>
+</div>
 
-            <p>
-                สามารถดูข้อมูลเกี่ยวกับหลักสูตร ผลลัพธ์การเรียนรู้
-                โครงสร้างรายวิชา แนวทางอาชีพ การศึกษาต่อ
-                และข้อมูลติดต่อได้จากเว็บไซต์นี้
-            </p>
 
-            <a class="btn" href="contact.html">
-                ติดต่อสาขา →
-            </a>
+<div class="career-card">
 
-        </div>
+<img
+src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=85"
+alt="Web Content Manager">
 
-    </section>
+<div class="career-content">
 
-</main>
+<span>02</span>
+
+<h3>
+Web Content Manager
+</h3>
+
+<p>
+จัดการและวางแผนเนื้อหา
+สำหรับเว็บไซต์
+</p>
+
+</div>
+
+</div>
+
+
+<div class="career-card">
+
+<img
+src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=900&q=85"
+alt="Digital Collection">
+
+<div class="career-content">
+
+<span>03</span>
+
+<h3>
+Digital Collection Developer
+</h3>
+
+<p>
+พัฒนาและจัดการคอลเล็กชัน
+ในรูปแบบดิจิทัล
+</p>
+
+</div>
+
+</div>
+
+
+<div class="career-card">
+
+<img
+src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=900&q=85"
+alt="Web Designer">
+
+<div class="career-content">
+
+<span>04</span>
+
+<h3>
+Web Designer
+</h3>
+
+<p>
+ออกแบบเว็บไซต์
+และประสบการณ์การใช้งาน
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<br>
+
+<div style="text-align:center;">
+
+<a href="careers.html" class="btn btn-orange">
+ดูเส้นทางอาชีพทั้งหมด →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section class="timeline-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>LEARNING JOURNEY</small>
+
+<h2>
+เส้นทางการเรียนรู้
+</h2>
+
+<p>
+ตัวอย่างภาพรวมการพัฒนาทักษะตลอดหลักสูตร
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<small>YEAR 01</small>
+
+<h3>
+พื้นฐานดิจิทัลและการออกแบบ
+</h3>
+
+<p>
+เรียนรู้พื้นฐานด้านสารสนเทศ
+เทคโนโลยี การออกแบบ และการสื่อสาร
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<small>YEAR 02</small>
+
+<h3>
+Digital Content & Media
+</h3>
+
+<p>
+พัฒนาทักษะการสร้างสื่อ
+การออกแบบ และการจัดการคอนเทนต์
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<small>YEAR 03</small>
+
+<h3>
+เลือกกลุ่มวิชาที่สนใจ
+</h3>
+
+<p>
+ต่อยอดความรู้ไปยัง Online Learning,
+Digital Marketing, Digital Collection
+หรือ Content Management
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<small>YEAR 04</small>
+
+<h3>
+ประสบการณ์การทำงานจริง
+</h3>
+
+<p>
+นำความรู้ไปประยุกต์ใช้กับการปฏิบัติงาน
+และพัฒนาทักษะก่อนเข้าสู่โลกการทำงาน
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section>
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>DCM GALLERY</small>
+
+<h2>
+บรรยากาศและกิจกรรม
+</h2>
+
+<p>
+ภาพจากสื่อประชาสัมพันธ์ของสาขาดิจิทัลคอนเทนต์และสื่อ
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<img
+src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/426595157_1003333134466401_919233955751944485_n.jpg"
+alt="DCM Activity">
+
+<img
+src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/428357394_1003333084466406_6130191326911859572_n.jpg"
+alt="DCM Activity">
+
+<img
+src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM03.jpg"
+alt="DCM Activity">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="about">
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>FAQ</small>
+
+<h2>
+คำถามที่พบบ่อย
+</h2>
+
+<p>
+ข้อมูลเบื้องต้นสำหรับผู้ที่สนใจหลักสูตร
+</p>
+
+</div>
+
+
+<div class="faq">
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFAQ(this)">
+ค่าเล่าเรียนเท่าไหร่?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+ค่าเล่าเรียนประมาณ 25,000 บาทต่อภาคการศึกษา
+และประมาณ 200,000 บาทตลอดหลักสูตร
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFAQ(this)">
+หลักสูตรเรียนทั้งหมดกี่หน่วยกิต?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+หลักสูตรมีจำนวนทั้งหมด 123 หน่วยกิต
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFAQ(this)">
+เรียนจบแล้วทำงานอะไรได้บ้าง?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+ตัวอย่างแนวทางอาชีพ ได้แก่ Digital Content Creator /
+Content Specialist, Web Content Manager,
+Digital Collection Developer และ Web Designer
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFAQ(this)">
+มีการฝึกงานหรือปฏิบัติงานจริงหรือไม่?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+หลักสูตรมีการจัดการศึกษาแบบบูรณาการกับการทำงาน
+และมีประสบการณ์ปฏิบัติงานในองค์กรอย่างน้อย 8 เดือน
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFAQ(this)">
+สามารถเรียนต่อระดับปริญญาโทได้หรือไม่?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+สามารถศึกษาต่อระดับปริญญาโทและปริญญาเอก
+ใน Computer Science, Information Technology
+หรือสาขาที่เกี่ยวข้องได้
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFAQ(this)">
+จบแล้วสามารถทำงานด้าน UX/UI ได้ไหม?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+ทักษะด้านการออกแบบและเทคโนโลยีดิจิทัล
+สามารถนำไปต่อยอดสู่งานด้าน UI/UX และ Web Design
+ได้ โดยขึ้นอยู่กับการพัฒนาทักษะและผลงานเพิ่มเติมของผู้เรียน
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT CTA -->
+
+<section class="contact-cta">
+
+<div class="container">
+
+<div class="contact-grid">
+
+<div>
+
+<h2>
+สนใจ Digital Content and Media?
+</h2>
+
+<p>
+ดูรายละเอียดหลักสูตร ค่าเล่าเรียน
+แนวทางอาชีพ และช่องทางการติดต่อ
+ของสาขาดิจิทัลคอนเทนต์และสื่อ
+</p>
+
+<br>
+
+<a href="contact.html" class="btn btn-white">
+ติดต่อสาขา →
+</a>
+
+</div>
+
+
+<div class="contact-info">
+
+<div>
+<strong>สาขา:</strong>
+Digital Content and Media
+</div>
+
+<div>
+<strong>สำนักวิชา:</strong>
+สำนักวิชาสารสนเทศศาสตร์
+</div>
+
+<div>
+<strong>มหาวิทยาลัย:</strong>
+มหาวิทยาลัยวลัยลักษณ์
+</div>
+
+<div>
+<strong>โทรศัพท์:</strong>
+075-672204
+</div>
+
+<div>
+<strong>สถานที่:</strong>
+222 ตำบลไทยบุรี อำเภอท่าศาลา
+จังหวัดนครศรีธรรมราช 80160
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 
 <!-- FOOTER -->
+
 <footer>
 
-    <div class="footgrid">
+<div class="footer-inner">
 
-        <div>
+<div class="footer-col">
 
-            <h3>
-                Digital Content & Media
-            </h3>
+<h3>
+Digital Content and Media
+</h3>
 
-            <p>
-                หลักสูตรสารสนเทศศาสตรบัณฑิต
-                สาขาดิจิทัลคอนเทนต์และสื่อ
-                สำนักวิชาสารสนเทศศาสตร์
-                มหาวิทยาลัยวลัยลักษณ์
-            </p>
+<p>
+หลักสูตรสารสนเทศศาสตรบัณฑิต
+สาขาดิจิทัลคอนเทนต์และสื่อ
+สำนักวิชาสารสนเทศศาสตร์
+มหาวิทยาลัยวลัยลักษณ์
+</p>
 
-        </div>
-
-
-        <div>
-
-            <h3>
-                เมนู
-            </h3>
-
-            <p>
-                <a href="about.html">เกี่ยวกับหลักสูตร</a>
-            </p>
-
-            <p>
-                <a href="curriculum.html">โครงสร้างหลักสูตร</a>
-            </p>
-
-            <p>
-                <a href="careers.html">อาชีพ</a>
-            </p>
-
-            <p>
-                <a href="contact.html">ติดต่อ</a>
-            </p>
-
-        </div>
+</div>
 
 
-        <div>
+<div class="footer-col">
 
-            <h3>
-                ติดต่อ
-            </h3>
+<h3>เว็บไซต์</h3>
 
-            <p>
-                โทร. 075-672204
-            </p>
+<a href="index.html">หน้าหลัก</a>
 
-            <p>
-                222 ตำบลไทยบุรี
-                อำเภอท่าศาลา
-                จังหวัดนครศรีธรรมราช 80160
-            </p>
+<a href="about.html">เกี่ยวกับหลักสูตร</a>
 
-        </div>
+<a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a>
 
-    </div>
+<a href="curriculum.html">โครงสร้างหลักสูตร</a>
+
+<a href="careers.html">แนวทางอาชีพ</a>
+
+</div>
 
 
-    <div class="copy">
-        © 2026 Digital Content & Media · Walailak University
-    </div>
+<div class="footer-col">
+
+<h3>ข้อมูลเพิ่มเติม</h3>
+
+<a href="tuition.html">ค่าเล่าเรียน</a>
+
+<a href="further-study.html">การศึกษาต่อ</a>
+
+<a href="contact.html">ติดต่อสาขา</a>
+
+<a href="https://informatics.wu.ac.th/" target="_blank">
+เว็บไซต์สำนักวิชาสารสนเทศศาสตร์ ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Digital Content and Media |
+School of Informatics, Walailak University
+
+</div>
 
 </footer>
 
 
-<!-- BACK -->
-<div class="back">
+<!-- CHAT BUTTON -->
 
-    <button onclick="goBack()">
-        ← ย้อนกลับ
-    </button>
+<button
+class="chat-button"
+onclick="toggleChat()"
+aria-label="เปิด DCM Assistant">
+
+💬
+
+</button>
+
+
+<!-- CHAT BOX -->
+
+<div class="chat-box" id="chatBox">
+
+<div class="chat-header">
+
+<strong>
+🟧 DCM Assistant
+</strong>
+
+<button class="chat-close" onclick="toggleChat()">
+×
+</button>
 
 </div>
 
 
-<!-- CHATBOT -->
-<div class="chat" id="chat">
+<div class="chat-body" id="chatBody">
 
-    <div class="chatHead">
+<div class="bot-message">
 
-        <strong>
-            🤖 DCM Assistant
-        </strong>
+สวัสดีครับ 👋<br><br>
 
-        <button class="chatClose"
-                onclick="toggleChat()">
-            ×
-        </button>
+ผมคือ DCM Assistant
+สามารถถามเกี่ยวกับหลักสูตร
+Digital Content and Media ได้ครับ
 
-    </div>
+<br><br>
 
+เช่น<br>
+• ค่าเทอมเท่าไหร่?<br>
+• เรียนกี่หน่วยกิต?<br>
+• จบแล้วทำงานอะไร?<br>
+• มีวิชาอะไรบ้าง?<br>
+• เรียนต่อได้ไหม?
 
-    <div class="chatBody" id="chatBody">
+</div>
 
-        <div class="msg bot">
-            สวัสดีครับ 👋<br>
-            ผมคือ DCM Assistant
-            สามารถถามเกี่ยวกับหลักสูตร
-            ดิจิทัลคอนเทนต์และสื่อได้เลยครับ
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="chatInput">
+<div class="chat-input">
 
-        <input
-            id="chatInput"
-            type="text"
-            placeholder="เช่น เรียนกี่หน่วยกิต?"
-            onkeydown="if(event.key==='Enter')sendChat()">
+<input
+id="chatInput"
+type="text"
+placeholder="ถามเกี่ยวกับหลักสูตร..."
+onkeydown="if(event.key==='Enter') sendMessage()">
 
-        <button onclick="sendChat()">
-            ส่ง
-        </button>
+<button onclick="sendMessage()">
+➤
+</button>
 
-    </div>
+</div>
 
 </div>
 
@@ -1248,21 +2069,39 @@ footer h3{
 <script>
 
 /* =========================
-   BACK BUTTON
+   MOBILE MENU
 ========================= */
 
-function goBack(){
+function toggleMenu(){
 
-    if(
-        document.referrer &&
-        new URL(document.referrer).origin === location.origin
-    ){
+    document
+    .getElementById("navLinks")
+    .classList.toggle("show");
 
-        history.back();
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+function toggleFAQ(button){
+
+    const item =
+    button.parentElement;
+
+    item.classList.toggle("open");
+
+    const symbol =
+    button.querySelector("span");
+
+    if(item.classList.contains("open")){
+
+        symbol.textContent="−";
 
     }else{
 
-        location.href = "index.html";
+        symbol.textContent="+";
 
     }
 
@@ -1273,467 +2112,254 @@ function goBack(){
    CHATBOT
 ========================= */
 
-const FAQ = [
+function toggleChat(){
 
-/* 01 */
-{
-    keys:["ชื่อหลักสูตร","หลักสูตรชื่ออะไร","ชื่อสาขา","สาขาอะไร"],
-    answer:"หลักสูตรชื่อ สารสนเทศศาสตรบัณฑิต สาขาดิจิทัลคอนเทนต์และสื่อ หรือ Digital Content & Media ครับ"
-},
+    const box =
+    document.getElementById("chatBox");
 
-/* 02 */
-{
-    keys:["digital content","dcm","digital content media"],
-    answer:"DCM ย่อมาจาก Digital Content & Media หรือสาขาดิจิทัลคอนเทนต์และสื่อครับ"
-},
+    if(box.style.display==="block"){
 
-/* 03 */
-{
-    keys:["มหาวิทยาลัย","เรียนที่ไหน","อยู่มหาลัยไหน"],
-    answer:"หลักสูตรนี้อยู่ที่มหาวิทยาลัยวลัยลักษณ์ สำนักวิชาสารสนเทศศาสตร์ จังหวัดนครศรีธรรมราชครับ"
-},
+        box.style.display="none";
 
-/* 04 */
-{
-    keys:["กี่หน่วยกิต","หน่วยกิต","เครดิต","ทั้งหมดกี่เครดิต"],
-    answer:"หลักสูตรมีทั้งหมด 123 หน่วยกิตครับ"
-},
+    }else{
 
-/* 05 */
-{
-    keys:["ค่าเทอม","ค่าเรียน","เทอมละเท่าไหร่","ค่าใช้จ่าย"],
-    answer:"ค่าเล่าเรียนที่เว็บไซต์หลักสูตรระบุคือ 25,000 บาทต่อภาคการศึกษาครับ"
-},
+        box.style.display="block";
 
-/* 06 */
-{
-    keys:["ทั้งหมดกี่บาท","ค่าเรียนทั้งหมด","ค่าเทอมรวม"],
-    answer:"เว็บไซต์หลักสูตรระบุค่าใช้จ่ายรวมตลอดหลักสูตรไว้ประมาณ 200,000 บาทครับ"
-},
-
-/* 07 */
-{
-    keys:["เรียนอะไร","เรียนเกี่ยวกับอะไร","เนื้อหาเรียน","เรียนด้านไหน"],
-    answer:"เน้นการออกแบบ ผลิต จัดการ และเผยแพร่ดิจิทัลคอนเทนต์ รวมถึงเทคโนโลยีสารสนเทศและสื่อดิจิทัลครับ"
-},
-
-/* 08 */
-{
-    keys:["ออกแบบ","design","กราฟิก"],
-    answer:"หลักสูตรมีเนื้อหาด้านการออกแบบและการพัฒนาดิจิทัลคอนเทนต์ครับ"
-},
-
-/* 09 */
-{
-    keys:["คอนเทนต์","content creator","สร้างคอนเทนต์"],
-    answer:"นักศึกษาจะได้เรียนเกี่ยวกับการออกแบบ ผลิต จัดการ และเผยแพร่ดิจิทัลคอนเทนต์ครับ"
-},
-
-/* 10 */
-{
-    keys:["ฝึกงาน","ฝึกประสบการณ์","ทำงานจริง","สหกิจ"],
-    answer:"หลักสูตรมีการเรียนรู้แบบ Work-based Education และมีประสบการณ์ทำงานจริงอย่างน้อย 8 เดือนครับ"
-},
-
-/* 11 */
-{
-    keys:["8 เดือน","แปดเดือน"],
-    answer:"หลักสูตรระบุประสบการณ์การทำงานในองค์กรอย่างน้อย 8 เดือนครับ"
-},
-
-/* 12 */
-{
-    keys:["อาชีพ","ทำงานอะไร","จบไปทำอะไร","งานหลังเรียนจบ"],
-    answer:"ตัวอย่างสายอาชีพ ได้แก่ Digital Content Creator / Content Specialist, Web Content Manager, Digital Collection Developer และ Web Designer ครับ"
-},
-
-/* 13 */
-{
-    keys:["digital content creator","content specialist"],
-    answer:"สามารถทำงานด้าน Digital Content Creator หรือ Content Specialist ได้ครับ"
-},
-
-/* 14 */
-{
-    keys:["web content manager","ผู้จัดการเนื้อหา"],
-    answer:"อีกหนึ่งสายอาชีพคือ Web Content Manager ซึ่งเกี่ยวข้องกับการดูแลและจัดการเนื้อหาบนเว็บไซต์ครับ"
-},
-
-/* 15 */
-{
-    keys:["digital collection","ดิจิทัลคอลเล็กชัน"],
-    answer:"สามารถทำงานเป็น Digital Collection Developer ได้ครับ"
-},
-
-/* 16 */
-{
-    keys:["web designer","ออกแบบเว็บไซต์"],
-    answer:"สามารถทำงานเป็น Web Designer ได้ครับ"
-},
-
-/* 17 */
-{
-    keys:["ศึกษาต่อ","ต่อโท","ปริญญาโท","เรียนต่อ"],
-    answer:"สามารถศึกษาต่อระดับปริญญาโทหรือเอกในสาขา Computer Science, Information Technology หรือสาขาที่เกี่ยวข้องได้ครับ"
-},
-
-/* 18 */
-{
-    keys:["จบอะไร","วุฒิ","วุฒิที่รับ"],
-    answer:"คุณสมบัติผู้สมัครตามข้อมูลหลักสูตร ได้แก่ ม.6 หรือเทียบเท่า และประกาศนียบัตรวิชาชีพครับ"
-},
-
-/* 19 */
-{
-    keys:["ภาษา","ภาษาอังกฤษ","ภาษาจีน"],
-    answer:"ในหมวดศึกษาทั่วไป นักศึกษาสามารถเลือกเรียนภาษาอังกฤษหรือภาษาจีนตามโครงสร้างหลักสูตรครับ"
-},
-
-/* 20 */
-{
-    keys:["minor","วิชาโท","กลุ่มวิชาโท"],
-    answer:"หลักสูตรมีทางเลือกด้านกลุ่มวิชาโท เช่น การพัฒนาการเรียนแบบออนไลน์ คอนเทนต์เพื่อการตลาดดิจิทัล ดิจิทัลคอลเล็กชัน และเทคโนโลยีเพื่อการจัดการคอนเทนต์ครับ"
-},
-
-/* 21 */
-{
-    keys:["ออนไลน์","online learning","e-learning"],
-    answer:"หนึ่งในกลุ่มความเชี่ยวชาญคือการพัฒนาการเรียนแบบออนไลน์ครับ"
-},
-
-/* 22 */
-{
-    keys:["การตลาด","digital marketing","การตลาดดิจิทัล"],
-    answer:"หลักสูตรมีเนื้อหาที่เกี่ยวข้องกับคอนเทนต์เพื่อการตลาดดิจิทัลครับ"
-},
-
-/* 23 */
-{
-    keys:["glam","digital glam"],
-    answer:"หลักสูตรกล่าวถึง Digital GLAM ซึ่งครอบคลุม Gallery, Library, Archive และ Museum ครับ"
-},
-
-/* 24 */
-{
-    keys:["library","ห้องสมุด"],
-    answer:"Library เป็นหนึ่งในองค์ประกอบของ Digital GLAM ที่เกี่ยวข้องกับการจัดการคอนเทนต์ดิจิทัลครับ"
-},
-
-/* 25 */
-{
-    keys:["museum","พิพิธภัณฑ์"],
-    answer:"Museum เป็นหนึ่งในองค์ประกอบของ Digital GLAM ครับ"
-},
-
-/* 26 */
-{
-    keys:["archive","จดหมายเหตุ"],
-    answer:"Archive เป็นหนึ่งในองค์ประกอบของ Digital GLAM ครับ"
-},
-
-/* 27 */
-{
-    keys:["gallery","แกลเลอรี"],
-    answer:"Gallery เป็นหนึ่งในองค์ประกอบของ Digital GLAM ครับ"
-},
-
-/* 28 */
-{
-    keys:["plo","ผลลัพธ์การเรียนรู้"],
-    answer:"หลักสูตรมีผลลัพธ์การเรียนรู้ระดับหลักสูตร หรือ PLO จำนวน 9 ข้อ ครอบคลุมด้านความรู้ ทักษะ จริยธรรม และคุณลักษณะครับ"
-},
-
-/* 29 */
-{
-    keys:["plo1"],
-    answer:"PLO1 เน้นการอธิบายความรู้ด้านมนุษยศาสตร์ สังคมศาสตร์ เทคโนโลยีสารสนเทศพื้นฐาน และแนวคิดสำหรับการออกแบบ ผลิต และเผยแพร่ดิจิทัลคอนเทนต์ครับ"
-},
-
-/* 30 */
-{
-    keys:["plo2"],
-    answer:"PLO2 เน้นการประยุกต์ใช้ความรู้ด้านการจัดการสารสนเทศ การออกแบบและผลิตสื่อ การจัดบริการดิจิทัลคอนเทนต์ และความรู้สำหรับอาชีพในอุตสาหกรรมดิจิทัลครับ"
-},
-
-/* 31 */
-{
-    keys:["plo3"],
-    answer:"PLO3 คือการเลือกใช้เทคโนโลยีเพื่อพัฒนาดิจิทัลคอนเทนต์ให้ตอบสนองวัตถุประสงค์ของผู้ใช้ครับ"
-},
-
-/* 32 */
-{
-    keys:["plo4"],
-    answer:"PLO4 เน้นการออกแบบบริการดิจิทัลคอนเทนต์อย่างเป็นระบบ โดยใช้กระบวนการวิจัยและพัฒนาครับ"
-},
-
-/* 33 */
-{
-    keys:["plo5"],
-    answer:"PLO5 เน้นทักษะการจัดระบบบริการดิจิทัลคอนเทนต์ให้สอดคล้องกับความต้องการขององค์กรครับ"
-},
-
-/* 34 */
-{
-    keys:["plo6"],
-    answer:"PLO6 เน้นทักษะการสื่อสารภาษาไทยและภาษาอังกฤษ ทั้งฟัง พูด อ่าน เขียน และการนำเสนอครับ"
-},
-
-/* 35 */
-{
-    keys:["plo7"],
-    answer:"PLO7 เน้นความซื่อสัตย์ ความรับผิดชอบ การปฏิบัติตามกฎระเบียบ และจริยธรรมทางวิชาการครับ"
-},
-
-/* 36 */
-{
-    keys:["plo8"],
-    answer:"PLO8 เน้นภาวะผู้นำ สุขภาวะ การเป็นผู้นำและผู้ตาม จิตอาสา และการทำงานร่วมกับผู้อื่นครับ"
-},
-
-/* 37 */
-{
-    keys:["plo9"],
-    answer:"PLO9 เน้นการรู้ดิจิทัลและความสามารถในการแสวงหาความรู้ภายใต้สภาพแวดล้อมดิจิทัลครับ"
-},
-
-/* 38 */
-{
-    keys:["หมวดศึกษาทั่วไป","ศึกษาทั่วไป"],
-    answer:"หมวดวิชาศึกษาทั่วไปมี 26 หน่วยกิตครับ"
-},
-
-/* 39 */
-{
-    keys:["หมวดเฉพาะ","วิชาเฉพาะ"],
-    answer:"หมวดวิชาเฉพาะมี 91 หน่วยกิตครับ"
-},
-
-/* 40 */
-{
-    keys:["วิชาเลือกเสรี","เลือกเสรี"],
-    answer:"วิชาเลือกเสรีมี 6 หน่วยกิตครับ"
-},
-
-/* 41 */
-{
-    keys:["วิชาแกน","วิชาบังคับ"],
-    answer:"ในหมวดวิชาเฉพาะ มีวิชาเฉพาะ 78 หน่วยกิต แบ่งเป็นวิชาบังคับ 63 หน่วยกิต และกลุ่มวิชาโท 15 หน่วยกิตครับ"
-},
-
-/* 42 */
-{
-    keys:["cooperative","สหกิจศึกษา"],
-    answer:"โครงสร้างหลักสูตรมีส่วนของ Cooperative Education จำนวน 13 หน่วยกิตครับ"
-},
-
-/* 43 */
-{
-    keys:["เรียนกี่ปี","กี่ปีจบ","ระยะเวลาเรียน"],
-    answer:"ระยะเวลาจริงขึ้นอยู่กับแผนการเรียนและการลงทะเบียนของนักศึกษา โดยโครงสร้างหลักสูตรรวม 123 หน่วยกิตครับ"
-},
-
-/* 44 */
-{
-    keys:["ปรัชญา","philosophy"],
-    answer:"ปรัชญาหลักสูตรมุ่งผลิตบัณฑิตให้มีสมรรถนะด้านดิจิทัลคอนเทนต์ในองค์กรดิจิทัล ใช้เทคโนโลยีสารสนเทศดิจิทัลได้อย่างเชี่ยวชาญ และมีคุณธรรม ความรับผิดชอบ และจริยธรรมทางวิชาการครับ"
-},
-
-/* 45 */
-{
-    keys:["เทคโนโลยี","ai","เอไอ"],
-    answer:"หลักสูตรเน้นการประยุกต์ใช้เทคโนโลยีดิจิทัลในการพัฒนาคอนเทนต์และบริการดิจิทัลครับ"
-},
-
-/* 46 */
-{
-    keys:["ux","ui","ux ui"],
-    answer:"งานด้านการออกแบบดิจิทัลและการตอบสนองความต้องการของผู้ใช้เป็นทักษะที่เกี่ยวข้องกับแนวทางของหลักสูตรครับ"
-},
-
-/* 47 */
-{
-    keys:["คุณธรรม","จริยธรรม","จรรยาบรรณ"],
-    answer:"หลักสูตรให้ความสำคัญกับคุณธรรม ความรับผิดชอบ และจริยธรรมทางวิชาการและวิชาชีพครับ"
-},
-
-/* 48 */
-{
-    keys:["ทำงานเป็นทีม","ทีม","teamwork"],
-    answer:"หลักสูตรมุ่งพัฒนาความสามารถในการทำงานร่วมกับผู้อื่น รวมถึงภาวะผู้นำและการเป็นผู้ตามครับ"
-},
-
-/* 49 */
-{
-    keys:["ที่อยู่","อยู่ที่ไหน","สถานที่"],
-    answer:"สำนักวิชาสารสนเทศศาสตร์ มหาวิทยาลัยวลัยลักษณ์ อยู่ที่ 222 ตำบลไทยบุรี อำเภอท่าศาลา จังหวัดนครศรีธรรมราช 80160 ครับ"
-},
-
-/* 50 */
-{
-    keys:["เบอร์โทร","โทร","โทรศัพท์","ติดต่อสาขา"],
-    answer:"เบอร์ติดต่อหลักสูตร Digital Content and Media คือ 075-672204 ครับ"
-},
-
-/* 51 */
-{
-    keys:["สมัคร","สมัครเรียน","รับสมัคร"],
-    answer:"หากต้องการสมัครเรียน แนะนำตรวจสอบประกาศรับสมัครล่าสุดของมหาวิทยาลัยวลัยลักษณ์โดยตรง เนื่องจากช่วงเวลาและเงื่อนไขการรับสมัครอาจเปลี่ยนแปลงได้ครับ"
-},
-
-/* 52 */
-{
-    keys:["ค่าใช้จ่ายต่อเทอม"],
-    answer:"ค่าเล่าเรียนที่เว็บไซต์หลักสูตรระบุคือ 25,000 บาทต่อภาคการศึกษาครับ"
-},
-
-/* 53 */
-{
-    keys:["200000","สองแสน"],
-    answer:"ค่าใช้จ่ายรวมที่หน้าเว็บไซต์หลักสูตรระบุไว้คือ 200,000 บาทครับ"
-},
-
-/* 54 */
-{
-    keys:["เรียนที่ไหนนคร","นครศรีธรรมราช","ท่าศาลา"],
-    answer:"หลักสูตรอยู่ที่มหาวิทยาลัยวลัยลักษณ์ อำเภอท่าศาลา จังหวัดนครศรีธรรมราชครับ"
-},
-
-/* 55 */
-{
-    keys:["สวัสดี","hello","hi","หวัดดี"],
-    answer:"สวัสดีครับ 👋 มีอะไรเกี่ยวกับหลักสูตร Digital Content & Media ที่อยากถามได้เลยครับ"
-}
-
-];
-
-
-/* =========================
-   CHAT FUNCTION
-========================= */
-
-function normalize(text){
-
-    return text
-        .toLowerCase()
-        .replace(/\s+/g," ")
-        .trim();
-
-}
-
-
-function getAnswer(question){
-
-    const q = normalize(question);
-
-    let best = null;
-    let score = 0;
-
-    for(const item of FAQ){
-
-        let current = 0;
-
-        for(const key of item.keys){
-
-            if(q.includes(normalize(key))){
-
-                current += normalize(key).length;
-
-            }
-
-        }
-
-        if(current > score){
-
-            score = current;
-            best = item.answer;
-
-        }
+        document
+        .getElementById("chatInput")
+        .focus();
 
     }
 
-    if(best){
-        return best;
-    }
-
-    return `
-ผมยังไม่พบคำตอบที่ตรงกับคำถามนี้ครับ
-
-ลองถามเกี่ยวกับ:
-• หลักสูตรเรียนอะไร
-• มีกี่หน่วยกิต
-• ค่าเทอมเท่าไหร่
-• เรียนจบทำงานอะไร
-• ฝึกงานกี่เดือน
-• PLO
-• วิชาโท
-• การศึกษาต่อ
-• ช่องทางติดต่อ
-
-หรือพิมพ์คำถามใหม่ได้เลยครับ 🙂
-`;
-
 }
 
 
-function addMessage(text,type){
+function addChatMessage(text,type){
 
-    const body = document.getElementById("chatBody");
+    const body =
+    document.getElementById("chatBody");
 
-    const div = document.createElement("div");
+    const div =
+    document.createElement("div");
 
-    div.className = "msg " + type;
+    div.className =
+    type==="user"
+    ? "user-message"
+    : "bot-message";
 
-    div.textContent = text;
+    div.innerHTML=text;
 
     body.appendChild(div);
 
-    body.scrollTop = body.scrollHeight;
+    body.scrollTop =
+    body.scrollHeight;
 
 }
 
 
-function sendChat(){
+function sendMessage(){
 
-    const input = document.getElementById("chatInput");
+    const input =
+    document.getElementById("chatInput");
 
-    const question = input.value.trim();
+    const question =
+    input.value.trim();
 
-    if(!question){
-        return;
-    }
+    if(!question) return;
 
-    addMessage(question,"user");
+    addChatMessage(question,"user");
 
-    input.value = "";
+    input.value="";
 
     setTimeout(()=>{
 
-        addMessage(
-            getAnswer(question),
-            "bot"
-        );
+        const q =
+        question.toLowerCase();
 
-    },300);
-
-}
+        let answer =
+        "สามารถสอบถามเกี่ยวกับหลักสูตร Digital Content and Media ได้ครับ เช่น ค่าเทอม โครงสร้างหลักสูตร อาชีพ การศึกษาต่อ หรือการติดต่อสาขา";
 
 
-function toggleChat(){
+        /* ค่าเทอม */
 
-    document
-        .getElementById("chat")
-        .classList.toggle("closed");
+        if(
+            q.includes("ค่าเทอม") ||
+            q.includes("ค่าเล่าเรียน") ||
+            q.includes("กี่บาท")
+        ){
 
-}
+            answer=
+            "ค่าเล่าเรียนประมาณ <b>25,000 บาทต่อภาคการศึกษา</b> และประมาณ <b>200,000 บาทตลอดหลักสูตร</b>ครับ";
+
+        }
 
 
-/* เปิด chatbot แบบย่อบนมือถือ */
-if(window.innerWidth <= 600){
+        /* หน่วยกิต */
 
-    document
-        .getElementById("chat")
-        .classList.add("closed");
+        else if(
+            q.includes("หน่วยกิต") ||
+            q.includes("กี่เครดิต")
+        ){
+
+            answer=
+            "หลักสูตรมีทั้งหมด <b>123 หน่วยกิต</b>ครับ";
+
+        }
+
+
+        /* อาชีพ */
+
+        else if(
+            q.includes("อาชีพ") ||
+            q.includes("ทำงานอะไร") ||
+            q.includes("จบไปทำอะไร") ||
+            q.includes("จบแล้วทำอะไร")
+        ){
+
+            answer=
+            "แนวทางอาชีพหลัก ๆ ได้แก่ <b>Digital Content Creator / Content Specialist, Web Content Manager, Digital Collection Developer และ Web Designer</b>ครับ";
+
+        }
+
+
+        /* Content */
+
+        else if(
+            q.includes("content creator") ||
+            q.includes("คอนเทนต์")
+        ){
+
+            answer=
+            "งาน Digital Content Creator เน้นการคิด วางแผน และผลิตคอนเทนต์สำหรับช่องทางดิจิทัล เช่น Social Media เว็บไซต์ และแพลตฟอร์มออนไลน์ครับ";
+
+        }
+
+
+        /* Web */
+
+        else if(
+            q.includes("web designer") ||
+            q.includes("เว็บดีไซน์") ||
+            q.includes("ออกแบบเว็บไซต์")
+        ){
+
+            answer=
+            "Web Designer เป็นงานด้านการออกแบบเว็บไซต์ โดยคำนึงถึงทั้งความสวยงามและประสบการณ์การใช้งานของผู้ใช้ครับ";
+
+        }
+
+
+        /* Digital Collection */
+
+        else if(
+            q.includes("digital collection") ||
+            q.includes("คอลเล็กชัน")
+        ){
+
+            answer=
+            "Digital Collection Developer เกี่ยวข้องกับการจัดการและพัฒนาคอลเล็กชันดิจิทัล เช่น ข้อมูล เอกสาร ภาพ และสื่อดิจิทัลครับ";
+
+        }
+
+
+        /* เรียนอะไร */
+
+        else if(
+            q.includes("เรียนอะไร") ||
+            q.includes("เรียนเกี่ยวกับอะไร") ||
+            q.includes("หลักสูตร")
+        ){
+
+            answer=
+            "หลักสูตรเน้นการออกแบบ ผลิต และเผยแพร่ Digital Content การจัดการสารสนเทศ การออกแบบสื่อ บริการดิจิทัล และเทคโนโลยีสำหรับการจัดการคอนเทนต์ครับ";
+
+        }
+
+
+        /* ฝึกงาน */
+
+        else if(
+            q.includes("ฝึกงาน") ||
+            q.includes("สหกิจ") ||
+            q.includes("ปฏิบัติงาน")
+        ){
+
+            answer=
+            "หลักสูตรมีการบูรณาการการเรียนกับการทำงาน และมีประสบการณ์ปฏิบัติงานในองค์กรอย่างน้อย <b>8 เดือน</b>ครับ";
+
+        }
+
+
+        /* เรียนต่อ */
+
+        else if(
+            q.includes("เรียนต่อ") ||
+            q.includes("ปริญญาโท") ||
+            q.includes("ปริญญาเอก")
+        ){
+
+            answer=
+            "สามารถศึกษาต่อระดับปริญญาโทหรือปริญญาเอกใน Computer Science, Information Technology หรือสาขาที่เกี่ยวข้องได้ครับ";
+
+        }
+
+
+        /* UX UI */
+
+        else if(
+            q.includes("ux") ||
+            q.includes("ui")
+        ){
+
+            answer=
+            "สามารถต่อยอดไปสู่งานด้าน UI/UX และ Web Design ได้ครับ โดยควรพัฒนาทักษะด้านการออกแบบและสร้าง Portfolio เพิ่มเติม";
+
+        }
+
+
+        /* Digital Marketing */
+
+        else if(
+            q.includes("marketing") ||
+            q.includes("การตลาด")
+        ){
+
+            answer=
+            "หลักสูตรมีแนวทาง Digital Marketing Content ซึ่งเกี่ยวข้องกับการสร้างคอนเทนต์เพื่อการตลาดดิจิทัลครับ";
+
+        }
+
+
+        /* ติดต่อ */
+
+        else if(
+            q.includes("ติดต่อ") ||
+            q.includes("เบอร์") ||
+            q.includes("โทร")
+        ){
+
+            answer=
+            "สามารถติดต่อสาขา Digital Content and Media ได้ที่ <b>075-672204</b> ครับ";
+
+        }
+
+
+        /* ขอบคุณ */
+
+        else if(
+            q.includes("ขอบคุณ") ||
+            q.includes("thanks")
+        ){
+
+            answer=
+            "ยินดีครับ 😊 หากต้องการข้อมูลเกี่ยวกับหลักสูตร DCM ถามผมได้เลยครับ";
+
+        }
+
+
+        addChatMessage(answer,"bot");
+
+    },400);
 
 }
 
