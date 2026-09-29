@@ -4,14 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>โครงสร้างหลักสูตร | Digital Content & Media</title>
+<title>ผลลัพธ์การเรียนรู้ | Digital Content & Media</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -37,11 +36,10 @@ body{
     --dark:#263238;
     --gray:#66727a;
     --border:#ececec;
-    --white:#fff;
+    --white:#ffffff;
 }
 
 /* TOP BAR */
-
 .topbar{
     background:#263238;
     color:#fff;
@@ -64,7 +62,6 @@ body{
 }
 
 /* HEADER */
-
 .header{
     background:#fff;
     border-bottom:1px solid #eee;
@@ -98,9 +95,9 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#fff;
+    color:white;
     font-weight:800;
-    font-size:17px;
+    font-size:20px;
 }
 
 .logo-text strong{
@@ -114,7 +111,6 @@ body{
 }
 
 /* NAV */
-
 .nav{
     background:var(--orange);
 }
@@ -150,7 +146,6 @@ body{
 }
 
 /* BREADCRUMB */
-
 .breadcrumb{
     background:#fff8ef;
     border-bottom:1px solid #f2e3d1;
@@ -170,13 +165,12 @@ body{
 }
 
 /* HERO */
-
 .hero{
     position:relative;
     min-height:420px;
     background:
-        linear-gradient(90deg,rgba(38,50,56,.9),rgba(38,50,56,.35)),
-        url("https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM02.jpg")
+        linear-gradient(90deg,rgba(38,50,56,.88),rgba(38,50,56,.35)),
+        url("https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM01-scaled.jpg")
         center/cover;
     display:flex;
     align-items:center;
@@ -212,8 +206,7 @@ body{
     font-size:17px;
 }
 
-/* CONTAINER */
-
+/* MAIN */
 .container{
     max-width:1200px;
     margin:auto;
@@ -242,308 +235,162 @@ body{
     max-width:760px;
 }
 
-/* CREDIT SUMMARY */
-
-.credit-summary{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    margin-top:20px;
-}
-
-.credit-card{
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:28px 20px;
-    text-align:center;
-    background:#fff;
-    transition:.25s;
-}
-
-.credit-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-}
-
-.credit-number{
-    color:var(--orange-dark);
-    font-size:38px;
-    font-weight:800;
-    line-height:1.2;
-}
-
-.credit-card h3{
-    font-size:17px;
-    margin-top:8px;
-}
-
-.credit-card p{
-    color:#777;
-    font-size:13px;
-    margin-top:4px;
-}
-
-/* TOTAL */
-
-.total-box{
-    margin-top:25px;
-    background:linear-gradient(135deg,#f28c28,#d96b00);
-    color:#fff;
-    border-radius:20px;
-    padding:35px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-}
-
-.total-box h2{
-    font-size:26px;
-}
-
-.total-box p{
-    color:#fff4e8;
-}
-
-.total-credit{
-    font-size:50px;
-    font-weight:800;
-    white-space:nowrap;
-}
-
-/* STRUCTURE */
-
-.structure-section{
-    background:var(--orange-soft);
-}
-
-.structure-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px;
-}
-
-.structure-card{
-    background:#fff;
-    border:1px solid #eee;
-    border-radius:18px;
-    padding:30px;
-    position:relative;
-    overflow:hidden;
-}
-
-.structure-card::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    width:6px;
-    height:100%;
-    background:var(--orange);
-}
-
-.structure-icon{
-    width:55px;
-    height:55px;
-    background:var(--orange-light);
-    border-radius:14px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:25px;
-    margin-bottom:18px;
-}
-
-.structure-card h3{
-    font-size:20px;
-    margin-bottom:8px;
-}
-
-.structure-credit{
-    color:var(--orange-dark);
-    font-size:25px;
-    font-weight:800;
-    margin-bottom:10px;
-}
-
-.structure-card p{
-    color:#66727a;
-    font-size:14px;
-}
-
-/* BAR */
-
-.progress-item{
-    margin-top:22px;
-}
-
-.progress-head{
-    display:flex;
-    justify-content:space-between;
-    font-size:14px;
-    margin-bottom:7px;
-}
-
-.progress-bar{
-    width:100%;
-    height:10px;
-    background:#eee;
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.progress-fill{
-    height:100%;
-    background:var(--orange);
-    border-radius:20px;
-}
-
-/* COURSE TABLE */
-
-.table-wrapper{
-    overflow-x:auto;
-    border:1px solid #eee;
-    border-radius:16px;
-}
-
-.course-table{
-    width:100%;
-    border-collapse:collapse;
-    min-width:650px;
-}
-
-.course-table th{
-    background:var(--orange);
-    color:#fff;
-    padding:15px;
-    text-align:left;
-    font-size:14px;
-}
-
-.course-table td{
-    padding:15px;
-    border-bottom:1px solid #eee;
-    font-size:14px;
-}
-
-.course-table tr:last-child td{
-    border-bottom:none;
-}
-
-.course-table tr:hover td{
-    background:#fff8ef;
-}
-
-.badge{
-    display:inline-block;
-    padding:4px 10px;
-    background:var(--orange-light);
-    color:var(--orange-dark);
-    border-radius:20px;
-    font-size:12px;
-    font-weight:600;
-}
-
-/* MINOR */
-
-.minor-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.minor-card{
-    border:1px solid #eee;
-    border-radius:16px;
-    padding:25px 20px;
-    background:#fff;
-    transition:.25s;
-}
-
-.minor-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 25px rgba(0,0,0,.07);
-}
-
-.minor-number{
-    color:var(--orange);
-    font-size:30px;
-    font-weight:800;
-}
-
-.minor-card h3{
-    font-size:16px;
-    margin:7px 0;
-}
-
-.minor-card p{
-    color:#777;
-    font-size:13px;
-}
-
-/* COOP */
-
-.coop{
-    background:#263238;
-    color:#fff;
-}
-
-.coop-inner{
-    max-width:1200px;
-    margin:auto;
-    padding:70px 20px;
-}
-
-.coop-box{
+/* INTRO */
+.intro{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:50px;
     align-items:center;
 }
 
-.coop h2{
+.intro-img{
+    width:100%;
+    border-radius:18px;
+    display:block;
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+
+.intro h2{
     font-size:30px;
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
-.coop p{
-    color:#d7dcde;
+.intro p{
+    color:var(--gray);
+    margin-bottom:15px;
 }
 
-.coop-number{
-    font-size:70px;
-    font-weight:800;
-    color:var(--orange);
-    line-height:1;
+/* CATEGORY */
+.category{
+    margin-top:70px;
 }
 
-.coop-label{
-    font-size:20px;
-    margin-top:10px;
+.category-head{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
 }
 
-/* NOTE */
-
-.note{
-    background:#fff8ef;
-    border-left:5px solid var(--orange);
-    padding:20px 25px;
-    border-radius:8px;
-    margin-top:30px;
-}
-
-.note strong{
+.category-icon{
+    width:52px;
+    height:52px;
+    background:var(--orange-light);
     color:var(--orange-dark);
+    border-radius:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
 }
 
-.note p{
-    color:#66727a;
+.category-head h2{
+    font-size:25px;
+}
+
+.category-head p{
+    color:#777;
     font-size:14px;
-    margin-top:5px;
+}
+
+/* PLO CARDS */
+.plo-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.plo-card{
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:25px;
+    background:#fff;
+    transition:.25s;
+    position:relative;
+    overflow:hidden;
+}
+
+.plo-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:5px;
+    background:var(--orange);
+}
+
+.plo-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.plo-number{
+    color:var(--orange-dark);
+    font-weight:800;
+    font-size:14px;
+    margin-bottom:7px;
+}
+
+.plo-card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.plo-card p{
+    color:#626b70;
+    font-size:14px;
+}
+
+/* FULL WIDTH */
+.full-section{
+    background:var(--orange-soft);
+}
+
+.full-section .container{
+    padding-top:70px;
+    padding-bottom:70px;
+}
+
+/* SKILL BOX */
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.skill-box{
+    background:#fff;
+    border:1px solid #eee;
+    padding:25px 20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.skill-icon{
+    width:55px;
+    height:55px;
+    background:var(--orange-light);
+    color:var(--orange-dark);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    font-size:24px;
+}
+
+.skill-box h3{
+    font-size:16px;
+    margin-bottom:7px;
+}
+
+.skill-box p{
+    color:#777;
+    font-size:13px;
 }
 
 /* CTA */
-
 .cta{
     background:linear-gradient(135deg,#f28c28,#d96b00);
     color:#fff;
@@ -581,10 +428,10 @@ body{
 }
 
 /* FOOTER */
-
 footer{
     background:#263238;
     color:#fff;
+    margin-top:0;
 }
 
 .footer-inner{
@@ -626,7 +473,6 @@ footer{
 }
 
 /* CHATBOT */
-
 .chatbot{
     position:fixed;
     right:22px;
@@ -715,7 +561,6 @@ footer{
 }
 
 /* RESPONSIVE */
-
 @media(max-width:900px){
 
     .nav-inner{
@@ -741,20 +586,12 @@ footer{
         font-size:34px;
     }
 
-    .credit-summary{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .structure-grid{
+    .intro{
         grid-template-columns:1fr;
     }
 
-    .minor-grid{
+    .skill-grid{
         grid-template-columns:repeat(2,1fr);
-    }
-
-    .coop-box{
-        grid-template-columns:1fr;
     }
 
     .footer-inner{
@@ -800,34 +637,12 @@ footer{
         font-size:25px;
     }
 
-    .credit-summary{
-        grid-template-columns:1fr 1fr;
-        gap:12px;
-    }
-
-    .credit-card{
-        padding:22px 12px;
-    }
-
-    .credit-number{
-        font-size:30px;
-    }
-
-    .total-box{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .total-credit{
-        font-size:42px;
-    }
-
-    .minor-grid{
+    .plo-grid{
         grid-template-columns:1fr;
     }
 
-    .coop-number{
-        font-size:55px;
+    .skill-grid{
+        grid-template-columns:1fr;
     }
 
     .cta{
@@ -845,152 +660,92 @@ footer{
         right:-5px;
     }
 }
-
 </style>
 </head>
 
 <body>
 
 <!-- TOP BAR -->
-
 <div class="topbar">
-
     <div class="topbar-inner">
-
+        <div>Walailak University • School of Informatics</div>
         <div>
-            Walailak University • School of Informatics
+            <a href="https://informatics.wu.ac.th/" target="_blank">School of Informatics</a>
+            <a href="https://www.wu.ac.th/" target="_blank">Walailak University</a>
         </div>
-
-        <div>
-            <a href="https://informatics.wu.ac.th/" target="_blank">
-                School of Informatics
-            </a>
-
-            <a href="https://www.wu.ac.th/" target="_blank">
-                Walailak University
-            </a>
-        </div>
-
     </div>
-
 </div>
 
-
 <!-- HEADER -->
-
 <header class="header">
-
     <div class="header-inner">
 
         <a href="index.html" class="logo">
-
-            <div class="logo-box">
-                DCM
-            </div>
-
+            <div class="logo-box">DCM</div>
             <div class="logo-text">
-
-                <strong>
-                    Digital Content & Media
-                </strong>
-
-                <span>
-                    School of Informatics • Walailak University
-                </span>
-
+                <strong>Digital Content & Media</strong>
+                <span>School of Informatics • Walailak University</span>
             </div>
-
         </a>
 
     </div>
-
 </header>
 
-
 <!-- NAV -->
-
 <nav class="nav">
 
-    <button class="menu-btn" onclick="toggleMenu()">
-        ☰
-    </button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
     <div class="nav-inner" id="navMenu">
 
-        <a href="index.html">
-            หน้าหลัก
-        </a>
+        <a href="index.html">หน้าหลัก</a>
 
-        <a href="about.html">
-            เกี่ยวกับหลักสูตร
-        </a>
+        <a href="about.html">เกี่ยวกับหลักสูตร</a>
 
-        <a href="learning-outcomes.html">
+        <a href="learning-outcomes.html" class="active">
             ผลลัพธ์การเรียนรู้
         </a>
 
-        <a href="curriculum.html" class="active">
-            โครงสร้างหลักสูตร
-        </a>
+        <a href="curriculum.html">โครงสร้างหลักสูตร</a>
 
-        <a href="careers.html">
-            แนวทางอาชีพ
-        </a>
+        <a href="careers.html">แนวทางอาชีพ</a>
 
-        <a href="tuition.html">
-            ค่าใช้จ่าย
-        </a>
+        <a href="tuition.html">ค่าใช้จ่าย</a>
 
-        <a href="further-study.html">
-            ศึกษาต่อ
-        </a>
+        <a href="further-study.html">ศึกษาต่อ</a>
 
-        <a href="contact.html">
-            ติดต่อ
-        </a>
+        <a href="contact.html">ติดต่อ</a>
 
     </div>
-
 </nav>
 
-
 <!-- BREADCRUMB -->
-
 <div class="breadcrumb">
-
     <div class="breadcrumb-inner">
-
-        <a href="index.html">
-            หน้าหลัก
-        </a>
-
+        <a href="index.html">หน้าหลัก</a>
         <span> › </span>
-
-        โครงสร้างหลักสูตร
-
+        ผลลัพธ์การเรียนรู้
     </div>
-
 </div>
 
-
 <!-- HERO -->
-
 <section class="hero">
 
     <div class="hero-inner">
 
         <span class="hero-tag">
-            CURRICULUM
+            PROGRAM LEARNING OUTCOMES
         </span>
 
         <h1>
-            โครงสร้างหลักสูตร
+            ผลลัพธ์การเรียนรู้<br>
+            ของหลักสูตร
         </h1>
 
         <p>
-            หลักสูตรสารสนเทศศาสตรบัณฑิต
-            สาขาดิจิทัลคอนเทนต์และสื่อ
-            มีโครงสร้างการเรียนรู้รวม 123 หน่วยกิต
+            สิ่งที่นักศึกษาจะได้รับจากการเรียนในหลักสูตร
+            ดิจิทัลคอนเทนต์และสื่อ ทั้งด้านความรู้ ทักษะ
+            จริยธรรม และคุณลักษณะของบัณฑิต
         </p>
 
     </div>
@@ -998,118 +753,106 @@ footer{
 </section>
 
 
-<!-- CREDIT SUMMARY -->
-
+<!-- INTRO -->
 <section class="container">
 
-    <div class="section-title">
-
-        <div class="small">
-            Program Structure
-        </div>
-
-        <h2>
-            ภาพรวมหน่วยกิต
-        </h2>
-
-        <p>
-            นักศึกษาจะเรียนทั้งหมวดวิชาศึกษาทั่วไป
-            วิชาเฉพาะ สหกิจศึกษา และวิชาเลือกเสรี
-        </p>
-
-    </div>
-
-
-    <div class="credit-summary">
-
-        <div class="credit-card">
-
-            <div class="credit-number">
-                26
-            </div>
-
-            <h3>
-                ศึกษาทั่วไป
-            </h3>
-
-            <p>
-                General Education
-            </p>
-
-        </div>
-
-
-        <div class="credit-card">
-
-            <div class="credit-number">
-                91
-            </div>
-
-            <h3>
-                วิชาเฉพาะ
-            </h3>
-
-            <p>
-                Specific Courses
-            </p>
-
-        </div>
-
-
-        <div class="credit-card">
-
-            <div class="credit-number">
-                13
-            </div>
-
-            <h3>
-                สหกิจศึกษา
-            </h3>
-
-            <p>
-                Cooperative Education
-            </p>
-
-        </div>
-
-
-        <div class="credit-card">
-
-            <div class="credit-number">
-                6
-            </div>
-
-            <h3>
-                วิชาเลือกเสรี
-            </h3>
-
-            <p>
-                Free Electives
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="total-box">
+    <div class="intro">
 
         <div>
 
-            <h2>
-                หน่วยกิตรวมตลอดหลักสูตร
-            </h2>
+            <div class="section-title">
+
+                <div class="small">
+                    Learning Outcomes
+                </div>
+
+                <h2>
+                    เรียนแล้วได้อะไร?
+                </h2>
+
+            </div>
 
             <p>
-                Bachelor of Information Science
-                (Digital Content and Media)
+                หลักสูตรสารสนเทศศาสตรบัณฑิต สาขาดิจิทัลคอนเทนต์และสื่อ
+                กำหนดผลลัพธ์การเรียนรู้ของหลักสูตร หรือ PLO
+                เพื่อให้เห็นความสามารถที่นักศึกษาควรพัฒนาเมื่อสำเร็จการศึกษา
+            </p>
+
+            <p>
+                ผลลัพธ์การเรียนรู้ครอบคลุมทั้งความรู้เกี่ยวกับสารสนเทศ
+                และดิจิทัลคอนเทนต์ ทักษะการออกแบบและพัฒนาสื่อ
+                การสื่อสาร จริยธรรม รวมถึงการทำงานร่วมกับผู้อื่น
             </p>
 
         </div>
 
-        <div class="total-credit">
-            123
-            <small>Credits</small>
+        <img
+            class="intro-img"
+            src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/426595157_1003333134466401_919233955751944485_n.jpg"
+            alt="Digital Content and Media"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- KNOWLEDGE -->
+<section class="container category">
+
+    <div class="category-head">
+
+        <div class="category-icon">
+            📚
+        </div>
+
+        <div>
+            <h2>ด้านความรู้</h2>
+            <p>Knowledge</p>
+        </div>
+
+    </div>
+
+
+    <div class="plo-grid">
+
+        <div class="plo-card">
+
+            <div class="plo-number">
+                PLO 1
+            </div>
+
+            <h3>
+                ความรู้พื้นฐานและแนวคิดด้านดิจิทัลคอนเทนต์
+            </h3>
+
+            <p>
+                อธิบายความรู้ด้านมนุษยศาสตร์สังคมศาสตร์ทั่วไป
+                เทคโนโลยีสารสนเทศพื้นฐาน และแนวคิดสำหรับการออกแบบ
+                ผลิต และเผยแพร่ดิจิทัลคอนเทนต์ที่ตอบสนองความต้องการของผู้ใช้
+            </p>
+
+        </div>
+
+
+        <div class="plo-card">
+
+            <div class="plo-number">
+                PLO 2
+            </div>
+
+            <h3>
+                การประยุกต์ใช้ความรู้ในอุตสาหกรรมดิจิทัล
+            </h3>
+
+            <p>
+                ประยุกต์ใช้ความรู้ด้านการจัดการสารสนเทศ
+                การออกแบบและผลิตสื่อ การจัดบริการดิจิทัลคอนเทนต์
+                และความรู้ในการประกอบอาชีพด้านการพัฒนาการเรียนแบบออนไลน์
+                คอนเทนต์เพื่อการตลาดดิจิทัล ดิจิทัลคอลเล็กชัน
+                หรือเทคโนโลยีเพื่อการจัดการคอนเทนต์
+            </p>
+
         </div>
 
     </div>
@@ -1117,197 +860,97 @@ footer{
 </section>
 
 
-<!-- STRUCTURE -->
+<!-- SKILLS -->
+<section class="full-section">
 
-<section class="structure-section">
+    <div class="container category">
 
-    <div class="container">
+        <div class="category-head">
 
-        <div class="section-title">
-
-            <div class="small">
-                Course Categories
+            <div class="category-icon">
+                💻
             </div>
 
-            <h2>
-                รายละเอียดโครงสร้างหลักสูตร
-            </h2>
-
-            <p>
-                แบ่งการเรียนออกเป็นหมวดต่าง ๆ
-                เพื่อพัฒนาความรู้และทักษะที่จำเป็นต่อการทำงาน
-                ในสายดิจิทัลคอนเทนต์และสื่อ
-            </p>
+            <div>
+                <h2>ด้านทักษะ</h2>
+                <p>Skills</p>
+            </div>
 
         </div>
 
 
-        <div class="structure-grid">
+        <div class="plo-grid">
 
+            <div class="plo-card">
 
-            <!-- GENERAL -->
-
-            <div class="structure-card">
-
-                <div class="structure-icon">
-                    📚
+                <div class="plo-number">
+                    PLO 3
                 </div>
 
                 <h3>
-                    หมวดวิชาศึกษาทั่วไป
+                    เลือกใช้เทคโนโลยี
                 </h3>
 
-                <div class="structure-credit">
-                    26 หน่วยกิต
-                </div>
-
                 <p>
-                    เป็นรายวิชาที่ช่วยพัฒนาพื้นฐานความรู้
-                    ทักษะการเรียนรู้ การสื่อสาร และทักษะที่จำเป็น
-                    โดยในส่วนของภาษา นักศึกษาสามารถเลือกเรียน
-                    ภาษาอังกฤษหรือภาษาจีนตามโครงสร้างของหลักสูตร
+                    เลือกใช้เทคโนโลยีเพื่อการพัฒนาดิจิทัลคอนเทนต์
+                    ที่ตอบสนองวัตถุประสงค์การใช้งานของผู้ใช้
                 </p>
-
-                <div class="progress-item">
-
-                    <div class="progress-head">
-                        <span>สัดส่วนของหลักสูตร</span>
-                        <strong>21.1%</strong>
-                    </div>
-
-                    <div class="progress-bar">
-                        <div
-                            class="progress-fill"
-                            style="width:21.1%"
-                        ></div>
-                    </div>
-
-                </div>
 
             </div>
 
 
-            <!-- SPECIFIC -->
+            <div class="plo-card">
 
-            <div class="structure-card">
-
-                <div class="structure-icon">
-                    💻
+                <div class="plo-number">
+                    PLO 4
                 </div>
 
                 <h3>
-                    หมวดวิชาเฉพาะ
+                    ออกแบบบริการดิจิทัลคอนเทนต์
                 </h3>
 
-                <div class="structure-credit">
-                    91 หน่วยกิต
-                </div>
-
                 <p>
-                    เป็นส่วนสำคัญของหลักสูตร ประกอบด้วย
-                    รายวิชาเฉพาะ 78 หน่วยกิต และสหกิจศึกษา
-                    13 หน่วยกิต โดยเน้นความรู้และทักษะที่เกี่ยวข้อง
-                    กับดิจิทัลคอนเทนต์และสื่อ
+                    ออกแบบการจัดบริการดิจิทัลคอนเทนต์อย่างเป็นระบบ
+                    โดยใช้กระบวนการวิจัยและพัฒนาเพื่อรองรับ
+                    การเปลี่ยนแปลงทางดิจิทัลขององค์กร
                 </p>
-
-                <div class="progress-item">
-
-                    <div class="progress-head">
-                        <span>สัดส่วนของหลักสูตร</span>
-                        <strong>74.0%</strong>
-                    </div>
-
-                    <div class="progress-bar">
-                        <div
-                            class="progress-fill"
-                            style="width:74%"
-                        ></div>
-                    </div>
-
-                </div>
 
             </div>
 
 
-            <!-- FREE ELECTIVE -->
+            <div class="plo-card">
 
-            <div class="structure-card">
-
-                <div class="structure-icon">
-                    ⭐
+                <div class="plo-number">
+                    PLO 5
                 </div>
 
                 <h3>
-                    วิชาเลือกเสรี
+                    จัดระบบบริการดิจิทัลคอนเทนต์
                 </h3>
 
-                <div class="structure-credit">
-                    6 หน่วยกิต
-                </div>
-
                 <p>
-                    นักศึกษาสามารถเลือกเรียนรายวิชาที่สนใจ
-                    เพื่อเพิ่มความรู้และประสบการณ์
-                    ให้สอดคล้องกับความสนใจของตนเอง
+                    มีทักษะในการจัดระบบบริการดิจิทัลคอนเทนต์
+                    ให้สอดคล้องกับความต้องการขององค์กร
                 </p>
-
-                <div class="progress-item">
-
-                    <div class="progress-head">
-                        <span>สัดส่วนของหลักสูตร</span>
-                        <strong>4.9%</strong>
-                    </div>
-
-                    <div class="progress-bar">
-                        <div
-                            class="progress-fill"
-                            style="width:4.9%"
-                        ></div>
-                    </div>
-
-                </div>
 
             </div>
 
 
-            <!-- SPECIFIC DETAIL -->
+            <div class="plo-card">
 
-            <div class="structure-card">
-
-                <div class="structure-icon">
-                    🎨
+                <div class="plo-number">
+                    PLO 6
                 </div>
 
                 <h3>
-                    รายวิชาเฉพาะ
+                    การสื่อสาร
                 </h3>
 
-                <div class="structure-credit">
-                    78 หน่วยกิต
-                </div>
-
                 <p>
-                    แบ่งเป็นวิชาบังคับ 63 หน่วยกิต
-                    และกลุ่มวิชาเลือกหรือ Minor 15 หน่วยกิต
-                    เพื่อให้นักศึกษาสามารถพัฒนาความสนใจ
-                    ในแนวทางที่ต้องการ
+                    มีทักษะการสื่อสารภาษาไทยและภาษาอังกฤษ
+                    เพื่อใช้ในชีวิตประจำวัน ทั้งการฟัง พูด อ่าน เขียน
+                    และเสนอผลงานได้ตามวัตถุประสงค์
                 </p>
-
-                <div class="progress-item">
-
-                    <div class="progress-head">
-                        <span>ภายในหมวดวิชาเฉพาะ</span>
-                        <strong>78 Credits</strong>
-                    </div>
-
-                    <div class="progress-bar">
-                        <div
-                            class="progress-fill"
-                            style="width:85.7%"
-                        ></div>
-                    </div>
-
-                </div>
 
             </div>
 
@@ -1318,307 +961,201 @@ footer{
 </section>
 
 
-<!-- SPECIFIC COURSE -->
+<!-- ETHICS -->
+<section class="container category">
 
+    <div class="category-head">
+
+        <div class="category-icon">
+            ⚖️
+        </div>
+
+        <div>
+            <h2>ด้านจริยธรรม</h2>
+            <p>Ethics</p>
+        </div>
+
+    </div>
+
+
+    <div class="plo-grid">
+
+        <div class="plo-card">
+
+            <div class="plo-number">
+                PLO 7
+            </div>
+
+            <h3>
+                ความรับผิดชอบและจริยธรรมทางวิชาการ
+            </h3>
+
+            <p>
+                แสดงออกถึงความซื่อสัตย์ ความกตัญญูกตเวที
+                ความรับผิดชอบต่อตนเองและสังคม ปฏิบัติตามกฎระเบียบ
+                และปฏิบัติตนอย่างถูกต้องตามจริยธรรมทางวิชาการ
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CHARACTER -->
+<section class="full-section">
+
+    <div class="container category">
+
+        <div class="category-head">
+
+            <div class="category-icon">
+                ⭐
+            </div>
+
+            <div>
+                <h2>ด้านคุณลักษณะ</h2>
+                <p>Character</p>
+            </div>
+
+        </div>
+
+
+        <div class="plo-grid">
+
+            <div class="plo-card">
+
+                <div class="plo-number">
+                    PLO 8
+                </div>
+
+                <h3>
+                    ภาวะผู้นำและการทำงานร่วมกับผู้อื่น
+                </h3>
+
+                <p>
+                    แสดงออกถึงการมีภาวะผู้นำ มีสุขภาวะ
+                    สามารถเป็นได้ทั้งผู้นำและผู้ตาม มีจิตอาสา
+                    และทำงานร่วมกับผู้อื่น
+                </p>
+
+            </div>
+
+
+            <div class="plo-card">
+
+                <div class="plo-number">
+                    PLO 9
+                </div>
+
+                <h3>
+                    การรู้ดิจิทัลและการเรียนรู้ตลอดชีวิต
+                </h3>
+
+                <p>
+                    แสดงออกถึงการรู้ดิจิทัล
+                    สามารถแสวงหาความรู้ภายใต้สภาพแวดล้อมดิจิทัล
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILL SUMMARY -->
 <section class="container">
 
     <div class="section-title">
 
         <div class="small">
-            Specific Courses
+            What You Will Develop
         </div>
 
         <h2>
-            รายละเอียดวิชาเฉพาะ
+            ทักษะสำคัญที่นักศึกษาจะได้พัฒนา
         </h2>
 
         <p>
-            ในหมวดวิชาเฉพาะ นักศึกษาจะเรียนวิชาบังคับ
-            และสามารถเลือกกลุ่มวิชาที่สนใจเพื่อพัฒนาความเชี่ยวชาญ
+            ผลลัพธ์การเรียนรู้สามารถมองภาพรวมเป็นทักษะสำคัญ
+            ที่นำไปใช้ในการเรียน การทำโครงงาน และการทำงานจริง
         </p>
 
     </div>
 
 
-    <div class="table-wrapper">
+    <div class="skill-grid">
 
-        <table class="course-table">
+        <div class="skill-box">
 
-            <thead>
-
-                <tr>
-
-                    <th>
-                        รายการ
-                    </th>
-
-                    <th>
-                        หน่วยกิต
-                    </th>
-
-                    <th>
-                        รายละเอียด
-                    </th>
-
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                <tr>
-
-                    <td>
-                        วิชาเฉพาะบังคับ
-                    </td>
-
-                    <td>
-                        <strong>63</strong>
-                    </td>
-
-                    <td>
-                        <span class="badge">
-                            Required
-                        </span>
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>
-                        กลุ่มวิชาเลือก / Minor
-                    </td>
-
-                    <td>
-                        <strong>15</strong>
-                    </td>
-
-                    <td>
-                        <span class="badge">
-                            Minor
-                        </span>
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>
-                        รวมรายวิชาเฉพาะ
-                    </td>
-
-                    <td>
-                        <strong>78</strong>
-                    </td>
-
-                    <td>
-                        วิชาเฉพาะทั้งหมด
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>
-                        สหกิจศึกษา
-                    </td>
-
-                    <td>
-                        <strong>13</strong>
-                    </td>
-
-                    <td>
-                        <span class="badge">
-                            Cooperative Education
-                        </span>
-                    </td>
-
-                </tr>
-
-            </tbody>
-
-        </table>
-
-    </div>
-
-</section>
-
-
-<!-- MINOR -->
-
-<section class="structure-section">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <div class="small">
-                Minor Groups
+            <div class="skill-icon">
+                🎨
             </div>
 
-            <h2>
-                กลุ่มวิชาเลือกที่สามารถต่อยอดได้
-            </h2>
+            <h3>
+                Digital Content
+            </h3>
 
             <p>
-                หลักสูตรกำหนดกลุ่มวิชาเพื่อให้นักศึกษาเลือกพัฒนา
-                ความสนใจและทักษะให้สอดคล้องกับแนวทางอาชีพ
+                การออกแบบและผลิตดิจิทัลคอนเทนต์
             </p>
 
         </div>
 
 
-        <div class="minor-grid">
+        <div class="skill-box">
 
-
-            <div class="minor-card">
-
-                <div class="minor-number">
-                    01
-                </div>
-
-                <h3>
-                    Online Learning Development
-                </h3>
-
-                <p>
-                    การพัฒนาการเรียนรู้แบบออนไลน์
-                    และสื่อสำหรับการเรียนรู้ในยุคดิจิทัล
-                </p>
-
+            <div class="skill-icon">
+                💡
             </div>
 
+            <h3>
+                Digital Technology
+            </h3>
 
-            <div class="minor-card">
-
-                <div class="minor-number">
-                    02
-                </div>
-
-                <h3>
-                    Digital Marketing Content
-                </h3>
-
-                <p>
-                    การสร้างคอนเทนต์สำหรับการตลาดดิจิทัล
-                    และการสื่อสารกับกลุ่มเป้าหมาย
-                </p>
-
-            </div>
-
-
-            <div class="minor-card">
-
-                <div class="minor-number">
-                    03
-                </div>
-
-                <h3>
-                    Digital Collections
-                </h3>
-
-                <p>
-                    การจัดการและพัฒนาดิจิทัลคอลเล็กชัน
-                    สำหรับข้อมูลและทรัพยากรดิจิทัล
-                </p>
-
-            </div>
-
-
-            <div class="minor-card">
-
-                <div class="minor-number">
-                    04
-                </div>
-
-                <h3>
-                    Content Management Technology
-                </h3>
-
-                <p>
-                    เทคโนโลยีเพื่อการจัดการคอนเทนต์
-                    และระบบสารสนเทศด้านเนื้อหา
-                </p>
-
-            </div>
+            <p>
+                การเลือกใช้เทคโนโลยีให้เหมาะกับงาน
+            </p>
 
         </div>
 
-    </div>
 
-</section>
+        <div class="skill-box">
 
-
-<!-- COOPERATIVE -->
-
-<section class="coop">
-
-    <div class="coop-inner">
-
-        <div class="coop-box">
-
-            <div>
-
-                <h2>
-                    สหกิจศึกษาและประสบการณ์การทำงานจริง
-                </h2>
-
-                <p>
-                    หลักสูตรมีการจัดการเรียนรู้แบบบูรณาการ
-                    กับการทำงาน โดยนักศึกษาจะได้มีประสบการณ์
-                    ปฏิบัติงานจริงในองค์กรทั้งในประเทศหรือต่างประเทศ
-                </p>
-
-                <p style="margin-top:15px;">
-                    ประสบการณ์ปฏิบัติงานจริงมีระยะเวลา
-                    อย่างน้อย 8 เดือน ตามแนวทางของหลักสูตร
-                </p>
-
+            <div class="skill-icon">
+                🗣️
             </div>
 
+            <h3>
+                Communication
+            </h3>
 
-            <div>
-
-                <div class="coop-number">
-                    13
-                </div>
-
-                <div class="coop-label">
-                    หน่วยกิตสหกิจศึกษา
-                </div>
-
-                <div style="margin-top:12px;color:#d7dcde;">
-                    ประสบการณ์ทำงานจริงอย่างน้อย 8 เดือน
-                </div>
-
-            </div>
+            <p>
+                การสื่อสารและการนำเสนอผลงาน
+            </p>
 
         </div>
 
-    </div>
 
-</section>
+        <div class="skill-box">
 
+            <div class="skill-icon">
+                🤝
+            </div>
 
-<!-- NOTE -->
+            <h3>
+                Collaboration
+            </h3>
 
-<section class="container">
+            <p>
+                การทำงานร่วมกับผู้อื่นและภาวะผู้นำ
+            </p>
 
-    <div class="note">
-
-        <strong>
-            หมายเหตุ
-        </strong>
-
-        <p>
-            โครงสร้างข้างต้นสรุปจากข้อมูลหลักสูตรดิจิทัลคอนเทนต์และสื่อ
-            โดยรายละเอียดรายวิชาและแผนการเรียนอาจต้องตรวจสอบ
-            จากเอกสารหลักสูตรฉบับล่าสุดของมหาวิทยาลัยอีกครั้ง
-        </p>
+        </div>
 
     </div>
 
@@ -1626,7 +1163,6 @@ footer{
 
 
 <!-- CTA -->
-
 <section class="container">
 
     <div class="cta">
@@ -1634,18 +1170,18 @@ footer{
         <div>
 
             <h2>
-                เรียนจบแล้วทำงานอะไรได้บ้าง?
+                อยากรู้ว่าเรียนอะไรบ้าง?
             </h2>
 
             <p>
-                ดูแนวทางอาชีพที่สามารถต่อยอดจากทักษะ
-                ด้านดิจิทัลคอนเทนต์และสื่อ
+                ดูโครงสร้างหลักสูตร รายวิชา และจำนวนหน่วยกิต
+                ของสาขาดิจิทัลคอนเทนต์และสื่อ
             </p>
 
         </div>
 
-        <a href="careers.html" class="btn">
-            ดูแนวทางอาชีพ →
+        <a href="curriculum.html" class="btn">
+            ดูโครงสร้างหลักสูตร →
         </a>
 
     </div>
@@ -1654,7 +1190,6 @@ footer{
 
 
 <!-- FOOTER -->
-
 <footer>
 
     <div class="footer-inner">
@@ -1681,25 +1216,10 @@ footer{
                 เมนู
             </h3>
 
-            <a href="index.html">
-                หน้าหลัก
-            </a>
-
-            <a href="about.html">
-                เกี่ยวกับหลักสูตร
-            </a>
-
-            <a href="learning-outcomes.html">
-                ผลลัพธ์การเรียนรู้
-            </a>
-
-            <a href="curriculum.html">
-                โครงสร้างหลักสูตร
-            </a>
-
-            <a href="careers.html">
-                แนวทางอาชีพ
-            </a>
+            <a href="index.html">หน้าหลัก</a>
+            <a href="about.html">เกี่ยวกับหลักสูตร</a>
+            <a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a>
+            <a href="curriculum.html">โครงสร้างหลักสูตร</a>
 
         </div>
 
@@ -1732,7 +1252,6 @@ footer{
 
 
 <!-- CHATBOT -->
-
 <div class="chatbot">
 
     <div class="chat-window" id="chatWindow">
@@ -1741,25 +1260,22 @@ footer{
             🤖 DCM Assistant
         </div>
 
-
         <div class="chat-body" id="chatBody">
 
             <div class="bot-msg">
                 สวัสดีครับ 👋<br>
                 ผมคือ DCM Assistant<br>
-                ถามเกี่ยวกับโครงสร้างหลักสูตร
-                หน่วยกิต หรือรายวิชาได้เลยครับ
+                ถามเกี่ยวกับหลักสูตรดิจิทัลคอนเทนต์และสื่อได้เลยครับ
             </div>
 
         </div>
-
 
         <div class="chat-input">
 
             <input
                 type="text"
                 id="chatInput"
-                placeholder="เช่น หลักสูตรมีกี่หน่วยกิต?"
+                placeholder="พิมพ์คำถาม..."
                 onkeydown="if(event.key==='Enter') sendMessage()"
             >
 
@@ -1770,7 +1286,6 @@ footer{
         </div>
 
     </div>
-
 
     <button class="chat-button" onclick="toggleChat()">
         💬
@@ -1783,8 +1298,7 @@ footer{
 
 function toggleMenu(){
 
-    const menu =
-        document.getElementById("navMenu");
+    const menu = document.getElementById("navMenu");
 
     menu.classList.toggle("show");
 
@@ -1793,8 +1307,7 @@ function toggleMenu(){
 
 function toggleChat(){
 
-    const chat =
-        document.getElementById("chatWindow");
+    const chat = document.getElementById("chatWindow");
 
     chat.style.display =
         chat.style.display === "block"
@@ -1804,13 +1317,11 @@ function toggleChat(){
 }
 
 
-function addMessage(text,type){
+function addMessage(text, type){
 
-    const body =
-        document.getElementById("chatBody");
+    const body = document.getElementById("chatBody");
 
-    const div =
-        document.createElement("div");
+    const div = document.createElement("div");
 
     div.className =
         type === "user"
@@ -1821,154 +1332,83 @@ function addMessage(text,type){
 
     body.appendChild(div);
 
-    body.scrollTop =
-        body.scrollHeight;
+    body.scrollTop = body.scrollHeight;
 
 }
 
 
 function getBotAnswer(question){
 
-    const q =
-        question.toLowerCase();
-
+    const q = question.toLowerCase();
 
     if(
-        q.includes("กี่หน่วยกิต") ||
-        q.includes("หน่วยกิตทั้งหมด") ||
-        q.includes("รวมกี่")
+        q.includes("plo") ||
+        q.includes("ผลลัพธ์") ||
+        q.includes("เรียนรู้")
     ){
 
         return `
-        หลักสูตรดิจิทัลคอนเทนต์และสื่อ
-        มีหน่วยกิตรวม <b>123 หน่วยกิต</b> ครับ
+        หลักสูตรมีผลลัพธ์การเรียนรู้ 9 ข้อ หรือ PLO 1–9
+        ครอบคลุมด้านความรู้ ทักษะ จริยธรรม
+        และคุณลักษณะของบัณฑิตครับ
         `;
 
     }
 
 
     if(
-        q.includes("ศึกษาทั่วไป") ||
-        q.includes("general")
+        q.includes("ความรู้") ||
+        q.includes("knowledge")
     ){
 
         return `
-        หมวดวิชาศึกษาทั่วไปมี
-        <b>26 หน่วยกิต</b> ครับ
+        ด้านความรู้คือ PLO 1 และ PLO 2
+        เน้นความรู้เกี่ยวกับสารสนเทศ เทคโนโลยี
+        การออกแบบ ผลิต และจัดการดิจิทัลคอนเทนต์ครับ
         `;
 
     }
 
 
     if(
-        q.includes("วิชาเฉพาะ") ||
-        q.includes("specific")
+        q.includes("ทักษะ") ||
+        q.includes("skill")
     ){
 
         return `
-        หมวดวิชาเฉพาะมีทั้งหมด
-        <b>91 หน่วยกิต</b>
-        โดยในนั้นเป็นรายวิชาเฉพาะ 78 หน่วยกิต
-        และสหกิจศึกษา 13 หน่วยกิตครับ
+        ด้านทักษะคือ PLO 3–6
+        ครอบคลุมการเลือกใช้เทคโนโลยี
+        การออกแบบบริการดิจิทัลคอนเทนต์
+        การจัดระบบบริการ และการสื่อสารครับ
         `;
 
     }
 
 
     if(
-        q.includes("วิชาบังคับ") ||
-        q.includes("บังคับ")
+        q.includes("จริยธรรม") ||
+        q.includes("ethic")
     ){
 
         return `
-        วิชาเฉพาะบังคับมี
-        <b>63 หน่วยกิต</b> ครับ
+        ด้านจริยธรรมคือ PLO 7
+        เน้นความซื่อสัตย์ ความรับผิดชอบ
+        การปฏิบัติตามกฎระเบียบ และจริยธรรมทางวิชาการครับ
         `;
 
     }
 
 
     if(
-        q.includes("minor") ||
-        q.includes("กลุ่มวิชาเลือก")
+        q.includes("คุณลักษณะ") ||
+        q.includes("ผู้นำ") ||
+        q.includes("ทำงานร่วม")
     ){
 
         return `
-        กลุ่มวิชาเลือกหรือ Minor
-        มี <b>15 หน่วยกิต</b> ครับ
-        `;
-
-    }
-
-
-    if(
-        q.includes("สหกิจ") ||
-        q.includes("cooperative")
-    ){
-
-        return `
-        สหกิจศึกษามี
-        <b>13 หน่วยกิต</b>
-        และหลักสูตรมีการบูรณาการการทำงานจริง
-        อย่างน้อย 8 เดือนครับ
-        `;
-
-    }
-
-
-    if(
-        q.includes("เลือกเสรี") ||
-        q.includes("free elective")
-    ){
-
-        return `
-        วิชาเลือกเสรีมี
-        <b>6 หน่วยกิต</b> ครับ
-        `;
-
-    }
-
-
-    if(
-        q.includes("เรียนภาษา") ||
-        q.includes("ภาษาอังกฤษ") ||
-        q.includes("ภาษาจีน")
-    ){
-
-        return `
-        ในหมวดศึกษาทั่วไปมีส่วนของภาษา
-        โดยนักศึกษาสามารถเลือกภาษาอังกฤษ
-        หรือภาษาจีนตามโครงสร้างของหลักสูตรครับ
-        `;
-
-    }
-
-
-    if(
-        q.includes("minor มีอะไร") ||
-        q.includes("เลือกอะไรได้")
-    ){
-
-        return `
-        กลุ่มวิชาเลือกที่หลักสูตรระบุไว้ ได้แก่
-        <br>• Online Learning Development
-        <br>• Digital Marketing Content
-        <br>• Digital Collections
-        <br>• Content Management Technology
-        `;
-
-    }
-
-
-    if(
-        q.includes("ค่าเทอม") ||
-        q.includes("ค่าใช้จ่าย")
-    ){
-
-        return `
-        ค่าใช้จ่ายอยู่ที่ประมาณ
-        <b>25,000 บาทต่อภาคการศึกษา</b>
-        และประมาณ 200,000 บาทตลอดหลักสูตรครับ
+        ด้านคุณลักษณะคือ PLO 8 และ PLO 9
+        เน้นภาวะผู้นำ การทำงานร่วมกับผู้อื่น
+        จิตอาสา และการรู้ดิจิทัลครับ
         `;
 
     }
@@ -1980,10 +1420,9 @@ function getBotAnswer(question){
     ){
 
         return `
-        หลังจบสามารถต่อยอดสู่อาชีพ เช่น
-        Digital Content Creator,
-        Web Content Manager,
-        Digital Collection Developer
+        สาขานี้สามารถต่อยอดสู่อาชีพ เช่น
+        Digital Content Creator / Content Specialist,
+        Web Content Manager, Digital Collection Developer
         และ Web Designer ครับ
         `;
 
@@ -1991,12 +1430,27 @@ function getBotAnswer(question){
 
 
     if(
-        q.includes("เรียนต่อ") ||
-        q.includes("ปริญญาโท")
+        q.includes("ค่าเทอม") ||
+        q.includes("ค่าใช้จ่าย")
     ){
 
         return `
-        สามารถศึกษาต่อระดับปริญญาโทหรือปริญญาเอก
+        ค่าใช้จ่ายของหลักสูตรอยู่ที่ประมาณ
+        25,000 บาทต่อภาคการศึกษา
+        และประมาณ 200,000 บาทตลอดหลักสูตรครับ
+        `;
+
+    }
+
+
+    if(
+        q.includes("เรียนต่อ") ||
+        q.includes("ปริญญาโท") ||
+        q.includes("ปริญญาเอก")
+    ){
+
+        return `
+        หลังจบสามารถศึกษาต่อระดับปริญญาโทหรือปริญญาเอก
         ใน Computer Science, Information Technology
         หรือสาขาที่เกี่ยวข้องได้ครับ
         `;
@@ -2005,10 +1459,9 @@ function getBotAnswer(question){
 
 
     return `
-    ลองถามผมเกี่ยวกับ
-    <b>หน่วยกิต, วิชาเฉพาะ, วิชาบังคับ,
-    Minor, สหกิจศึกษา, วิชาเลือกเสรี
-    หรือโครงสร้างหลักสูตร</b>
+    สามารถถามผมเกี่ยวกับ
+    <b>หลักสูตร, PLO, รายวิชา, ค่าเทอม,
+    อาชีพ, การศึกษาต่อ หรือการติดต่อหลักสูตร</b>
     ได้เลยครับ 😊
     `;
 
@@ -2017,11 +1470,9 @@ function getBotAnswer(question){
 
 function sendMessage(){
 
-    const input =
-        document.getElementById("chatInput");
+    const input = document.getElementById("chatInput");
 
-    const question =
-        input.value.trim();
+    const question = input.value.trim();
 
     if(!question) return;
 
@@ -2031,8 +1482,7 @@ function sendMessage(){
 
     setTimeout(function(){
 
-        const answer =
-            getBotAnswer(question);
+        const answer = getBotAnswer(question);
 
         addMessage(answer,"bot");
 
