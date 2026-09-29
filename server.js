@@ -21,7 +21,7 @@ const ai = GEMINI_API_KEY
 // ใช้โมเดล Gemini ที่กำหนดผ่าน Render ได้
 // ถ้าไม่ได้กำหนด จะใช้ค่าเริ่มต้นนี้
 const GEMINI_MODEL =
-    process.env.GEMINI_MODEL || "gemini-3.8-flash";
+    process.env.GEMINI_MODEL || "gemini-2.5-flash";
 
 
 // =====================================================
