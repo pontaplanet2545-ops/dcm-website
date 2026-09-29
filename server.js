@@ -3,26 +3,33 @@ const path = require("path");
 const { GoogleGenAI } = require("@google/genai");
 
 const app = express();
-
 const PORT = process.env.PORT || 3000;
 
-// =====================================================
-// GEMINI
-// =====================================================
+// ================================
+// CHECK GEMINI KEY
+// ================================
+
+console.log(
+  "GEMINI_API_KEY exists:",
+  !!process.env.GEMINI_API_KEY
+);
+
+console.log(
+  "GEMINI_API_KEY length:",
+  process.env.GEMINI_API_KEY
+    ? process.env.GEMINI_API_KEY.length
+    : 0
+);
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 
 const ai = GEMINI_API_KEY
-    ? new GoogleGenAI({
-        apiKey: GEMINI_API_KEY
+  ? new GoogleGenAI({
+      apiKey: GEMINI_API_KEY
     })
-    : null;
+  : null;
 
-// ใช้โมเดล Gemini ที่กำหนดผ่าน Render ได้
-// ถ้าไม่ได้กำหนด จะใช้ค่าเริ่มต้นนี้
-const GEMINI_MODEL =
-    process.env.GEMINI_MODEL || "gemini-2.5-flash";
-
+const GEMINI_MODEL = "gemini-2.5-flash";
 
 // =====================================================
 // EXPRESS
