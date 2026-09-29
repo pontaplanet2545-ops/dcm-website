@@ -1,1003 +1,1056 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>แนวทางประกอบอาชีพ | Digital Content and Media</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Noto Sans Thai", sans-serif;
-            background: #f5f9fd;
-            color: #243447;
-            line-height: 1.7;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* =========================
-           TOP BAR
-        ========================= */
-
-        .top-bar {
-            background: #f1f7fc;
-            border-bottom: 1px solid #dce9f3;
-            padding: 8px 5%;
-            font-size: 13px;
-            color: #607d94;
-        }
-
-        .top-inner {
-            max-width: 1250px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            background: white;
-            border-bottom: 1px solid #e2edf5;
-        }
-
-        .header-inner {
-            max-width: 1250px;
-            margin: auto;
-            padding: 18px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .brand-logo {
-            width: 55px;
-            height: 55px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #0077c8, #4db7ee);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 22px;
-            font-weight: 800;
-        }
-
-        .brand-text h1 {
-            font-size: 20px;
-            color: #0068ad;
-            font-weight: 800;
-            line-height: 1.3;
-        }
-
-        .brand-text p {
-            font-size: 12px;
-            color: #71879a;
-        }
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
-            background: #006fba;
-            color: white;
-        }
-
-        .nav-inner {
-            max-width: 1250px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 5%;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 0;
-        }
-
-        .nav-links a {
-            display: block;
-            padding: 15px 16px;
-            font-size: 14px;
-            transition: 0.25s;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            background: #005b98;
-        }
-
-        .menu-btn {
-            display: none;
-            border: none;
-            background: transparent;
-            color: white;
-            font-size: 27px;
-            cursor: pointer;
-        }
-
-        /* =========================
-           BREADCRUMB
-        ========================= */
-
-        .breadcrumb {
-            max-width: 1250px;
-            margin: auto;
-            padding: 15px 5%;
-            font-size: 13px;
-            color: #71879a;
-        }
-
-        .breadcrumb a {
-            color: #0077c8;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 360px;
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0, 68, 115, 0.92),
-                    rgba(0, 111, 186, 0.72),
-                    rgba(0, 111, 186, 0.35)
-                ),
-                url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85");
-
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero-content {
-            max-width: 1250px;
-            width: 100%;
-            margin: auto;
-            padding: 60px 5%;
-            color: white;
-        }
-
-        .hero-label {
-            display: inline-block;
-            padding: 7px 15px;
-            border: 1px solid rgba(255,255,255,0.45);
-            background: rgba(255,255,255,0.12);
-            border-radius: 30px;
-            font-size: 13px;
-            margin-bottom: 15px;
-        }
-
-        .hero h2 {
-            font-size: 42px;
-            line-height: 1.25;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .hero p {
-            max-width: 720px;
-            font-size: 17px;
-            opacity: 0.95;
-        }
-
-        /* =========================
-           MAIN
-        ========================= */
-
-        main {
-            max-width: 1250px;
-            margin: auto;
-            padding: 70px 5%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title .small {
-            color: #0084d1;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .section-title h2 {
-            color: #075d96;
-            font-size: 31px;
-            margin: 5px 0 10px;
-        }
-
-        .section-title p {
-            max-width: 700px;
-            margin: auto;
-            color: #6b7f91;
-            font-size: 15px;
-        }
-
-        /* =========================
-           INTRO
-        ========================= */
-
-        .intro-box {
-            background: white;
-            border-radius: 18px;
-            padding: 35px;
-            margin-bottom: 60px;
-            border: 1px solid #e2edf5;
-            box-shadow: 0 8px 25px rgba(0, 82, 130, 0.06);
-        }
-
-        .intro-box h3 {
-            color: #006fba;
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .intro-box p {
-            color: #607486;
-            font-size: 15px;
-        }
-
-        /* =========================
-           CAREER GRID
-        ========================= */
-
-        .career-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .career-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid #e1edf5;
-            box-shadow: 0 10px 30px rgba(0, 75, 120, 0.08);
-            transition: 0.3s ease;
-        }
-
-        .career-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 18px 40px rgba(0, 88, 145, 0.14);
-        }
-
-        .career-image {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .career-content {
-            padding: 28px;
-        }
-
-        .career-top {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 10px;
-        }
-
-        .career-number {
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-            background: #e7f5ff;
-            color: #0077c8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-            font-weight: 800;
-        }
-
-        .career-content h3 {
-            color: #075d96;
-            font-size: 22px;
-        }
-
-        .career-name {
-            color: #0082ce;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .career-content p {
-            color: #65798b;
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-
-        .career-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .career-skills span {
-            background: #f0f8fd;
-            border: 1px solid #d9edf9;
-            color: #28749e;
-            border-radius: 20px;
-            padding: 5px 11px;
-            font-size: 12px;
-        }
-
-        /* =========================
-           SKILL SECTION
-        ========================= */
-
-        .skills-section {
-            margin-top: 80px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-
-        .skill-box {
-            background: white;
-            border: 1px solid #e1edf5;
-            border-radius: 16px;
-            padding: 25px 20px;
-            text-align: center;
-        }
-
-        .skill-icon {
-            width: 55px;
-            height: 55px;
-            margin: auto auto 15px;
-            border-radius: 50%;
-            background: #e9f6ff;
-            color: #0077c8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: 800;
-        }
-
-        .skill-box h3 {
-            color: #075d96;
-            font-size: 16px;
-            margin-bottom: 6px;
-        }
-
-        .skill-box p {
-            color: #718494;
-            font-size: 13px;
-        }
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .cta {
-            margin-top: 70px;
-            background: linear-gradient(135deg, #0067a9, #0098df);
-            color: white;
-            padding: 45px;
-            border-radius: 22px;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 27px;
-            margin-bottom: 10px;
-        }
-
-        .cta p {
-            opacity: 0.92;
-            font-size: 14px;
-            margin-bottom: 22px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 11px 22px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.25s;
-        }
-
-        .btn-white {
-            background: white;
-            color: #006fba;
-        }
-
-        .btn-white:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 1px solid rgba(255,255,255,0.7);
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.12);
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #073b5c;
-            color: white;
-            margin-top: 50px;
-        }
-
-        .footer-inner {
-            max-width: 1250px;
-            margin: auto;
-            padding: 50px 5% 25px;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        .footer-col h3 {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        .footer-col p,
-        .footer-col a {
-            color: #c4d9e8;
-            font-size: 13px;
-        }
-
-        .footer-col a {
-            display: block;
-            margin-bottom: 7px;
-        }
-
-        .footer-col a:hover {
-            color: white;
-        }
-
-        .copyright {
-            border-top: 1px solid rgba(255,255,255,0.12);
-            padding: 18px 5%;
-            text-align: center;
-            color: #aac6d9;
-            font-size: 12px;
-        }
-
-        /* =========================
-           CHATBOT
-        ========================= */
-
-        .chat-button {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: none;
-            background: #0077c8;
-            color: white;
-            font-size: 25px;
-            cursor: pointer;
-            box-shadow: 0 8px 25px rgba(0, 100, 170, 0.3);
-            z-index: 1000;
-        }
-
-        .chat-box {
-            position: fixed;
-            right: 25px;
-            bottom: 95px;
-            width: 350px;
-            background: white;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 15px 45px rgba(0, 50, 80, 0.22);
-            display: none;
-            z-index: 999;
-            border: 1px solid #dceaf3;
-        }
-
-        .chat-header {
-            background: #0077c8;
-            color: white;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .chat-header strong {
-            font-size: 15px;
-        }
-
-        .chat-close {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        .chat-body {
-            height: 330px;
-            padding: 15px;
-            overflow-y: auto;
-            background: #f7fbfe;
-        }
-
-        .bot-message,
-        .user-message {
-            max-width: 85%;
-            padding: 10px 13px;
-            border-radius: 13px;
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
-
-        .bot-message {
-            background: white;
-            color: #52697b;
-            border: 1px solid #e0edf5;
-        }
-
-        .user-message {
-            margin-left: auto;
-            background: #0077c8;
-            color: white;
-        }
-
-        .chat-input {
-            display: flex;
-            border-top: 1px solid #e0eaf0;
-            background: white;
-        }
-
-        .chat-input input {
-            flex: 1;
-            border: none;
-            outline: none;
-            padding: 13px;
-            font-family: inherit;
-            font-size: 13px;
-        }
-
-        .chat-input button {
-            border: none;
-            background: #0077c8;
-            color: white;
-            padding: 0 17px;
-            cursor: pointer;
-        }
-
-        /* =========================
-           BACK BUTTON
-        ========================= */
-
-        .back-controls {
-            max-width: 1250px;
-            margin: auto;
-            padding: 10px 5% 0;
-            display: flex;
-            gap: 10px;
-        }
-
-        .back-btn {
-            border: 1px solid #d6e6f0;
-            background: white;
-            color: #0070b7;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 13px;
-        }
-
-        .back-btn:hover {
-            background: #eef8ff;
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-            }
-
-            .nav-links.show {
-                display: flex;
-            }
-
-            .nav-inner {
-                flex-wrap: wrap;
-            }
-
-            .menu-btn {
-                display: block;
-            }
-
-            .career-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-inner {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-        @media (max-width: 600px) {
-
-            .top-inner {
-                display: block;
-                text-align: center;
-            }
-
-            .header-inner {
-                padding: 15px 5%;
-            }
-
-            .brand-text h1 {
-                font-size: 16px;
-            }
-
-            .brand-text p {
-                font-size: 10px;
-            }
-
-            .brand-logo {
-                width: 45px;
-                height: 45px;
-                font-size: 18px;
-            }
-
-            .hero {
-                min-height: 320px;
-            }
-
-            .hero h2 {
-                font-size: 30px;
-            }
-
-            .hero p {
-                font-size: 14px;
-            }
-
-            main {
-                padding-top: 45px;
-            }
-
-            .section-title h2 {
-                font-size: 25px;
-            }
-
-            .intro-box {
-                padding: 25px;
-            }
-
-            .career-image {
-                height: 220px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .chat-box {
-                right: 12px;
-                bottom: 90px;
-                width: calc(100% - 24px);
-            }
-
-            .chat-button {
-                right: 15px;
-                bottom: 15px;
-            }
-
-            .cta {
-                padding: 30px 20px;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>แนวทางประกอบอาชีพ | Digital Content & Media</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Noto Sans Thai',sans-serif;
+    color:#263238;
+    background:#fff;
+    line-height:1.7;
+}
+
+:root{
+    --orange:#f28c28;
+    --orange-dark:#d96b00;
+    --orange-light:#fff3e3;
+    --orange-soft:#fff8ef;
+    --dark:#263238;
+    --gray:#66727a;
+    --border:#ececec;
+}
+
+/* ================= TOP BAR ================= */
+
+.topbar{
+    background:#263238;
+    color:#fff;
+    font-size:13px;
+}
+
+.topbar-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:8px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.topbar a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:18px;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    background:#fff;
+    border-bottom:1px solid #eee;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:var(--dark);
+}
+
+.logo-box{
+    width:48px;
+    height:48px;
+    background:var(--orange);
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-weight:800;
+    font-size:17px;
+}
+
+.logo-text strong{
+    display:block;
+    font-size:17px;
+}
+
+.logo-text span{
+    font-size:12px;
+    color:#777;
+}
+
+/* ================= NAV ================= */
+
+.nav{
+    background:var(--orange);
+}
+
+.nav-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+}
+
+.nav a{
+    color:#fff;
+    text-decoration:none;
+    padding:13px 15px;
+    font-size:14px;
+    transition:.2s;
+}
+
+.nav a:hover,
+.nav a.active{
+    background:var(--orange-dark);
+}
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:26px;
+    cursor:pointer;
+    padding:10px 20px;
+}
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb{
+    background:#fff8ef;
+    border-bottom:1px solid #f2e3d1;
+}
+
+.breadcrumb-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:12px 20px;
+    font-size:13px;
+    color:#777;
+}
+
+.breadcrumb a{
+    color:var(--orange-dark);
+    text-decoration:none;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+    min-height:440px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(38,50,56,.90),
+            rgba(38,50,56,.35)
+        ),
+        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-inner{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:80px 20px;
+    color:#fff;
+}
+
+.hero-tag{
+    display:inline-block;
+    background:var(--orange);
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:44px;
+    line-height:1.25;
+    max-width:800px;
+    margin-bottom:18px;
+}
+
+.hero p{
+    max-width:700px;
+    color:#f5f5f5;
+    font-size:17px;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    margin-bottom:35px;
+}
+
+.section-title .small{
+    color:var(--orange-dark);
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-size:31px;
+    margin-top:5px;
+}
+
+.section-title p{
+    color:var(--gray);
+    max-width:750px;
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.intro-image{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.10);
+}
+
+.intro-text h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.intro-text p{
+    color:var(--gray);
+    margin-bottom:15px;
+}
+
+/* ================= CAREER CARDS ================= */
+
+.career-section{
+    background:var(--orange-soft);
+}
+
+.career-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.career-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid #eee;
+    transition:.3s;
+}
+
+.career-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(0,0,0,.10);
+}
+
+.career-image{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.career-content{
+    padding:27px;
+}
+
+.career-number{
+    color:var(--orange);
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.career-content h3{
+    font-size:23px;
+    margin:6px 0 10px;
+}
+
+.career-content p{
+    color:var(--gray);
+    font-size:14px;
+}
+
+.career-tag{
+    display:inline-block;
+    background:var(--orange-light);
+    color:var(--orange-dark);
+    padding:5px 11px;
+    border-radius:20px;
+    font-size:12px;
+    margin:5px 5px 0 0;
+}
+
+/* ================= CAREER DETAILS ================= */
+
+.detail-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.detail-card{
+    border:1px solid #eee;
+    border-radius:16px;
+    padding:25px 20px;
+    background:#fff;
+    text-align:center;
+    transition:.25s;
+}
+
+.detail-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.07);
+}
+
+.detail-icon{
+    width:60px;
+    height:60px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:var(--orange-light);
+    color:var(--orange-dark);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+}
+
+.detail-card h3{
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.detail-card p{
+    font-size:13px;
+    color:var(--gray);
+}
+
+/* ================= SKILLS ================= */
+
+.skills-section{
+    background:#263238;
+    color:#fff;
+}
+
+.skills-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.skills-inner .section-title p{
+    color:#cbd1d4;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.skill{
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.04);
+    border-radius:15px;
+    padding:22px;
+}
+
+.skill h3{
+    color:#fff;
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.skill p{
+    color:#cbd1d4;
+    font-size:13px;
+}
+
+/* ================= CAREER PATH ================= */
+
+.path{
+    display:flex;
+    align-items:center;
+    gap:0;
+    margin-top:40px;
+}
+
+.path-item{
+    flex:1;
+    text-align:center;
+    position:relative;
+}
+
+.path-item:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    top:25px;
+    left:60%;
+    width:80%;
+    height:3px;
+    background:#f3c18d;
+}
+
+.path-circle{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:var(--orange);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 12px;
+    font-weight:800;
+    position:relative;
+    z-index:2;
+}
+
+.path-item h3{
+    font-size:15px;
+}
+
+.path-item p{
+    font-size:12px;
+    color:#777;
+    padding:0 10px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    background:linear-gradient(
+        135deg,
+        #f28c28,
+        #d96b00
+    );
+    color:#fff;
+    border-radius:22px;
+    padding:45px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.cta h2{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.cta p{
+    color:#fff4e8;
+}
+
+.btn{
+    display:inline-block;
+    background:#fff;
+    color:var(--orange-dark);
+    text-decoration:none;
+    padding:12px 23px;
+    border-radius:8px;
+    font-weight:700;
+    white-space:nowrap;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#263238;
+    color:#fff;
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px 30px;
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer h3{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.footer p,
+.footer a{
+    color:#cbd1d4;
+    font-size:14px;
+}
+
+.footer a{
+    display:block;
+    text-decoration:none;
+    margin-bottom:7px;
+}
+
+.footer a:hover{
+    color:#fff;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding:18px 20px;
+    text-align:center;
+    color:#aaa;
+    font-size:12px;
+}
+
+/* ================= CHATBOT ================= */
+
+.chatbot{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:2000;
+}
+
+.chat-button{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:var(--orange);
+    color:#fff;
+    border:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+    font-size:25px;
+    cursor:pointer;
+}
+
+.chat-window{
+    display:none;
+    position:absolute;
+    right:0;
+    bottom:70px;
+    width:340px;
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 15px 45px rgba(0,0,0,.2);
+    overflow:hidden;
+    border:1px solid #eee;
+}
+
+.chat-header{
+    background:var(--orange);
+    color:#fff;
+    padding:15px;
+    font-weight:700;
+}
+
+.chat-body{
+    height:320px;
+    overflow-y:auto;
+    padding:15px;
+    background:#fafafa;
+}
+
+.bot-msg,
+.user-msg{
+    padding:10px 12px;
+    border-radius:12px;
+    margin-bottom:10px;
+    font-size:13px;
+    max-width:88%;
+}
+
+.bot-msg{
+    background:#fff;
+    border:1px solid #eee;
+}
+
+.user-msg{
+    background:var(--orange);
+    color:#fff;
+    margin-left:auto;
+}
+
+.chat-input{
+    display:flex;
+    border-top:1px solid #eee;
+}
+
+.chat-input input{
+    flex:1;
+    border:none;
+    padding:12px;
+    outline:none;
+    font-family:inherit;
+}
+
+.chat-input button{
+    border:none;
+    background:var(--orange);
+    color:#fff;
+    padding:0 15px;
+    cursor:pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .nav-inner{
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .nav-inner.show{
+        display:flex;
+    }
+
+    .nav a{
+        border-bottom:1px solid rgba(255,255,255,.15);
+    }
+
+    .menu-btn{
+        display:block;
+        margin-left:auto;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .intro{
+        grid-template-columns:1fr;
+    }
+
+    .career-grid{
+        grid-template-columns:1fr;
+    }
+
+    .detail-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .path{
+        flex-wrap:wrap;
+        gap:30px 0;
+    }
+
+    .path-item{
+        flex:50%;
+    }
+
+    .path-item::after{
+        display:none;
+    }
+}
+
+@media(max-width:600px){
+
+    .topbar-inner{
+        font-size:11px;
+    }
+
+    .topbar-inner div:last-child{
+        display:none;
+    }
+
+    .logo-text strong{
+        font-size:14px;
+    }
+
+    .logo-text span{
+        font-size:10px;
+    }
+
+    .hero{
+        min-height:370px;
+    }
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .container{
+        padding:50px 18px;
+    }
+
+    .section-title h2{
+        font-size:25px;
+    }
+
+    .intro-image{
+        height:280px;
+    }
+
+    .detail-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    .path{
+        display:block;
+    }
+
+    .path-item{
+        margin-bottom:25px;
+    }
+
+    .cta{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:30px;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr;
+    }
+
+    .chat-window{
+        width:calc(100vw - 35px);
+        right:-5px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- TOP BAR -->
-    <div class="top-bar">
-        <div class="top-inner">
-            <span>มหาวิทยาลัยวลัยลักษณ์ | สำนักวิชาสารสนเทศศาสตร์</span>
-            <span>Digital Content and Media</span>
+<!-- ================= TOP BAR ================= -->
+
+<div class="topbar">
+
+    <div class="topbar-inner">
+
+        <div>
+            Walailak University • School of Informatics
         </div>
-    </div>
 
+        <div>
 
-    <!-- HEADER -->
-    <header>
+            <a href="https://informatics.wu.ac.th/" target="_blank">
+                School of Informatics
+            </a>
 
-        <div class="header-inner">
-
-            <a href="index.html" class="brand">
-
-                <div class="brand-logo">
-                    DCM
-                </div>
-
-                <div class="brand-text">
-                    <h1>Digital Content and Media</h1>
-                    <p>สาขาดิจิทัลคอนเทนต์และสื่อ</p>
-                </div>
-
+            <a href="https://www.wu.ac.th/" target="_blank">
+                Walailak University
             </a>
 
         </div>
 
-    </header>
-
-
-    <!-- NAVIGATION -->
-    <nav>
-
-        <div class="nav-inner">
-
-            <button class="menu-btn" onclick="toggleMenu()">
-                ☰
-            </button>
-
-            <ul class="nav-links" id="navLinks">
-
-                <li>
-                    <a href="index.html">
-                        หน้าหลัก
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        เกี่ยวกับหลักสูตร
-                    </a>
-                </li>
-
-                <li>
-                    <a href="learning-outcomes.html">
-                        ผลลัพธ์การเรียนรู้
-                    </a>
-                </li>
-
-                <li>
-                    <a href="curriculum.html">
-                        โครงสร้างหลักสูตร
-                    </a>
-                </li>
-
-                <li>
-                    <a href="careers.html" class="active">
-                        แนวทางอาชีพ
-                    </a>
-                </li>
-
-                <li>
-                    <a href="tuition.html">
-                        ค่าเล่าเรียน
-                    </a>
-                </li>
-
-                <li>
-                    <a href="further-study.html">
-                        การศึกษาต่อ
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact.html">
-                        ติดต่อ
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </nav>
-
-
-    <!-- BREADCRUMB -->
-
-    <div class="breadcrumb">
-
-        <a href="index.html">หน้าหลัก</a>
-        <span> / </span>
-        <span>แนวทางประกอบอาชีพ</span>
-
     </div>
 
+</div>
 
-    <!-- BACK CONTROLS -->
 
-    <div class="back-controls">
+<!-- ================= HEADER ================= -->
 
-        <button class="back-btn" onclick="history.back()">
-            ← ย้อนกลับ
-        </button>
+<header class="header">
 
-        <a href="index.html" class="back-btn">
-            🏠 หน้าหลัก
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-box">
+                DCM
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    Digital Content & Media
+                </strong>
+
+                <span>
+                    School of Informatics • Walailak University
+                </span>
+
+            </div>
+
         </a>
 
     </div>
 
+</header>
 
-    <!-- HERO -->
 
-    <section class="hero">
+<!-- ================= NAV ================= -->
 
-        <div class="hero-content">
+<nav class="nav">
 
-            <span class="hero-label">
-                CAREER PATH
-            </span>
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <div class="nav-inner" id="navMenu">
+
+        <a href="index.html">
+            หน้าหลัก
+        </a>
+
+        <a href="about.html">
+            เกี่ยวกับหลักสูตร
+        </a>
+
+        <a href="learning-outcomes.html">
+            ผลลัพธ์การเรียนรู้
+        </a>
+
+        <a href="curriculum.html">
+            โครงสร้างหลักสูตร
+        </a>
+
+        <a href="careers.html" class="active">
+            แนวทางอาชีพ
+        </a>
+
+        <a href="tuition.html">
+            ค่าใช้จ่าย
+        </a>
+
+        <a href="further-study.html">
+            ศึกษาต่อ
+        </a>
+
+        <a href="contact.html">
+            ติดต่อ
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= BREADCRUMB ================= -->
+
+<div class="breadcrumb">
+
+    <div class="breadcrumb-inner">
+
+        <a href="index.html">
+            หน้าหลัก
+        </a>
+
+        <span> › </span>
+
+        แนวทางประกอบอาชีพ
+
+    </div>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <span class="hero-tag">
+            CAREER PATH
+        </span>
+
+        <h1>
+            เรียนจบแล้ว<br>
+            ทำงานอะไรได้บ้าง?
+        </h1>
+
+        <p>
+            ทักษะด้านดิจิทัลคอนเทนต์ การออกแบบ
+            การจัดการข้อมูล และเทคโนโลยีดิจิทัล
+            สามารถต่อยอดไปสู่งานได้หลากหลายสาย
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="container">
+
+    <div class="intro">
+
+        <img
+            class="intro-image"
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85"
+            alt="Digital media team"
+        >
+
+        <div class="intro-text">
+
+            <div class="section-title">
+
+                <div class="small">
+                    Career Opportunities
+                </div>
+
+                <h2>
+                    จากห้องเรียนสู่การทำงานจริง
+                </h2>
+
+            </div>
+
+            <p>
+                หลักสูตรดิจิทัลคอนเทนต์และสื่อมุ่งพัฒนา
+                ทั้งความรู้และทักษะที่สามารถนำไปประยุกต์ใช้
+                ในอุตสาหกรรมดิจิทัล
+            </p>
+
+            <p>
+                นักศึกษาสามารถต่อยอดความสนใจไปยังงานด้าน
+                Content, Web, Digital Collection และ Design
+                ตามทักษะและประสบการณ์ที่ตนเองพัฒนา
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CAREERS ================= -->
+
+<section class="career-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small">
+                Career Opportunities
+            </div>
 
             <h2>
                 แนวทางประกอบอาชีพ
             </h2>
 
             <p>
-                เส้นทางอาชีพสำหรับผู้สำเร็จการศึกษาสาขาดิจิทัลคอนเทนต์และสื่อ
-                ที่สามารถนำความรู้ด้านการออกแบบ สื่อดิจิทัล เทคโนโลยี
-                และการจัดการคอนเทนต์ไปประยุกต์ใช้ในการทำงาน
+                ตัวอย่างอาชีพที่ระบุไว้สำหรับหลักสูตร
+                ดิจิทัลคอนเทนต์และสื่อ
             </p>
 
         </div>
 
-    </section>
-
-
-    <!-- MAIN CONTENT -->
-
-    <main>
-
-        <div class="section-title">
-
-            <div class="small">
-                CAREER OPPORTUNITIES
-            </div>
-
-            <h2>
-                แนวทางประกอบอาชีพหลังสำเร็จการศึกษา
-            </h2>
-
-            <p>
-                หลักสูตรช่วยพัฒนาความรู้และทักษะที่สามารถต่อยอดไปสู่งานด้าน
-                Digital Content, Web, Digital Collection และการออกแบบสื่อ
-            </p>
-
-        </div>
-
-
-        <!-- INTRO -->
-
-        <div class="intro-box">
-
-            <h3>
-                เรียนดิจิทัลคอนเทนต์และสื่อ ทำงานอะไรได้บ้าง?
-            </h3>
-
-            <p>
-                ผู้สำเร็จการศึกษาสามารถนำทักษะด้านการออกแบบและผลิตสื่อ
-                การจัดการข้อมูลและคอนเทนต์ เทคโนโลยีดิจิทัล
-                รวมถึงการสื่อสาร ไปประยุกต์ใช้กับงานในอุตสาหกรรมดิจิทัล
-                โดยตัวอย่างแนวทางอาชีพของหลักสูตร ได้แก่
-                Digital Content Creator / Content Specialist,
-                Web Content Manager, Digital Collection Developer
-                และ Web Designer
-            </p>
-
-        </div>
-
-
-        <!-- CAREER -->
 
         <div class="career-grid">
 
 
-            <!-- 01 -->
+            <!-- CAREER 1 -->
 
             <article class="career-card">
 
                 <img
                     class="career-image"
-                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
-                    alt="Digital Content Creator working with team"
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+                    alt="Digital Content Creator"
                 >
 
                 <div class="career-content">
 
-                    <div class="career-top">
-
-                        <div class="career-number">
-                            01
-                        </div>
-
-                        <h3>
-                            Digital Content Creator
-                        </h3>
-
+                    <div class="career-number">
+                        CAREER 01
                     </div>
 
-                    <div class="career-name">
-                        Content Creator / Content Specialist
-                    </div>
+                    <h3>
+                        Digital Content Creator
+                    </h3>
 
                     <p>
-                        สร้างสรรค์และผลิตเนื้อหาสำหรับช่องทางดิจิทัล
-                        เช่น Social Media เว็บไซต์ หรือแพลตฟอร์มออนไลน์
-                        โดยใช้ความคิดสร้างสรรค์และทักษะด้านสื่อ
+                        สร้างและพัฒนาคอนเทนต์ดิจิทัล
+                        สำหรับสื่อออนไลน์และแพลตฟอร์มดิจิทัล
+                        รวมถึงการวางแนวคิดและนำเสนอเนื้อหา
+                        ให้เหมาะกับกลุ่มเป้าหมาย
                     </p>
 
-                    <div class="career-skills">
+                    <div style="margin-top:12px;">
 
-                        <span>Content Creation</span>
-                        <span>Graphic Design</span>
-                        <span>Social Media</span>
-                        <span>Digital Media</span>
+                        <span class="career-tag">
+                            Content
+                        </span>
+
+                        <span class="career-tag">
+                            Social Media
+                        </span>
+
+                        <span class="career-tag">
+                            Creative
+                        </span>
 
                     </div>
 
@@ -1006,46 +1059,46 @@
             </article>
 
 
-            <!-- 02 -->
+            <!-- CAREER 2 -->
 
             <article class="career-card">
 
                 <img
                     class="career-image"
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=85"
-                    alt="Web Content Manager working"
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85"
+                    alt="Web Content Manager"
                 >
 
                 <div class="career-content">
 
-                    <div class="career-top">
-
-                        <div class="career-number">
-                            02
-                        </div>
-
-                        <h3>
-                            Web Content Manager
-                        </h3>
-
+                    <div class="career-number">
+                        CAREER 02
                     </div>
 
-                    <div class="career-name">
-                        ผู้ดูแลและจัดการเนื้อหาบนเว็บไซต์
-                    </div>
+                    <h3>
+                        Web Content Manager
+                    </h3>
 
                     <p>
-                        วางแผน จัดการ และดูแลเนื้อหาบนเว็บไซต์
-                        ให้มีความถูกต้อง เป็นระบบ และเหมาะสมกับกลุ่มเป้าหมาย
-                        รวมถึงประสานงานกับทีมที่เกี่ยวข้อง
+                        ดูแลและจัดการเนื้อหาบนเว็บไซต์
+                        วางโครงสร้างเนื้อหา ตรวจสอบข้อมูล
+                        และดูแลให้เว็บไซต์มีเนื้อหาที่เหมาะสม
+                        กับผู้ใช้งาน
                     </p>
 
-                    <div class="career-skills">
+                    <div style="margin-top:12px;">
 
-                        <span>Web Content</span>
-                        <span>Content Management</span>
-                        <span>Planning</span>
-                        <span>Communication</span>
+                        <span class="career-tag">
+                            Website
+                        </span>
+
+                        <span class="career-tag">
+                            Content Management
+                        </span>
+
+                        <span class="career-tag">
+                            UX
+                        </span>
 
                     </div>
 
@@ -1054,47 +1107,45 @@
             </article>
 
 
-            <!-- 03 -->
+            <!-- CAREER 3 -->
 
             <article class="career-card">
 
                 <img
                     class="career-image"
-                    src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=1000&q=85"
-                    alt="Digital Collection Developer working"
+                    src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=1200&q=85"
+                    alt="Digital Collection Developer"
                 >
 
                 <div class="career-content">
 
-                    <div class="career-top">
-
-                        <div class="career-number">
-                            03
-                        </div>
-
-                        <h3>
-                            Digital Collection Developer
-                        </h3>
-
+                    <div class="career-number">
+                        CAREER 03
                     </div>
 
-                    <div class="career-name">
-                        นักพัฒนาคอลเล็กชันดิจิทัล
-                    </div>
+                    <h3>
+                        Digital Collection Developer
+                    </h3>
 
                     <p>
-                        จัดการและพัฒนาคอลเล็กชันดิจิทัล
-                        เช่น ข้อมูล เอกสาร ภาพ หรือสื่อดิจิทัล
-                        เพื่อให้สามารถจัดเก็บ ค้นหา และนำเสนอข้อมูล
-                        ในรูปแบบดิจิทัลได้อย่างเป็นระบบ
+                        พัฒนาและจัดการคอลเล็กชันดิจิทัล
+                        รวมถึงการจัดระบบข้อมูลและทรัพยากรดิจิทัล
+                        เพื่อให้สามารถค้นหาและนำไปใช้ประโยชน์ได้
                     </p>
 
-                    <div class="career-skills">
+                    <div style="margin-top:12px;">
 
-                        <span>Digital Collection</span>
-                        <span>Metadata</span>
-                        <span>Information Management</span>
-                        <span>Digital Archive</span>
+                        <span class="career-tag">
+                            Digital Collection
+                        </span>
+
+                        <span class="career-tag">
+                            Information
+                        </span>
+
+                        <span class="career-tag">
+                            Metadata
+                        </span>
 
                     </div>
 
@@ -1103,46 +1154,45 @@
             </article>
 
 
-            <!-- 04 -->
+            <!-- CAREER 4 -->
 
             <article class="career-card">
 
                 <img
                     class="career-image"
-                    src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=85"
-                    alt="Web Designer working"
+                    src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=85"
+                    alt="Web Designer"
                 >
 
                 <div class="career-content">
 
-                    <div class="career-top">
-
-                        <div class="career-number">
-                            04
-                        </div>
-
-                        <h3>
-                            Web Designer
-                        </h3>
-
+                    <div class="career-number">
+                        CAREER 04
                     </div>
 
-                    <div class="career-name">
-                        นักออกแบบเว็บไซต์
-                    </div>
+                    <h3>
+                        Web Designer
+                    </h3>
 
                     <p>
-                        ออกแบบหน้าตาและประสบการณ์การใช้งานเว็บไซต์
-                        โดยคำนึงถึงความสวยงาม ความง่ายในการใช้งาน
-                        และความต้องการของผู้ใช้
+                        ออกแบบหน้าตาเว็บไซต์และประสบการณ์ผู้ใช้
+                        โดยนำแนวคิดด้านการออกแบบ
+                        UX/UI และดิจิทัลคอนเทนต์มาประยุกต์ใช้
                     </p>
 
-                    <div class="career-skills">
+                    <div style="margin-top:12px;">
 
-                        <span>Web Design</span>
-                        <span>UI Design</span>
-                        <span>UX Design</span>
-                        <span>Visual Design</span>
+                        <span class="career-tag">
+                            UI Design
+                        </span>
+
+                        <span class="career-tag">
+                            UX
+                        </span>
+
+                        <span class="career-tag">
+                            Web Design
+                        </span>
 
                     </div>
 
@@ -1150,241 +1200,454 @@
 
             </article>
 
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WORK SKILLS ================= -->
+
+<section class="container">
+
+    <div class="section-title">
+
+        <div class="small">
+            Useful Skills
+        </div>
+
+        <h2>
+            ทักษะที่สามารถนำไปใช้ในการทำงาน
+        </h2>
+
+        <p>
+            นอกจากความรู้ในรายวิชาแล้ว นักศึกษายังสามารถพัฒนา
+            ทักษะที่ใช้ในการทำงานสายดิจิทัลได้หลากหลายด้าน
+        </p>
+
+    </div>
+
+
+    <div class="detail-grid">
+
+
+        <div class="detail-card">
+
+            <div class="detail-icon">
+                🎨
+            </div>
+
+            <h3>
+                Graphic Design
+            </h3>
+
+            <p>
+                การออกแบบกราฟิกและสื่อดิจิทัล
+            </p>
 
         </div>
 
 
-        <!-- SKILLS -->
+        <div class="detail-card">
 
-        <section class="skills-section">
-
-            <div class="section-title">
-
-                <div class="small">
-                    SKILLS
-                </div>
-
-                <h2>
-                    ทักษะที่สามารถนำไปต่อยอดในการทำงาน
-                </h2>
-
-                <p>
-                    ความรู้จากหลักสูตรสามารถนำไปพัฒนาทักษะที่หลากหลาย
-                    สำหรับการทำงานในสายดิจิทัล
-                </p>
-
+            <div class="detail-icon">
+                🎬
             </div>
 
+            <h3>
+                Content Production
+            </h3>
 
-            <div class="skills-grid">
+            <p>
+                การวางแผนและผลิตคอนเทนต์
+            </p>
 
-
-                <div class="skill-box">
-
-                    <div class="skill-icon">
-                        ✦
-                    </div>
-
-                    <h3>
-                        Digital Content
-                    </h3>
-
-                    <p>
-                        การคิด วางแผน และผลิตคอนเทนต์สำหรับสื่อดิจิทัล
-                    </p>
-
-                </div>
+        </div>
 
 
-                <div class="skill-box">
+        <div class="detail-card">
 
-                    <div class="skill-icon">
-                        ◇
-                    </div>
-
-                    <h3>
-                        Design
-                    </h3>
-
-                    <p>
-                        การออกแบบสื่อ ภาพกราฟิก และส่วนติดต่อผู้ใช้
-                    </p>
-
-                </div>
-
-
-                <div class="skill-box">
-
-                    <div class="skill-icon">
-                        ◎
-                    </div>
-
-                    <h3>
-                        Information
-                    </h3>
-
-                    <p>
-                        การจัดการข้อมูล คอนเทนต์ และคอลเล็กชันดิจิทัล
-                    </p>
-
-                </div>
-
-
-                <div class="skill-box">
-
-                    <div class="skill-icon">
-                        ↗
-                    </div>
-
-                    <h3>
-                        Technology
-                    </h3>
-
-                    <p>
-                        การเลือกใช้เทคโนโลยีเพื่อพัฒนาสื่อและบริการดิจิทัล
-                    </p>
-
-                </div>
-
-
+            <div class="detail-icon">
+                💻
             </div>
 
-        </section>
+            <h3>
+                Web & Digital
+            </h3>
+
+            <p>
+                การออกแบบและจัดการเนื้อหาดิจิทัล
+            </p>
+
+        </div>
 
 
-        <!-- CTA -->
+        <div class="detail-card">
 
-        <section class="cta">
+            <div class="detail-icon">
+                🗂️
+            </div>
+
+            <h3>
+                Information Management
+            </h3>
+
+            <p>
+                การจัดระบบและจัดการข้อมูลดิจิทัล
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS DARK ================= -->
+
+<section class="skills-section">
+
+    <div class="skills-inner">
+
+        <div class="section-title">
+
+            <div class="small" style="color:#f28c28;">
+                Professional Skills
+            </div>
 
             <h2>
-                สนใจเรียน Digital Content and Media?
+                ทักษะที่ควรพัฒนาระหว่างเรียน
             </h2>
 
             <p>
-                ดูรายละเอียดหลักสูตร โครงสร้างรายวิชา ค่าเล่าเรียน
-                และข้อมูลการติดต่อเพิ่มเติม
+                การพัฒนาทักษะเหล่านี้จะช่วยให้สามารถสร้าง Portfolio
+                และเตรียมตัวสำหรับการทำงานในสายดิจิทัล
             </p>
 
-            <div class="cta-buttons">
-
-                <a href="curriculum.html" class="btn btn-white">
-                    ดูโครงสร้างหลักสูตร
-                </a>
-
-                <a href="contact.html" class="btn btn-outline">
-                    ติดต่อสาขา
-                </a>
-
-            </div>
-
-        </section>
+        </div>
 
 
-    </main>
+        <div class="skills-grid">
 
 
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="footer-inner">
-
-
-            <div class="footer-col">
+            <div class="skill">
 
                 <h3>
-                    Digital Content and Media
+                    🎨 Creative Thinking
                 </h3>
 
                 <p>
-                    หลักสูตรสารสนเทศศาสตรบัณฑิต
-                    สาขาดิจิทัลคอนเทนต์และสื่อ
-                    สำนักวิชาสารสนเทศศาสตร์
-                    มหาวิทยาลัยวลัยลักษณ์
+                    คิดไอเดียและพัฒนาคอนเทนต์
+                    ให้เหมาะกับโจทย์และกลุ่มเป้าหมาย
                 </p>
 
             </div>
 
 
-            <div class="footer-col">
+            <div class="skill">
 
                 <h3>
-                    เมนู
+                    💻 Digital Technology
                 </h3>
 
-                <a href="index.html">หน้าหลัก</a>
-                <a href="about.html">เกี่ยวกับหลักสูตร</a>
-                <a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a>
-                <a href="curriculum.html">โครงสร้างหลักสูตร</a>
+                <p>
+                    เรียนรู้และเลือกใช้เครื่องมือ
+                    และเทคโนโลยีดิจิทัลให้เหมาะกับงาน
+                </p>
 
             </div>
 
 
-            <div class="footer-col">
+            <div class="skill">
 
                 <h3>
-                    ข้อมูลเพิ่มเติม
+                    🎯 User Understanding
                 </h3>
 
-                <a href="careers.html">แนวทางประกอบอาชีพ</a>
-                <a href="tuition.html">ค่าเล่าเรียน</a>
-                <a href="further-study.html">การศึกษาต่อ</a>
-                <a href="contact.html">ติดต่อสาขา</a>
+                <p>
+                    เข้าใจความต้องการของผู้ใช้
+                    และนำข้อมูลมาพัฒนางาน
+                </p>
 
             </div>
 
 
+            <div class="skill">
+
+                <h3>
+                    🗣️ Communication
+                </h3>
+
+                <p>
+                    สื่อสาร นำเสนอ และอธิบายแนวคิด
+                    ของผลงานได้อย่างชัดเจน
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>
+                    🤝 Teamwork
+                </h3>
+
+                <p>
+                    ทำงานร่วมกับผู้อื่น
+                    และแบ่งหน้าที่ภายในทีม
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>
+                    📚 Lifelong Learning
+                </h3>
+
+                <p>
+                    เรียนรู้เทคโนโลยีและแนวโน้มใหม่ ๆ
+                    ในสภาพแวดล้อมดิจิทัล
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CAREER PATH ================= -->
+
+<section class="container">
+
+    <div class="section-title">
+
+        <div class="small">
+            Career Development
+        </div>
+
+        <h2>
+            แนวทางการพัฒนาตัวเอง
+        </h2>
+
+        <p>
+            ตัวอย่างเส้นทางการพัฒนาทักษะตั้งแต่เริ่มเรียน
+            ไปจนถึงการเตรียมตัวเข้าสู่การทำงาน
+        </p>
+
+    </div>
+
+
+    <div class="path">
+
+
+        <div class="path-item">
+
+            <div class="path-circle">
+                1
+            </div>
+
+            <h3>
+                เรียนรู้
+            </h3>
+
+            <p>
+                พื้นฐานดิจิทัล
+                และการออกแบบ
+            </p>
+
         </div>
 
 
-        <div class="copyright">
+        <div class="path-item">
 
-            © 2026 Digital Content and Media,
-            School of Informatics, Walailak University
+            <div class="path-circle">
+                2
+            </div>
+
+            <h3>
+                ทดลอง
+            </h3>
+
+            <p>
+                ทำโปรเจกต์
+                และสร้างผลงาน
+            </p>
 
         </div>
 
-    </footer>
+
+        <div class="path-item">
+
+            <div class="path-circle">
+                3
+            </div>
+
+            <h3>
+                สร้าง Portfolio
+            </h3>
+
+            <p>
+                รวบรวมผลงาน
+                ที่แสดงทักษะ
+            </p>
+
+        </div>
 
 
-    <!-- CHAT BUTTON -->
+        <div class="path-item">
 
-    <button
-        class="chat-button"
-        onclick="toggleChat()"
-        aria-label="เปิดแชตบอท"
-    >
-        💬
-    </button>
+            <div class="path-circle">
+                4
+            </div>
+
+            <h3>
+                ทำงานจริง
+            </h3>
+
+            <p>
+                ฝึกประสบการณ์
+                และต่อยอดอาชีพ
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- CHAT BOX -->
+<!-- ================= CTA ================= -->
 
-    <div class="chat-box" id="chatBox">
+<section class="container">
+
+    <div class="cta">
+
+        <div>
+
+            <h2>
+                อยากรู้ว่าเรียนกี่หน่วยกิต?
+            </h2>
+
+            <p>
+                ดูรายละเอียดโครงสร้างหลักสูตร
+                และหมวดวิชาต่าง ๆ ได้ที่หน้าโครงสร้างหลักสูตร
+            </p>
+
+        </div>
+
+        <a href="curriculum.html" class="btn">
+            ดูโครงสร้างหลักสูตร →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer">
+
+            <h3>
+                Digital Content & Media
+            </h3>
+
+            <p>
+                หลักสูตรสารสนเทศศาสตรบัณฑิต
+                สาขาดิจิทัลคอนเทนต์และสื่อ
+                สำนักวิชาสารสนเทศศาสตร์
+                มหาวิทยาลัยวลัยลักษณ์
+            </p>
+
+        </div>
+
+
+        <div class="footer">
+
+            <h3>
+                เมนู
+            </h3>
+
+            <a href="index.html">
+                หน้าหลัก
+            </a>
+
+            <a href="about.html">
+                เกี่ยวกับหลักสูตร
+            </a>
+
+            <a href="learning-outcomes.html">
+                ผลลัพธ์การเรียนรู้
+            </a>
+
+            <a href="curriculum.html">
+                โครงสร้างหลักสูตร
+            </a>
+
+            <a href="careers.html">
+                แนวทางอาชีพ
+            </a>
+
+        </div>
+
+
+        <div class="footer">
+
+            <h3>
+                ติดต่อ
+            </h3>
+
+            <p>
+                โทร. 075-672204
+            </p>
+
+            <p>
+                222 ตำบลไทยบุรี
+                อำเภอท่าศาลา
+                จังหวัดนครศรีธรรมราช 80160
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Digital Content & Media — Walailak University
+    </div>
+
+</footer>
+
+
+<!-- ================= CHATBOT ================= -->
+
+<div class="chatbot">
+
+    <div class="chat-window" id="chatWindow">
 
         <div class="chat-header">
-
-            <strong>
-                DCM Assistant
-            </strong>
-
-            <button
-                class="chat-close"
-                onclick="toggleChat()"
-            >
-                ×
-            </button>
-
+            🤖 DCM Assistant
         </div>
 
 
         <div class="chat-body" id="chatBody">
 
-            <div class="bot-message">
-                สวัสดีครับ 👋 ผมคือ DCM Assistant
-                สามารถถามเกี่ยวกับสาขาดิจิทัลคอนเทนต์และสื่อ
-                เช่น เรียนจบทำงานอะไรได้บ้าง
-                หรืออยากรู้เกี่ยวกับหลักสูตรก็ถามได้เลยครับ
+            <div class="bot-msg">
+                สวัสดีครับ 👋<br>
+                ผมคือ DCM Assistant<br>
+                ถามเกี่ยวกับอาชีพของสาขา
+                Digital Content & Media ได้เลยครับ
             </div>
 
         </div>
@@ -1395,7 +1658,7 @@
             <input
                 type="text"
                 id="chatInput"
-                placeholder="พิมพ์คำถาม..."
+                placeholder="เช่น จบแล้วทำงานอะไรได้บ้าง?"
                 onkeydown="if(event.key==='Enter') sendMessage()"
             >
 
@@ -1408,184 +1671,256 @@
     </div>
 
 
-    <script>
+    <button class="chat-button" onclick="toggleChat()">
+        💬
+    </button>
 
-        /* =========================
-           MOBILE MENU
-        ========================= */
+</div>
 
-        function toggleMenu() {
 
-            const menu = document.getElementById("navLinks");
+<script>
 
-            menu.classList.toggle("show");
+function toggleMenu(){
 
-        }
+    const menu =
+        document.getElementById("navMenu");
 
+    menu.classList.toggle("show");
 
-        /* =========================
-           CHATBOT
-        ========================= */
+}
 
-        function toggleChat() {
 
-            const chat = document.getElementById("chatBox");
+function toggleChat(){
 
-            if (chat.style.display === "block") {
+    const chat =
+        document.getElementById("chatWindow");
 
-                chat.style.display = "none";
+    chat.style.display =
+        chat.style.display === "block"
+        ? "none"
+        : "block";
 
-            } else {
+}
 
-                chat.style.display = "block";
 
-                document.getElementById("chatInput").focus();
+function addMessage(text,type){
 
-            }
+    const body =
+        document.getElementById("chatBody");
 
-        }
+    const div =
+        document.createElement("div");
 
+    div.className =
+        type === "user"
+        ? "user-msg"
+        : "bot-msg";
 
-        function addMessage(text, type) {
+    div.innerHTML = text;
 
-            const body = document.getElementById("chatBody");
+    body.appendChild(div);
 
-            const message = document.createElement("div");
+    body.scrollTop =
+        body.scrollHeight;
 
-            message.className =
-                type === "user"
-                ? "user-message"
-                : "bot-message";
+}
 
-            message.textContent = text;
 
-            body.appendChild(message);
+function getBotAnswer(question){
 
-            body.scrollTop = body.scrollHeight;
+    const q =
+        question.toLowerCase();
 
-        }
 
+    if(
+        q.includes("อาชีพ") ||
+        q.includes("จบแล้ว") ||
+        q.includes("ทำงานอะไร")
+    ){
 
-        function sendMessage() {
+        return `
+        อาชีพที่หลักสูตรระบุไว้มี 4 แนวทางหลักครับ
+        <br><br>
+        1. Digital Content Creator / Content Specialist
+        <br>
+        2. Web Content Manager
+        <br>
+        3. Digital Collection Developer
+        <br>
+        4. Web Designer
+        `;
 
-            const input =
-                document.getElementById("chatInput");
+    }
 
-            const question =
-                input.value.trim();
 
-            if (!question) return;
+    if(
+        q.includes("content creator") ||
+        q.includes("คอนเทนต์ครีเอเตอร์")
+    ){
 
-            addMessage(question, "user");
+        return `
+        Digital Content Creator หรือ Content Specialist
+        ทำงานเกี่ยวกับการสร้างและพัฒนาคอนเทนต์ดิจิทัล
+        สำหรับสื่อออนไลน์และแพลตฟอร์มต่าง ๆ ครับ
+        `;
 
-            input.value = "";
+    }
 
-            setTimeout(function () {
 
-                const q = question.toLowerCase();
+    if(
+        q.includes("web content") ||
+        q.includes("เว็บไซต์")
+    ){
 
-                let answer =
-                    "สามารถสอบถามเกี่ยวกับหลักสูตร Digital Content and Media ได้ครับ เช่น อาชีพ ค่าเทอม โครงสร้างหลักสูตร หรือทักษะที่ได้รับ";
+        return `
+        Web Content Manager
+        ดูแลและจัดการเนื้อหาบนเว็บไซต์
+        รวมถึงการจัดโครงสร้างและดูแลข้อมูล
+        ให้เหมาะกับผู้ใช้งานครับ
+        `;
 
+    }
 
-                if (
-                    q.includes("อาชีพ") ||
-                    q.includes("ทำงานอะไร") ||
-                    q.includes("จบไปทำอะไร")
-                ) {
 
-                    answer =
-                        "สาขานี้มีแนวทางอาชีพ เช่น Digital Content Creator / Content Specialist, Web Content Manager, Digital Collection Developer และ Web Designer ครับ";
+    if(
+        q.includes("digital collection") ||
+        q.includes("คอลเล็กชัน")
+    ){
 
-                }
+        return `
+        Digital Collection Developer
+        เกี่ยวข้องกับการพัฒนาและจัดการคอลเล็กชันดิจิทัล
+        รวมถึงการจัดระบบข้อมูลและทรัพยากรดิจิทัลครับ
+        `;
 
-                else if (
-                    q.includes("content creator") ||
-                    q.includes("คอนเทนต์")
-                ) {
+    }
 
-                    answer =
-                        "Digital Content Creator / Content Specialist เป็นงานด้านการคิด วางแผน และผลิตคอนเทนต์สำหรับช่องทางดิจิทัล เช่น Social Media เว็บไซต์ และแพลตฟอร์มออนไลน์ครับ";
 
-                }
+    if(
+        q.includes("web designer") ||
+        q.includes("ออกแบบเว็บ")
+    ){
 
-                else if (
-                    q.includes("web designer") ||
-                    q.includes("เว็บดีไซน์")
-                ) {
+        return `
+        Web Designer
+        เกี่ยวข้องกับการออกแบบเว็บไซต์
+        หน้าตาเว็บไซต์ และประสบการณ์ของผู้ใช้งาน
+        โดยนำแนวคิด UX/UI มาประยุกต์ใช้ครับ
+        `;
 
-                    answer =
-                        "Web Designer คือผู้ที่ออกแบบหน้าตาและประสบการณ์การใช้งานเว็บไซต์ โดยคำนึงถึงความสวยงามและความง่ายในการใช้งานครับ";
+    }
 
-                }
 
-                else if (
-                    q.includes("web content")
-                ) {
+    if(
+        q.includes("ทักษะ") ||
+        q.includes("skill")
+    ){
 
-                    answer =
-                        "Web Content Manager มีหน้าที่วางแผน จัดการ และดูแลเนื้อหาบนเว็บไซต์ให้เหมาะสมกับกลุ่มเป้าหมายครับ";
+        return `
+        ทักษะที่สามารถพัฒนาได้ เช่น
+        Graphic Design, Content Production,
+        Web & Digital, Information Management,
+        Communication และ Teamwork ครับ
+        `;
 
-                }
+    }
 
-                else if (
-                    q.includes("digital collection") ||
-                    q.includes("คอลเล็กชัน")
-                ) {
 
-                    answer =
-                        "Digital Collection Developer ทำงานเกี่ยวกับการจัดการและพัฒนาคอลเล็กชันดิจิทัล เช่น เอกสาร ภาพ ข้อมูล และสื่อดิจิทัลครับ";
+    if(
+        q.includes("portfolio") ||
+        q.includes("พอร์ต")
+    ){
 
-                }
+        return `
+        แนะนำให้สะสมผลงานระหว่างเรียน เช่น
+        งานออกแบบ กราฟิก เว็บไซต์ วิดีโอ
+        หรือโปรเจกต์ด้านดิจิทัลคอนเทนต์
+        เพื่อใช้เป็น Portfolio ครับ
+        `;
 
-                else if (
-                    q.includes("ทักษะ") ||
-                    q.includes("skill")
-                ) {
+    }
 
-                    answer =
-                        "ทักษะที่สามารถต่อยอดได้ ได้แก่ Digital Content, Graphic/UI/UX Design, Information Management และการเลือกใช้เทคโนโลยีดิจิทัลครับ";
 
-                }
+    if(
+        q.includes("เรียนกี่หน่วยกิต") ||
+        q.includes("หน่วยกิต")
+    ){
 
-                else if (
-                    q.includes("หลักสูตร") ||
-                    q.includes("เรียนอะไร")
-                ) {
+        return `
+        หลักสูตรมีทั้งหมด <b>123 หน่วยกิต</b> ครับ
+        สามารถดูรายละเอียดได้ที่หน้า
+        “โครงสร้างหลักสูตร”
+        `;
 
-                    answer =
-                        "หลักสูตรเน้นการออกแบบ ผลิต และเผยแพร่ Digital Content รวมถึงการจัดการสารสนเทศ การออกแบบสื่อ และเทคโนโลยีดิจิทัลครับ";
+    }
 
-                }
 
-                else if (
-                    q.includes("ค่าเทอม") ||
-                    q.includes("ค่าเล่าเรียน")
-                ) {
+    if(
+        q.includes("ค่าเทอม") ||
+        q.includes("ค่าใช้จ่าย")
+    ){
 
-                    answer =
-                        "ค่าเล่าเรียนของหลักสูตรอยู่ที่ 25,000 บาทต่อภาคการศึกษา และประมาณ 200,000 บาทตลอดหลักสูตรครับ";
+        return `
+        ค่าใช้จ่ายของหลักสูตรอยู่ที่ประมาณ
+        <b>25,000 บาทต่อภาคการศึกษา</b>
+        ครับ
+        `;
 
-                }
+    }
 
-                else if (
-                    q.includes("ติดต่อ") ||
-                    q.includes("โทร")
-                ) {
 
-                    answer =
-                        "สามารถติดต่อหลักสูตร Digital Content and Media สำนักวิชาสารสนเทศศาสตร์ มหาวิทยาลัยวลัยลักษณ์ ได้ที่ 075-672204 ครับ";
+    if(
+        q.includes("เรียนต่อ") ||
+        q.includes("ปริญญาโท")
+    ){
 
-                }
+        return `
+        หลังจบสามารถศึกษาต่อระดับปริญญาโทหรือปริญญาเอก
+        ใน Computer Science, Information Technology
+        หรือสาขาที่เกี่ยวข้องได้ครับ
+        `;
 
+    }
 
-                addMessage(answer, "bot");
 
-            }, 500);
+    return `
+    ลองถามเกี่ยวกับ
+    <b>อาชีพ, Content Creator,
+    Web Content Manager,
+    Digital Collection Developer,
+    Web Designer, ทักษะ หรือ Portfolio</b>
+    ได้เลยครับ 😊
+    `;
 
-        }
+}
 
-    </script>
+
+function sendMessage(){
+
+    const input =
+        document.getElementById("chatInput");
+
+    const question =
+        input.value.trim();
+
+    if(!question) return;
+
+    addMessage(question,"user");
+
+    input.value = "";
+
+    setTimeout(function(){
+
+        const answer =
+            getBotAnswer(question);
+
+        addMessage(answer,"bot");
+
+    },400);
+
+}
+
+</script>
 
 </body>
 </html>
