@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>โครงสร้างหลักสูตร | DCM</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap');
+*{box-sizing:border-box}body{margin:0;font-family:'Noto Sans Thai',sans-serif;background:#f7fbff;color:#17344e;line-height:1.7}a{text-decoration:none;color:inherit}.container{width:min(1200px,92%);margin:auto}
+.top{background:#052f58;color:#d9edff;font-size:13px}.topin{display:flex;justify-content:space-between;padding:7px 0}.head{background:#fff;border-bottom:1px solid #dceaf4}.headin{height:85px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;gap:12px;align-items:center}.mark{width:50px;height:50px;border-radius:13px;background:linear-gradient(135deg,#0759a8,#28a7ec);display:grid;place-items:center;color:#fff;font-weight:800}.logo b{display:block;color:#063b70}.logo small{color:#71879a}
+.nav{background:#0759a8}.navin{display:flex}.nav a{color:#fff;padding:13px 14px;font-size:14px;font-weight:600;border-bottom:3px solid transparent}.nav a:hover,.nav a.active{background:#ffffff12;border-color:#9ddcff}.menu{display:none;background:none;border:0;color:#fff;font-size:28px}
+.crumb{background:#edf7ff;padding:10px 0;border-bottom:1px solid #dceaf4;color:#698096;font-size:13px}
+.hero{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;background:#064b8c}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}.over{position:absolute;inset:0;background:linear-gradient(90deg,#022e59ed,#0759a8a5,#0759a800)}.hc{position:relative;color:#fff;padding:70px 0}.hc h1{font-size:48px;line-height:1.15;margin:0}.hc p{max-width:760px;color:#e0f3ff}.badge{display:inline-block;background:#a8e0ff;color:#064276;padding:5px 13px;border-radius:30px;font-size:12px;font-weight:800}
+.section{padding:70px 0}.blue{background:#eff8ff}.title{text-align:center;margin-bottom:35px}.title h2{margin:0;color:#063b70;font-size:32px}.title p{color:#698096}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.stat{background:#fff;border:1px solid #dceaf4;border-radius:18px;padding:25px;text-align:center;box-shadow:0 10px 30px #164b7010}.stat b{font-size:38px;color:#0759a8;display:block}.stat span{color:#698096;font-size:14px}
+.tablewrap{overflow:auto;background:#fff;border:1px solid #dceaf4;border-radius:18px;box-shadow:0 10px 30px #164b7010}.table{width:100%;border-collapse:collapse;min-width:700px}.table th{background:#0759a8;color:#fff;text-align:left;padding:15px}.table td{padding:15px;border-bottom:1px solid #e3edf4}.table tr:last-child td{border-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.card{background:#fff;border:1px solid #dceaf4;border-radius:18px;padding:25px;box-shadow:0 10px 30px #164b7010}.card h3{color:#0759a8;margin-top:0}.card p{color:#5d7589}
+.minor{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.minor .card{text-align:center}.minor .icon{font-size:30px}
+.footer{background:#052f58;color:#cfe4f5;padding:50px 0 20px}.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}.footer h3{color:#fff}.copy{border-top:1px solid #ffffff20;margin-top:30px;padding-top:15px;font-size:12px}
+.back{position:fixed;left:18px;bottom:18px;z-index:999;border:0;background:#fff;color:#0759a8;padding:10px 15px;border-radius:30px;box-shadow:0 5px 25px #0002}.chatbtn{position:fixed;right:20px;bottom:20px;z-index:999;width:62px;height:62px;border:0;border-radius:50%;background:#0759a8;color:#fff;font-size:25px}.chat{display:none;position:fixed;right:20px;bottom:95px;width:min(390px,calc(100vw - 25px));height:550px;background:#fff;z-index:1000;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px #00294d40}.chat.open{display:flex;flex-direction:column}.ch{background:#0759a8;color:#fff;padding:15px;display:flex;justify-content:space-between}.ch button{background:none;border:0;color:#fff;font-size:22px}.cb{flex:1;background:#f3f8fc;padding:12px;overflow:auto}.m{padding:9px 12px;border-radius:13px;margin-bottom:8px;max-width:88%;font-size:13px}.bot{background:#fff;border:1px solid #dceaf4}.user{background:#0759a8;color:#fff;margin-left:auto}.cf{display:flex;border-top:1px solid #dceaf4}.cf input{flex:1;border:0;padding:13px;outline:0}.cf button{border:0;background:#0759a8;color:#fff;padding:0 17px}
+@media(max-width:850px){.navin{display:none;flex-direction:column}.nav.open .navin{display:flex}.menu{display:block}.stats,.cards,.minor,.fg{grid-template-columns:1fr 1fr}.hc h1{font-size:38px}}@media(max-width:550px){.stats,.cards,.minor,.fg{grid-template-columns:1fr}.section{padding:50px 0}}
+</style>
+</head>
+
+<body>
+<div class="top"><div class="container topin"><span>มหาวิทยาลัยวลัยลักษณ์ • สำนักวิชาสารสนเทศศาสตร์</span><span>Digital Content & Media</span></div></div>
+
+<header class="head"><div class="container headin">
+<a class="logo" href="index.html"><div class="mark">WU</div><div><b>Digital Content & Media</b><small>School of Informatics • Walailak University</small></div></a>
+<button class="menu" onclick="toggle()">☰</button>
+</div></header>
+
+<nav class="nav" id="nav"><div class="container navin">
+<a href="index.html">หน้าหลัก</a><a href="about.html">เกี่ยวกับหลักสูตร</a><a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a><a class="active" href="curriculum.html">โครงสร้างหลักสูตร</a><a href="careers.html">อาชีพ</a><a href="tuition.html">ค่าเทอม</a><a href="further-study.html">ศึกษาต่อ</a><a href="contact.html">ติดต่อ</a>
+</div></nav>
+
+<div class="crumb"><div class="container">หน้าหลัก / โครงสร้างหลักสูตร</div></div>
+
+<section class="hero">
+<img src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM06.jpg" alt="นักศึกษา DCM เรียนด้วยคอมพิวเตอร์">
+<div class="over"></div>
+<div class="container hc"><span class="badge">CURRICULUM</span><h1>โครงสร้างหลักสูตร</h1><p>หลักสูตรปรับปรุงปีการศึกษา 2567 รวมทั้งหมด 123 หน่วยกิต</p></div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="title"><h2>ภาพรวมหลักสูตร</h2><p>จำนวนหน่วยกิตในแต่ละหมวด</p></div>
+
+<div class="stats">
+<div class="stat"><b>123</b><span>หน่วยกิตรวม</span></div>
+<div class="stat"><b>26</b><span>ศึกษาทั่วไป</span></div>
+<div class="stat"><b>91</b><span>หมวดวิชาเฉพาะ</span></div>
+<div class="stat"><b>6</b><span>เลือกเสรี</span></div>
+</div>
+</div>
+</section>
+
+<section class="section blue">
+<div class="container">
+<div class="title"><h2>รายละเอียดโครงสร้าง</h2><p>ข้อมูลตามหลักสูตรปรับปรุงปีการศึกษา 2567</p></div>
+
+<div class="tablewrap">
+<table class="table">
+<thead><tr><th>หมวดวิชา</th><th>จำนวนหน่วยกิต</th><th>รายละเอียด</th></tr></thead>
+<tbody>
+<tr><td>ศึกษาทั่วไป</td><td>26</td><td>เลือกภาษาอังกฤษ 9 หน่วยกิต หรือภาษาจีน 9 หน่วยกิต</td></tr>
+<tr><td>หมวดวิชาเฉพาะ</td><td>91</td><td>รวมวิชาเฉพาะของหลักสูตรและสหกิจศึกษา</td></tr>
+<tr><td>วิชาเฉพาะของหลักสูตร</td><td>78</td><td>วิชาบังคับ 63 + วิชาโท 15 หน่วยกิต</td></tr>
+<tr><td>สหกิจศึกษา</td><td>13</td><td>การเรียนรู้จากการทำงานจริง</td></tr>
+<tr><td>วิชาเลือกเสรี</td><td>6</td><td>เลือกเรียนตามเกณฑ์ของหลักสูตร</td></tr>
+<tr><td><strong>รวม</strong></td><td><strong>123</strong></td><td><strong>หน่วยกิตตลอดหลักสูตร</strong></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="title"><h2>กลุ่มวิชาโท</h2><p>เลือกแนวทางที่สนใจเพื่อเตรียมความพร้อมด้านอาชีพ</p></div>
+
+<div class="minor">
+<div class="card"><div class="icon">📚</div><h3>Online Learning</h3><p>การพัฒนาการเรียนออนไลน์</p></div>
+<div class="card"><div class="icon">📣</div><h3>Digital Marketing</h3><p>คอนเทนต์เพื่อการตลาดดิจิทัล</p></div>
+<div class="card"><div class="icon">🗂️</div><h3>Digital Collection</h3><p>ดิจิทัลคอลเล็กชัน</p></div>
+<div class="card"><div class="icon">⚙️</div><h3>Content Technology</h3><p>เทคโนโลยีเพื่อการจัดการคอนเทนต์</p></div>
+</div>
+</div>
+</section>
+
+<section class="section blue">
+<div class="container">
+<div class="cards">
+<div class="card">
+<h3>🎓 การเรียนรู้เชิงบูรณาการ</h3>
+<p>หลักสูตรเชื่อมโยงการเรียนกับการทำงานจริง และกำหนดให้มีการปฏิบัติงานในสถานประกอบการไม่น้อยกว่า 8 เดือน</p>
+</div>
+<div class="card">
+<h3>🌎 ประสบการณ์ในประเทศและต่างประเทศ</h3>
+<p>หน้าโปรแกรมระบุว่าสามารถปฏิบัติงานจริงในองค์กรทั้งในประเทศและต่างประเทศ</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="footer"><div class="container fg">
+<div><h3>Digital Content & Media</h3><p>หลักสูตรสารสนเทศศาสตรบัณฑิต สาขาดิจิทัลคอนเทนต์และสื่อ มหาวิทยาลัยวลัยลักษณ์</p></div>
+<div><h3>เมนู</h3><p><a href="about.html">เกี่ยวกับ</a><br><a href="learning-outcomes.html">PLO</a><br><a href="careers.html">อาชีพ</a></p></div>
+<div><h3>ติดต่อ</h3><p>075-672204</p></div>
+</div><div class="container copy">© 2026 Digital Content & Media • Walailak University</div></footer>
+
+<button class="back" onclick="back()">← ย้อนกลับ</button><button class="chatbtn" onclick="openChat()">💬</button>
+
+<div class="chat" id="chat"><div class="ch"><b>DCM Assistant</b><button onclick="closeChat()">×</button></div><div class="cb" id="cb"></div><form class="cf" onsubmit="send(event)"><input id="i" placeholder="ถามเรื่องโครงสร้างหลักสูตร..."><button>ส่ง</button></form></div>
+
+<script>
+function toggle(){document.getElementById('nav').classList.toggle('open')}
+function back(){if(document.referrer&&new URL(document.referrer).origin===location.origin)history.back();else location.href='index.html'}
+function openChat(){document.getElementById('chat').classList.add('open')}
+function closeChat(){document.getElementById('chat').classList.remove('open')}
+const faq=[
+['123','หลักสูตรมีทั้งหมด 123 หน่วยกิตครับ'],['26','หมวดศึกษาทั่วไปมี 26 หน่วยกิตครับ'],['91','หมวดวิชาเฉพาะมี 91 หน่วยกิตครับ'],['63','วิชาบังคับมี 63 หน่วยกิตครับ'],['15','วิชาโทมี 15 หน่วยกิตครับ'],['13','สหกิจศึกษามี 13 หน่วยกิตครับ'],['6','วิชาเลือกเสรีมี 6 หน่วยกิตครับ'],['วิชาโท','มี 4 กลุ่ม ได้แก่ Online Learning, Digital Marketing Content, Digital Collection และ Content Management Technology ครับ'],['สหกิจ','มีการปฏิบัติงานจริงไม่น้อยกว่า 8 เดือนครับ']
+];
+function ans(q){q=q.toLowerCase();let x=faq.find(x=>q.includes(x[0]));return x?x[1]:'ลองถาม เช่น 123 หน่วยกิต, วิชาโท, วิชาบังคับ, สหกิจ หรือเลือกเสรีครับ'}
+function add(t,c){let d=document.createElement('div');d.className='m '+c;d.textContent=t;document.getElementById('cb').appendChild(d)}
+function ask(q){openChat();add(q,'user');setTimeout(()=>add(ans(q),'bot'),150)}
+function send(e){e.preventDefault();let i=document.getElementById('i');if(i.value.trim()){ask(i.value);i.value=''}}
+add('สวัสดีครับ 👋 ถามเรื่องโครงสร้างหลักสูตรได้เลยครับ','bot');
+</script>
+</body>
+</html>

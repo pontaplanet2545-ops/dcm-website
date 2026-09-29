@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ผลลัพธ์การเรียนรู้ | DCM</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap');
+*{box-sizing:border-box}body{margin:0;font-family:'Noto Sans Thai',sans-serif;color:#17344e;background:#f7fbff;line-height:1.7}
+a{text-decoration:none;color:inherit}.container{width:min(1200px,92%);margin:auto}
+.top{background:#052f58;color:#d9edff;font-size:13px}.topin{display:flex;justify-content:space-between;padding:7px 0}
+.head{background:#fff;border-bottom:1px solid #dceaf4}.headin{height:85px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px}.mark{width:50px;height:50px;background:linear-gradient(135deg,#0759a8,#2aa8ed);border-radius:13px;color:#fff;display:grid;place-items:center;font-weight:800}.logo b{display:block;color:#063b70}.logo small{color:#71879a}
+.nav{background:#0759a8}.navin{display:flex}.nav a{color:#fff;padding:13px 14px;font-size:14px;font-weight:600;border-bottom:3px solid transparent}.nav a.active,.nav a:hover{border-color:#9bdcff;background:#ffffff12}.menu{display:none;background:none;border:0;color:#fff;font-size:28px}
+.crumb{background:#edf7ff;border-bottom:1px solid #dceaf4;padding:10px 0;color:#688096;font-size:13px}
+.hero{position:relative;min-height:390px;display:flex;align-items:center;overflow:hidden;background:#064a88}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}.over{position:absolute;inset:0;background:linear-gradient(90deg,#022e59ee,#0759a8aa,#0759a800)}.hero .content{position:relative;color:#fff;padding:65px 0}.hero h1{font-size:47px;line-height:1.15;margin:0}.hero p{max-width:750px;color:#e0f2ff}.badge{display:inline-block;background:#a8e0ff;color:#064276;padding:5px 13px;border-radius:30px;font-size:12px;font-weight:800}
+.section{padding:70px 0}.bluebg{background:#eff8ff}.title{text-align:center;margin-bottom:35px}.title h2{color:#063b70;font-size:31px;margin:0}.title p{color:#698095}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.card{background:#fff;border:1px solid #dceaf4;border-radius:18px;padding:25px;box-shadow:0 12px 35px #164b7012}.card h3{color:#0759a8;margin-top:0}.card p{color:#5d7589}.num{width:48px;height:48px;border-radius:14px;background:#e5f4ff;color:#0759a8;display:grid;place-items:center;font-weight:800;font-size:19px}
+.group{padding:28px;border-radius:20px;background:#fff;border:1px solid #dceaf4;box-shadow:0 12px 35px #164b7010;margin-bottom:25px}.group h2{color:#0759a8;margin-top:0}.group small{color:#7890a3}
+.footer{background:#052f58;color:#cfe4f5;padding:50px 0 20px}.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}.footer h3{color:#fff}.copy{border-top:1px solid #ffffff20;margin-top:30px;padding-top:15px;font-size:12px}
+.back{position:fixed;left:18px;bottom:18px;z-index:999;border:0;background:#fff;color:#0759a8;padding:10px 15px;border-radius:30px;box-shadow:0 5px 25px #0002}.chatbtn{position:fixed;right:20px;bottom:20px;z-index:999;width:62px;height:62px;border:0;border-radius:50%;background:#0759a8;color:#fff;font-size:25px}
+.chat{display:none;position:fixed;right:20px;bottom:95px;width:min(390px,calc(100vw - 25px));height:550px;background:#fff;z-index:1000;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px #00294d40}.chat.open{display:flex;flex-direction:column}.ch{background:#0759a8;color:#fff;padding:15px;display:flex;justify-content:space-between}.ch button{background:none;border:0;color:#fff;font-size:22px}.cb{flex:1;background:#f3f8fc;padding:12px;overflow:auto}.m{padding:9px 12px;border-radius:13px;margin-bottom:8px;max-width:88%;font-size:13px;white-space:pre-wrap}.bot{background:#fff;border:1px solid #dceaf4}.user{background:#0759a8;color:#fff;margin-left:auto}.q{display:flex;gap:5px;padding:7px;overflow:auto}.q button{white-space:nowrap;border:1px solid #b9d8ee;background:#f4faff;color:#0759a8;border-radius:18px;padding:5px 9px}.cf{display:flex;border-top:1px solid #dceaf4}.cf input{flex:1;border:0;padding:13px;outline:0}.cf button{border:0;background:#0759a8;color:#fff;padding:0 17px}
+@media(max-width:850px){.navin{display:none;flex-direction:column}.nav.open .navin{display:flex}.menu{display:block}.grid,.fg{grid-template-columns:1fr}.hero h1{font-size:38px}.section{padding:50px 0}}
+</style>
+</head>
+
+<body>
+
+<div class="top"><div class="container topin"><span>มหาวิทยาลัยวลัยลักษณ์ • สำนักวิชาสารสนเทศศาสตร์</span><span>Digital Content & Media</span></div></div>
+
+<header class="head">
+<div class="container headin">
+<a class="logo" href="index.html"><div class="mark">WU</div><div><b>Digital Content & Media</b><small>School of Informatics • Walailak University</small></div></a>
+<button class="menu" onclick="nav()">☰</button>
+</div>
+</header>
+
+<nav class="nav" id="nav">
+<div class="container navin">
+<a href="index.html">หน้าหลัก</a>
+<a href="about.html">เกี่ยวกับหลักสูตร</a>
+<a class="active" href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a>
+<a href="curriculum.html">โครงสร้างหลักสูตร</a>
+<a href="careers.html">อาชีพ</a>
+<a href="tuition.html">ค่าเทอม</a>
+<a href="further-study.html">ศึกษาต่อ</a>
+<a href="contact.html">ติดต่อ</a>
+</div>
+</nav>
+
+<div class="crumb"><div class="container">หน้าหลัก / ผลลัพธ์การเรียนรู้</div></div>
+
+<section class="hero">
+<img src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/428357394_1003333084466406_6130191326911859572_n.jpg" alt="นักศึกษา DCM ทำงานกับสื่อ">
+<div class="over"></div>
+<div class="container content">
+<span class="badge">PROGRAM LEARNING OUTCOMES</span>
+<h1>ผลลัพธ์การเรียนรู้<br>PLO 1 – PLO 9</h1>
+<p>สิ่งที่นักศึกษาควรสามารถทำได้เมื่อสำเร็จการศึกษาจากหลักสูตรดิจิทัลคอนเทนต์และสื่อ</p>
+</div>
+</section>
+
+<section class="section white">
+<div class="container">
+<div class="title">
+<h2>Knowledge • Skills • Ethics • Character</h2>
+<p>ผลลัพธ์การเรียนรู้แบ่งออกเป็น 4 ด้าน</p>
+</div>
+
+<div class="group">
+<h2>01 — Knowledge</h2>
+<small>ด้านความรู้</small>
+<div class="grid">
+<div class="card">
+<div class="num">PLO1</div>
+<h3>ความรู้พื้นฐาน</h3>
+<p>อธิบายความรู้ด้านมนุษยศาสตร์ สังคมศาสตร์ เทคโนโลยีสารสนเทศพื้นฐาน และแนวคิดสำหรับการออกแบบ ผลิต และเผยแพร่ดิจิทัลคอนเทนต์ที่ตอบสนองความต้องการของผู้ใช้</p>
+</div>
+<div class="card">
+<div class="num">PLO2</div>
+<h3>ประยุกต์ใช้ความรู้</h3>
+<p>ประยุกต์ใช้ความรู้ด้านการจัดการสารสนเทศ การออกแบบและผลิตสื่อ การจัดบริการดิจิทัลคอนเทนต์ และความรู้ด้านอาชีพที่เกี่ยวข้องกับอุตสาหกรรมดิจิทัล</p>
+</div>
+</div>
+</div>
+
+<div class="group">
+<h2>02 — Skills</h2>
+<small>ด้านทักษะ</small>
+<div class="grid">
+<div class="card"><div class="num">PLO3</div><h3>เลือกใช้เทคโนโลยี</h3><p>เลือกใช้เทคโนโลยีเพื่อพัฒนาดิจิทัลคอนเทนต์ให้ตอบสนองวัตถุประสงค์และความต้องการของผู้ใช้</p></div>
+<div class="card"><div class="num">PLO4</div><h3>ออกแบบบริการดิจิทัล</h3><p>ออกแบบการจัดบริการดิจิทัลคอนเทนต์อย่างเป็นระบบ โดยใช้กระบวนการวิจัยและพัฒนา</p></div>
+<div class="card"><div class="num">PLO5</div><h3>จัดระบบบริการ</h3><p>มีทักษะในการจัดระบบบริการดิจิทัลคอนเทนต์ให้สอดคล้องกับความต้องการขององค์กร</p></div>
+<div class="card"><div class="num">PLO6</div><h3>การสื่อสาร</h3><p>มีทักษะการสื่อสารภาษาไทยและภาษาอังกฤษ ทั้งการฟัง พูด อ่าน เขียน และนำเสนอผลงาน โดยผู้ที่เลือกภาษาจีนสามารถสื่อสารภาษาจีนในชีวิตประจำวันได้</p></div>
+</div>
+</div>
+
+<div class="group">
+<h2>03 — Ethics</h2>
+<small>ด้านจริยธรรม</small>
+<div class="grid">
+<div class="card"><div class="num">PLO7</div><h3>ความรับผิดชอบและจริยธรรม</h3><p>แสดงออกถึงความซื่อสัตย์ ความกตัญญูกตเวที ความรับผิดชอบต่อตนเองและสังคม ปฏิบัติตามกฎระเบียบ และจริยธรรมทางวิชาการ</p></div>
+</div>
+</div>
+
+<div class="group">
+<h2>04 — Character</h2>
+<small>ด้านลักษณะบุคคล</small>
+<div class="grid">
+<div class="card"><div class="num">PLO8</div><h3>ภาวะผู้นำและการทำงานร่วมกัน</h3><p>มีภาวะผู้นำ มีสุขภาวะ สามารถเป็นทั้งผู้นำและผู้ตาม มีจิตอาสา และทำงานร่วมกับผู้อื่น</p></div>
+<div class="card"><div class="num">PLO9</div><h3>Digital Literacy</h3><p>แสดงออกถึงการรู้ดิจิทัล และสามารถแสวงหาความรู้ภายใต้สภาพแวดล้อมดิจิทัล</p></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section bluebg">
+<div class="container">
+<div class="title"><h2>ตัวอย่างการนำ PLO ไปใช้</h2><p>เชื่อมโยงความรู้กับการทำงานจริง</p></div>
+<div class="grid">
+<div class="card"><h3>🎨 สร้างคอนเทนต์</h3><p>ใช้ PLO1–PLO3 เพื่อเข้าใจผู้ใช้ เลือกเทคโนโลยี และสร้างคอนเทนต์ที่เหมาะสม</p></div>
+<div class="card"><h3>💻 พัฒนาเว็บไซต์</h3><p>ใช้ PLO3–PLO5 เพื่อเลือกเทคโนโลยี ออกแบบบริการ และจัดระบบคอนเทนต์</p></div>
+<div class="card"><h3>🤝 ทำงานเป็นทีม</h3><p>ใช้ PLO7–PLO8 เพื่อทำงานอย่างรับผิดชอบ มีจริยธรรม และร่วมมือกับผู้อื่น</p></div>
+<div class="card"><h3>🌐 เรียนรู้ตลอดชีวิต</h3><p>PLO9 ช่วยให้ผู้เรียนสามารถค้นหาและเรียนรู้ข้อมูลใหม่ ๆ ในสภาพแวดล้อมดิจิทัล</p></div>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container fg">
+<div><h3>Digital Content & Media</h3><p>หลักสูตรสารสนเทศศาสตรบัณฑิต สาขาดิจิทัลคอนเทนต์และสื่อ มหาวิทยาลัยวลัยลักษณ์</p></div>
+<div><h3>เว็บไซต์</h3><p><a href="about.html">เกี่ยวกับหลักสูตร</a><br><a href="curriculum.html">โครงสร้าง</a><br><a href="careers.html">อาชีพ</a></p></div>
+<div><h3>ติดต่อ</h3><p>โทร. 075-672204</p></div>
+</div>
+<div class="container copy">© 2026 Digital Content & Media • Walailak University</div>
+</footer>
+
+<button class="back" onclick="back()">← ย้อนกลับ</button>
+<button class="chatbtn" onclick="openChat()">💬</button>
+
+<div class="chat" id="chat">
+<div class="ch"><div><b>DCM Assistant</b><br><small>ถามข้อมูลหลักสูตร</small></div><button onclick="closeChat()">×</button></div>
+<div class="cb" id="cb"></div>
+<div class="q"><button onclick="ask('PLO1 คืออะไร')">PLO1</button><button onclick="ask('PLO6 คืออะไร')">PLO6</button><button onclick="ask('PLO9 คืออะไร')">PLO9</button></div>
+<form class="cf" onsubmit="send(event)"><input id="i" placeholder="ถามเกี่ยวกับ PLO..."><button>ส่ง</button></form>
+</div>
+
+<script>
+function nav(){document.getElementById('nav').classList.toggle('open')}
+function back(){if(document.referrer&&new URL(document.referrer).origin===location.origin)history.back();else location.href='index.html'}
+function openChat(){document.getElementById('chat').classList.add('open')}
+function closeChat(){document.getElementById('chat').classList.remove('open')}
+const data=[
+['plo1','PLO1 เน้นความรู้ด้านมนุษยศาสตร์ สังคมศาสตร์ เทคโนโลยีสารสนเทศพื้นฐาน และแนวคิดสำหรับการออกแบบ ผลิต และเผยแพร่ดิจิทัลคอนเทนต์ครับ'],
+['plo2','PLO2 เน้นการประยุกต์ใช้ความรู้ด้านการจัดการสารสนเทศ การออกแบบและผลิตสื่อ การจัดบริการดิจิทัลคอนเทนต์ และความรู้ด้านอาชีพครับ'],
+['plo3','PLO3 เน้นการเลือกใช้เทคโนโลยีเพื่อพัฒนาดิจิทัลคอนเทนต์ให้ตอบสนองผู้ใช้ครับ'],
+['plo4','PLO4 เน้นการออกแบบบริการดิจิทัลคอนเทนต์อย่างเป็นระบบด้วยกระบวนการวิจัยและพัฒนาครับ'],
+['plo5','PLO5 เน้นการจัดระบบบริการดิจิทัลคอนเทนต์ให้สอดคล้องกับองค์กรครับ'],
+['plo6','PLO6 เน้นการสื่อสารภาษาไทยและภาษาอังกฤษ และภาษาจีนสำหรับผู้ที่เลือกภาษาจีนครับ'],
+['plo7','PLO7 เน้นความซื่อสัตย์ ความรับผิดชอบ การปฏิบัติตามกฎระเบียบ และจริยธรรมทางวิชาการครับ'],
+['plo8','PLO8 เน้นภาวะผู้นำ สุขภาวะ จิตอาสา และการทำงานร่วมกับผู้อื่นครับ'],
+['plo9','PLO9 เน้น Digital Literacy และการแสวงหาความรู้ในสภาพแวดล้อมดิจิทัลครับ'],
+['ผลลัพธ์','หลักสูตรมี PLO ทั้งหมด 9 ข้อ แบ่งเป็น Knowledge, Skills, Ethics และ Character ครับ']
+];
+function ans(q){q=q.toLowerCase();let x=data.find(x=>q.includes(x[0]));return x?x[1]:'ถามได้ เช่น PLO1, PLO2, PLO3, PLO6, PLO7, PLO8 หรือ PLO9 ครับ'}
+function add(t,c){let d=document.createElement('div');d.className='m '+c;d.textContent=t;document.getElementById('cb').appendChild(d);document.getElementById('cb').scrollTop=99999}
+function ask(q){openChat();add(q,'user');setTimeout(()=>add(ans(q),'bot'),150)}
+function send(e){e.preventDefault();let x=document.getElementById('i');if(x.value.trim()){ask(x.value);x.value=''}}
+add('สวัสดีครับ 👋 ถามผมเกี่ยวกับ PLO ของ DCM ได้เลยครับ','bot');
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ค่าเทอม | Digital Content & Media</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap');
+*{box-sizing:border-box}body{margin:0;font-family:'Noto Sans Thai',sans-serif;background:#f7fbff;color:#17344e;line-height:1.7}a{text-decoration:none;color:inherit}.container{width:min(1200px,92%);margin:auto}
+.top{background:#052f58;color:#d9edff;font-size:13px}.topin{display:flex;justify-content:space-between;padding:7px 0}.head{background:#fff;border-bottom:1px solid #dceaf4}.headin{height:85px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:12px}.mark{width:50px;height:50px;border-radius:13px;background:linear-gradient(135deg,#0759a8,#28a7ec);display:grid;place-items:center;color:#fff;font-weight:800}.logo b{display:block;color:#063b70}.logo small{color:#71879a}.nav{background:#0759a8}.navin{display:flex}.nav a{color:#fff;padding:13px 14px;font-size:14px;font-weight:600;border-bottom:3px solid transparent}.nav a.active,.nav a:hover{border-color:#9ddcff;background:#ffffff12}.menu{display:none;background:none;border:0;color:#fff;font-size:28px}.crumb{background:#edf7ff;border-bottom:1px solid #dceaf4;padding:10px 0;color:#698096;font-size:13px}
+.hero{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;background:#064b8c}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}.over{position:absolute;inset:0;background:linear-gradient(90deg,#022e59ed,#0759a8a5,#0759a800)}.hc{position:relative;color:#fff;padding:70px 0}.hc h1{font-size:48px;line-height:1.15;margin:0}.hc p{max-width:700px;color:#e0f3ff}.badge{display:inline-block;background:#a8e0ff;color:#064276;padding:5px 13px;border-radius:30px;font-size:12px;font-weight:800}
+.section{padding:70px 0}.blue{background:#eff8ff}.title{text-align:center;margin-bottom:35px}.title h2{margin:0;color:#063b70;font-size:32px}.title p{color:#698096}
+.pricegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}.price{background:#fff;border:1px solid #dceaf4;border-radius:24px;padding:40px;text-align:center;box-shadow:0 15px 45px #164b7012}.price .num{font-size:58px;color:#0759a8;font-weight:800;line-height:1}.price .unit{color:#698096;margin-top:8px}.price h2{color:#063b70}.price.primary{background:linear-gradient(135deg,#0759a8,#0b80d8);color:#fff}.price.primary h2,.price.primary .num{color:#fff}.price.primary .unit{color:#d9efff}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid #dceaf4;border-radius:18px;padding:25px}.card h3{color:#0759a8;margin-top:0}.card p{color:#5d7589}
+.note{background:#e8f5ff;border-left:5px solid #0759a8;padding:20px;border-radius:10px;color:#49667d}
+.footer{background:#052f58;color:#cfe4f5;padding:50px 0 20px}.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}.footer h3{color:#fff}.copy{border-top:1px solid #ffffff20;margin-top:30px;padding-top:15px;font-size:12px}
+.back{position:fixed;left:18px;bottom:18px;z-index:999;border:0;background:#fff;color:#0759a8;padding:10px 15px;border-radius:30px;box-shadow:0 5px 25px #0002}.chatbtn{position:fixed;right:20px;bottom:20px;z-index:999;width:62px;height:62px;border:0;border-radius:50%;background:#0759a8;color:#fff;font-size:25px}.chat{display:none;position:fixed;right:20px;bottom:95px;width:min(390px,calc(100vw - 25px));height:550px;background:#fff;z-index:1000;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px #00294d40}.chat.open{display:flex;flex-direction:column}.ch{background:#0759a8;color:#fff;padding:15px;display:flex;justify-content:space-between}.ch button{background:none;border:0;color:#fff;font-size:22px}.cb{flex:1;background:#f3f8fc;padding:12px;overflow:auto}.m{padding:9px 12px;border-radius:13px;margin-bottom:8px;max-width:88%;font-size:13px}.bot{background:#fff;border:1px solid #dceaf4}.user{background:#0759a8;color:#fff;margin-left:auto}.cf{display:flex;border-top:1px solid #dceaf4}.cf input{flex:1;border:0;padding:13px;outline:0}.cf button{border:0;background:#0759a8;color:#fff;padding:0 17px}
+@media(max-width:850px){.navin{display:none;flex-direction:column}.nav.open .navin{display:flex}.menu{display:block}.pricegrid,.info,.fg{grid-template-columns:1fr}.hc h1{font-size:38px}}
+</style>
+</head>
+
+<body>
+<div class="top"><div class="container topin"><span>มหาวิทยาลัยวลัยลักษณ์ • สำนักวิชาสารสนเทศศาสตร์</span><span>Digital Content & Media</span></div></div>
+<header class="head"><div class="container headin"><a class="logo" href="index.html"><div class="mark">WU</div><div><b>Digital Content & Media</b><small>School of Informatics • Walailak University</small></div></a><button class="menu" onclick="toggle()">☰</button></div></header>
+<nav class="nav" id="nav"><div class="container navin"><a href="index.html">หน้าหลัก</a><a href="about.html">เกี่ยวกับหลักสูตร</a><a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a><a href="curriculum.html">โครงสร้างหลักสูตร</a><a href="careers.html">อาชีพ</a><a class="active" href="tuition.html">ค่าเทอม</a><a href="further-study.html">ศึกษาต่อ</a><a href="contact.html">ติดต่อ</a></div></nav>
+<div class="crumb"><div class="container">หน้าหลัก / ค่าเทอม</div></div>
+
+<section class="hero">
+<img src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM05.jpg" alt="นักศึกษา DCM">
+<div class="over"></div>
+<div class="container hc"><span class="badge">TUITION FEES</span><h1>ค่าใช้จ่าย<br>ในการศึกษา</h1><p>ข้อมูลค่าธรรมเนียมการศึกษาของหลักสูตร Digital Content & Media</p></div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="title"><h2>ค่าธรรมเนียมการศึกษา</h2><p>ตัวเลขตามข้อมูลหน้าโปรแกรม DCM</p></div>
+
+<div class="pricegrid">
+<div class="price primary"><h2>ต่อภาคการศึกษา</h2><div class="num">25,000</div><div class="unit">บาท / ภาคการศึกษา</div></div>
+<div class="price"><h2>ตลอดหลักสูตร</h2><div class="num">200,000</div><div class="unit">บาท / ตลอดหลักสูตร</div></div>
+</div>
+</div>
+</section>
+
+<section class="section blue">
+<div class="container">
+<div class="title"><h2>ข้อมูลที่ควรรู้</h2><p>ใช้ประกอบการวางแผนค่าใช้จ่าย</p></div>
+<div class="info">
+<div class="card"><h3>🎓 123 หน่วยกิต</h3><p>หลักสูตรมีจำนวนหน่วยกิตรวมตลอดหลักสูตร 123 หน่วยกิต</p></div>
+<div class="card"><h3>💼 สหกิจศึกษา</h3><p>มีการปฏิบัติงานจริงในสถานประกอบการไม่น้อยกว่า 8 เดือน</p></div>
+<div class="card"><h3>📚 วิชาโท</h3><p>นักศึกษาสามารถเลือกกลุ่มวิชาโทเพื่อพัฒนาความรู้ที่สนใจ</p></div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="note"><strong>หมายเหตุ:</strong> ค่าธรรมเนียมในหน้าเว็บนี้อ้างอิงข้อมูลที่เผยแพร่บนหน้าโปรแกรม DCM ปัจจุบัน หากต้องการข้อมูลค่าใช้จ่ายอื่น ๆ เช่น ค่าหอพัก ค่าใช้จ่ายส่วนตัว หรือค่าธรรมเนียมเฉพาะกิจ ควรตรวจสอบประกาศของมหาวิทยาลัยเพิ่มเติม</div>
+</div>
+</section>
+
+<footer class="footer"><div class="container fg"><div><h3>Digital Content & Media</h3><p>หลักสูตรสารสนเทศศาสตรบัณฑิต สาขาดิจิทัลคอนเทนต์และสื่อ มหาวิทยาลัยวลัยลักษณ์</p></div><div><h3>เมนู</h3><p><a href="curriculum.html">โครงสร้าง</a><br><a href="careers.html">อาชีพ</a><br><a href="contact.html">ติดต่อ</a></p></div><div><h3>ติดต่อ</h3><p>075-672204</p></div></div><div class="container copy">© 2026 Digital Content & Media</div></footer>
+
+<button class="back" onclick="back()">← ย้อนกลับ</button><button class="chatbtn" onclick="openChat()">💬</button>
+<div class="chat" id="chat"><div class="ch"><b>DCM Assistant</b><button onclick="closeChat()">×</button></div><div class="cb" id="cb"></div><form class="cf" onsubmit="send(event)"><input id="i" placeholder="ถามเรื่องค่าเทอม..."><button>ส่ง</button></form></div>
+
+<script>
+function toggle(){document.getElementById('nav').classList.toggle('open')}
+function back(){if(document.referrer&&new URL(document.referrer).origin===location.origin)history.back();else location.href='index.html'}
+function openChat(){document.getElementById('chat').classList.add('open')}function closeChat(){document.getElementById('chat').classList.remove('open')}
+const data=[['ค่าเทอม','ค่าเทอม 25,000 บาทต่อภาคการศึกษา และ 200,000 บาทตลอดหลักสูตรครับ'],['กี่บาท','ค่าธรรมเนียมคือ 25,000 บาทต่อภาคการศึกษา และ 200,000 บาทตลอดหลักสูตรครับ'],['หน่วยกิต','หลักสูตรมี 123 หน่วยกิตครับ'],['สหกิจ','มีการปฏิบัติงานจริงไม่น้อยกว่า 8 เดือนครับ']];
+function ans(q){q=q.toLowerCase();let x=data.find(x=>q.includes(x[0]));return x?x[1]:'ลองถามว่า ค่าเทอมเท่าไหร่, เรียนกี่หน่วยกิต หรือมีสหกิจไหมครับ'}
+function add(t,c){let d=document.createElement('div');d.className='m '+c;d.textContent=t;document.getElementById('cb').appendChild(d)}
+function ask(q){openChat();add(q,'user');setTimeout(()=>add(ans(q),'bot'),150)}
+function send(e){e.preventDefault();let i=document.getElementById('i');if(i.value.trim()){ask(i.value);i.value=''}}
+add('สวัสดีครับ 👋 ถามเรื่องค่าเทอม DCM ได้เลยครับ','bot');
+</script>
+</body>
+</html>

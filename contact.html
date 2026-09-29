@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ติดต่อ | Digital Content & Media</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap');
+*{box-sizing:border-box}body{margin:0;font-family:'Noto Sans Thai',sans-serif;color:#17344e;background:#f7fbff;line-height:1.7}a{text-decoration:none;color:inherit}.container{width:min(1200px,92%);margin:auto}
+.top{background:#052f58;color:#d9edff;font-size:13px}.topin{display:flex;justify-content:space-between;padding:7px 0}.head{background:#fff;border-bottom:1px solid #dceaf4}.headin{height:85px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;gap:12px;align-items:center}.mark{width:50px;height:50px;border-radius:13px;background:linear-gradient(135deg,#0759a8,#28a7ec);display:grid;place-items:center;color:#fff;font-weight:800}.logo b{display:block;color:#063b70}.logo small{color:#71879a}.nav{background:#0759a8}.navin{display:flex}.nav a{color:#fff;padding:13px 14px;font-size:14px;font-weight:600;border-bottom:3px solid transparent}.nav a:hover,.nav a.active{border-color:#9ddcff;background:#ffffff12}.menu{display:none;background:none;border:0;color:#fff;font-size:28px}.crumb{background:#edf7ff;border-bottom:1px solid #dceaf4;padding:10px 0;color:#698096;font-size:13px}
+.hero{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;background:#064b8c}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}.over{position:absolute;inset:0;background:linear-gradient(90deg,#022e59ee,#0759a8a5,#0759a800)}.hc{position:relative;color:#fff;padding:70px 0}.hc h1{font-size:48px;line-height:1.15;margin:0}.hc p{max-width:750px;color:#e0f3ff}.badge{display:inline-block;background:#a8e0ff;color:#064276;padding:5px 13px;border-radius:30px;font-size:12px;font-weight:800}
+.section{padding:70px 0}.blue{background:#eff8ff}.title{text-align:center;margin-bottom:35px}.title h2{margin:0;color:#063b70;font-size:32px}.title p{color:#698096}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}.card{background:#fff;border:1px solid #dceaf4;border-radius:20px;padding:30px;box-shadow:0 12px 35px #164b7012}.card h2{color:#0759a8;margin-top:0}.item{display:flex;gap:15px;padding:16px 0;border-bottom:1px solid #e5eef4}.item:last-child{border:0}.ico{width:45px;height:45px;border-radius:13px;background:#e7f5ff;color:#0759a8;display:grid;place-items:center;font-size:20px;flex:none}.item b{display:block}.item span{color:#62798d}
+.logoimg{width:100%;max-height:300px;object-fit:contain;border:1px solid #dceaf4;border-radius:18px;background:#fff;padding:20px}
+.address{background:#0759a8;color:#fff;border-radius:20px;padding:30px}.address h2{margin-top:0}.address p{color:#d8edff}
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.link{background:#fff;border:1px solid #dceaf4;border-radius:15px;padding:20px;color:#0759a8;font-weight:700}
+.footer{background:#052f58;color:#cfe4f5;padding:50px 0 20px}.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}.footer h3{color:#fff}.copy{border-top:1px solid #ffffff20;margin-top:30px;padding-top:15px;font-size:12px}
+.back{position:fixed;left:18px;bottom:18px;z-index:999;border:0;background:#fff;color:#0759a8;padding:10px 15px;border-radius:30px;box-shadow:0 5px 25px #0002}.chatbtn{position:fixed;right:20px;bottom:20px;z-index:999;width:62px;height:62px;border:0;border-radius:50%;background:#0759a8;color:#fff;font-size:25px}.chat{display:none;position:fixed;right:20px;bottom:95px;width:min(390px,calc(100vw - 25px));height:550px;background:#fff;z-index:1000;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px #00294d40}.chat.open{display:flex;flex-direction:column}.ch{background:#0759a8;color:#fff;padding:15px;display:flex;justify-content:space-between}.ch button{background:none;border:0;color:#fff;font-size:22px}.cb{flex:1;background:#f3f8fc;padding:12px;overflow:auto}.m{padding:9px 12px;border-radius:13px;margin-bottom:8px;max-width:88%;font-size:13px}.bot{background:#fff;border:1px solid #dceaf4}.user{background:#0759a8;color:#fff;margin-left:auto}.cf{display:flex;border-top:1px solid #dceaf4}.cf input{flex:1;border:0;padding:13px;outline:0}.cf button{border:0;background:#0759a8;color:#fff;padding:0 17px}
+@media(max-width:850px){.navin{display:none;flex-direction:column}.nav.open .navin{display:flex}.menu{display:block}.contact,.links,.fg{grid-template-columns:1fr}.hc h1{font-size:38px}}
+</style>
+</head>
+
+<body>
+<div class="top"><div class="container topin"><span>มหาวิทยาลัยวลัยลักษณ์ • สำนักวิชาสารสนเทศศาสตร์</span><span>Digital Content & Media</span></div></div>
+
+<header class="head"><div class="container headin">
+<a class="logo" href="index.html"><div class="mark">WU</div><div><b>Digital Content & Media</b><small>School of Informatics • Walailak University</small></div></a>
+<button class="menu" onclick="toggle()">☰</button>
+</div></header>
+
+<nav class="nav" id="nav"><div class="container navin">
+<a href="index.html">หน้าหลัก</a><a href="about.html">เกี่ยวกับหลักสูตร</a><a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a><a href="curriculum.html">โครงสร้างหลักสูตร</a><a href="careers.html">อาชีพ</a><a href="tuition.html">ค่าเทอม</a><a href="further-study.html">ศึกษาต่อ</a><a class="active" href="contact.html">ติดต่อ</a>
+</div></nav>
+
+<div class="crumb"><div class="container">หน้าหลัก / ติดต่อ</div></div>
+
+<section class="hero">
+<img src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM01-scaled.jpg" alt="นักศึกษา DCM">
+<div class="over"></div>
+<div class="container hc"><span class="badge">CONTACT</span><h1>ติดต่อหลักสูตร</h1><p>ข้อมูลติดต่อหลักสูตร Digital Content & Media สำนักวิชาสารสนเทศศาสตร์ มหาวิทยาลัยวลัยลักษณ์</p></div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="title"><h2>ช่องทางการติดต่อ</h2><p>สอบถามข้อมูลเกี่ยวกับหลักสูตรเพิ่มเติม</p></div>
+
+<div class="contact">
+
+<div class="card">
+<h2>Digital Content and Media</h2>
+
+<div class="item">
+<div class="ico">🏫</div>
+<div><b>หน่วยงาน</b><span>สำนักวิชาสารสนเทศศาสตร์<br>มหาวิทยาลัยวลัยลักษณ์</span></div>
+</div>
+
+<div class="item">
+<div class="ico">📞</div>
+<div><b>โทรศัพท์หลักสูตร</b><span>075-672204</span></div>
+</div>
+
+<div class="item">
+<div class="ico">📍</div>
+<div><b>ที่อยู่</b><span>222 ตำบลไทยบุรี อำเภอท่าศาลา จังหวัดนครศรีธรรมราช 80160</span></div>
+</div>
+
+<div class="item">
+<div class="ico">🎓</div>
+<div><b>ชื่อปริญญา</b><span>สารสนเทศศาสตรบัณฑิต (ดิจิทัลคอนเทนต์และสื่อ)<br>Bachelor of Information Science (Digital Content and Media)</span></div>
+</div>
+</div>
+
+<div>
+<div class="card">
+<h2>Digital Content & Media</h2>
+<img class="logoimg" src="https://informatics.wu.ac.th/wp-content/uploads/2024/03/Frame-48099299.png" alt="Digital Content and Media">
+</div>
+
+<br>
+
+<div class="address">
+<h2>School of Informatics</h2>
+<p>Walailak University<br>222 ตำบลไทยบุรี อำเภอท่าศาลา จังหวัดนครศรีธรรมราช 80160</p>
+<a href="tel:075672204" style="display:inline-block;background:#fff;color:#0759a8;padding:9px 15px;border-radius:9px;font-weight:700">📞 โทร 075-672204</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section blue">
+<div class="container">
+<div class="title"><h2>ลิงก์สำคัญ</h2><p>เว็บไซต์ที่เกี่ยวข้องกับหลักสูตร</p></div>
+<div class="links">
+<a class="link" href="index.html">🏠 หน้าเว็บไซต์ DCM</a>
+<a class="link" href="https://informatics.wu.ac.th/bachelors-degree/digital-content-and-media/" target="_blank">🌐 หน้า DCM ทางการ</a>
+<a class="link" href="https://entry.wu.ac.th/" target="_blank">🎓 สมัครเรียน WU</a>
+</div>
+</div>
+</section>
+
+<footer class="footer"><div class="container fg"><div><h3>Digital Content & Media</h3><p>หลักสูตรสารสนเทศศาสตรบัณฑิต สาขาดิจิทัลคอนเทนต์และสื่อ มหาวิทยาลัยวลัยลักษณ์</p></div><div><h3>เมนู</h3><p><a href="about.html">เกี่ยวกับ</a><br><a href="curriculum.html">โครงสร้าง</a><br><a href="careers.html">อาชีพ</a></p></div><div><h3>โทร</h3><p>075-672204</p></div></div><div class="container copy">© 2026 Digital Content & Media</div></footer>
+
+<button class="back" onclick="back()">← ย้อนกลับ</button><button class="chatbtn" onclick="openChat()">💬</button>
+
+<div class="chat" id="chat"><div class="ch"><b>DCM Assistant</b><button onclick="closeChat()">×</button></div><div class="cb" id="cb"></div><form class="cf" onsubmit="send(event)"><input id="i" placeholder="ถามเรื่องการติดต่อ..."><button>ส่ง</button></form></div>
+
+<script>
+function toggle(){document.getElementById('nav').classList.toggle('open')}
+function back(){if(document.referrer&&new URL(document.referrer).origin===location.origin)history.back();else location.href='index.html'}
+function openChat(){document.getElementById('chat').classList.add('open')}function closeChat(){document.getElementById('chat').classList.remove('open')}
+const data=[
+['โทร','โทรศัพท์หลักสูตร Digital Content and Media คือ 075-672204 ครับ'],
+['เบอร์','เบอร์โทรศัพท์หลักสูตรคือ 075-672204 ครับ'],
+['ติดต่อ','ติดต่อหลักสูตรดิจิทัลคอนเทนต์และสื่อ สำนักวิชาสารสนเทศศาสตร์ มหาวิทยาลัยวลัยลักษณ์ โทร 075-672204 ครับ'],
+['ที่อยู่','สำนักวิชาสารสนเทศศาสตร์ มหาวิทยาลัยวลัยลักษณ์ อยู่ที่ 222 ตำบลไทยบุรี อำเภอท่าศาลา จังหวัดนครศรีธรรมราช 80160 ครับ'],
+['ปริญญา','ชื่อปริญญาคือ สารสนเทศศาสตรบัณฑิต (ดิจิทัลคอนเทนต์และสื่อ) หรือ Bachelor of Information Science (Digital Content and Media) ครับ']
+];
+function ans(q){q=q.toLowerCase();let x=data.find(x=>q.includes(x[0]));return x?x[1]:'ถามได้ว่า เบอร์โทรอะไร, ติดต่อที่ไหน, ที่อยู่ หรือชื่อปริญญาครับ'}
+function add(t,c){let d=document.createElement('div');d.className='m '+c;d.textContent=t;document.getElementById('cb').appendChild(d)}
+function ask(q){openChat();add(q,'user');setTimeout(()=>add(ans(q),'bot'),150)}
+function send(e){e.preventDefault();let i=document.getElementById('i');if(i.value.trim()){ask(i.value);i.value=''}}
+add('สวัสดีครับ 👋 ผมคือ DCM Assistant ถามข้อมูลการติดต่อได้เลยครับ','bot');
+</script>
+</body>
+</html>
