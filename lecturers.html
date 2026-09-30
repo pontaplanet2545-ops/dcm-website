@@ -1,129 +1,2712 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>อาจารย์ประจำหลักสูตร | Digital Content and Media</title>
+
+<title>อาจารย์ | Digital Content & Media</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:"Segoe UI","Noto Sans Thai",Arial,sans-serif;background:#fff;color:#222;line-height:1.7}
-.navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid #eee}
-.nav-container{max-width:1200px;margin:auto;min-height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 25px}
-.logo{text-decoration:none;color:#111;font-size:21px;font-weight:900}.logo span{color:#f97316}
-.nav-menu{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;justify-content:center}
-.nav-menu a{text-decoration:none;color:#444;padding:9px 12px;border-radius:9px;font-size:14px;transition:.2s}
-.nav-menu a:hover,.nav-menu a.active{background:#f97316;color:#fff}
-.hero{background:linear-gradient(135deg,#fff7ed,#ffedd5 55%,#f97316);padding:85px 20px}
-.hero-container{max-width:1200px;margin:auto}
-.hero-label{display:inline-block;color:#ea580c;font-size:13px;letter-spacing:1px;font-weight:800;margin-bottom:12px}
-.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.1;color:#111;margin-bottom:18px}
-.hero p{max-width:700px;color:#555;font-size:17px}
-.container{max-width:1200px;margin:auto;padding:70px 20px}
-.section-title{text-align:center;margin-bottom:42px}.section-title .small{color:#f97316;font-size:13px;font-weight:900;letter-spacing:.7px;margin-bottom:7px}
-.section-title h2{font-size:34px;color:#111;margin-bottom:8px}.section-title p{color:#777}
-.lecturer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
-.lecturer-card{background:#fff;border:1px solid #eee;border-radius:20px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.06);transition:.3s;display:flex;flex-direction:column}
-.lecturer-card:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(249,115,22,.14);border-color:#fed7aa}
-.lecturer-image{height:310px;background:#f8fafc;overflow:hidden}.lecturer-image img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}
-.lecturer-card:hover .lecturer-image img{transform:scale(1.025)}
-.lecturer-info{padding:24px;display:flex;flex-direction:column;flex:1}.lecturer-info h3{font-size:20px;line-height:1.45;color:#111;margin-bottom:12px}
-.label{font-size:13px;font-weight:900;color:#f97316;margin-bottom:5px}.lecturer-info p{font-size:14px;color:#666;margin-bottom:16px}
-.lecturer-contact{margin-top:auto;padding-top:15px;border-top:1px solid #eee}.lecturer-contact a{display:block;text-decoration:none;color:#555;font-size:13px;margin:5px 0}
-.lecturer-contact a:hover{color:#ea580c}.profile-btn{display:block!important;margin-top:14px;padding:10px 14px;background:#111;color:#fff!important;border-radius:10px;text-align:center;font-weight:700}
-.profile-btn:hover{background:#f97316}
-.profile-panel{display:none;max-width:1000px;margin:0 auto}.profile-panel.show{display:block}
-.profile-card{display:grid;grid-template-columns:minmax(380px,48%) 1fr;background:#fff;border:1px solid #eee;border-radius:28px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.10)}
-.profile-image{height:620px;background:#f3f4f6;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.profile-image img{width:100%;height:100%;min-height:0;object-fit:contain;object-position:center;background:#f3f4f6;display:block}
-.profile-info{padding:52px 48px;display:flex;flex-direction:column;justify-content:center}.back-btn{display:inline-flex;align-items:center;gap:7px;color:#ea580c;text-decoration:none;font-weight:800;margin-bottom:20px}
-.profile-role{display:inline-block;background:#fff7ed;color:#ea580c;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:800;margin-bottom:14px}
-.profile-info h2{font-size:34px;color:#111;line-height:1.3;margin-bottom:20px}.profile-label{font-size:14px;color:#f97316;font-weight:900;margin:22px 0 9px}
-.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:6px 10px;border-radius:999px;font-size:13px}
-.profile-contact{margin-top:25px;padding-top:20px;border-top:1px solid #eee}.profile-contact a{display:block;color:#444;text-decoration:none;margin:9px 0}
-.profile-contact a:hover{color:#ea580c}.back-list{display:inline-block;margin-top:20px;background:#f97316;color:#fff!important;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
-footer{background:#111;color:#fff;padding:42px 20px;margin-top:20px}.footer-container{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:30px}
-.footer-title{font-size:20px;font-weight:800;margin-bottom:7px}.footer-text{color:#aaa;font-size:14px}
-@media(max-width:900px){.nav-container{flex-direction:column;padding:15px 20px;gap:12px}.lecturer-grid{grid-template-columns:repeat(2,1fr)}.profile-card{grid-template-columns:1fr}.profile-image{height:520px}.profile-image img{width:100%;height:100%;min-height:0;object-fit:contain}}
-@media(max-width:600px){.hero{padding:60px 20px}.hero h1{font-size:42px}.container{padding:45px 15px}.lecturer-grid{grid-template-columns:1fr}.profile-image{height:430px}.profile-info{padding:28px 22px}.profile-info h2{font-size:28px}.footer-container{flex-direction:column}.nav-menu{gap:3px}.nav-menu a{font-size:13px;padding:8px 9px}}
+
+/* =========================
+RESET
+========================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Noto Sans Thai",sans-serif;
+    color:#2b2119;
+    background:#fff;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* =========================
+TOP BAR
+========================= */
+
+.topbar{
+    background:#211914;
+    color:#ddd;
+    padding:8px 6%;
+    font-size:12px;
+}
+
+.topbar-inner{
+    max-width:1250px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+/* =========================
+HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid #eee;
+}
+
+.header-inner{
+    max-width:1250px;
+    min-height:78px;
+
+    margin:auto;
+    padding:0 6%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-mark{
+    width:45px;
+    height:45px;
+
+    border-radius:13px;
+
+    background:#F28C28;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:15px;
+    font-weight:800;
+}
+
+.logo-text strong{
+    display:block;
+    font-size:16px;
+}
+
+.logo-text span{
+    display:block;
+    color:#888;
+    font-size:10px;
+}
+
+
+/* =========================
+NAV
+========================= */
+
+nav ul{
+    list-style:none;
+
+    display:flex;
+    gap:3px;
+}
+
+nav a{
+    display:block;
+
+    padding:9px 10px;
+
+    border-radius:9px;
+
+    font-size:12px;
+    font-weight:600;
+
+    transition:.2s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#F28C28;
+    background:#FFF2E4;
+}
+
+.menu-toggle{
+    display:none;
+
+    background:none;
+    border:0;
+
+    font-size:27px;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+    position:relative;
+
+    min-height:500px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            105deg,
+            rgba(33,25,20,.96),
+            rgba(43,33,25,.72),
+            rgba(43,33,25,.32)
+        ),
+        url("https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM05.jpg")
+        center/cover;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:110px 6%;
+
+    color:white;
+}
+
+.hero-label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    margin-bottom:20px;
+}
+
+.hero-label::before{
+    content:"";
+
+    width:35px;
+    height:2px;
+
+    background:#F28C28;
+}
+
+.hero h1{
+    max-width:700px;
+
+    font-size:clamp(42px,6vw,68px);
+
+    line-height:1.15;
+
+    letter-spacing:-1px;
+
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:650px;
+
+    color:#ddd;
+
+    font-size:16px;
+}
+
+
+/* =========================
+GENERAL
+========================= */
+
+.container{
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:0 6%;
+}
+
+.section{
+    padding:90px 0;
+}
+
+.section-head{
+    max-width:720px;
+
+    margin-bottom:45px;
+}
+
+.section-head.center{
+    margin-left:auto;
+    margin-right:auto;
+
+    text-align:center;
+}
+
+.eyebrow{
+    color:#F28C28;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    margin-bottom:9px;
+}
+
+.section-head h2{
+    font-size:36px;
+
+    line-height:1.3;
+
+    margin-bottom:12px;
+}
+
+.section-head p{
+    color:#777;
+
+    font-size:14px;
+}
+
+
+/* =========================
+INTRO
+========================= */
+
+.intro{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:55px;
+
+    align-items:center;
+}
+
+.intro-image{
+    position:relative;
+}
+
+.intro-image img{
+    width:100%;
+
+    height:430px;
+
+    object-fit:cover;
+
+    border-radius:28px;
+}
+
+.intro-content h2{
+    font-size:35px;
+
+    line-height:1.3;
+
+    margin-bottom:18px;
+}
+
+.intro-content p{
+    color:#666;
+
+    font-size:14px;
+
+    margin-bottom:16px;
+}
+
+.intro-highlight{
+    margin-top:25px;
+
+    padding:20px;
+
+    border-left:4px solid #F28C28;
+
+    background:#FFF9F2;
+
+    border-radius:0 14px 14px 0;
+}
+
+.intro-highlight strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+.intro-highlight span{
+    color:#777;
+    font-size:13px;
+}
+
+
+/* =========================
+LECTURER GRID
+========================= */
+
+.lecturer-section{
+    background:#FFF9F2;
+}
+
+.lecturer-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.lecturer-card{
+    background:white;
+
+    border:1px solid #eee;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 5px 18px rgba(43,33,25,.03);
+}
+
+.lecturer-card:hover{
+    transform:translateY(-7px);
+
+    box-shadow:0 18px 40px rgba(43,33,25,.1);
+}
+
+.lecturer-image{
+    height:330px;
+
+    background:#F7F3EF;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:flex-end;
+
+    overflow:hidden;
+}
+
+.lecturer-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    object-position:center bottom;
+
+    transition:.3s;
+}
+
+.lecturer-card:hover .lecturer-image img{
+    transform:scale(1.03);
+}
+
+.lecturer-info{
+    padding:22px;
+}
+
+.lecturer-role{
+    display:inline-block;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    background:#FFF2E4;
+
+    color:#C96913;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+}
+
+.lecturer-info h3{
+    font-size:18px;
+
+    line-height:1.4;
+
+    margin-bottom:5px;
+}
+
+.lecturer-info p{
+    color:#888;
+
+    font-size:12px;
+}
+
+.view-profile{
+    margin-top:15px;
+
+    color:#F28C28;
+
+    font-size:12px;
+
+    font-weight:800;
+}
+
+
+/* =========================
+PROFILE MODAL
+========================= */
+
+.modal{
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:10000;
+
+    background:rgba(20,14,10,.72);
+
+    backdrop-filter:blur(6px);
+
+    padding:30px;
+
+    overflow-y:auto;
+}
+
+.modal.show{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.modal-box{
+    width:100%;
+
+    max-width:900px;
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.3);
+
+    animation:modalIn .25s ease;
+}
+
+@keyframes modalIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.98);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+.modal-close{
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    z-index:5;
+
+    width:42px;
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.9);
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    color:#2b2119;
+}
+
+.modal-content{
+    display:grid;
+
+    grid-template-columns:42% 58%;
+}
+
+.modal-photo{
+    min-height:570px;
+
+    background:#F7F3EF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+}
+
+.modal-photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    object-position:center bottom;
+}
+
+.modal-info{
+    padding:50px 45px;
+}
+
+.modal-info .eyebrow{
+    margin-bottom:10px;
+}
+
+.modal-info h2{
+    font-size:30px;
+
+    line-height:1.35;
+
+    margin-bottom:8px;
+}
+
+.modal-info .position{
+    color:#F28C28;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:28px;
+}
+
+.info-block{
+    margin-bottom:25px;
+}
+
+.info-block h4{
+    font-size:14px;
+
+    margin-bottom:7px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+.info-block h4::before{
+    content:"";
+
+    width:5px;
+    height:18px;
+
+    border-radius:5px;
+
+    background:#F28C28;
+}
+
+.info-block p{
+    color:#777;
+
+    font-size:13px;
+}
+
+.info-tags{
+    display:flex;
+
+    gap:7px;
+
+    flex-wrap:wrap;
+}
+
+.info-tags span{
+    background:#FFF2E4;
+
+    color:#C96913;
+
+    padding:6px 11px;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:600;
+}
+
+
+/* =========================
+VALUES
+========================= */
+
+.values{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.value-card{
+    padding:28px;
+
+    border:1px solid #eee;
+
+    border-radius:22px;
+
+    background:white;
+}
+
+.value-icon{
+    width:50px;
+    height:50px;
+
+    border-radius:15px;
+
+    background:#FFF2E4;
+
+    color:#F28C28;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:22px;
+
+    margin-bottom:18px;
+}
+
+.value-card h3{
+    font-size:18px;
+
+    margin-bottom:8px;
+}
+
+.value-card p{
+    color:#777;
+
+    font-size:13px;
+}
+
+
+/* =========================
+CTA
+========================= */
+
+.cta{
+    background:#F28C28;
+
+    color:white;
+
+    padding:75px 6%;
+
+    text-align:center;
+}
+
+.cta h2{
+    font-size:34px;
+
+    margin-bottom:10px;
+}
+
+.cta p{
+    max-width:650px;
+
+    margin:0 auto 25px;
+
+    color:#fff4e7;
+
+    font-size:14px;
+}
+
+.cta-button{
+    display:inline-block;
+
+    background:white;
+
+    color:#F28C28;
+
+    padding:12px 25px;
+
+    border-radius:12px;
+
+    font-weight:800;
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+    background:#211914;
+
+    color:white;
+
+    padding:55px 6% 25px;
+}
+
+.footer-grid{
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1.4fr 1fr 1fr;
+
+    gap:40px;
+}
+
+.footer-logo{
+    font-size:23px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+}
+
+.footer-column h4{
+    color:#F28C28;
+
+    margin-bottom:15px;
+}
+
+.footer-column p,
+.footer-column a{
+    color:#ccc;
+
+    font-size:13px;
+}
+
+.footer-column a{
+    display:block;
+
+    margin-bottom:7px;
+}
+
+.footer-column a:hover{
+    color:#F28C28;
+}
+
+.footer-bottom{
+    max-width:1250px;
+
+    margin:35px auto 0;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    color:#999;
+
+    font-size:12px;
+
+    text-align:center;
+}
+
+
+/* =========================
+CHATBOT
+========================= */
+
+.chat-button{
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#F28C28;
+
+    color:white;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+    z-index:9999;
+
+    transition:.25s;
+}
+
+.chat-button:hover{
+    transform:scale(1.08);
+}
+
+.chat-box{
+    display:none;
+
+    position:fixed;
+
+    right:25px;
+    bottom:95px;
+
+    width:370px;
+    height:520px;
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.22);
+
+    overflow:hidden;
+
+    z-index:9999;
+
+    border:1px solid #eee;
+}
+
+.chat-header{
+    height:70px;
+
+    background:#2b2119;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 18px;
+}
+
+.chat-header strong{
+    display:block;
+    font-size:17px;
+}
+
+.chat-header span{
+    display:block;
+    font-size:12px;
+    color:#ddd;
+    margin-top:4px;
+}
+
+.chat-header button{
+    border:none;
+    background:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.chat-body{
+    height:380px;
+
+    padding:18px;
+
+    overflow-y:auto;
+
+    background:#FFF9F2;
+}
+
+.chat-question{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:12px;
+}
+
+.chat-question-content{
+    max-width:80%;
+
+    background:#F28C28;
+
+    color:white;
+
+    padding:11px 14px;
+
+    border-radius:15px 15px 3px 15px;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    word-break:break-word;
+}
+
+.chat-question-label{
+    font-size:11px;
+    opacity:.8;
+    margin-bottom:3px;
+}
+
+.chat-answer{
+    display:flex;
+    justify-content:flex-start;
+    margin-bottom:18px;
+}
+
+.chat-answer-content{
+    max-width:85%;
+
+    background:white;
+
+    color:#2b2119;
+
+    padding:13px 15px;
+
+    border-radius:15px 15px 15px 3px;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.07);
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+}
+
+.chat-answer-label{
+    font-size:11px;
+
+    color:#F28C28;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+}
+
+.chat-loading{
+    background:white;
+
+    color:#777;
+
+    padding:12px 15px;
+
+    border-radius:15px;
+
+    width:max-content;
+
+    max-width:90%;
+
+    font-size:13px;
+
+    margin-bottom:15px;
+}
+
+.chat-input-area{
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 12px;
+
+    border-top:1px solid #eee;
+
+    background:white;
+}
+
+.chat-input-area input{
+    flex:1;
+
+    height:45px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding:0 13px;
+
+    outline:none;
+
+    font-family:inherit;
+
+    font-size:14px;
+}
+
+.chat-input-area input:focus{
+    border-color:#F28C28;
+}
+
+.chat-input-area button{
+    width:45px;
+    height:45px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#F28C28;
+
+    color:white;
+
+    font-size:19px;
+
+    cursor:pointer;
+}
+
+.chat-input-area button:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1050px){
+
+    nav a{
+        padding:8px 7px;
+        font-size:11px;
+    }
+
+    .lecturer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:850px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        display:none;
+
+        position:absolute;
+
+        top:78px;
+        left:0;
+        right:0;
+
+        background:white;
+
+        border-bottom:1px solid #eee;
+
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+
+    nav.show{
+        display:block;
+    }
+
+    nav ul{
+        display:block;
+        padding:10px 6%;
+    }
+
+    nav a{
+        padding:12px;
+        font-size:13px;
+    }
+
+    .intro{
+        grid-template-columns:1fr;
+    }
+
+    .values{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .modal-content{
+        grid-template-columns:1fr;
+    }
+
+    .modal-photo{
+        min-height:380px;
+        height:380px;
+    }
+
+    .modal-info{
+        padding:35px 30px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .topbar-inner{
+        justify-content:center;
+    }
+
+    .topbar-inner span:last-child{
+        display:none;
+    }
+
+    .header-inner{
+        min-height:70px;
+    }
+
+    nav{
+        top:70px;
+    }
+
+    .hero{
+        min-height:460px;
+    }
+
+    .hero-content{
+        padding:80px 6%;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .section{
+        padding:65px 0;
+    }
+
+    .section-head h2{
+        font-size:29px;
+    }
+
+    .intro-content h2{
+        font-size:29px;
+    }
+
+    .lecturer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .lecturer-image{
+        height:380px;
+    }
+
+    .modal{
+        padding:12px;
+    }
+
+    .modal-box{
+        border-radius:20px;
+    }
+
+    .modal-photo{
+        min-height:320px;
+        height:320px;
+    }
+
+    .modal-info{
+        padding:30px 22px;
+    }
+
+    .modal-info h2{
+        font-size:25px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .chat-box{
+        right:12px;
+        left:12px;
+
+        bottom:85px;
+
+        width:auto;
+        height:70vh;
+    }
+
+    .chat-body{
+        height:calc(70vh - 140px);
+    }
+
+    .chat-button{
+        right:18px;
+        bottom:18px;
+    }
+
+}
+
 </style>
+
 </head>
+
+
 <body>
 
-<nav class="navbar"><div class="nav-container">
-<a href="index.html" class="logo">DCM<span>.</span></a>
-<ul class="nav-menu">
-<li><a href="index.html">หน้าแรก</a></li><li><a href="about.html">เกี่ยวกับสาขา</a></li>
-<li><a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a></li><li><a href="curriculum.html">หลักสูตร</a></li>
-<li><a href="careers.html">อาชีพ</a></li><li><a href="tuition.html">ค่าเทอม</a></li>
-<li><a href="further-study.html">เรียนต่อ</a></li><li><a href="lecturers.html" class="active">อาจารย์</a></li>
-<li><a href="contact.html">ติดต่อ</a></li>
-</ul></div></nav>
 
-<section class="hero" id="hero"><div class="hero-container">
-<div class="hero-label">DIGITAL CONTENT & MEDIA</div>
-<h1>อาจารย์ประจำหลักสูตร</h1>
-<p>พบกับคณาจารย์ผู้สอนและผู้เชี่ยวชาญของหลักสูตรดิจิทัลคอนเทนต์และสื่อ สำนักวิชาสารสนเทศศาสตร์ มหาวิทยาลัยวลัยลักษณ์</p>
-</div></section>
+<!-- =========================
+TOP BAR
+========================= -->
 
-<main class="container">
-<section id="listView">
-<div class="section-title"><div class="small">OUR LECTURERS</div><h2>อาจารย์ประจำหลักสูตร</h2><p>คณาจารย์ผู้เชี่ยวชาญในหลากหลายด้านของสารสนเทศและดิจิทัลคอนเทนต์</p></div>
-<div class="lecturer-grid" id="lecturerGrid"></div>
+<div class="topbar">
+
+    <div class="topbar-inner">
+
+        <span>
+            มหาวิทยาลัยวลัยลักษณ์ • สำนักวิชาสารสนเทศศาสตร์
+        </span>
+
+        <span>
+            Digital Content & Media
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+HEADER
+========================= -->
+
+<header>
+
+    <div class="header-inner">
+
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-mark">
+                DCM
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    Digital Content & Media
+                </strong>
+
+                <span>
+                    Walailak University
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            onclick="toggleMenu()"
+            aria-label="เปิดเมนู"
+        >
+            ☰
+        </button>
+
+
+        <nav id="mainNav">
+
+            <ul id="3mn0ic">
+
+                <li>
+                    <a href="index.html">
+                        หน้าหลัก
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        เกี่ยวกับหลักสูตร
+                    </a>
+                </li>
+
+                <li>
+                    <a href="learning-outcomes.html">
+                        ผลลัพธ์การเรียนรู้
+                    </a>
+                </li>
+
+                <li>
+                    <a href="curriculum.html">
+                        โครงสร้างหลักสูตร
+                    </a>
+                </li>
+
+                <li>
+                    <a href="careers.html">
+                        แนวทางอาชีพ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="tuition.html">
+                        ค่าเล่าเรียน
+                    </a>
+                </li>
+
+                <li>
+                    <a href="further-study.html">
+                        การศึกษาต่อ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="lecturers.html" class="active">
+                        อาจารย์
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        ติดต่อ
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            OUR LECTURERS
+        </div>
+
+        <h1>
+            อาจารย์
+        </h1>
+
+        <p>
+            พบกับทีมอาจารย์ผู้ดูแลและถ่ายทอดความรู้
+            ด้านดิจิทัลคอนเทนต์ สื่อ เทคโนโลยีสารสนเทศ
+            และการจัดการสารสนเทศ
+        </p>
+
+    </div>
+
 </section>
 
-<section id="profileView" class="profile-panel">
-<a href="#" class="back-btn" onclick="showList();return false;">← กลับไปหน้าอาจารย์</a>
-<div class="profile-card">
-<div class="profile-image"><img id="profileImage" src="" alt=""></div>
-<div class="profile-info">
-<span class="profile-role">อาจารย์ประจำหลักสูตรดิจิทัลคอนเทนต์และสื่อ</span>
-<h2 id="profileName"></h2>
-<div class="profile-label">ความเชี่ยวชาญ</div><div class="tags" id="profileExpertise"></div>
-<div class="profile-contact"><a id="profileEmail" href=""></a><a id="profilePhone" href=""></a>
-<a href="#" class="back-list" onclick="showList();return false;">กลับหน้าอาจารย์</a></div>
-</div></div></section>
-</main>
 
-<footer><div class="footer-container"><div><div class="footer-title">Digital Content & Media</div>
-<div class="footer-text">สำนักวิชาสารสนเทศศาสตร์<br>มหาวิทยาลัยวลัยลักษณ์</div></div>
-<div class="footer-text">222 ตำบลไทยบุรี อำเภอท่าศาลา<br>จังหวัดนครศรีธรรมราช 80160</div></div></footer>
+<!-- =========================
+INTRO
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="intro">
+
+
+            <div class="intro-image">
+
+                <img
+                    src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM02.jpg"
+                    alt="Digital Content and Media"
+                >
+
+            </div>
+
+
+            <div class="intro-content">
+
+                <div class="eyebrow">
+                    DCM LECTURERS
+                </div>
+
+                <h2>
+                    เรียนรู้กับอาจารย์
+                    ที่มีความหลากหลายด้านความเชี่ยวชาญ
+                </h2>
+
+                <p>
+                    หลักสูตรดิจิทัลคอนเทนต์และสื่อ
+                    ครอบคลุมทั้งด้านเทคโนโลยีสารสนเทศ
+                    การออกแบบและผลิตสื่อ
+                    การจัดการสารสนเทศ และการพัฒนาดิจิทัลคอนเทนต์
+                </p>
+
+                <p>
+                    คลิกที่โปรไฟล์ของอาจารย์แต่ละท่าน
+                    เพื่อดูรายละเอียดเพิ่มเติม
+                </p>
+
+
+                <div class="intro-highlight">
+
+                    <strong>
+                        👨‍🏫 ทีมอาจารย์ 6 คน
+                    </strong>
+
+                    <span>
+                        รวมข้อมูลไว้ในหน้าเดียว
+                        ไม่ต้องเปิดหน้าโปรไฟล์แยก
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+LECTURERS
+========================= -->
+
+<section class="section lecturer-section">
+
+    <div class="container">
+
+        <div class="section-head center">
+
+            <div class="eyebrow">
+                MEET THE TEAM
+            </div>
+
+            <h2>
+                ทีมอาจารย์ DCM
+            </h2>
+
+            <p>
+                เลือกอาจารย์ที่ต้องการดูข้อมูล
+                เพื่อเปิดรายละเอียดเพิ่มเติม
+            </p>
+
+        </div>
+
+
+        <div class="lecturer-grid">
+
+
+            <!-- 1 -->
+
+            <div
+                class="lecturer-card"
+                onclick="openProfile(0)"
+            >
+
+                <div class="lecturer-image">
+
+                    <img
+                        src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Siwanath-Nuntapichai-lecturer.png"
+                        alt="Siwanath Nuntapichai"
+                    >
+
+                </div>
+
+                <div class="lecturer-info">
+
+                    <span class="lecturer-role">
+                        LECTURER
+                    </span>
+
+                    <h3>
+                        Siwanath Nuntapichai
+                    </h3>
+
+                    <p>
+                        อาจารย์ประจำหลักสูตร
+                    </p>
+
+                    <div class="view-profile">
+                        ดูโปรไฟล์ →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2 -->
+
+            <div
+                class="lecturer-card"
+                onclick="openProfile(1)"
+            >
+
+                <div class="lecturer-image">
+
+                    <img
+                        src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Siriwatchana-Kaeophanuek-lecturer.png"
+                        alt="Siriwatchana Kaeophanuek"
+                    >
+
+                </div>
+
+                <div class="lecturer-info">
+
+                    <span class="lecturer-role">
+                        LECTURER
+                    </span>
+
+                    <h3>
+                        Siriwatchana Kaeophanuek
+                    </h3>
+
+                    <p>
+                        อาจารย์ประจำหลักสูตร
+                    </p>
+
+                    <div class="view-profile">
+                        ดูโปรไฟล์ →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3 -->
+
+            <div
+                class="lecturer-card"
+                onclick="openProfile(2)"
+            >
+
+                <div class="lecturer-image">
+
+                    <img
+                        src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Suthanya-Doung-In-lecturer.png"
+                        alt="Suthanya Doung-In"
+                    >
+
+                </div>
+
+                <div class="lecturer-info">
+
+                    <span class="lecturer-role">
+                        LECTURER
+                    </span>
+
+                    <h3>
+                        Suthanya Doung-In
+                    </h3>
+
+                    <p>
+                        อาจารย์ประจำหลักสูตร
+                    </p>
+
+                    <div class="view-profile">
+                        ดูโปรไฟล์ →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 4 -->
+
+            <div
+                class="lecturer-card"
+                onclick="openProfile(3)"
+            >
+
+                <div class="lecturer-image">
+
+                    <img
+                        src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Yuttana-Jaroenruen-lecturer.png"
+                        alt="Yuttana Jaroenruen"
+                    >
+
+                </div>
+
+                <div class="lecturer-info">
+
+                    <span class="lecturer-role">
+                        LECTURER
+                    </span>
+
+                    <h3>
+                        Yuttana Jaroenruen
+                    </h3>
+
+                    <p>
+                        อาจารย์ประจำหลักสูตร
+                    </p>
+
+                    <div class="view-profile">
+                        ดูโปรไฟล์ →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 5 -->
+
+            <div
+                class="lecturer-card"
+                onclick="openProfile(4)"
+            >
+
+                <div class="lecturer-image">
+
+                    <img
+                        src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Dichitchai-Mettarikanon-lecturer.png"
+                        alt="Dichitchai Mettarikanon"
+                    >
+
+                </div>
+
+                <div class="lecturer-info">
+
+                    <span class="lecturer-role">
+                        LECTURER
+                    </span>
+
+                    <h3>
+                        Dichitchai Mettarikanon
+                    </h3>
+
+                    <p>
+                        อาจารย์ประจำหลักสูตร
+                    </p>
+
+                    <div class="view-profile">
+                        ดูโปรไฟล์ →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 6 -->
+
+            <div
+                class="lecturer-card"
+                onclick="openProfile(5)"
+            >
+
+                <div class="lecturer-image">
+
+                    <img
+                        src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Kanitsorn-Suriyapaiboonwattana-lecturer.png"
+                        alt="Kanitsorn Suriyapaiboonwattana"
+                    >
+
+                </div>
+
+                <div class="lecturer-info">
+
+                    <span class="lecturer-role">
+                        LECTURER
+                    </span>
+
+                    <h3>
+                        Kanitsorn Suriyapaiboonwattana
+                    </h3>
+
+                    <p>
+                        อาจารย์ประจำหลักสูตร
+                    </p>
+
+                    <div class="view-profile">
+                        ดูโปรไฟล์ →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+VALUES
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-head center">
+
+            <div class="eyebrow">
+                LEARNING EXPERIENCE
+            </div>
+
+            <h2>
+                สิ่งที่นักศึกษาจะได้รับ
+            </h2>
+
+            <p>
+                การเรียนไม่ได้มีเพียงเนื้อหาในห้องเรียน
+                แต่ยังเน้นการนำความรู้ไปใช้จริง
+            </p>
+
+        </div>
+
+
+        <div class="values">
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+                    💡
+                </div>
+
+                <h3>
+                    ความรู้ด้านดิจิทัล
+                </h3>
+
+                <p>
+                    เรียนรู้แนวคิดและเทคโนโลยี
+                    ที่เกี่ยวข้องกับการสร้างและจัดการ
+                    ดิจิทัลคอนเทนต์
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    การลงมือทำ
+                </h3>
+
+                <p>
+                    พัฒนาทักษะผ่านการออกแบบ
+                    ผลิต และพัฒนางานดิจิทัล
+                    เพื่อนำความรู้ไปประยุกต์ใช้
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    การทำงานร่วมกัน
+                </h3>
+
+                <p>
+                    ฝึกการสื่อสาร การทำงานเป็นทีม
+                    และความรับผิดชอบ
+                    ซึ่งเป็นทักษะสำคัญในการทำงาน
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+CTA
+========================= -->
+
+<section class="cta">
+
+    <h2>
+        อยากรู้จักหลักสูตร DCM มากขึ้น?
+    </h2>
+
+    <p>
+        ดูรายละเอียดเกี่ยวกับหลักสูตร
+        ผลลัพธ์การเรียนรู้ แนวทางอาชีพ
+        และโครงสร้างการเรียนได้จากหน้าอื่น ๆ
+    </p>
+
+    <a
+        href="about.html"
+        class="cta-button"
+    >
+        ดูเกี่ยวกับหลักสูตร →
+    </a>
+
+</section>
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div class="footer-column">
+
+            <div class="footer-logo">
+                Digital Content & Media
+            </div>
+
+            <p>
+                Bachelor of Information Science<br>
+                Walailak University
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                เมนู
+            </h4>
+
+            <a href="index.html">
+                หน้าหลัก
+            </a>
+
+            <a href="about.html">
+                เกี่ยวกับหลักสูตร
+            </a>
+
+            <a href="learning-outcomes.html">
+                ผลลัพธ์การเรียนรู้
+            </a>
+
+            <a href="curriculum.html">
+                โครงสร้างหลักสูตร
+            </a>
+
+            <a href="careers.html">
+                แนวทางอาชีพ
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                ติดต่อ
+            </h4>
+
+            <p>
+                สำนักวิชาสารสนเทศศาสตร์<br>
+                มหาวิทยาลัยวลัยลักษณ์
+            </p>
+
+            <p style="margin-top:8px;">
+                โทร. 075-672204
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Digital Content & Media, Walailak University
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+PROFILE MODAL
+========================= -->
+
+<div
+    class="modal"
+    id="profileModal"
+    onclick="closeOutside(event)"
+>
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeProfile()"
+            aria-label="ปิด"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-content">
+
+
+            <div class="modal-photo">
+
+                <img
+                    id="modalImage"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+
+            <div class="modal-info">
+
+                <div class="eyebrow">
+                    DCM LECTURER
+                </div>
+
+                <h2 id="modalName">
+                    -
+                </h2>
+
+                <div
+                    class="position"
+                    id="modalPosition"
+                >
+                    อาจารย์ประจำหลักสูตร
+                </div>
+
+
+                <div class="info-block">
+
+                    <h4>
+                        เกี่ยวกับอาจารย์
+                    </h4>
+
+                    <p id="modalBio">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div class="info-block">
+
+                    <h4>
+                        ด้านการเรียนรู้
+                    </h4>
+
+                    <p id="modalFocus">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div class="info-block">
+
+                    <h4>
+                        สาขาที่เกี่ยวข้อง
+                    </h4>
+
+                    <div
+                        class="info-tags"
+                        id="modalTags"
+                    >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+CHATBOT
+========================= -->
+
+<button
+    class="chat-button"
+    onclick="toggleChat()"
+    aria-label="เปิดแชทบอท"
+>
+    💬
+</button>
+
+
+<div
+    class="chat-box"
+    id="chatBox"
+>
+
+    <div class="chat-header">
+
+        <div>
+
+            <strong>
+                DCM Assistant
+            </strong>
+
+            <span>
+                ถามข้อมูลเกี่ยวกับหลักสูตร
+            </span>
+
+        </div>
+
+        <button
+            onclick="toggleChat()"
+            aria-label="ปิดแชท"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="chat-body"
+        id="chatBody"
+    ></div>
+
+
+    <div class="chat-input-area">
+
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="พิมพ์คำถามเกี่ยวกับ DCM..."
+            autocomplete="off"
+        >
+
+        <button
+            id="sendButton"
+            onclick="sendMessage()"
+        >
+            ➤
+        </button>
+
+    </div>
+
+</div>
+
 
 <script>
-const lecturers={
-siwanath:{name:"ผศ.ดร.ศิวนาถ นันทพิชัย",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Siwanath-Nuntapichai-lecturer.png",expertise:["การจัดระบบสารสนเทศและความรู้","ระบบการจัดเก็บและค้นคืน","การจัดบริการสารสนเทศสำหรับองค์กรและชุมชน","ระบบปฏิบัติการห้องสมุดอัตโนมัติ"],email:"ndecha@wu.ac.th",phone:"075-673362"},
-sirivaj:{name:"ผศ.ดร.สิริวัจนา แก้วผนึก",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Siriwatchana-Kaeophanuek-lecturer.png",expertise:["การรู้ดิจิทัล","การรู้เท่าทันดิจิทัล","การออกแบบการเรียนการสอน","การเล่าเรื่องดิจิทัล","การเรียนการสอนออนไลน์"],email:"ksirivaj@mail.wu.ac.th",phone:"0-7567-6751"},
-suthanya:{name:"ผศ.ดร.สุธัญญา ด้วงอินทร์",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Suthanya-Doung-In-lecturer.png",expertise:["Digital Libraries","Digital Museum","Active Learning","Information Seeking Behavior","Digital Cultural Heritage","User Interface Design","Usability Study"],email:"dsuthany@wu.ac.th",phone:"075-672261"},
-yuttana:{name:"ผศ.ดร.ยุทธนา เจริญรื่น",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Yuttana-Jaroenruen-lecturer.png",expertise:["การวิเคราะห์และออกแบบระบบห้องสมุดอัตโนมัติ","การวิเคราะห์และออกแบบห้องสมุดดิจิทัล","การจัดระบบความรู้","ออนโทโลยี","กราฟความรู้"],email:"jyuttana@wu.ac.th",phone:"075-676745"},
-dichitchai:{name:"ผศ.ดิชิตชัย เมตตาริกานนท์",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Dichitchai-Mettarikanon-lecturer.png",expertise:["บรรณารักษศาสตร์","สารสนเทศศาสตร์","การจัดการความรู้","การจัดการสารสนเทศ","เทคโนโลยีสารสนเทศ"],email:"mdichitc@wu.ac.th",phone:"075-676743"},
-kanitsorn:{name:"ดร.คณิตสรณ์ สุริยะไพบูลย์วัฒนา",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Kanitsorn-Suriyapaiboonwattana-lecturer.png",expertise:["Human Computer-Interaction","Mixed-Method","Factor Analysis","Content Analysis","MVC Framework","Responsive Web Design","Database Design & Data Analytic","E-Publication Framework","Digital Library System","DRM"],email:"kanitsorn.su@wu.ac.th",phone:"075-672284"}
-};
 
-const grid=document.getElementById("lecturerGrid");
-grid.innerHTML=Object.entries(lecturers).map(([id,l])=>`
-<article class="lecturer-card"><div class="lecturer-image"><img src="${l.image}" alt="${l.name}" loading="lazy"></div>
-<div class="lecturer-info"><h3>${l.name}</h3><div class="label">ความเชี่ยวชาญ</div><p>${l.expertise.join(", ")}</p>
-<div class="lecturer-contact"><a href="mailto:${l.email}">✉ ${l.email}</a><a href="tel:${l.phone.replace(/[^0-9+]/g,"")}">☎ ${l.phone}</a>
-<a href="#profile" class="profile-btn" onclick="showProfile('${id}');return false;">ดูโปรไฟล์อาจารย์</a></div></div></article>`).join("");
+/* =========================
+MOBILE MENU
+========================= */
 
-function showProfile(id){
-const l=lecturers[id];if(!l)return;
-document.getElementById("listView").style.display="none";
-document.getElementById("profileView").classList.add("show");
-document.getElementById("hero").style.display="none";
-document.getElementById("profileImage").src=l.image;document.getElementById("profileImage").alt=l.name;
-document.getElementById("profileName").textContent=l.name;
-document.getElementById("profileExpertise").innerHTML=l.expertise.map(x=>`<span class="tag">${x}</span>`).join("");
-const e=document.getElementById("profileEmail");e.href="mailto:"+l.email;e.textContent="✉ "+l.email;
-const p=document.getElementById("profilePhone");p.href="tel:"+l.phone.replace(/[^0-9+]/g,"");p.textContent="☎ "+l.phone;
-window.scrollTo({top:0,behavior:"smooth"});
+function toggleMenu(){
+
+    const nav =
+        document.getElementById("mainNav");
+
+    nav.classList.toggle("show");
+
 }
-function showList(){
-document.getElementById("profileView").classList.remove("show");
-document.getElementById("listView").style.display="block";
-document.getElementById("hero").style.display="block";
-window.scrollTo({top:0,behavior:"smooth"});
+
+
+/* =========================
+LECTURER DATA
+========================= */
+
+const lecturers = [
+
+    {
+        name:"Siwanath Nuntapichai",
+
+        image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Siwanath-Nuntapichai-lecturer.png",
+
+        position:"อาจารย์ประจำหลักสูตร",
+
+        bio:"อาจารย์ผู้มีบทบาทในการจัดการเรียนรู้และพัฒนานักศึกษาในหลักสูตร Digital Content & Media",
+
+        focus:"การเรียนรู้ด้านดิจิทัลคอนเทนต์ สื่อ และการประยุกต์ใช้เทคโนโลยีสารสนเทศ",
+
+        tags:[
+            "Digital Content",
+            "Digital Media",
+            "Information Technology"
+        ]
+    },
+
+
+    {
+        name:"Siriwatchana Kaeophanuek",
+
+        image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Siriwatchana-Kaeophanuek-lecturer.png",
+
+        position:"อาจารย์ประจำหลักสูตร",
+
+        bio:"อาจารย์ผู้ดูแลการเรียนรู้และการพัฒนาทักษะของนักศึกษาในด้านที่เกี่ยวข้องกับหลักสูตร",
+
+        focus:"การออกแบบสื่อ ดิจิทัลคอนเทนต์ และการประยุกต์ใช้เทคโนโลยีเพื่อการสื่อสาร",
+
+        tags:[
+            "Media Design",
+            "Digital Content",
+            "Communication"
+        ]
+    },
+
+
+    {
+        name:"Suthanya Doung-In",
+
+        image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Suthanya-Doung-In-lecturer.png",
+
+        position:"อาจารย์ประจำหลักสูตร",
+
+        bio:"อาจารย์ผู้สนับสนุนการเรียนรู้และการพัฒนาทักษะด้านดิจิทัลของนักศึกษา",
+
+        focus:"การจัดการสารสนเทศ ดิจิทัลคอนเทนต์ และการประยุกต์ใช้เทคโนโลยี",
+
+        tags:[
+            "Information Management",
+            "Digital Content",
+            "Technology"
+        ]
+    },
+
+
+    {
+        name:"Yuttana Jaroenruen",
+
+        image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Yuttana-Jaroenruen-lecturer.png",
+
+        position:"อาจารย์ประจำหลักสูตร",
+
+        bio:"อาจารย์ผู้มีส่วนร่วมในการจัดการเรียนรู้และพัฒนาทักษะของนักศึกษาในหลักสูตร",
+
+        focus:"เทคโนโลยีสารสนเทศ การจัดการข้อมูล และการพัฒนางานดิจิทัล",
+
+        tags:[
+            "Information Technology",
+            "Data",
+            "Digital Technology"
+        ]
+    },
+
+
+    {
+        name:"Dichitchai Mettarikanon",
+
+        image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Dichitchai-Mettarikanon-lecturer.png",
+
+        position:"อาจารย์ประจำหลักสูตร",
+
+        bio:"อาจารย์ผู้ถ่ายทอดความรู้และดูแลการเรียนรู้ของนักศึกษาในด้านที่เกี่ยวข้องกับสารสนเทศและดิจิทัล",
+
+        focus:"สารสนเทศ เทคโนโลยีดิจิทัล และการจัดการบริการสารสนเทศ",
+
+        tags:[
+            "Information Science",
+            "Digital Technology",
+            "Information Service"
+        ]
+    },
+
+
+    {
+        name:"Kanitsorn Suriyapaiboonwattana",
+
+        image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Kanitsorn-Suriyapaiboonwattana-lecturer.png",
+
+        position:"อาจารย์ประจำหลักสูตร",
+
+        bio:"อาจารย์ผู้สนับสนุนการเรียนรู้และการพัฒนาทักษะของนักศึกษาในหลักสูตร Digital Content & Media",
+
+        focus:"ดิจิทัลคอนเทนต์ การออกแบบ และการประยุกต์ใช้เทคโนโลยีดิจิทัล",
+
+        tags:[
+            "Digital Content",
+            "Design",
+            "Digital Technology"
+        ]
+    }
+
+];
+
+
+/* =========================
+OPEN PROFILE
+========================= */
+
+function openProfile(index){
+
+    const lecturer =
+        lecturers[index];
+
+
+    document.getElementById("modalImage").src =
+        lecturer.image;
+
+
+    document.getElementById("modalImage").alt =
+        lecturer.name;
+
+
+    document.getElementById("modalName").textContent =
+        lecturer.name;
+
+
+    document.getElementById("modalPosition").textContent =
+        lecturer.position;
+
+
+    document.getElementById("modalBio").textContent =
+        lecturer.bio;
+
+
+    document.getElementById("modalFocus").textContent =
+        lecturer.focus;
+
+
+    const tags =
+        document.getElementById("modalTags");
+
+
+    tags.innerHTML = "";
+
+
+    lecturer.tags.forEach(function(tag){
+
+        const span =
+            document.createElement("span");
+
+        span.textContent =
+            tag;
+
+        tags.appendChild(span);
+
+    });
+
+
+    document
+        .getElementById("profileModal")
+        .classList.add("show");
+
+
+    document.body.style.overflow =
+        "hidden";
+
 }
+
+
+/* =========================
+CLOSE PROFILE
+========================= */
+
+function closeProfile(){
+
+    document
+        .getElementById("profileModal")
+        .classList.remove("show");
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+function closeOutside(event){
+
+    if(
+        event.target ===
+        document.getElementById("profileModal")
+    ){
+
+        closeProfile();
+
+    }
+
+}
+
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeProfile();
+
+        }
+
+    }
+);
+
+
+/* =========================
+CHATBOT
+========================= */
+
+function toggleChat(){
+
+    const box =
+        document.getElementById("chatBox");
+
+
+    if(box.style.display === "block"){
+
+        box.style.display = "none";
+
+    }else{
+
+        box.style.display = "block";
+
+        const input =
+            document.getElementById("chatInput");
+
+        if(input){
+            input.focus();
+        }
+
+    }
+
+}
+
+
+function addUserMessage(message){
+
+    const body =
+        document.getElementById("chatBody");
+
+
+    const wrapper =
+        document.createElement("div");
+
+    wrapper.className =
+        "chat-question";
+
+
+    const content =
+        document.createElement("div");
+
+    content.className =
+        "chat-question-content";
+
+
+    const label =
+        document.createElement("div");
+
+    label.className =
+        "chat-question-label";
+
+    label.textContent =
+        "คำถาม";
+
+
+    const text =
+        document.createElement("div");
+
+    text.textContent =
+        message;
+
+
+    content.appendChild(label);
+
+    content.appendChild(text);
+
+    wrapper.appendChild(content);
+
+    body.appendChild(wrapper);
+
+    body.scrollTop =
+        body.scrollHeight;
+
+}
+
+
+function addBotMessage(message){
+
+    const body =
+        document.getElementById("chatBody");
+
+
+    const wrapper =
+        document.createElement("div");
+
+    wrapper.className =
+        "chat-answer";
+
+
+    const content =
+        document.createElement("div");
+
+    content.className =
+        "chat-answer-content";
+
+
+    const label =
+        document.createElement("div");
+
+    label.className =
+        "chat-answer-label";
+
+    label.textContent =
+        "DCM Assistant";
+
+
+    const text =
+        document.createElement("div");
+
+    text.textContent =
+        String(message);
+
+
+    content.appendChild(label);
+
+    content.appendChild(text);
+
+    wrapper.appendChild(content);
+
+    body.appendChild(wrapper);
+
+    body.scrollTop =
+        body.scrollHeight;
+
+}
+
+
+async function sendMessage(){
+
+    const input =
+        document.getElementById("chatInput");
+
+    const button =
+        document.getElementById("sendButton");
+
+    const question =
+        input.value.trim();
+
+
+    if(!question){
+        return;
+    }
+
+
+    addUserMessage(question);
+
+    input.value = "";
+
+    input.disabled = true;
+
+    button.disabled = true;
+
+
+    const body =
+        document.getElementById("chatBody");
+
+
+    const loading =
+        document.createElement("div");
+
+
+    loading.className =
+        "chat-loading";
+
+
+    loading.id =
+        "chatLoading";
+
+
+    loading.textContent =
+        "กำลังค้นหาคำตอบให้ครับ... ⏳";
+
+
+    body.appendChild(loading);
+
+    body.scrollTop =
+        body.scrollHeight;
+
+
+    try{
+
+        const response =
+            await fetch("/api/chat",{
+
+                method:"POST",
+
+                headers:{
+                    "Content-Type":
+                        "application/json"
+                },
+
+                body:JSON.stringify({
+                    message:question
+                })
+
+            });
+
+
+        let data = {};
+
+
+        try{
+
+            data =
+                await response.json();
+
+        }catch(error){
+
+            data = {};
+
+        }
+
+
+        const oldLoading =
+            document.getElementById(
+                "chatLoading"
+            );
+
+
+        if(oldLoading){
+            oldLoading.remove();
+        }
+
+
+        if(!response.ok){
+
+            throw new Error(
+                data.error ||
+                "ไม่สามารถเชื่อมต่อ AI ได้"
+            );
+
+        }
+
+
+        addBotMessage(
+            data.reply ||
+            "ขออภัยครับ ไม่พบคำตอบที่เหมาะสม"
+        );
+
+
+    }catch(error){
+
+        const oldLoading =
+            document.getElementById(
+                "chatLoading"
+            );
+
+
+        if(oldLoading){
+            oldLoading.remove();
+        }
+
+
+        console.error(
+            "DCM Assistant Error:",
+            error
+        );
+
+
+        addBotMessage(
+            "ขออภัยครับ ตอนนี้ไม่สามารถเชื่อมต่อ AI ได้ กรุณาลองใหม่อีกครั้งครับ"
+        );
+
+
+    }finally{
+
+        input.disabled = false;
+
+        button.disabled = false;
+
+        input.focus();
+
+    }
+
+}
+
+
+/* =========================
+ENTER TO SEND
+========================= */
+
+document
+.getElementById("chatInput")
+.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Enter"){
+
+            event.preventDefault();
+
+            sendMessage();
+
+        }
+
+    }
+);
+
 </script>
+
+
 </body>
 </html>
