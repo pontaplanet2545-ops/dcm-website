@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ผลลัพธ์การเรียนรู้ | Digital Content & Media</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>ผลลัพธ์การเรียนรู้ | Digital Content and Media</title>
+
+<meta name="description"
+      content="ผลลัพธ์การเรียนรู้ของหลักสูตรสารสนเทศศาสตรบัณฑิต สาขาดิจิทัลคอนเทนต์และสื่อ มหาวิทยาลัยวลัยลักษณ์">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
 
 <style>
+
+/* ==================================================
+   RESET
+================================================== */
+
 *{
     margin:0;
     padding:0;
@@ -22,1475 +41,2951 @@ html{
 }
 
 body{
-    font-family:'Noto Sans Thai',sans-serif;
-    color:#263238;
-    background:#fff;
+    font-family:"Noto Sans Thai",sans-serif;
+    background:#FFF9F2;
+    color:#2b2119;
     line-height:1.7;
 }
 
-:root{
-    --orange:#f28c28;
-    --orange-dark:#d96b00;
-    --orange-light:#fff3e3;
-    --orange-soft:#fff8ef;
-    --dark:#263238;
-    --gray:#66727a;
-    --border:#ececec;
-    --white:#ffffff;
-}
-
-/* TOP BAR */
-.topbar{
-    background:#263238;
-    color:#fff;
-    font-size:13px;
-}
-
-.topbar-inner{
-    max-width:1200px;
-    margin:auto;
-    padding:8px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.topbar a{
-    color:#fff;
+a{
     text-decoration:none;
-    margin-left:18px;
+    color:inherit;
 }
 
-/* HEADER */
-.header{
-    background:#fff;
-    border-bottom:1px solid #eee;
-    position:sticky;
-    top:0;
-    z-index:1000;
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+/* ==================================================
+   VARIABLES
+================================================== */
+
+:root{
+
+    --orange:#F28C28;
+
+    --orange-dark:#d96f0c;
+
+    --brown:#2b2119;
+
+    --cream:#FFF9F2;
+
+    --white:#ffffff;
+
+    --light:#f7eee4;
+
+    --gray:#6f665e;
+
+    --border:#eadfd4;
+
+}
+
+
+/* ==================================================
+   TOP BAR
+================================================== */
+
+.topbar{
+
+    background:var(--brown);
+
+    color:white;
+
+    text-align:center;
+
+    padding:8px 15px;
+
+    font-size:13px;
+
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+header{
+
+    background:white;
+
+    border-bottom:1px solid var(--border);
+
 }
 
 .header-inner{
+
     max-width:1200px;
+
     margin:auto;
-    padding:15px 20px;
+
+    padding:20px 25px;
+
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
+
+    justify-content:space-between;
+
 }
 
 .logo{
+
     display:flex;
+
     align-items:center;
-    gap:12px;
-    text-decoration:none;
-    color:var(--dark);
+
+    gap:14px;
+
 }
 
 .logo-box{
-    width:48px;
-    height:48px;
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:12px;
+
     background:var(--orange);
-    border-radius:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+
     color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     font-weight:800;
-    font-size:20px;
+
+    font-size:19px;
+
 }
 
-.logo-text strong{
-    display:block;
-    font-size:17px;
+.logo-text h1{
+
+    font-size:18px;
+
+    line-height:1.2;
+
+    font-weight:800;
+
 }
 
 .logo-text span{
+
+    display:block;
+
     font-size:12px;
-    color:#777;
+
+    color:var(--gray);
+
+    margin-top:3px;
+
 }
 
-/* NAV */
-.nav{
-    background:var(--orange);
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+nav{
+
+    background:white;
+
+    border-bottom:1px solid var(--border);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
 }
 
 .nav-inner{
+
     max-width:1200px;
+
     margin:auto;
+
+    padding:0 25px;
+
+}
+
+.nav-links{
+
+    list-style:none;
+
     display:flex;
+
+    justify-content:center;
+
     align-items:center;
+
+    gap:4px;
+
 }
 
-.nav a{
-    color:#fff;
-    text-decoration:none;
-    padding:13px 15px;
+.nav-links li a{
+
+    display:block;
+
+    padding:14px 13px;
+
     font-size:14px;
-    transition:.2s;
+
+    font-weight:600;
+
+    color:#51473f;
+
+    transition:.25s;
+
 }
 
-.nav a:hover,
-.nav a.active{
-    background:var(--orange-dark);
+.nav-links li a:hover{
+
+    color:var(--orange);
+
+}
+
+.nav-links li a.active{
+
+    color:var(--orange);
+
+    border-bottom:3px solid var(--orange);
+
 }
 
 .menu-btn{
+
     display:none;
-    background:none;
+
     border:none;
-    color:#fff;
-    font-size:26px;
+
+    background:none;
+
+    font-size:28px;
+
     cursor:pointer;
-    padding:10px 20px;
+
+    padding:10px 0;
+
 }
 
-/* BREADCRUMB */
-.breadcrumb{
-    background:#fff8ef;
-    border-bottom:1px solid #f2e3d1;
-}
 
-.breadcrumb-inner{
-    max-width:1200px;
-    margin:auto;
-    padding:12px 20px;
-    font-size:13px;
-    color:#777;
-}
+/* ==================================================
+   PAGE HERO
+================================================== */
 
-.breadcrumb a{
-    color:var(--orange-dark);
-    text-decoration:none;
-}
+.page-hero{
 
-/* HERO */
-.hero{
     position:relative;
+
     min-height:420px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
     background:
-        linear-gradient(90deg,rgba(38,50,56,.88),rgba(38,50,56,.35)),
-        url("https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM01-scaled.jpg")
-        center/cover;
-    display:flex;
-    align-items:center;
+
+        linear-gradient(
+            90deg,
+            rgba(43,33,25,.94),
+            rgba(43,33,25,.72),
+            rgba(43,33,25,.25)
+        ),
+
+        url("https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM03.jpg")
+        center/cover no-repeat;
+
 }
 
-.hero-inner{
-    max-width:1200px;
+.page-hero-inner{
+
     width:100%;
+
+    max-width:1200px;
+
     margin:auto;
-    padding:70px 20px;
-    color:#fff;
+
+    padding:80px 25px;
+
 }
 
-.hero-tag{
-    display:inline-block;
-    background:var(--orange);
-    padding:7px 15px;
-    border-radius:30px;
+.page-hero small{
+
+    color:#ffb968;
+
     font-size:13px;
-    margin-bottom:18px;
-}
 
-.hero h1{
-    font-size:42px;
-    line-height:1.3;
-    max-width:800px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    max-width:720px;
-    color:#f5f5f5;
-    font-size:17px;
-}
-
-/* MAIN */
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:70px 20px;
-}
-
-.section-title{
-    margin-bottom:35px;
-}
-
-.section-title .small{
-    color:var(--orange-dark);
-    font-size:14px;
     font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:1px;
+
+    letter-spacing:1.5px;
+
 }
 
-.section-title h2{
-    font-size:30px;
-    margin-top:5px;
+.page-hero h2{
+
+    color:white;
+
+    font-size:52px;
+
+    line-height:1.2;
+
+    margin:14px 0 20px;
+
+    max-width:800px;
+
 }
 
-.section-title p{
+.page-hero p{
+
+    color:#f5eee8;
+
+    max-width:700px;
+
+    font-size:17px;
+
+}
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
+.container{
+
+    width:min(1150px,92%);
+
+    margin:auto;
+
+}
+
+
+/* ==================================================
+   SECTION
+================================================== */
+
+section{
+
+    padding:85px 0;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    max-width:780px;
+
+    margin:0 auto 50px;
+
+}
+
+.section-heading small{
+
+    color:var(--orange);
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
+    font-size:12px;
+
+}
+
+.section-heading h2{
+
+    font-size:34px;
+
+    margin:8px 0 12px;
+
+    line-height:1.35;
+
+}
+
+.section-heading p{
+
     color:var(--gray);
-    max-width:760px;
+
 }
 
-/* INTRO */
+
+/* ==================================================
+   INTRO
+================================================== */
+
 .intro{
+
+    background:white;
+
+}
+
+.intro-grid{
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
-    gap:50px;
+
+    gap:60px;
+
     align-items:center;
+
 }
 
-.intro-img{
+.intro-image{
+
+    position:relative;
+
+}
+
+.intro-image img{
+
     width:100%;
-    border-radius:18px;
+
+    height:430px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(43,33,25,.12);
+
+}
+
+.image-label{
+
+    position:absolute;
+
+    left:25px;
+
+    bottom:25px;
+
+    background:white;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+}
+
+.image-label strong{
+
     display:block;
-    box-shadow:0 15px 40px rgba(0,0,0,.1);
+
+    color:var(--orange);
+
+    font-size:20px;
+
 }
 
-.intro h2{
-    font-size:30px;
-    margin-bottom:15px;
-}
+.image-label span{
 
-.intro p{
+    font-size:12px;
+
     color:var(--gray);
-    margin-bottom:15px;
+
 }
 
-/* CATEGORY */
-.category{
-    margin-top:70px;
+.intro-content small{
+
+    color:var(--orange);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
 }
 
-.category-head{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin-bottom:25px;
+.intro-content h2{
+
+    font-size:34px;
+
+    line-height:1.4;
+
+    margin:10px 0 20px;
+
 }
 
-.category-icon{
-    width:52px;
-    height:52px;
-    background:var(--orange-light);
-    color:var(--orange-dark);
-    border-radius:14px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:24px;
+.intro-content p{
+
+    color:var(--gray);
+
+    margin-bottom:16px;
+
 }
 
-.category-head h2{
-    font-size:25px;
+
+/* ==================================================
+   FOUR DIMENSIONS
+================================================== */
+
+.dimensions{
+
+    background:var(--cream);
+
 }
 
-.category-head p{
-    color:#777;
-    font-size:14px;
-}
+.dimension-grid{
 
-/* PLO CARDS */
-.plo-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:repeat(4,1fr);
+
     gap:20px;
+
+}
+
+.dimension-card{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:17px;
+
+    padding:28px 22px;
+
+    text-align:center;
+
+    transition:.25s;
+
+}
+
+.dimension-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 30px rgba(43,33,25,.09);
+
+}
+
+.dimension-icon{
+
+    width:58px;
+
+    height:58px;
+
+    margin:0 auto 15px;
+
+    border-radius:15px;
+
+    background:#fff0df;
+
+    color:var(--orange);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
+
+    font-weight:800;
+
+}
+
+.dimension-card h3{
+
+    font-size:19px;
+
+    margin-bottom:7px;
+
+}
+
+.dimension-card p{
+
+    font-size:13px;
+
+    color:var(--gray);
+
+}
+
+
+/* ==================================================
+   PLO SECTION
+================================================== */
+
+.plo-section{
+
+    background:white;
+
+}
+
+.plo-group{
+
+    margin-bottom:55px;
+
+}
+
+.plo-group:last-child{
+
+    margin-bottom:0;
+
+}
+
+.plo-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:22px;
+
+}
+
+.plo-title-line{
+
+    width:6px;
+
+    height:38px;
+
+    border-radius:10px;
+
+    background:var(--orange);
+
+}
+
+.plo-title h3{
+
+    font-size:25px;
+
+}
+
+.plo-title span{
+
+    color:var(--gray);
+
+    font-size:13px;
+
+}
+
+.plo-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
 }
 
 .plo-card{
-    border:1px solid var(--border);
-    border-radius:16px;
-    padding:25px;
-    background:#fff;
-    transition:.25s;
-    position:relative;
-    overflow:hidden;
-}
 
-.plo-card::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    bottom:0;
-    width:5px;
-    background:var(--orange);
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:25px;
+
+    background:#fffdfb;
+
+    transition:.25s;
+
 }
 
 .plo-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(43,33,25,.08);
+
 }
 
-.plo-number{
-    color:var(--orange-dark);
+.plo-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:58px;
+
+    height:32px;
+
+    padding:0 12px;
+
+    background:var(--orange);
+
+    color:white;
+
+    border-radius:8px;
+
+    font-size:13px;
+
     font-weight:800;
-    font-size:14px;
-    margin-bottom:7px;
+
+    margin-bottom:12px;
+
 }
 
-.plo-card h3{
-    font-size:18px;
-    margin-bottom:10px;
+.plo-card h4{
+
+    font-size:17px;
+
+    margin-bottom:8px;
+
 }
 
 .plo-card p{
-    color:#626b70;
+
+    color:var(--gray);
+
     font-size:14px;
+
+    line-height:1.75;
+
 }
 
-/* FULL WIDTH */
-.full-section{
-    background:var(--orange-soft);
+
+/* ==================================================
+   SKILLS SUMMARY
+================================================== */
+
+.skills-summary{
+
+    background:var(--brown);
+
+    color:white;
+
 }
 
-.full-section .container{
-    padding-top:70px;
-    padding-bottom:70px;
+.skills-summary .section-heading p{
+
+    color:#d5ccc5;
+
 }
 
-/* SKILL BOX */
-.skill-grid{
+.skills-grid{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
 }
 
-.skill-box{
-    background:#fff;
-    border:1px solid #eee;
-    padding:25px 20px;
-    border-radius:15px;
-    text-align:center;
+.skill-card{
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    padding:27px;
+
+    border-radius:16px;
+
 }
 
-.skill-icon{
-    width:55px;
-    height:55px;
-    background:var(--orange-light);
-    color:var(--orange-dark);
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 15px;
-    font-size:24px;
-}
+.skill-number{
 
-.skill-box h3{
-    font-size:16px;
-    margin-bottom:7px;
-}
+    color:#ffb968;
 
-.skill-box p{
-    color:#777;
+    font-weight:800;
+
     font-size:13px;
+
+    margin-bottom:8px;
+
 }
 
-/* CTA */
+.skill-card h3{
+
+    font-size:18px;
+
+    margin-bottom:9px;
+
+}
+
+.skill-card p{
+
+    color:#d4cbc3;
+
+    font-size:14px;
+
+}
+
+
+/* ==================================================
+   CTA
+================================================== */
+
 .cta{
-    background:linear-gradient(135deg,#f28c28,#d96b00);
-    color:#fff;
-    border-radius:22px;
-    padding:45px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:30px;
+
+    background:var(--orange);
+
+    color:white;
+
+    text-align:center;
+
 }
 
 .cta h2{
-    font-size:28px;
-    margin-bottom:8px;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
 }
 
 .cta p{
-    color:#fff4e8;
+
+    max-width:680px;
+
+    margin:0 auto 25px;
+
 }
 
 .btn{
-    display:inline-block;
-    background:#fff;
-    color:var(--orange-dark);
-    text-decoration:none;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     padding:12px 22px;
-    border-radius:8px;
+
+    border-radius:10px;
+
     font-weight:700;
-    white-space:nowrap;
-    transition:.2s;
-}
 
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-/* FOOTER */
-footer{
-    background:#263238;
-    color:#fff;
-    margin-top:0;
-}
-
-.footer-inner{
-    max-width:1200px;
-    margin:auto;
-    padding:50px 20px 30px;
-    display:grid;
-    grid-template-columns:1.4fr 1fr 1fr;
-    gap:40px;
-}
-
-.footer h3{
-    margin-bottom:15px;
-    font-size:18px;
-}
-
-.footer p,
-.footer a{
-    color:#cbd1d4;
     font-size:14px;
+
+    transition:.25s;
+
 }
 
-.footer a{
-    display:block;
-    text-decoration:none;
-    margin-bottom:7px;
+.btn-white{
+
+    background:white;
+
+    color:var(--brown);
+
 }
 
-.footer a:hover{
-    color:#fff;
+.btn-white:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
 }
 
-.copyright{
-    border-top:1px solid rgba(255,255,255,.1);
-    padding:18px 20px;
-    text-align:center;
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer{
+
+    background:#211914;
+
+    color:#ddd;
+
+    padding:55px 0 25px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:1.5fr 1fr 1fr;
+
+    gap:45px;
+
+}
+
+.footer-logo{
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+.footer-col h3{
+
+    color:white;
+
+    font-size:16px;
+
+    margin-bottom:14px;
+
+}
+
+.footer-col p{
+
     color:#aaa;
-    font-size:12px;
+
+    font-size:13px;
+
+    margin-bottom:5px;
+
 }
 
-/* CHATBOT */
-.chatbot{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    z-index:2000;
+.footer-links{
+
+    list-style:none;
+
 }
+
+.footer-links li{
+
+    margin-bottom:7px;
+
+}
+
+.footer-links a{
+
+    color:#aaa;
+
+    font-size:13px;
+
+}
+
+.footer-links a:hover{
+
+    color:#ffb968;
+
+}
+
+.footer-bottom{
+
+    margin-top:40px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    text-align:center;
+
+    color:#888;
+
+    font-size:12px;
+
+}
+
+
+/* ==================================================
+   CHATBOT BUTTON
+================================================== */
 
 .chat-button{
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:var(--orange);
-    color:#fff;
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:60px;
+
+    height:60px;
+
     border:none;
-    box-shadow:0 8px 25px rgba(0,0,0,.2);
-    font-size:25px;
+
+    border-radius:50%;
+
+    background:var(--orange);
+
+    color:white;
+
+    font-size:26px;
+
     cursor:pointer;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+    z-index:9999;
+
+    transition:.25s;
+
 }
 
-.chat-window{
-    display:none;
-    position:absolute;
-    right:0;
-    bottom:70px;
-    width:340px;
-    background:#fff;
-    border-radius:16px;
-    box-shadow:0 15px 45px rgba(0,0,0,.2);
-    overflow:hidden;
-    border:1px solid #eee;
+.chat-button:hover{
+
+    transform:scale(1.08);
+
 }
+
+
+/* ==================================================
+   CHATBOT BOX
+================================================== */
+
+.chat-box{
+
+    display:none;
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:95px;
+
+    width:370px;
+
+    height:520px;
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.22);
+
+    overflow:hidden;
+
+    z-index:9999;
+
+    border:1px solid #eee;
+
+}
+
+
+/* ==================================================
+   CHAT HEADER
+================================================== */
 
 .chat-header{
-    background:var(--orange);
-    color:#fff;
-    padding:15px;
-    font-weight:700;
+
+    height:70px;
+
+    background:var(--brown);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 18px;
+
 }
+
+.chat-header strong{
+
+    display:block;
+
+    font-size:17px;
+
+}
+
+.chat-header span{
+
+    display:block;
+
+    font-size:12px;
+
+    color:#ddd;
+
+    margin-top:4px;
+
+}
+
+.chat-header button{
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+
+/* ==================================================
+   CHAT BODY
+================================================== */
 
 .chat-body{
-    height:320px;
+
+    height:380px;
+
+    padding:18px;
+
     overflow-y:auto;
-    padding:15px;
-    background:#fafafa;
+
+    background:var(--cream);
+
 }
 
-.bot-msg,
-.user-msg{
-    padding:10px 12px;
-    border-radius:12px;
-    margin-bottom:10px;
-    font-size:13px;
-    max-width:88%;
-}
 
-.bot-msg{
-    background:#fff;
-    border:1px solid #eee;
-}
+/* ==================================================
+   USER QUESTION
+================================================== */
 
-.user-msg{
-    background:var(--orange);
-    color:#fff;
-    margin-left:auto;
-}
+.chat-question{
 
-.chat-input{
     display:flex;
-    border-top:1px solid #eee;
+
+    justify-content:flex-end;
+
+    margin-bottom:12px;
+
 }
 
-.chat-input input{
-    flex:1;
-    border:none;
-    padding:12px;
-    outline:none;
-    font-family:inherit;
-}
+.chat-question-content{
 
-.chat-input button{
-    border:none;
+    max-width:80%;
+
     background:var(--orange);
-    color:#fff;
-    padding:0 15px;
-    cursor:pointer;
+
+    color:white;
+
+    padding:11px 14px;
+
+    border-radius:15px 15px 3px 15px;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    word-break:break-word;
+
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
+.chat-question-label{
+
+    font-size:11px;
+
+    opacity:.8;
+
+    margin-bottom:3px;
+
+}
+
+
+/* ==================================================
+   BOT ANSWER
+================================================== */
+
+.chat-answer{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    margin-bottom:18px;
+
+}
+
+.chat-answer-content{
+
+    max-width:85%;
+
+    background:white;
+
+    color:var(--brown);
+
+    padding:13px 15px;
+
+    border-radius:15px 15px 15px 3px;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.07);
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+}
+
+.chat-answer-label{
+
+    font-size:11px;
+
+    color:var(--orange);
+
+    font-weight:700;
+
+    margin-bottom:4px;
+
+}
+
+
+/* ==================================================
+   CHAT LOADING
+================================================== */
+
+.chat-loading{
+
+    background:white;
+
+    color:#777;
+
+    padding:12px 15px;
+
+    border-radius:15px;
+
+    width:max-content;
+
+    max-width:90%;
+
+    font-size:13px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* ==================================================
+   CHAT INPUT
+================================================== */
+
+.chat-input-area{
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 12px;
+
+    border-top:1px solid #eee;
+
+    background:white;
+
+}
+
+.chat-input-area input{
+
+    flex:1;
+
+    height:45px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding:0 13px;
+
+    outline:none;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+}
+
+.chat-input-area input:focus{
+
+    border-color:var(--orange);
+
+}
+
+.chat-input-area button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--orange);
+
+    color:white;
+
+    font-size:19px;
+
+    cursor:pointer;
+
+}
+
+.chat-input-area button:hover{
+
+    background:var(--orange-dark);
+
+}
+
+.chat-input-area button:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:950px){
+
+    .nav-links{
+
+        gap:0;
+
+    }
+
+    .nav-links li a{
+
+        padding:13px 8px;
+
+        font-size:12px;
+
+    }
+
+    .dimension-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .skills-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:750px){
+
+    .header-inner{
+
+        padding:15px 20px;
+
+    }
 
     .nav-inner{
-        display:none;
-        flex-direction:column;
-        align-items:stretch;
-    }
 
-    .nav-inner.show{
-        display:flex;
-    }
+        padding:0 20px;
 
-    .nav a{
-        border-bottom:1px solid rgba(255,255,255,.15);
     }
 
     .menu-btn{
+
         display:block;
-        margin-left:auto;
+
     }
 
-    .hero h1{
-        font-size:34px;
+    .nav-links{
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        padding-bottom:10px;
+
     }
 
-    .intro{
+    .nav-links.show{
+
+        display:flex;
+
+    }
+
+    .nav-links li a{
+
+        padding:11px 5px;
+
+        border-bottom:1px solid #eee;
+
+    }
+
+    .nav-links li a.active{
+
+        border-bottom:1px solid #eee;
+
+        color:var(--orange);
+
+    }
+
+    .page-hero{
+
+        min-height:360px;
+
+    }
+
+    .page-hero h2{
+
+        font-size:38px;
+
+    }
+
+    .page-hero p{
+
+        font-size:15px;
+
+    }
+
+    .intro-grid{
+
         grid-template-columns:1fr;
+
     }
 
-    .skill-grid{
-        grid-template-columns:repeat(2,1fr);
+    .intro-image img{
+
+        height:350px;
+
     }
 
-    .footer-inner{
+    .plo-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .skills-grid{
+
         grid-template-columns:1fr 1fr;
+
     }
+
+    .footer-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
 }
 
 @media(max-width:600px){
 
-    .topbar-inner{
+    section{
+
+        padding:65px 0;
+
+    }
+
+    .topbar{
+
         font-size:11px;
+
     }
 
-    .topbar-inner div:last-child{
-        display:none;
-    }
+    .logo-text h1{
 
-    .logo-text strong{
-        font-size:14px;
+        font-size:15px;
+
     }
 
     .logo-text span{
+
         font-size:10px;
+
     }
 
-    .hero{
-        min-height:360px;
+    .logo-box{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:16px;
+
     }
 
-    .hero h1{
+    .page-hero{
+
+        min-height:330px;
+
+    }
+
+    .page-hero h2{
+
+        font-size:32px;
+
+    }
+
+    .section-heading h2{
+
         font-size:28px;
+
     }
 
-    .hero p{
-        font-size:14px;
+    .intro-content h2{
+
+        font-size:29px;
+
     }
 
-    .container{
-        padding:50px 18px;
-    }
+    .dimension-grid{
 
-    .section-title h2{
-        font-size:25px;
-    }
-
-    .plo-grid{
         grid-template-columns:1fr;
+
     }
 
-    .skill-grid{
+    .skills-grid{
+
         grid-template-columns:1fr;
+
     }
 
-    .cta{
-        flex-direction:column;
-        align-items:flex-start;
-        padding:30px;
-    }
+    .footer-grid{
 
-    .footer-inner{
         grid-template-columns:1fr;
+
+        gap:30px;
+
     }
 
-    .chat-window{
-        width:calc(100vw - 35px);
-        right:-5px;
+    .chat-box{
+
+        right:12px;
+
+        left:12px;
+
+        bottom:85px;
+
+        width:auto;
+
+        height:70vh;
+
     }
+
+    .chat-body{
+
+        height:calc(70vh - 140px);
+
+    }
+
+    .chat-button{
+
+        right:18px;
+
+        bottom:18px;
+
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- TOP BAR -->
+
+<!-- ==================================================
+     TOP BAR
+================================================== -->
+
 <div class="topbar">
-    <div class="topbar-inner">
-        <div>Walailak University • School of Informatics</div>
-        <div>
-            <a href="https://informatics.wu.ac.th/" target="_blank">School of Informatics</a>
-            <a href="https://www.wu.ac.th/" target="_blank">Walailak University</a>
-        </div>
-    </div>
+
+    Walailak University • School of Informatics • Digital Content and Media
+
 </div>
 
-<!-- HEADER -->
-<header class="header">
-    <div class="header-inner">
 
-        <a href="index.html" class="logo">
-            <div class="logo-box">DCM</div>
-            <div class="logo-text">
-                <strong>Digital Content & Media</strong>
-                <span>School of Informatics • Walailak University</span>
-            </div>
-        </a>
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header>
+
+<div class="header-inner">
+
+<a href="index.html" class="logo">
+
+    <div class="logo-box">
+        DCM
+    </div>
+
+    <div class="logo-text">
+
+        <h1>Digital Content and Media</h1>
+
+        <span>สาขาดิจิทัลคอนเทนต์และสื่อ</span>
 
     </div>
+
+</a>
+
+</div>
+
 </header>
 
-<!-- NAV -->
-<nav class="nav">
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+<!-- ==================================================
+     NAVIGATION
+================================================== -->
 
-    <div class="nav-inner" id="navMenu">
+<nav>
 
-        <a href="index.html">หน้าหลัก</a>
+<div class="nav-inner">
 
-        <a href="about.html">เกี่ยวกับหลักสูตร</a>
+<button class="menu-btn"
+        onclick="toggleMenu()">
 
-        <a href="learning-outcomes.html" class="active">
-            ผลลัพธ์การเรียนรู้
-        </a>
+    ☰
 
-        <a href="curriculum.html">โครงสร้างหลักสูตร</a>
+</button>
 
-        <a href="careers.html">แนวทางอาชีพ</a>
 
-        <a href="tuition.html">ค่าใช้จ่าย</a>
+<ul class="nav-links" id="navLinks">
 
-        <a href="further-study.html">ศึกษาต่อ</a>
+<li>
+    <a href="index.html">
+        หน้าหลัก
+    </a>
+</li>
 
-        <a href="contact.html">ติดต่อ</a>
+<li>
+    <a href="about.html">
+        เกี่ยวกับหลักสูตร
+    </a>
+</li>
 
-    </div>
-</nav>
-
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-    <div class="breadcrumb-inner">
-        <a href="index.html">หน้าหลัก</a>
-        <span> › </span>
+<li>
+    <a href="learning-outcomes.html"
+       class="active">
         ผลลัพธ์การเรียนรู้
-    </div>
+    </a>
+</li>
+
+<li>
+    <a href="curriculum.html">
+        โครงสร้างหลักสูตร
+    </a>
+</li>
+
+<li>
+    <a href="careers.html">
+        แนวทางอาชีพ
+    </a>
+</li>
+
+<li>
+    <a href="tuition.html">
+        ค่าเล่าเรียน
+    </a>
+</li>
+
+<li>
+    <a href="further-study.html">
+        การศึกษาต่อ
+    </a>
+</li>
+
+<li>
+    <a href="lecturers.html">
+        อาจารย์
+    </a>
+</li>
+
+<li>
+    <a href="contact.html">
+        ติดต่อ
+    </a>
+</li>
+
+</ul>
+
 </div>
 
-<!-- HERO -->
-<section class="hero">
-
-    <div class="hero-inner">
-
-        <span class="hero-tag">
-            PROGRAM LEARNING OUTCOMES
-        </span>
-
-        <h1>
-            ผลลัพธ์การเรียนรู้<br>
-            ของหลักสูตร
-        </h1>
-
-        <p>
-            สิ่งที่นักศึกษาจะได้รับจากการเรียนในหลักสูตร
-            ดิจิทัลคอนเทนต์และสื่อ ทั้งด้านความรู้ ทักษะ
-            จริยธรรม และคุณลักษณะของบัณฑิต
-        </p>
-
-    </div>
-
-</section>
+</nav>
 
 
-<!-- INTRO -->
-<section class="container">
+<!-- ==================================================
+     PAGE HERO
+================================================== -->
 
-    <div class="intro">
+<section class="page-hero">
 
-        <div>
+<div class="page-hero-inner">
 
-            <div class="section-title">
+    <small>
+        LEARNING OUTCOMES
+    </small>
 
-                <div class="small">
-                    Learning Outcomes
-                </div>
+    <h2>
+        ผลลัพธ์การเรียนรู้
+    </h2>
 
-                <h2>
-                    เรียนแล้วได้อะไร?
-                </h2>
+    <p>
+        สิ่งที่ผู้เรียนควรมีเมื่อสำเร็จการศึกษา
+        ทั้งด้านความรู้ ทักษะ จริยธรรม
+        และลักษณะบุคคล
+    </p>
 
-            </div>
-
-            <p>
-                หลักสูตรสารสนเทศศาสตรบัณฑิต สาขาดิจิทัลคอนเทนต์และสื่อ
-                กำหนดผลลัพธ์การเรียนรู้ของหลักสูตร หรือ PLO
-                เพื่อให้เห็นความสามารถที่นักศึกษาควรพัฒนาเมื่อสำเร็จการศึกษา
-            </p>
-
-            <p>
-                ผลลัพธ์การเรียนรู้ครอบคลุมทั้งความรู้เกี่ยวกับสารสนเทศ
-                และดิจิทัลคอนเทนต์ ทักษะการออกแบบและพัฒนาสื่อ
-                การสื่อสาร จริยธรรม รวมถึงการทำงานร่วมกับผู้อื่น
-            </p>
-
-        </div>
-
-        <img
-            class="intro-img"
-            src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/426595157_1003333134466401_919233955751944485_n.jpg"
-            alt="Digital Content and Media"
-        >
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- KNOWLEDGE -->
-<section class="container category">
+<!-- ==================================================
+     INTRO
+================================================== -->
 
-    <div class="category-head">
+<section class="intro">
 
-        <div class="category-icon">
-            📚
-        </div>
+<div class="container">
 
-        <div>
-            <h2>ด้านความรู้</h2>
-            <p>Knowledge</p>
-        </div>
-
-    </div>
+<div class="intro-grid">
 
 
-    <div class="plo-grid">
+<div class="intro-image">
 
-        <div class="plo-card">
+<img
+src="https://informatics.wu.ac.th/wp-content/uploads/2024/04/DCM05.jpg"
+alt="Digital Content and Media Learning">
 
-            <div class="plo-number">
-                PLO 1
-            </div>
+<div class="image-label">
 
-            <h3>
-                ความรู้พื้นฐานและแนวคิดด้านดิจิทัลคอนเทนต์
-            </h3>
+<strong>9 PLOs</strong>
 
-            <p>
-                อธิบายความรู้ด้านมนุษยศาสตร์สังคมศาสตร์ทั่วไป
-                เทคโนโลยีสารสนเทศพื้นฐาน และแนวคิดสำหรับการออกแบบ
-                ผลิต และเผยแพร่ดิจิทัลคอนเทนต์ที่ตอบสนองความต้องการของผู้ใช้
-            </p>
+<span>
+Program Learning Outcomes
+</span>
 
-        </div>
+</div>
+
+</div>
 
 
-        <div class="plo-card">
+<div class="intro-content">
 
-            <div class="plo-number">
-                PLO 2
-            </div>
+<small>
+PROGRAM LEARNING OUTCOMES
+</small>
 
-            <h3>
-                การประยุกต์ใช้ความรู้ในอุตสาหกรรมดิจิทัล
-            </h3>
+<h2>
+เรียนจบแล้วควรมีความสามารถอะไร?
+</h2>
 
-            <p>
-                ประยุกต์ใช้ความรู้ด้านการจัดการสารสนเทศ
-                การออกแบบและผลิตสื่อ การจัดบริการดิจิทัลคอนเทนต์
-                และความรู้ในการประกอบอาชีพด้านการพัฒนาการเรียนแบบออนไลน์
-                คอนเทนต์เพื่อการตลาดดิจิทัล ดิจิทัลคอลเล็กชัน
-                หรือเทคโนโลยีเพื่อการจัดการคอนเทนต์
-            </p>
+<p>
+หลักสูตรกำหนดผลลัพธ์การเรียนรู้ของบัณฑิต
+ให้ครอบคลุม 4 ด้าน ได้แก่
+ความรู้ ทักษะ จริยธรรม และลักษณะบุคคล
+</p>
 
-        </div>
+<p>
+ผลลัพธ์การเรียนรู้เหล่านี้ใช้เป็นแนวทาง
+ในการพัฒนาผู้เรียนตลอดหลักสูตร
+เพื่อให้สามารถนำความรู้ไปใช้ในการทำงาน
+และเรียนรู้ต่อได้ในสภาพแวดล้อมดิจิทัล
+</p>
 
-    </div>
+</div>
 
-</section>
+</div>
 
-
-<!-- SKILLS -->
-<section class="full-section">
-
-    <div class="container category">
-
-        <div class="category-head">
-
-            <div class="category-icon">
-                💻
-            </div>
-
-            <div>
-                <h2>ด้านทักษะ</h2>
-                <p>Skills</p>
-            </div>
-
-        </div>
-
-
-        <div class="plo-grid">
-
-            <div class="plo-card">
-
-                <div class="plo-number">
-                    PLO 3
-                </div>
-
-                <h3>
-                    เลือกใช้เทคโนโลยี
-                </h3>
-
-                <p>
-                    เลือกใช้เทคโนโลยีเพื่อการพัฒนาดิจิทัลคอนเทนต์
-                    ที่ตอบสนองวัตถุประสงค์การใช้งานของผู้ใช้
-                </p>
-
-            </div>
-
-
-            <div class="plo-card">
-
-                <div class="plo-number">
-                    PLO 4
-                </div>
-
-                <h3>
-                    ออกแบบบริการดิจิทัลคอนเทนต์
-                </h3>
-
-                <p>
-                    ออกแบบการจัดบริการดิจิทัลคอนเทนต์อย่างเป็นระบบ
-                    โดยใช้กระบวนการวิจัยและพัฒนาเพื่อรองรับ
-                    การเปลี่ยนแปลงทางดิจิทัลขององค์กร
-                </p>
-
-            </div>
-
-
-            <div class="plo-card">
-
-                <div class="plo-number">
-                    PLO 5
-                </div>
-
-                <h3>
-                    จัดระบบบริการดิจิทัลคอนเทนต์
-                </h3>
-
-                <p>
-                    มีทักษะในการจัดระบบบริการดิจิทัลคอนเทนต์
-                    ให้สอดคล้องกับความต้องการขององค์กร
-                </p>
-
-            </div>
-
-
-            <div class="plo-card">
-
-                <div class="plo-number">
-                    PLO 6
-                </div>
-
-                <h3>
-                    การสื่อสาร
-                </h3>
-
-                <p>
-                    มีทักษะการสื่อสารภาษาไทยและภาษาอังกฤษ
-                    เพื่อใช้ในชีวิตประจำวัน ทั้งการฟัง พูด อ่าน เขียน
-                    และเสนอผลงานได้ตามวัตถุประสงค์
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ETHICS -->
-<section class="container category">
+<!-- ==================================================
+     FOUR DIMENSIONS
+================================================== -->
 
-    <div class="category-head">
+<section class="dimensions">
 
-        <div class="category-icon">
-            ⚖️
-        </div>
+<div class="container">
 
-        <div>
-            <h2>ด้านจริยธรรม</h2>
-            <p>Ethics</p>
-        </div>
+<div class="section-heading">
 
-    </div>
+<small>
+4 DIMENSIONS
+</small>
 
+<h2>
+ผลลัพธ์การเรียนรู้ 4 ด้าน
+</h2>
 
-    <div class="plo-grid">
+<p>
+หลักสูตรกำหนดผลลัพธ์การเรียนรู้ตาม 4 ด้าน
+ของมาตรฐานคุณวุฒิระดับอุดมศึกษา
+</p>
 
-        <div class="plo-card">
-
-            <div class="plo-number">
-                PLO 7
-            </div>
-
-            <h3>
-                ความรับผิดชอบและจริยธรรมทางวิชาการ
-            </h3>
-
-            <p>
-                แสดงออกถึงความซื่อสัตย์ ความกตัญญูกตเวที
-                ความรับผิดชอบต่อตนเองและสังคม ปฏิบัติตามกฎระเบียบ
-                และปฏิบัติตนอย่างถูกต้องตามจริยธรรมทางวิชาการ
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+</div>
 
 
-<!-- CHARACTER -->
-<section class="full-section">
-
-    <div class="container category">
-
-        <div class="category-head">
-
-            <div class="category-icon">
-                ⭐
-            </div>
-
-            <div>
-                <h2>ด้านคุณลักษณะ</h2>
-                <p>Character</p>
-            </div>
-
-        </div>
+<div class="dimension-grid">
 
 
-        <div class="plo-grid">
+<div class="dimension-card">
 
-            <div class="plo-card">
+<div class="dimension-icon">
+K
+</div>
 
-                <div class="plo-number">
-                    PLO 8
-                </div>
+<h3>
+ความรู้
+</h3>
 
-                <h3>
-                    ภาวะผู้นำและการทำงานร่วมกับผู้อื่น
-                </h3>
+<p>
+Knowledge
+</p>
 
-                <p>
-                    แสดงออกถึงการมีภาวะผู้นำ มีสุขภาวะ
-                    สามารถเป็นได้ทั้งผู้นำและผู้ตาม มีจิตอาสา
-                    และทำงานร่วมกับผู้อื่น
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="plo-card">
+<div class="dimension-card">
 
-                <div class="plo-number">
-                    PLO 9
-                </div>
+<div class="dimension-icon">
+S
+</div>
 
-                <h3>
-                    การรู้ดิจิทัลและการเรียนรู้ตลอดชีวิต
-                </h3>
+<h3>
+ทักษะ
+</h3>
 
-                <p>
-                    แสดงออกถึงการรู้ดิจิทัล
-                    สามารถแสวงหาความรู้ภายใต้สภาพแวดล้อมดิจิทัล
-                </p>
+<p>
+Skills
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </div>
+<div class="dimension-card">
+
+<div class="dimension-icon">
+E
+</div>
+
+<h3>
+จริยธรรม
+</h3>
+
+<p>
+Ethics
+</p>
+
+</div>
+
+
+<div class="dimension-card">
+
+<div class="dimension-icon">
+C
+</div>
+
+<h3>
+ลักษณะบุคคล
+</h3>
+
+<p>
+Character
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- SKILL SUMMARY -->
-<section class="container">
+<!-- ==================================================
+     PLO
+================================================== -->
 
-    <div class="section-title">
+<section class="plo-section">
 
-        <div class="small">
-            What You Will Develop
-        </div>
+<div class="container">
 
-        <h2>
-            ทักษะสำคัญที่นักศึกษาจะได้พัฒนา
-        </h2>
+<div class="section-heading">
 
-        <p>
-            ผลลัพธ์การเรียนรู้สามารถมองภาพรวมเป็นทักษะสำคัญ
-            ที่นำไปใช้ในการเรียน การทำโครงงาน และการทำงานจริง
-        </p>
+<small>
+PLO 1 — PLO 9
+</small>
 
-    </div>
+<h2>
+รายละเอียดผลลัพธ์การเรียนรู้
+</h2>
 
+<p>
+ผลลัพธ์การเรียนรู้ของบัณฑิตในแต่ละด้าน
+</p>
 
-    <div class="skill-grid">
-
-        <div class="skill-box">
-
-            <div class="skill-icon">
-                🎨
-            </div>
-
-            <h3>
-                Digital Content
-            </h3>
-
-            <p>
-                การออกแบบและผลิตดิจิทัลคอนเทนต์
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="skill-box">
+<!-- =========================
+     KNOWLEDGE
+========================= -->
 
-            <div class="skill-icon">
-                💡
-            </div>
+<div class="plo-group">
 
-            <h3>
-                Digital Technology
-            </h3>
+<div class="plo-title">
 
-            <p>
-                การเลือกใช้เทคโนโลยีให้เหมาะกับงาน
-            </p>
+<div class="plo-title-line"></div>
 
-        </div>
+<div>
 
+<h3>
+ด้านความรู้
+</h3>
 
-        <div class="skill-box">
+<span>
+Knowledge
+</span>
 
-            <div class="skill-icon">
-                🗣️
-            </div>
+</div>
 
-            <h3>
-                Communication
-            </h3>
-
-            <p>
-                การสื่อสารและการนำเสนอผลงาน
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="skill-box">
+<div class="plo-grid">
 
-            <div class="skill-icon">
-                🤝
-            </div>
 
-            <h3>
-                Collaboration
-            </h3>
+<div class="plo-card">
 
-            <p>
-                การทำงานร่วมกับผู้อื่นและภาวะผู้นำ
-            </p>
+<div class="plo-badge">
+PLO1
+</div>
 
-        </div>
+<h4>
+ความรู้พื้นฐานและดิจิทัลคอนเทนต์
+</h4>
 
-    </div>
+<p>
+อธิบายความรู้ด้านมนุษยศาสตร์
+สังคมศาสตร์ทั่วไป เทคโนโลยีสารสนเทศพื้นฐาน
+และแนวคิดสำหรับการออกแบบ ผลิต
+และเผยแพร่ดิจิทัลคอนเทนต์
+ที่ตอบสนองความต้องการของผู้ใช้
+</p>
+
+</div>
+
+
+<div class="plo-card">
+
+<div class="plo-badge">
+PLO2
+</div>
+
+<h4>
+การประยุกต์ใช้ความรู้
+</h4>
+
+<p>
+ประยุกต์ใช้ความรู้ด้านการจัดการสารสนเทศ
+การออกแบบและผลิตสื่อ
+การจัดบริการดิจิทัลคอนเทนต์
+และความรู้ในการประกอบอาชีพ
+เพื่อตอบสนองความต้องการของผู้ประกอบการ
+ในอุตสาหกรรมดิจิทัล
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<div class="plo-group">
+
+<div class="plo-title">
+
+<div class="plo-title-line"></div>
+
+<div>
+
+<h3>
+ด้านทักษะ
+</h3>
+
+<span>
+Skills
+</span>
+
+</div>
+
+</div>
+
+
+<div class="plo-grid">
+
+
+<div class="plo-card">
+
+<div class="plo-badge">
+PLO3
+</div>
+
+<h4>
+การเลือกใช้เทคโนโลยี
+</h4>
+
+<p>
+เลือกใช้เทคโนโลยีเพื่อการพัฒนา
+ดิจิทัลคอนเทนต์ที่ตอบสนอง
+วัตถุประสงค์การใช้งานของผู้ใช้
+</p>
+
+</div>
+
+
+<div class="plo-card">
+
+<div class="plo-badge">
+PLO4
+</div>
+
+<h4>
+การออกแบบบริการดิจิทัลคอนเทนต์
+</h4>
+
+<p>
+ออกแบบการจัดบริการดิจิทัลคอนเทนต์
+อย่างเป็นระบบ โดยใช้กระบวนการวิจัย
+และพัฒนาเพื่อรองรับการเปลี่ยนแปลง
+ทางดิจิทัลขององค์กร
+</p>
+
+</div>
+
+
+<div class="plo-card">
+
+<div class="plo-badge">
+PLO5
+</div>
+
+<h4>
+การจัดระบบบริการ
+</h4>
+
+<p>
+มีทักษะในการจัดระบบบริการ
+ดิจิทัลคอนเทนต์ให้สอดคล้อง
+กับความต้องการขององค์กร
+</p>
+
+</div>
+
+
+<div class="plo-card">
+
+<div class="plo-badge">
+PLO6
+</div>
+
+<h4>
+การสื่อสาร
+</h4>
+
+<p>
+มีทักษะการสื่อสารภาษาไทย
+และภาษาอังกฤษ ทั้งการฟัง พูด อ่าน
+เขียน และการนำเสนอผลงาน
+ตามวัตถุประสงค์
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     ETHICS
+========================= -->
+
+<div class="plo-group">
+
+<div class="plo-title">
+
+<div class="plo-title-line"></div>
+
+<div>
+
+<h3>
+ด้านจริยธรรม
+</h3>
+
+<span>
+Ethics
+</span>
+
+</div>
+
+</div>
+
+
+<div class="plo-grid">
+
+
+<div class="plo-card">
+
+<div class="plo-badge">
+PLO7
+</div>
+
+<h4>
+ความรับผิดชอบและจริยธรรม
+</h4>
+
+<p>
+แสดงออกถึงความซื่อสัตย์
+ความกตัญญูกตเวที
+ความรับผิดชอบต่อตนเองและสังคม
+ปฏิบัติตามกฎระเบียบ
+และปฏิบัติตนอย่างถูกต้อง
+ตามจริยธรรมทางวิชาการ
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     CHARACTER
+========================= -->
+
+<div class="plo-group">
+
+<div class="plo-title">
+
+<div class="plo-title-line"></div>
+
+<div>
+
+<h3>
+ด้านลักษณะบุคคล
+</h3>
+
+<span>
+Character
+</span>
+
+</div>
+
+</div>
+
+
+<div class="plo-grid">
+
+
+<div class="plo-card">
+
+<div class="plo-badge">
+PLO8
+</div>
+
+<h4>
+ภาวะผู้นำและการทำงานร่วมกับผู้อื่น
+</h4>
+
+<p>
+แสดงออกถึงการมีภาวะผู้นำ
+มีสุขภาวะ สามารถเป็นได้ทั้งผู้นำ
+และผู้ตาม มีจิตอาสา
+และทำงานร่วมกับผู้อื่น
+</p>
+
+</div>
+
+
+<div class="plo-card">
+
+<div class="plo-badge">
+PLO9
+</div>
+
+<h4>
+การรู้ดิจิทัลและการเรียนรู้
+</h4>
+
+<p>
+แสดงออกถึงการรู้ดิจิทัล
+สามารถแสวงหาความรู้
+ภายใต้สภาพแวดล้อมดิจิทัล
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- CTA -->
-<section class="container">
+<!-- ==================================================
+     PRACTICAL SKILLS
+================================================== -->
 
-    <div class="cta">
+<section class="skills-summary">
 
-        <div>
+<div class="container">
 
-            <h2>
-                อยากรู้ว่าเรียนอะไรบ้าง?
-            </h2>
+<div class="section-heading">
 
-            <p>
-                ดูโครงสร้างหลักสูตร รายวิชา และจำนวนหน่วยกิต
-                ของสาขาดิจิทัลคอนเทนต์และสื่อ
-            </p>
+<small>
+AFTER GRADUATION
+</small>
 
-        </div>
+<h2>
+เมื่อเรียนจบแล้ว
+</h2>
 
-        <a href="curriculum.html" class="btn">
-            ดูโครงสร้างหลักสูตร →
-        </a>
+<p>
+ผลลัพธ์การเรียนรู้เหล่านี้นำไปสู่ความสามารถ
+ในการเรียนและการทำงานด้านดิจิทัล
+</p>
 
-    </div>
+</div>
+
+
+<div class="skills-grid">
+
+
+<div class="skill-card">
+
+<div class="skill-number">
+01 — KNOWLEDGE
+</div>
+
+<h3>
+เข้าใจดิจิทัลคอนเทนต์
+</h3>
+
+<p>
+เข้าใจแนวคิด เทคโนโลยี
+และกระบวนการออกแบบ ผลิต
+และเผยแพร่ดิจิทัลคอนเทนต์
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<div class="skill-number">
+02 — TECHNOLOGY
+</div>
+
+<h3>
+เลือกใช้เทคโนโลยี
+</h3>
+
+<p>
+สามารถเลือกใช้เทคโนโลยี
+ให้เหมาะกับวัตถุประสงค์
+และความต้องการของผู้ใช้
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<div class="skill-number">
+03 — DESIGN
+</div>
+
+<h3>
+ออกแบบบริการดิจิทัล
+</h3>
+
+<p>
+สามารถคิด วิเคราะห์
+และออกแบบบริการดิจิทัลคอนเทนต์
+อย่างเป็นระบบ
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<div class="skill-number">
+04 — COMMUNICATION
+</div>
+
+<h3>
+สื่อสารและนำเสนอ
+</h3>
+
+<p>
+สื่อสารภาษาไทยและภาษาอังกฤษ
+และนำเสนอผลงาน
+ตามวัตถุประสงค์
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<div class="skill-number">
+05 — TEAMWORK
+</div>
+
+<h3>
+ทำงานร่วมกับผู้อื่น
+</h3>
+
+<p>
+สามารถเป็นผู้นำหรือผู้ตาม
+ทำงานเป็นทีม และมีจิตอาสา
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<div class="skill-number">
+06 — DIGITAL LITERACY
+</div>
+
+<h3>
+เรียนรู้ในโลกดิจิทัล
+</h3>
+
+<p>
+สามารถแสวงหาความรู้
+และพัฒนาตนเองภายใต้
+สภาพแวดล้อมดิจิทัล
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ==================================================
+     CTA
+================================================== -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+อยากรู้ว่าเรียนอะไรเพื่อให้ได้ PLO เหล่านี้?
+</h2>
+
+<p>
+ดูโครงสร้างหลักสูตรและรายวิชาที่ผู้เรียน
+จะได้เรียนตลอดหลักสูตร
+</p>
+
+<a href="curriculum.html"
+   class="btn btn-white">
+
+ดูโครงสร้างหลักสูตร
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
 <footer>
 
-    <div class="footer-inner">
+<div class="container">
 
-        <div class="footer">
-
-            <h3>
-                Digital Content & Media
-            </h3>
-
-            <p>
-                หลักสูตรสารสนเทศศาสตรบัณฑิต
-                สาขาดิจิทัลคอนเทนต์และสื่อ
-                สำนักวิชาสารสนเทศศาสตร์
-                มหาวิทยาลัยวลัยลักษณ์
-            </p>
-
-        </div>
+<div class="footer-grid">
 
 
-        <div class="footer">
+<div class="footer-col">
 
-            <h3>
-                เมนู
-            </h3>
+<div class="footer-logo">
+DCM
+</div>
 
-            <a href="index.html">หน้าหลัก</a>
-            <a href="about.html">เกี่ยวกับหลักสูตร</a>
-            <a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a>
-            <a href="curriculum.html">โครงสร้างหลักสูตร</a>
+<p>
+Bachelor of Information Science
+</p>
 
-        </div>
+<p>
+Digital Content and Media
+</p>
 
+<p>
+School of Informatics
+Walailak University
+</p>
 
-        <div class="footer">
-
-            <h3>
-                ติดต่อ
-            </h3>
-
-            <p>
-                โทร. 075-672204
-            </p>
-
-            <p>
-                มหาวิทยาลัยวลัยลักษณ์
-                จังหวัดนครศรีธรรมราช
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="copyright">
-        © 2026 Digital Content & Media — Walailak University
-    </div>
+<div class="footer-col">
+
+<h3>
+เว็บไซต์
+</h3>
+
+<ul class="footer-links">
+
+<li>
+<a href="index.html">
+หน้าหลัก
+</a>
+</li>
+
+<li>
+<a href="about.html">
+เกี่ยวกับหลักสูตร
+</a>
+</li>
+
+<li>
+<a href="learning-outcomes.html">
+ผลลัพธ์การเรียนรู้
+</a>
+</li>
+
+<li>
+<a href="curriculum.html">
+โครงสร้างหลักสูตร
+</a>
+</li>
+
+<li>
+<a href="careers.html">
+แนวทางอาชีพ
+</a>
+</li>
+
+<li>
+<a href="tuition.html">
+ค่าเล่าเรียน
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>
+ข้อมูลติดต่อ
+</h3>
+
+<p>
+โทร. 075-672204
+</p>
+
+<p>
+สำนักวิชาสารสนเทศศาสตร์
+มหาวิทยาลัยวลัยลักษณ์
+</p>
+
+<p>
+222 ตำบลไทยบุรี
+อำเภอท่าศาลา
+จังหวัดนครศรีธรรมราช 80160
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 Digital Content and Media
+Walailak University
+
+</div>
+
+</div>
 
 </footer>
 
 
-<!-- CHATBOT -->
-<div class="chatbot">
+<!-- ==================================================
+     CHATBOT BUTTON
+================================================== -->
 
-    <div class="chat-window" id="chatWindow">
+<button
+    class="chat-button"
+    onclick="toggleChat()"
+    aria-label="เปิดแชทบอท">
 
-        <div class="chat-header">
-            🤖 DCM Assistant
-        </div>
+    💬
 
-        <div class="chat-body" id="chatBody">
+</button>
 
-            <div class="bot-msg">
-                สวัสดีครับ 👋<br>
-                ผมคือ DCM Assistant<br>
-                ถามเกี่ยวกับหลักสูตรดิจิทัลคอนเทนต์และสื่อได้เลยครับ
-            </div>
 
-        </div>
+<!-- ==================================================
+     CHATBOT
+================================================== -->
 
-        <div class="chat-input">
+<div class="chat-box" id="chatBox">
 
-            <input
-                type="text"
-                id="chatInput"
-                placeholder="พิมพ์คำถาม..."
-                onkeydown="if(event.key==='Enter') sendMessage()"
-            >
 
-            <button onclick="sendMessage()">
-                ส่ง
-            </button>
+<div class="chat-header">
 
-        </div>
+<div>
 
-    </div>
+<strong>
+DCM Assistant
+</strong>
 
-    <button class="chat-button" onclick="toggleChat()">
-        💬
-    </button>
+<span>
+ถามข้อมูลเกี่ยวกับหลักสูตร
+</span>
 
 </div>
 
 
+<button
+    onclick="toggleChat()"
+    aria-label="ปิดแชท">
+
+    ×
+
+</button>
+
+</div>
+
+
+<div
+    class="chat-body"
+    id="chatBody">
+
+</div>
+
+
+<div class="chat-input-area">
+
+<input
+    type="text"
+    id="chatInput"
+    placeholder="พิมพ์คำถามเกี่ยวกับ DCM..."
+    autocomplete="off"
+>
+
+<button
+    id="sendButton"
+    onclick="sendMessage()">
+
+    ➤
+
+</button>
+
+</div>
+
+
+</div>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
 <script>
+
+
+/* ==================================================
+   MOBILE MENU
+================================================== */
 
 function toggleMenu(){
 
-    const menu = document.getElementById("navMenu");
+    const nav =
+        document.getElementById("navLinks");
 
-    menu.classList.toggle("show");
+    nav.classList.toggle("show");
 
 }
 
+
+/* ==================================================
+   CHATBOT OPEN / CLOSE
+================================================== */
 
 function toggleChat(){
 
-    const chat = document.getElementById("chatWindow");
+    const box =
+        document.getElementById("chatBox");
 
-    chat.style.display =
-        chat.style.display === "block"
-        ? "none"
-        : "block";
+    if(box.style.display === "block"){
+
+        box.style.display = "none";
+
+    }else{
+
+        box.style.display = "block";
+
+        const input =
+            document.getElementById("chatInput");
+
+        if(input){
+
+            input.focus();
+
+        }
+
+    }
 
 }
 
 
-function addMessage(text, type){
+/* ==================================================
+   ADD USER QUESTION
+================================================== */
 
-    const body = document.getElementById("chatBody");
+function addUserMessage(message){
 
-    const div = document.createElement("div");
+    const body =
+        document.getElementById("chatBody");
 
-    div.className =
-        type === "user"
-        ? "user-msg"
-        : "bot-msg";
+    const wrapper =
+        document.createElement("div");
 
-    div.innerHTML = text;
-
-    body.appendChild(div);
-
-    body.scrollTop = body.scrollHeight;
-
-}
+    wrapper.className =
+        "chat-question";
 
 
-function getBotAnswer(question){
+    const content =
+        document.createElement("div");
 
-    const q = question.toLowerCase();
-
-    if(
-        q.includes("plo") ||
-        q.includes("ผลลัพธ์") ||
-        q.includes("เรียนรู้")
-    ){
-
-        return `
-        หลักสูตรมีผลลัพธ์การเรียนรู้ 9 ข้อ หรือ PLO 1–9
-        ครอบคลุมด้านความรู้ ทักษะ จริยธรรม
-        และคุณลักษณะของบัณฑิตครับ
-        `;
-
-    }
+    content.className =
+        "chat-question-content";
 
 
-    if(
-        q.includes("ความรู้") ||
-        q.includes("knowledge")
-    ){
+    const label =
+        document.createElement("div");
 
-        return `
-        ด้านความรู้คือ PLO 1 และ PLO 2
-        เน้นความรู้เกี่ยวกับสารสนเทศ เทคโนโลยี
-        การออกแบบ ผลิต และจัดการดิจิทัลคอนเทนต์ครับ
-        `;
+    label.className =
+        "chat-question-label";
 
-    }
+    label.textContent =
+        "คำถาม";
 
 
-    if(
-        q.includes("ทักษะ") ||
-        q.includes("skill")
-    ){
+    const text =
+        document.createElement("div");
 
-        return `
-        ด้านทักษะคือ PLO 3–6
-        ครอบคลุมการเลือกใช้เทคโนโลยี
-        การออกแบบบริการดิจิทัลคอนเทนต์
-        การจัดระบบบริการ และการสื่อสารครับ
-        `;
-
-    }
+    text.textContent =
+        message;
 
 
-    if(
-        q.includes("จริยธรรม") ||
-        q.includes("ethic")
-    ){
+    content.appendChild(label);
 
-        return `
-        ด้านจริยธรรมคือ PLO 7
-        เน้นความซื่อสัตย์ ความรับผิดชอบ
-        การปฏิบัติตามกฎระเบียบ และจริยธรรมทางวิชาการครับ
-        `;
+    content.appendChild(text);
 
-    }
+    wrapper.appendChild(content);
+
+    body.appendChild(wrapper);
 
 
-    if(
-        q.includes("คุณลักษณะ") ||
-        q.includes("ผู้นำ") ||
-        q.includes("ทำงานร่วม")
-    ){
-
-        return `
-        ด้านคุณลักษณะคือ PLO 8 และ PLO 9
-        เน้นภาวะผู้นำ การทำงานร่วมกับผู้อื่น
-        จิตอาสา และการรู้ดิจิทัลครับ
-        `;
-
-    }
-
-
-    if(
-        q.includes("อาชีพ") ||
-        q.includes("ทำงาน")
-    ){
-
-        return `
-        สาขานี้สามารถต่อยอดสู่อาชีพ เช่น
-        Digital Content Creator / Content Specialist,
-        Web Content Manager, Digital Collection Developer
-        และ Web Designer ครับ
-        `;
-
-    }
-
-
-    if(
-        q.includes("ค่าเทอม") ||
-        q.includes("ค่าใช้จ่าย")
-    ){
-
-        return `
-        ค่าใช้จ่ายของหลักสูตรอยู่ที่ประมาณ
-        25,000 บาทต่อภาคการศึกษา
-        และประมาณ 200,000 บาทตลอดหลักสูตรครับ
-        `;
-
-    }
-
-
-    if(
-        q.includes("เรียนต่อ") ||
-        q.includes("ปริญญาโท") ||
-        q.includes("ปริญญาเอก")
-    ){
-
-        return `
-        หลังจบสามารถศึกษาต่อระดับปริญญาโทหรือปริญญาเอก
-        ใน Computer Science, Information Technology
-        หรือสาขาที่เกี่ยวข้องได้ครับ
-        `;
-
-    }
-
-
-    return `
-    สามารถถามผมเกี่ยวกับ
-    <b>หลักสูตร, PLO, รายวิชา, ค่าเทอม,
-    อาชีพ, การศึกษาต่อ หรือการติดต่อหลักสูตร</b>
-    ได้เลยครับ 😊
-    `;
+    body.scrollTop =
+        body.scrollHeight;
 
 }
 
 
-function sendMessage(){
+/* ==================================================
+   ADD BOT ANSWER
+================================================== */
 
-    const input = document.getElementById("chatInput");
+function addBotMessage(message){
 
-    const question = input.value.trim();
+    const body =
+        document.getElementById("chatBody");
 
-    if(!question) return;
+    const wrapper =
+        document.createElement("div");
 
-    addMessage(question,"user");
+    wrapper.className =
+        "chat-answer";
+
+
+    const content =
+        document.createElement("div");
+
+    content.className =
+        "chat-answer-content";
+
+
+    const label =
+        document.createElement("div");
+
+    label.className =
+        "chat-answer-label";
+
+    label.textContent =
+        "DCM Assistant";
+
+
+    const text =
+        document.createElement("div");
+
+    text.textContent =
+        String(message);
+
+
+    content.appendChild(label);
+
+    content.appendChild(text);
+
+    wrapper.appendChild(content);
+
+    body.appendChild(wrapper);
+
+
+    body.scrollTop =
+        body.scrollHeight;
+
+}
+
+
+/* ==================================================
+   SEND MESSAGE TO API
+================================================== */
+
+async function sendMessage(){
+
+    const input =
+        document.getElementById("chatInput");
+
+    const button =
+        document.getElementById("sendButton");
+
+
+    const question =
+        input.value.trim();
+
+
+    if(!question){
+
+        return;
+
+    }
+
+
+    addUserMessage(question);
+
 
     input.value = "";
 
-    setTimeout(function(){
+    input.disabled = true;
 
-        const answer = getBotAnswer(question);
+    button.disabled = true;
 
-        addMessage(answer,"bot");
 
-    },400);
+    const body =
+        document.getElementById("chatBody");
+
+
+    const loading =
+        document.createElement("div");
+
+
+    loading.className =
+        "chat-loading";
+
+
+    loading.id =
+        "chatLoading";
+
+
+    loading.textContent =
+        "กำลังค้นหาคำตอบให้ครับ... ⏳";
+
+
+    body.appendChild(loading);
+
+
+    body.scrollTop =
+        body.scrollHeight;
+
+
+    try{
+
+        const response =
+            await fetch("/api/chat",{
+
+                method:"POST",
+
+                headers:{
+                    "Content-Type":
+                        "application/json"
+                },
+
+                body:JSON.stringify({
+
+                    message:question
+
+                })
+
+            });
+
+
+        let data = {};
+
+
+        try{
+
+            data =
+                await response.json();
+
+        }catch(error){
+
+            data = {};
+
+        }
+
+
+        const oldLoading =
+            document.getElementById("chatLoading");
+
+
+        if(oldLoading){
+
+            oldLoading.remove();
+
+        }
+
+
+        if(!response.ok){
+
+            throw new Error(
+
+                data.error ||
+                "ไม่สามารถเชื่อมต่อ AI ได้"
+
+            );
+
+        }
+
+
+        addBotMessage(
+
+            data.reply ||
+
+            "ขออภัยครับ ไม่พบคำตอบที่เหมาะสม"
+
+        );
+
+
+    }catch(error){
+
+
+        const oldLoading =
+            document.getElementById("chatLoading");
+
+
+        if(oldLoading){
+
+            oldLoading.remove();
+
+        }
+
+
+        console.error(
+            "DCM Assistant Error:",
+            error
+        );
+
+
+        addBotMessage(
+
+            "ขออภัยครับ ตอนนี้ไม่สามารถเชื่อมต่อ AI ได้ กรุณาลองใหม่อีกครั้งครับ"
+
+        );
+
+
+    }finally{
+
+        input.disabled = false;
+
+        button.disabled = false;
+
+        input.focus();
+
+    }
 
 }
 
+
+/* ==================================================
+   ENTER KEY
+================================================== */
+
+document
+    .getElementById("chatInput")
+    .addEventListener(
+        "keydown",
+        function(event){
+
+            if(event.key === "Enter"){
+
+                event.preventDefault();
+
+                sendMessage();
+
+            }
+
+        }
+    );
+
+
 </script>
 
+
 </body>
+
 </html>
