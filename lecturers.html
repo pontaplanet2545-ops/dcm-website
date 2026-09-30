@@ -1,1082 +1,129 @@
-```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>อาจารย์ประจำหลักสูตร | Digital Content and Media</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Segoe UI", "Noto Sans Thai", Arial, sans-serif;
-            background: #f7f8fa;
-            color: #222;
-            line-height: 1.7;
-        }
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: auto;
-            height: 76px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 25px;
-        }
-
-        .logo {
-            text-decoration: none;
-            color: #111827;
-            font-size: 20px;
-            font-weight: 800;
-        }
-
-        .logo span {
-            color: #e11d48;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            list-style: none;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: #374151;
-            padding: 10px 14px;
-            border-radius: 10px;
-            font-size: 14px;
-            transition: 0.2s;
-        }
-
-        .nav-menu a:hover,
-        .nav-menu a.active {
-            background: #111827;
-            color: white;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            background:
-                linear-gradient(
-                    135deg,
-                    #111827 0%,
-                    #1f2937 55%,
-                    #be123c 100%
-                );
-
-            color: white;
-            padding: 90px 20px;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .hero-label {
-            display: inline-block;
-            font-size: 13px;
-            letter-spacing: 1px;
-            font-weight: 700;
-            color: #fecdd3;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 {
-            font-size: clamp(38px, 6vw, 70px);
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 700px;
-            color: #e5e7eb;
-            font-size: 17px;
-        }
-
-        /* =========================
-           CONTENT
-        ========================= */
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 75px 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title .small {
-            color: #e11d48;
-            font-size: 14px;
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-
-        .section-title h2 {
-            font-size: 34px;
-            color: #111827;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #6b7280;
-        }
-
-        /* =========================
-           HEAD OF PROGRAM
-        ========================= */
-
-        .head-card {
-            max-width: 900px;
-            margin: 0 auto 80px;
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
-            display: grid;
-            grid-template-columns: 320px 1fr;
-        }
-
-        .head-image {
-            min-height: 390px;
-            background: #f3f4f6;
-        }
-
-        .head-image img {
-            width: 100%;
-            height: 100%;
-            min-height: 390px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .head-info {
-            padding: 40px;
-        }
-
-        .position {
-            display: inline-block;
-            background: #ffe4e6;
-            color: #be123c;
-            padding: 6px 12px;
-            border-radius: 999px;
-            font-size: 13px;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .head-info h3 {
-            font-size: 28px;
-            margin-bottom: 18px;
-            color: #111827;
-        }
-
-        .expertise-title {
-            font-weight: 800;
-            margin-bottom: 8px;
-            color: #374151;
-        }
-
-        .expertise {
-            color: #6b7280;
-            margin-bottom: 22px;
-        }
-
-        .contact-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .contact-list a {
-            color: #374151;
-            text-decoration: none;
-        }
-
-        .contact-list a:hover {
-            color: #e11d48;
-        }
-
-        /* =========================
-           LECTURER GRID
-        ========================= */
-
-        .lecturer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .lecturer-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-            transition: 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .lecturer-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-        }
-
-        .lecturer-image {
-            height: 300px;
-            background: #f3f4f6;
-            overflow: hidden;
-        }
-
-        .lecturer-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .lecturer-card:hover .lecturer-image img {
-            transform: scale(1.03);
-        }
-
-        .lecturer-info {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .lecturer-info h3 {
-            font-size: 20px;
-            line-height: 1.4;
-            color: #111827;
-            margin-bottom: 14px;
-        }
-
-        .lecturer-info .label {
-            font-size: 13px;
-            font-weight: 800;
-            color: #e11d48;
-            margin-bottom: 5px;
-        }
-
-        .lecturer-info p {
-            font-size: 14px;
-            color: #6b7280;
-            margin-bottom: 15px;
-        }
-
-        .lecturer-contact {
-            margin-top: auto;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-        }
-
-        .lecturer-contact a {
-            display: block;
-            text-decoration: none;
-            color: #4b5563;
-            font-size: 13px;
-            margin: 5px 0;
-        }
-
-        .lecturer-contact a:hover {
-            color: #e11d48;
-        }
-
-        .profile-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 15px;
-            background: #111827;
-            color: white !important;
-            border-radius: 10px;
-            text-decoration: none;
-            text-align: center;
-            transition: 0.2s;
-        }
-
-        .profile-btn:hover {
-            background: #e11d48;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #111827;
-            color: white;
-            padding: 45px 20px;
-            margin-top: 30px;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .footer-title {
-            font-size: 20px;
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-
-        .footer-text {
-            color: #9ca3af;
-            font-size: 14px;
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .nav-container {
-                height: auto;
-                padding: 15px 20px;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .nav-menu {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .head-card {
-                grid-template-columns: 1fr;
-            }
-
-            .head-image {
-                height: 350px;
-            }
-
-            .head-image img {
-                min-height: 350px;
-            }
-
-            .lecturer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-        }
-
-        @media (max-width: 600px) {
-
-            .hero {
-                padding: 65px 20px;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .container {
-                padding: 55px 15px;
-            }
-
-            .lecturer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .head-info {
-                padding: 25px;
-            }
-
-            .footer-container {
-                flex-direction: column;
-            }
-
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>อาจารย์ประจำหลักสูตร | Digital Content and Media</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI","Noto Sans Thai",Arial,sans-serif;background:#fff;color:#222;line-height:1.7}
+.navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid #eee}
+.nav-container{max-width:1200px;margin:auto;min-height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 25px}
+.logo{text-decoration:none;color:#111;font-size:21px;font-weight:900}.logo span{color:#f97316}
+.nav-menu{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;justify-content:center}
+.nav-menu a{text-decoration:none;color:#444;padding:9px 12px;border-radius:9px;font-size:14px;transition:.2s}
+.nav-menu a:hover,.nav-menu a.active{background:#f97316;color:#fff}
+.hero{background:linear-gradient(135deg,#fff7ed,#ffedd5 55%,#f97316);padding:85px 20px}
+.hero-container{max-width:1200px;margin:auto}
+.hero-label{display:inline-block;color:#ea580c;font-size:13px;letter-spacing:1px;font-weight:800;margin-bottom:12px}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.1;color:#111;margin-bottom:18px}
+.hero p{max-width:700px;color:#555;font-size:17px}
+.container{max-width:1200px;margin:auto;padding:70px 20px}
+.section-title{text-align:center;margin-bottom:42px}.section-title .small{color:#f97316;font-size:13px;font-weight:900;letter-spacing:.7px;margin-bottom:7px}
+.section-title h2{font-size:34px;color:#111;margin-bottom:8px}.section-title p{color:#777}
+.lecturer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.lecturer-card{background:#fff;border:1px solid #eee;border-radius:20px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.06);transition:.3s;display:flex;flex-direction:column}
+.lecturer-card:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(249,115,22,.14);border-color:#fed7aa}
+.lecturer-image{height:310px;background:#f8fafc;overflow:hidden}.lecturer-image img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}
+.lecturer-card:hover .lecturer-image img{transform:scale(1.025)}
+.lecturer-info{padding:24px;display:flex;flex-direction:column;flex:1}.lecturer-info h3{font-size:20px;line-height:1.45;color:#111;margin-bottom:12px}
+.label{font-size:13px;font-weight:900;color:#f97316;margin-bottom:5px}.lecturer-info p{font-size:14px;color:#666;margin-bottom:16px}
+.lecturer-contact{margin-top:auto;padding-top:15px;border-top:1px solid #eee}.lecturer-contact a{display:block;text-decoration:none;color:#555;font-size:13px;margin:5px 0}
+.lecturer-contact a:hover{color:#ea580c}.profile-btn{display:block!important;margin-top:14px;padding:10px 14px;background:#111;color:#fff!important;border-radius:10px;text-align:center;font-weight:700}
+.profile-btn:hover{background:#f97316}
+.profile-panel{display:none;max-width:1000px;margin:0 auto}.profile-panel.show{display:block}
+.profile-card{display:grid;grid-template-columns:minmax(380px,48%) 1fr;background:#fff;border:1px solid #eee;border-radius:28px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.10)}
+.profile-image{height:620px;background:#f3f4f6;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.profile-image img{width:100%;height:100%;min-height:0;object-fit:contain;object-position:center;background:#f3f4f6;display:block}
+.profile-info{padding:52px 48px;display:flex;flex-direction:column;justify-content:center}.back-btn{display:inline-flex;align-items:center;gap:7px;color:#ea580c;text-decoration:none;font-weight:800;margin-bottom:20px}
+.profile-role{display:inline-block;background:#fff7ed;color:#ea580c;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:800;margin-bottom:14px}
+.profile-info h2{font-size:34px;color:#111;line-height:1.3;margin-bottom:20px}.profile-label{font-size:14px;color:#f97316;font-weight:900;margin:22px 0 9px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:6px 10px;border-radius:999px;font-size:13px}
+.profile-contact{margin-top:25px;padding-top:20px;border-top:1px solid #eee}.profile-contact a{display:block;color:#444;text-decoration:none;margin:9px 0}
+.profile-contact a:hover{color:#ea580c}.back-list{display:inline-block;margin-top:20px;background:#f97316;color:#fff!important;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+footer{background:#111;color:#fff;padding:42px 20px;margin-top:20px}.footer-container{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:30px}
+.footer-title{font-size:20px;font-weight:800;margin-bottom:7px}.footer-text{color:#aaa;font-size:14px}
+@media(max-width:900px){.nav-container{flex-direction:column;padding:15px 20px;gap:12px}.lecturer-grid{grid-template-columns:repeat(2,1fr)}.profile-card{grid-template-columns:1fr}.profile-image{height:520px}.profile-image img{width:100%;height:100%;min-height:0;object-fit:contain}}
+@media(max-width:600px){.hero{padding:60px 20px}.hero h1{font-size:42px}.container{padding:45px 15px}.lecturer-grid{grid-template-columns:1fr}.profile-image{height:430px}.profile-info{padding:28px 22px}.profile-info h2{font-size:28px}.footer-container{flex-direction:column}.nav-menu{gap:3px}.nav-menu a{font-size:13px;padding:8px 9px}}
+</style>
 </head>
-
 <body>
 
-<!-- =========================
-     NAVBAR
-========================= -->
+<nav class="navbar"><div class="nav-container">
+<a href="index.html" class="logo">DCM<span>.</span></a>
+<ul class="nav-menu">
+<li><a href="index.html">หน้าแรก</a></li><li><a href="about.html">เกี่ยวกับสาขา</a></li>
+<li><a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a></li><li><a href="curriculum.html">หลักสูตร</a></li>
+<li><a href="careers.html">อาชีพ</a></li><li><a href="tuition.html">ค่าเทอม</a></li>
+<li><a href="further-study.html">เรียนต่อ</a></li><li><a href="lecturers.html" class="active">อาจารย์</a></li>
+<li><a href="contact.html">ติดต่อ</a></li>
+</ul></div></nav>
 
-<nav class="navbar">
-
-    <div class="nav-container">
-
-        <a href="index.html" class="logo">
-            DCM<span>.</span>
-        </a>
-
-        <ul class="nav-menu">
-
-            <li>
-                <a href="index.html">
-                    หน้าแรก
-                </a>
-            </li>
-
-            <li>
-                <a href="about.html">
-                    เกี่ยวกับสาขา
-                </a>
-            </li>
-
-            <li>
-                <a href="learning-outcomes.html">
-                    ผลลัพธ์การเรียนรู้
-                </a>
-            </li>
-
-            <li>
-                <a href="curriculum.html">
-                    หลักสูตร
-                </a>
-            </li>
-
-            <li>
-                <a href="careers.html">
-                    อาชีพ
-                </a>
-            </li>
-
-            <li>
-                <a href="tuition.html">
-                    ค่าเทอม
-                </a>
-            </li>
-
-            <li>
-                <a href="further-study.html">
-                    เรียนต่อ
-                </a>
-            </li>
-
-            <li>
-                <a href="lecturers.html" class="active">
-                    อาจารย์
-                </a>
-            </li>
-
-            <li>
-                <a href="contact.html">
-                    ติดต่อ
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
-
-</nav>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-    <div class="hero-container">
-
-        <div class="hero-label">
-            DIGITAL CONTENT & MEDIA
-        </div>
-
-        <h1>
-            อาจารย์ประจำหลักสูตร
-        </h1>
-
-        <p>
-            พบกับคณาจารย์ผู้สอนและผู้เชี่ยวชาญ
-            ของหลักสูตรดิจิทัลคอนเทนต์และสื่อ
-            สำนักวิชาสารสนเทศศาสตร์
-            มหาวิทยาลัยวลัยลักษณ์
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     MAIN CONTENT
-========================= -->
+<section class="hero" id="hero"><div class="hero-container">
+<div class="hero-label">DIGITAL CONTENT & MEDIA</div>
+<h1>อาจารย์ประจำหลักสูตร</h1>
+<p>พบกับคณาจารย์ผู้สอนและผู้เชี่ยวชาญของหลักสูตรดิจิทัลคอนเทนต์และสื่อ สำนักวิชาสารสนเทศศาสตร์ มหาวิทยาลัยวลัยลักษณ์</p>
+</div></section>
 
 <main class="container">
-
-
-    <!-- HEAD OF PROGRAM -->
-
-    <div class="section-title">
-
-        <div class="small">
-            PROGRAM LEADERSHIP
-        </div>
-
-        <h2>
-            หัวหน้าสาขา
-        </h2>
-
-        <p>
-            ผู้ดูแลและขับเคลื่อนหลักสูตรดิจิทัลคอนเทนต์และสื่อ
-        </p>
-
-    </div>
-
-
-    <div class="head-card">
-
-        <div class="head-image">
-
-            <img
-                src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Naparat-Chookerd-lecturer.png"
-                alt="ผศ.ดร.นภารัตน์ ชูเกิด"
-            >
-
-        </div>
-
-
-        <div class="head-info">
-
-            <span class="position">
-                หัวหน้าสาขา
-            </span>
-
-            <h3>
-                ผศ.ดร.นภารัตน์ ชูเกิด
-            </h3>
-
-            <div class="expertise-title">
-                ความเชี่ยวชาญ
-            </div>
-
-            <div class="expertise">
-                เทคโนโลยีทางการศึกษา,
-                การออกแบบการเรียนการสอน,
-                การจัดการเรียนการสอนแบบออนไลน์,
-                การจัดการการเรียนการสอนบนเว็บ,
-                สื่อดิจิทัลเพื่อการเรียนรู้
-            </div>
-
-            <div class="contact-list">
-
-                <a href="mailto:jnaparat@wu.ac.th">
-                    ✉ jnaparat@wu.ac.th
-                </a>
-
-                <a href="tel:075672271">
-                    ☎ 075-672271
-                </a>
-
-                <a href="tel:075672206">
-                    ☎ 075-672206-7
-                </a>
-
-                <a
-                    href="https://rps.wu.ac.th/researchersInfo/73"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    ดูโปรไฟล์อาจารย์ →
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- LECTURERS -->
-
-    <div class="section-title">
-
-        <div class="small">
-            OUR LECTURERS
-        </div>
-
-        <h2>
-            อาจารย์ประจำหลักสูตร
-        </h2>
-
-        <p>
-            คณาจารย์ผู้เชี่ยวชาญในหลากหลายด้านของสารสนเทศและดิจิทัลคอนเทนต์
-        </p>
-
-    </div>
-
-
-    <div class="lecturer-grid">
-
-
-        <!-- 1 -->
-
-        <article class="lecturer-card">
-
-            <div class="lecturer-image">
-
-                <img
-                    src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Siwanath-Nuntapichai-lecturer.png"
-                    alt="ผศ.ดร.ศิวนาถ นันทพิชัย"
-                    loading="lazy"
-                >
-
-            </div>
-
-            <div class="lecturer-info">
-
-                <h3>
-                    ผศ.ดร.ศิวนาถ นันทพิชัย
-                </h3>
-
-                <div class="label">
-                    ความเชี่ยวชาญ
-                </div>
-
-                <p>
-                    การจัดระบบสารสนเทศและความรู้,
-                    ระบบการจัดเก็บและค้นคืน,
-                    การจัดบริการสารสนเทศสำหรับองค์กรและชุมชน,
-                    ระบบปฏิบัติการห้องสมุดอัตโนมัติ
-                </p>
-
-                <div class="lecturer-contact">
-
-                    <a href="mailto:ndecha@wu.ac.th">
-                        ✉ ndecha@wu.ac.th
-                    </a>
-
-                    <a href="tel:075673362">
-                        ☎ 075-673362
-                    </a>
-
-                    <a
-                        href="https://rps.wu.ac.th/researchersInfo/28"
-                        target="_blank"
-                        rel="noopener"
-                        class="profile-btn"
-                    >
-                        ดูโปรไฟล์อาจารย์
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 2 -->
-
-        <article class="lecturer-card">
-
-            <div class="lecturer-image">
-
-                <img
-                    src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Siriwatchana-Kaeophanuek-lecturer.png"
-                    alt="ผศ.ดร.สิริวัจนา แก้วผนึก"
-                    loading="lazy"
-                >
-
-            </div>
-
-            <div class="lecturer-info">
-
-                <h3>
-                    ผศ.ดร.สิริวัจนา แก้วผนึก
-                </h3>
-
-                <div class="label">
-                    ความเชี่ยวชาญ
-                </div>
-
-                <p>
-                    การรู้ดิจิทัล / การรู้เท่าทันดิจิทัล,
-                    การออกแบบการเรียนการสอน,
-                    การเล่าเรื่องดิจิทัล,
-                    การเรียนการสอนออนไลน์
-                </p>
-
-                <div class="lecturer-contact">
-
-                    <a href="mailto:ksirivaj@mail.wu.ac.th">
-                        ✉ ksirivaj@mail.wu.ac.th
-                    </a>
-
-                    <a href="tel:075676751">
-                        ☎ 0-7567-6751
-                    </a>
-
-                    <a
-                        href="https://rps.wu.ac.th/researchersInfo/140"
-                        target="_blank"
-                        rel="noopener"
-                        class="profile-btn"
-                    >
-                        ดูโปรไฟล์อาจารย์
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 3 -->
-
-        <article class="lecturer-card">
-
-            <div class="lecturer-image">
-
-                <img
-                    src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Suthanya-Doung-In-lecturer.png"
-                    alt="ผศ.ดร.สุธัญญา ด้วงอินทร์"
-                    loading="lazy"
-                >
-
-            </div>
-
-            <div class="lecturer-info">
-
-                <h3>
-                    ผศ.ดร.สุธัญญา ด้วงอินทร์
-                </h3>
-
-                <div class="label">
-                    ความเชี่ยวชาญ
-                </div>
-
-                <p>
-                    Digital Libraries,
-                    Digital Museum,
-                    Active Learning,
-                    Information Seeking Behavior,
-                    Digital Cultural Heritage,
-                    User Interface Design,
-                    Usability Study
-                </p>
-
-                <div class="lecturer-contact">
-
-                    <a href="mailto:dsuthany@wu.ac.th">
-                        ✉ dsuthany@wu.ac.th
-                    </a>
-
-                    <a href="tel:075672261">
-                        ☎ 075-672261
-                    </a>
-
-                    <a
-                        href="https://rps.wu.ac.th/researchersInfo/76"
-                        target="_blank"
-                        rel="noopener"
-                        class="profile-btn"
-                    >
-                        ดูโปรไฟล์อาจารย์
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 4 -->
-
-        <article class="lecturer-card">
-
-            <div class="lecturer-image">
-
-                <img
-                    src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Yuttana-Jaroenruen-lecturer.png"
-                    alt="ผศ.ดร.ยุทธนา เจริญรื่น"
-                    loading="lazy"
-                >
-
-            </div>
-
-            <div class="lecturer-info">
-
-                <h3>
-                    ผศ.ดร.ยุทธนา เจริญรื่น
-                </h3>
-
-                <div class="label">
-                    ความเชี่ยวชาญ
-                </div>
-
-                <p>
-                    การวิเคราะห์และออกแบบระบบห้องสมุดอัตโนมัติ,
-                    การวิเคราะห์และออกแบบห้องสมุดดิจิทัล,
-                    การจัดระบบความรู้,
-                    ออนโทโลยี และกราฟความรู้
-                </p>
-
-                <div class="lecturer-contact">
-
-                    <a href="mailto:jyuttana@wu.ac.th">
-                        ✉ jyuttana@wu.ac.th
-                    </a>
-
-                    <a href="tel:075676745">
-                        ☎ 075-676745
-                    </a>
-
-                    <a
-                        href="https://rps.wu.ac.th/researchersInfo/125"
-                        target="_blank"
-                        rel="noopener"
-                        class="profile-btn"
-                    >
-                        ดูโปรไฟล์อาจารย์
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 5 -->
-
-        <article class="lecturer-card">
-
-            <div class="lecturer-image">
-
-                <img
-                    src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Dichitchai-Mettarikanon-lecturer.png"
-                    alt="ผศ.ดิชิตชัย เมตตาริกานนท์"
-                    loading="lazy"
-                >
-
-            </div>
-
-            <div class="lecturer-info">
-
-                <h3>
-                    ผศ.ดิชิตชัย เมตตาริกานนท์
-                </h3>
-
-                <div class="label">
-                    ความเชี่ยวชาญ
-                </div>
-
-                <p>
-                    บรรณารักษศาสตร์,
-                    สารสนเทศศาสตร์,
-                    การจัดการความรู้,
-                    การจัดการสารสนเทศ,
-                    เทคโนโลยีสารสนเทศ
-                </p>
-
-                <div class="lecturer-contact">
-
-                    <a href="mailto:mdichitc@wu.ac.th">
-                        ✉ mdichitc@wu.ac.th
-                    </a>
-
-                    <a href="tel:075676743">
-                        ☎ 075-676743
-                    </a>
-
-                    <a
-                        href="https://rps.wu.ac.th/researchersInfo/46"
-                        target="_blank"
-                        rel="noopener"
-                        class="profile-btn"
-                    >
-                        ดูโปรไฟล์อาจารย์
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 6 -->
-
-        <article class="lecturer-card">
-
-            <div class="lecturer-image">
-
-                <img
-                    src="https://informatics.wu.ac.th/wp-content/uploads/2025/06/Kanitsorn-Suriyapaiboonwattana-lecturer.png"
-                    alt="ดร.คณิตสรณ์ สุริยะไพบูลย์วัฒนา"
-                    loading="lazy"
-                >
-
-            </div>
-
-            <div class="lecturer-info">
-
-                <h3>
-                    ดร.คณิตสรณ์ สุริยะไพบูลย์วัฒนา
-                </h3>
-
-                <div class="label">
-                    ความเชี่ยวชาญ
-                </div>
-
-                <p>
-                    Human Computer-Interaction,
-                    Mixed-Mthod,
-                    Factor Analysis,
-                    Content Analysis,
-                    MVC Framework,
-                    Responsive Web Design,
-                    Database Design & Data Analytic,
-                    E-Publication Framework,
-                    Digital Library System,
-                    DRM
-                </p>
-
-                <div class="lecturer-contact">
-
-                    <a href="mailto:kanitsorn.su@wu.ac.th">
-                        ✉ kanitsorn.su@wu.ac.th
-                    </a>
-
-                    <a href="tel:075672284">
-                        ☎ 075-672284
-                    </a>
-
-                    <a
-                        href="https://rps.wu.ac.th/researchersInfo/214"
-                        target="_blank"
-                        rel="noopener"
-                        class="profile-btn"
-                    >
-                        ดูโปรไฟล์อาจารย์
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-    </div>
-
+<section id="listView">
+<div class="section-title"><div class="small">OUR LECTURERS</div><h2>อาจารย์ประจำหลักสูตร</h2><p>คณาจารย์ผู้เชี่ยวชาญในหลากหลายด้านของสารสนเทศและดิจิทัลคอนเทนต์</p></div>
+<div class="lecturer-grid" id="lecturerGrid"></div>
+</section>
+
+<section id="profileView" class="profile-panel">
+<a href="#" class="back-btn" onclick="showList();return false;">← กลับไปหน้าอาจารย์</a>
+<div class="profile-card">
+<div class="profile-image"><img id="profileImage" src="" alt=""></div>
+<div class="profile-info">
+<span class="profile-role">อาจารย์ประจำหลักสูตรดิจิทัลคอนเทนต์และสื่อ</span>
+<h2 id="profileName"></h2>
+<div class="profile-label">ความเชี่ยวชาญ</div><div class="tags" id="profileExpertise"></div>
+<div class="profile-contact"><a id="profileEmail" href=""></a><a id="profilePhone" href=""></a>
+<a href="#" class="back-list" onclick="showList();return false;">กลับหน้าอาจารย์</a></div>
+</div></div></section>
 </main>
 
+<footer><div class="footer-container"><div><div class="footer-title">Digital Content & Media</div>
+<div class="footer-text">สำนักวิชาสารสนเทศศาสตร์<br>มหาวิทยาลัยวลัยลักษณ์</div></div>
+<div class="footer-text">222 ตำบลไทยบุรี อำเภอท่าศาลา<br>จังหวัดนครศรีธรรมราช 80160</div></div></footer>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<script>
+const lecturers={
+siwanath:{name:"ผศ.ดร.ศิวนาถ นันทพิชัย",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Siwanath-Nuntapichai-lecturer.png",expertise:["การจัดระบบสารสนเทศและความรู้","ระบบการจัดเก็บและค้นคืน","การจัดบริการสารสนเทศสำหรับองค์กรและชุมชน","ระบบปฏิบัติการห้องสมุดอัตโนมัติ"],email:"ndecha@wu.ac.th",phone:"075-673362"},
+sirivaj:{name:"ผศ.ดร.สิริวัจนา แก้วผนึก",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Siriwatchana-Kaeophanuek-lecturer.png",expertise:["การรู้ดิจิทัล","การรู้เท่าทันดิจิทัล","การออกแบบการเรียนการสอน","การเล่าเรื่องดิจิทัล","การเรียนการสอนออนไลน์"],email:"ksirivaj@mail.wu.ac.th",phone:"0-7567-6751"},
+suthanya:{name:"ผศ.ดร.สุธัญญา ด้วงอินทร์",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Suthanya-Doung-In-lecturer.png",expertise:["Digital Libraries","Digital Museum","Active Learning","Information Seeking Behavior","Digital Cultural Heritage","User Interface Design","Usability Study"],email:"dsuthany@wu.ac.th",phone:"075-672261"},
+yuttana:{name:"ผศ.ดร.ยุทธนา เจริญรื่น",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Yuttana-Jaroenruen-lecturer.png",expertise:["การวิเคราะห์และออกแบบระบบห้องสมุดอัตโนมัติ","การวิเคราะห์และออกแบบห้องสมุดดิจิทัล","การจัดระบบความรู้","ออนโทโลยี","กราฟความรู้"],email:"jyuttana@wu.ac.th",phone:"075-676745"},
+dichitchai:{name:"ผศ.ดิชิตชัย เมตตาริกานนท์",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Dichitchai-Mettarikanon-lecturer.png",expertise:["บรรณารักษศาสตร์","สารสนเทศศาสตร์","การจัดการความรู้","การจัดการสารสนเทศ","เทคโนโลยีสารสนเทศ"],email:"mdichitc@wu.ac.th",phone:"075-676743"},
+kanitsorn:{name:"ดร.คณิตสรณ์ สุริยะไพบูลย์วัฒนา",image:"https://informatics.wu.ac.th/wp-content/uploads/2025/06/Kanitsorn-Suriyapaiboonwattana-lecturer.png",expertise:["Human Computer-Interaction","Mixed-Method","Factor Analysis","Content Analysis","MVC Framework","Responsive Web Design","Database Design & Data Analytic","E-Publication Framework","Digital Library System","DRM"],email:"kanitsorn.su@wu.ac.th",phone:"075-672284"}
+};
 
-<footer>
+const grid=document.getElementById("lecturerGrid");
+grid.innerHTML=Object.entries(lecturers).map(([id,l])=>`
+<article class="lecturer-card"><div class="lecturer-image"><img src="${l.image}" alt="${l.name}" loading="lazy"></div>
+<div class="lecturer-info"><h3>${l.name}</h3><div class="label">ความเชี่ยวชาญ</div><p>${l.expertise.join(", ")}</p>
+<div class="lecturer-contact"><a href="mailto:${l.email}">✉ ${l.email}</a><a href="tel:${l.phone.replace(/[^0-9+]/g,"")}">☎ ${l.phone}</a>
+<a href="#profile" class="profile-btn" onclick="showProfile('${id}');return false;">ดูโปรไฟล์อาจารย์</a></div></div></article>`).join("");
 
-    <div class="footer-container">
-
-        <div>
-
-            <div class="footer-title">
-                Digital Content & Media
-            </div>
-
-            <div class="footer-text">
-                สำนักวิชาสารสนเทศศาสตร์
-                มหาวิทยาลัยวลัยลักษณ์
-            </div>
-
-        </div>
-
-        <div class="footer-text">
-
-            222 ตำบลไทยบุรี
-            อำเภอท่าศาลา
-            จังหวัดนครศรีธรรมราช 80160
-
-        </div>
-
-    </div>
-
-</footer>
-
+function showProfile(id){
+const l=lecturers[id];if(!l)return;
+document.getElementById("listView").style.display="none";
+document.getElementById("profileView").classList.add("show");
+document.getElementById("hero").style.display="none";
+document.getElementById("profileImage").src=l.image;document.getElementById("profileImage").alt=l.name;
+document.getElementById("profileName").textContent=l.name;
+document.getElementById("profileExpertise").innerHTML=l.expertise.map(x=>`<span class="tag">${x}</span>`).join("");
+const e=document.getElementById("profileEmail");e.href="mailto:"+l.email;e.textContent="✉ "+l.email;
+const p=document.getElementById("profilePhone");p.href="tel:"+l.phone.replace(/[^0-9+]/g,"");p.textContent="☎ "+l.phone;
+window.scrollTo({top:0,behavior:"smooth"});
+}
+function showList(){
+document.getElementById("profileView").classList.remove("show");
+document.getElementById("listView").style.display="block";
+document.getElementById("hero").style.display="block";
+window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
 </body>
 </html>
-```
-
-ข้อมูลในหน้านี้ตรงกับหน้าทางการที่ผมตรวจสอบ โดยรวมทั้งหัวหน้าสาขาและอาจารย์ 6 คน รวมถึงความเชี่ยวชาญ อีเมล เบอร์โทรศัพท์ และลิงก์โปรไฟล์ RPS ของแต่ละคน
-
-### 2. เรื่อง "เชื่อมกับทุกอัน"
-
-ให้เพิ่มเมนูนี้เข้าไปใน **Navbar ของทุกไฟล์**:
-
-```html
-<li>
-    <a href="lecturers.html">อาจารย์</a>
-</li>
-```
-
-เช่นใน
-
-```text
-index.html
-about.html
-learning-outcomes.html
-curriculum.html
-careers.html
-tuition.html
-further-study.html
-contact.html
-```
-
-ทุกหน้าจะกด **อาจารย์ → `lecturers.html`** ได้
-
-และใน `lecturers.html` ผมทำย้อนกลับไว้แล้ว:
-
-```html
-<a href="index.html" class="logo">
-    DCM<span>.</span>
-</a>
-```
-
-รวมถึงเมนูไปยังทุกหน้าหลักด้วย
-
-**ส่วนรูปไม่ต้องดาวน์โหลดมาใส่ใน GitHub ก็ได้** เพราะตอนนี้ `<img>` ดึงจาก URL ของเว็บ Informatics โดยตรง เช่นรูปอาจารย์นภารัตน์และอาจารย์แต่ละคนจาก `/wp-content/uploads/2025/06/` ซึ่งเป็นแหล่งรูปที่หน้าทางการใช้อยู่แล้ว
-
-> หมายเหตุหนึ่งจุด: หน้าเว็บทางการที่ตรวจสอบล่าสุดแสดงชื่อ **ดร.คณิตสรณ์ สุริยะไพบูลย์วัฒนา** โดยไม่ได้แสดง “ผศ.” ในชื่อ ขณะที่ข้อมูลที่คุณส่งมาก่อนหน้านี้มี “ผศ.ดร.” ดังนั้นในหน้าใหม่นี้ผมยึดตาม **หน้าเว็บทางการปัจจุบัน** เป็นหลักครับ
