@@ -1,7 +1,7 @@
 {
   "name": "dcm-website",
   "version": "1.0.0",
-  "description": "Walailak University Digital Content and Media Website with Gemini AI",
+  "description": "Walailak University Digital Content and Media Website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
