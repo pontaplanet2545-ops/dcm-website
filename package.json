@@ -1,13 +1,13 @@
 {
   "name": "dcm-website",
   "version": "1.0.0",
-  "description": "Walailak University Digital Content and Media Website with Gemini AI Chatbot",
+  "description": "Walailak University Digital Content and Media Website with Gemini AI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "@google/genai": "^1.21.0",
+    "@google/generative-ai": "^0.24.1",
     "express": "^4.21.2"
   }
 }
