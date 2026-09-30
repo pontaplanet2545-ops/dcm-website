@@ -1,36 +1,34 @@
 const express = require("express");
 const path = require("path");
-const { GoogleGenAI } = require("@google/genai");
+const Groq = require("groq-sdk");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ================================
-// CHECK GEMINI KEY
+// CHECK GROQ KEY
 // ================================
 
 console.log(
-  "GEMINI_API_KEY exists:",
-  !!process.env.GEMINI_API_KEY
+  "GROQ_API_KEY exists:",
+  !!process.env.GROQ_API_KEY
 );
 
 console.log(
-  "GEMINI_API_KEY length:",
-  process.env.GEMINI_API_KEY
-    ? process.env.GEMINI_API_KEY.length
+  "GROQ_API_KEY length:",
+  process.env.GROQ_API_KEY
+    ? process.env.GROQ_API_KEY.length
     : 0
 );
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
+const GROQ_API_KEY = process.env.GROQ_API_KEY || "";
 
-const ai = GEMINI_API_KEY
-  ? new GoogleGenAI({
-      apiKey: GEMINI_API_KEY
-    })
+const groq = GROQ_API_KEY
+  ? new Groq({ apiKey: GROQ_API_KEY })
   : null;
 
-// เปลี่ยนเป็นชื่อโมเดลที่ Google แนะนำใน Error Message ล่าสุด
-const GEMINI_MODEL = "gemini-3.1-pro-preview";
+// ใช้โมเดล Llama 3.3 70B Versatile บน Groq (ฟรี และเสถียรมาก)
+const GROQ_MODEL = "llama-3.3-70b-versatile";
 
 // =====================================================
 // EXPRESS
@@ -433,9 +431,9 @@ app.get("/api/health", (req, res) => {
     res.json({
         ok: true,
         service: "DCM Assistant",
-        ai: Boolean(GEMINI_API_KEY),
-        provider: "Google Gemini",
-        model: GEMINI_MODEL
+        ai: Boolean(GROQ_API_KEY),
+        provider: "Groq Cloud",
+        model: GROQ_MODEL
     });
 
 });
@@ -460,41 +458,39 @@ app.post("/api/chat", async (req, res) => {
         }
 
         // ---------------------------------------------
-        // ถ้าไม่มี Gemini API Key
+        // ถ้าไม่มี Groq API Key
         // ---------------------------------------------
 
-        if (!ai) {
+        if (!groq) {
 
             return res.status(503).json({
-                error: "ยังไม่ได้ตั้งค่า GEMINI_API_KEY บน Render"
+                error: "ยังไม่ได้ตั้งค่า GROQ_API_KEY บน Render"
             });
 
         }
 
         // ---------------------------------------------
-        // เรียก Gemini
+        // เรียก Groq API
         // ---------------------------------------------
 
-        const response = await ai.models.generateContent({
-
-            model: GEMINI_MODEL,
-
-            contents: message,
-
-            config: {
-
-                systemInstruction: DCM_KNOWLEDGE,
-
-                temperature: 0.4,
-
-                maxOutputTokens: 800
-
-            }
-
+        const completion = await groq.chat.completions.create({
+            messages: [
+                {
+                    role: "system",
+                    content: DCM_KNOWLEDGE
+                },
+                {
+                    role: "user",
+                    content: message
+                }
+            ],
+            model: GROQ_MODEL,
+            temperature: 0.4,
+            max_tokens: 800
         });
 
         const reply =
-            response?.text ||
+            completion.choices[0]?.message?.content ||
             "ขออภัยครับ ตอนนี้ยังไม่สามารถสร้างคำตอบได้";
 
         return res.json({
@@ -503,7 +499,7 @@ app.post("/api/chat", async (req, res) => {
 
     } catch (error) {
 
-        console.error("Gemini API Error:");
+        console.error("Groq API Error:");
 
         console.error(error);
 
@@ -518,12 +514,12 @@ app.post("/api/chat", async (req, res) => {
         if (status === 401 || status === 403) {
 
             errorMessage =
-                "Gemini API Key ไม่ถูกต้องหรือไม่มีสิทธิ์ใช้งานครับ";
+                "GROQ API Key ไม่ถูกต้องหรือไม่มีสิทธิ์ใช้งานครับ";
 
         } else if (status === 429) {
 
             errorMessage =
-                "Gemini API มีการใช้งานถึงขีดจำกัดแล้วครับ กรุณาลองใหม่ภายหลัง";
+                "Groq API มีการใช้งานเกินขีดจำกัดแล้วครับ กรุณาลองใหม่ภายหลัง";
 
         }
 
@@ -567,11 +563,11 @@ app.listen(PORT, () => {
     );
 
     console.log(
-        `Gemini enabled: ${Boolean(GEMINI_API_KEY)}`
+        `Groq enabled: ${Boolean(GROQ_API_KEY)}`
     );
 
     console.log(
-        `Gemini model: ${GEMINI_MODEL}`
+        `Groq model: ${GROQ_MODEL}`
     );
 
 });
