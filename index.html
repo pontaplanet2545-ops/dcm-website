@@ -852,6 +852,7 @@ footer{
     border-radius:12px;
     font-size:12px;
     margin-bottom:9px;
+    white-space: pre-line;
 }
 
 .bot-message{
@@ -2476,8 +2477,8 @@ function addChatMessage(message,type){
         : "bot-message";
 
     /*
-       ใช้ textContent เพื่อป้องกัน
-       HTML/Script ที่ส่งมาจากผู้ใช้
+        ใช้ textContent เพื่อป้องกัน
+        HTML/Script ที่ส่งมาจากผู้ใช้
     */
 
     div.textContent = message;
@@ -2491,7 +2492,7 @@ function addChatMessage(message,type){
 
 
 /* =========================
-   GEMINI CHAT
+   GROQ AI CHAT
 ========================= */
 
 async function sendMessage(){
@@ -2564,7 +2565,7 @@ async function sendMessage(){
          *      ↓
          * server.js
          *      ↓
-         * Gemini
+         * Groq API
          */
 
         const response =
@@ -2620,7 +2621,7 @@ async function sendMessage(){
         }
 
 
-        /* แสดงคำตอบ Gemini */
+        /* แสดงคำตอบจาก Groq */
 
         addChatMessage(
 
@@ -2651,7 +2652,7 @@ async function sendMessage(){
 
 
         /*
-         * กรณีเชื่อมต่อ Gemini ไม่สำเร็จ
+         * กรณีเชื่อมต่อ AI ไม่สำเร็จ
          */
 
         addChatMessage(
@@ -2660,7 +2661,7 @@ async function sendMessage(){
 
             "กรุณาตรวจสอบว่า Render ทำงานอยู่ " +
 
-            "และตั้งค่า GEMINI_API_KEY แล้วครับ",
+            "และตั้งค่า GROQ_API_KEY แล้วครับ",
 
             "bot"
 
@@ -2727,53 +2728,6 @@ document
     });
 
 </script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-    CSS ทั้งหมด
-</head>
-
-<body>
-
-    TOP BAR
-    HEADER
-    NAVIGATION
-
-    HERO
-
-    QUICK STATS
-
-    ABOUT
-
-    PROGRAM HIGHLIGHTS
-
-    LEARNING TRACKS
-
-    CAREERS
-
-    LEARNING TIMELINE
-
-    GALLERY
-
-    FAQ
-
-    CONTACT
-
-    FOOTER
-
-    CHATBOT
-
-    JAVASCRIPT
-        ├── Mobile Menu
-        ├── FAQ
-        ├── เปิด/ปิด Chatbot
-        ├── ส่งข้อความ
-        ├── เรียก /api/chat
-        ├── รับคำตอบ Gemini
-        └── กด Enter เพื่อส่ง
 
 </body>
 </html>
