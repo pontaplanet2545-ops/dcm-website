@@ -1,34 +1,34 @@
 const express = require("express");
 const path = require("path");
-const Groq = require("groq-sdk");
+const OpenAI = require("openai");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ================================
-// CHECK GROQ KEY
+// CHECK OPENAI KEY
 // ================================
 
 console.log(
-  "GROQ_API_KEY exists:",
-  !!process.env.GROQ_API_KEY
+  "OPENAI_API_KEY exists:",
+  !!process.env.OPENAI_API_KEY
 );
 
 console.log(
-  "GROQ_API_KEY length:",
-  process.env.GROQ_API_KEY
-    ? process.env.GROQ_API_KEY.length
+  "OPENAI_API_KEY length:",
+  process.env.OPENAI_API_KEY
+    ? process.env.OPENAI_API_KEY.length
     : 0
 );
 
-const GROQ_API_KEY = process.env.GROQ_API_KEY || "";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 
-const groq = GROQ_API_KEY
-  ? new Groq({ apiKey: GROQ_API_KEY })
+const openai = OPENAI_API_KEY
+  ? new OpenAI({ apiKey: OPENAI_API_KEY })
   : null;
 
-// ใช้โมเดล llama-3.1-8b-instant ที่ใช้งานได้จริงและตอบสนองได้รวดเร็ว
-const GROQ_MODEL = "llama-3.1-8b-instant";
+// ใช้โมเดล gpt-4o-mini ที่เสถียรและประมวลผลภาษาไทยได้ดีเยี่ยม
+const OPENAI_MODEL = "gpt-4o-mini";
 
 // =====================================================
 // EXPRESS
@@ -431,9 +431,9 @@ app.get("/api/health", (req, res) => {
     res.json({
         ok: true,
         service: "DCM Assistant",
-        ai: Boolean(GROQ_API_KEY),
-        provider: "Groq Cloud",
-        model: GROQ_MODEL
+        ai: Boolean(OPENAI_API_KEY),
+        provider: "OpenAI",
+        model: OPENAI_MODEL
     });
 
 });
@@ -458,22 +458,23 @@ app.post("/api/chat", async (req, res) => {
         }
 
         // ---------------------------------------------
-        // ถ้าไม่มี Groq API Key
+        // ถ้าไม่มี OpenAI API Key
         // ---------------------------------------------
 
-        if (!groq) {
+        if (!openai) {
 
             return res.status(503).json({
-                error: "ยังไม่ได้ตั้งค่า GROQ_API_KEY บน Render"
+                error: "ยังไม่ได้ตั้งค่า OPENAI_API_KEY บน Render"
             });
 
         }
 
         // ---------------------------------------------
-        // เรียก Groq API
+        // เรียก OpenAI API
         // ---------------------------------------------
 
-        const completion = await groq.chat.completions.create({
+        const completion = await openai.chat.completions.create({
+            model: OPENAI_MODEL,
             messages: [
                 {
                     role: "system",
@@ -484,7 +485,6 @@ app.post("/api/chat", async (req, res) => {
                     content: message
                 }
             ],
-            model: GROQ_MODEL,
             temperature: 0.4,
             max_tokens: 800
         });
@@ -499,7 +499,7 @@ app.post("/api/chat", async (req, res) => {
 
     } catch (error) {
 
-        console.error("Groq API Error:");
+        console.error("OpenAI API Error:");
 
         console.error(error);
 
@@ -514,12 +514,12 @@ app.post("/api/chat", async (req, res) => {
         if (status === 401 || status === 403) {
 
             errorMessage =
-                "GROQ API Key ไม่ถูกต้องหรือไม่มีสิทธิ์ใช้งานครับ";
+                "OPENAI API Key ไม่ถูกต้องหรือไม่มีสิทธิ์ใช้งานครับ";
 
         } else if (status === 429) {
 
             errorMessage =
-                "Groq API มีการใช้งานเกินขีดจำกัดแล้วครับ กรุณาลองใหม่ภายหลัง";
+                "OpenAI API มีการใช้งานเกินขีดจำกัด หรือยอดเงินคงเหลือในบัญชีไม่เพียงพอครับ";
 
         }
 
@@ -563,11 +563,11 @@ app.listen(PORT, () => {
     );
 
     console.log(
-        `Groq enabled: ${Boolean(GROQ_API_KEY)}`
+        `OpenAI enabled: ${Boolean(OPENAI_API_KEY)}`
     );
 
     console.log(
-        `Groq model: ${GROQ_MODEL}`
+        `OpenAI model: ${OPENAI_MODEL}`
     );
 
 });
