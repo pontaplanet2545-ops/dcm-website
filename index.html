@@ -2653,14 +2653,24 @@ function formatBotResponse(text){
     let safeText =
         escapeHTML(String(text));
 
-    safeText =
-        safeText.replace(
-            /\n/g,
-            "<br>"
-        );
+    /*
+     * อนุญาตเฉพาะ HTML tag
+     * ที่ต้องการให้แสดงผลจริง
+     */
+    safeText = safeText.replace(
+        /&lt;(\/?)(strong|b|br)&gt;/gi,
+        "<$1$2>"
+    );
+
+    /*
+     * รองรับการขึ้นบรรทัดใหม่
+     */
+    safeText = safeText.replace(
+        /\n/g,
+        "<br>"
+    );
 
     return safeText;
-
 }
 
 
