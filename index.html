@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,8 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -52,7 +50,6 @@ img{
     display:block;
 }
 
-
 /* =========================
    TOP BAR
 ========================= */
@@ -70,7 +67,6 @@ img{
     display:flex;
     justify-content:space-between;
 }
-
 
 /* =========================
    HEADER
@@ -124,9 +120,8 @@ header{
     font-size:12px;
 }
 
-
 /* =========================
-   NAVIGATION
+   NAV
 ========================= */
 
 nav{
@@ -169,7 +164,6 @@ nav{
     cursor:pointer;
 }
 
-
 /* =========================
    HERO
 ========================= */
@@ -179,7 +173,6 @@ nav{
     position:relative;
     display:flex;
     align-items:center;
-
     background:
     linear-gradient(
         90deg,
@@ -267,7 +260,6 @@ nav{
     transform:translateY(-2px);
 }
 
-
 /* =========================
    QUICK STATS
 ========================= */
@@ -311,7 +303,6 @@ nav{
     font-size:13px;
 }
 
-
 /* =========================
    GENERAL
 ========================= */
@@ -344,7 +335,6 @@ nav{
     color:var(--gray);
     font-size:14px;
 }
-
 
 /* =========================
    ABOUT
@@ -426,7 +416,6 @@ nav{
     margin-right:10px;
 }
 
-
 /* =========================
    HIGHLIGHTS
 ========================= */
@@ -465,7 +454,6 @@ nav{
     color:var(--gray);
     font-size:13px;
 }
-
 
 /* =========================
    LEARNING TRACKS
@@ -520,7 +508,6 @@ nav{
     font-size:13px;
 }
 
-
 /* =========================
    CAREERS
 ========================= */
@@ -569,7 +556,6 @@ nav{
     color:var(--gray);
     font-size:12px;
 }
-
 
 /* =========================
    TIMELINE
@@ -642,7 +628,6 @@ nav{
     font-size:13px;
 }
 
-
 /* =========================
    GALLERY
 ========================= */
@@ -664,7 +649,6 @@ nav{
 .gallery img:hover{
     transform:scale(1.02);
 }
-
 
 /* =========================
    FAQ
@@ -708,7 +692,6 @@ nav{
 .faq-item.open .faq-answer{
     display:block;
 }
-
 
 /* =========================
    CONTACT CTA
@@ -754,7 +737,6 @@ nav{
 .contact-info div:last-child{
     margin-bottom:0;
 }
-
 
 /* =========================
    FOOTER
@@ -802,7 +784,6 @@ footer{
     font-size:11px;
 }
 
-
 /* =========================
    CHATBOT
 ========================= */
@@ -811,59 +792,38 @@ footer{
     position:fixed;
     right:24px;
     bottom:24px;
-
     width:62px;
     height:62px;
-
     border:none;
     border-radius:50%;
-
     background:var(--orange);
     color:white;
-
     font-size:25px;
     cursor:pointer;
-
     box-shadow:0 10px 30px rgba(210,100,0,.35);
-
     z-index:1000;
-}
-
-.chat-button:hover{
-    background:var(--orange-dark);
-    transform:scale(1.05);
 }
 
 .chat-box{
     position:fixed;
     right:24px;
     bottom:98px;
-
     width:360px;
-
     background:white;
-
     border-radius:18px;
     overflow:hidden;
-
     box-shadow:0 20px 50px rgba(0,0,0,.2);
-
     border:1px solid var(--border);
-
     display:none;
-
     z-index:999;
 }
 
 .chat-header{
     background:var(--orange);
     color:white;
-
     padding:15px 17px;
-
     display:flex;
     justify-content:space-between;
-    align-items:center;
 }
 
 .chat-header strong{
@@ -881,25 +841,17 @@ footer{
 .chat-body{
     height:330px;
     padding:15px;
-
     overflow-y:auto;
-
     background:#fffaf5;
 }
 
 .bot-message,
 .user-message{
     max-width:85%;
-
     padding:9px 12px;
-
     border-radius:12px;
-
     font-size:12px;
-
     margin-bottom:9px;
-
-    word-wrap:break-word;
 }
 
 .bot-message{
@@ -921,41 +873,20 @@ footer{
 
 .chat-input input{
     flex:1;
-
     border:0;
     outline:0;
-
     padding:13px;
-
     font-family:inherit;
     font-size:12px;
 }
 
-.chat-input input:disabled{
-    background:#f5f5f5;
-}
-
 .chat-input button{
     width:55px;
-
     border:0;
-
     background:var(--orange);
     color:white;
-
     cursor:pointer;
-
-    font-size:16px;
 }
-
-.chat-input button:hover{
-    background:var(--orange-dark);
-}
-
-.chat-input button:disabled{
-    opacity:.6;
-}
-
 
 /* =========================
    RESPONSIVE
@@ -1006,7 +937,6 @@ footer{
     .footer-inner{
         grid-template-columns:1fr;
     }
-
 }
 
 @media(max-width:600px){
@@ -1086,37 +1016,21 @@ footer{
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     TOP BAR
-========================= -->
+<!-- TOP BAR -->
 
 <div class="topbar">
-
     <div class="topbar-inner">
-
-        <span>
-            มหาวิทยาลัยวลัยลักษณ์
-        </span>
-
-        <span>
-            สำนักวิชาสารสนเทศศาสตร์ | Digital Content and Media
-        </span>
-
+        <span>มหาวิทยาลัยวลัยลักษณ์</span>
+        <span>สำนักวิชาสารสนเทศศาสตร์ | Digital Content and Media</span>
     </div>
-
 </div>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -1129,15 +1043,8 @@ footer{
     </div>
 
     <div class="logo-text">
-
-        <h1>
-            Digital Content and Media
-        </h1>
-
-        <span>
-            สาขาดิจิทัลคอนเทนต์และสื่อ
-        </span>
-
+        <h1>Digital Content and Media</h1>
+        <span>สาขาดิจิทัลคอนเทนต์และสื่อ</span>
     </div>
 
 </a>
@@ -1147,77 +1054,35 @@ footer{
 </header>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
 <div class="nav-inner">
 
-<button
-class="menu-btn"
-onclick="toggleMenu()">
-
-☰
-
+<button class="menu-btn" onclick="toggleMenu()">
+    ☰
 </button>
 
-<ul
-class="nav-links"
-id="navLinks">
+<ul class="nav-links" id="navLinks">
 
-<li>
-<a
-class="active"
-href="index.html">
+<li><a class="active" href="index.html">หน้าหลัก</a></li>
 
-หน้าหลัก
+<li><a href="about.html">เกี่ยวกับหลักสูตร</a></li>
 
-</a>
-</li>
+<li><a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a></li>
 
-<li>
-<a href="about.html">
-เกี่ยวกับหลักสูตร
-</a>
-</li>
+<li><a href="curriculum.html">โครงสร้างหลักสูตร</a></li>
 
-<li>
-<a href="learning-outcomes.html">
-ผลลัพธ์การเรียนรู้
-</a>
-</li>
+<li><a href="careers.html">แนวทางอาชีพ</a></li>
 
-<li>
-<a href="curriculum.html">
-โครงสร้างหลักสูตร
-</a>
-</li>
+<li><a href="tuition.html">ค่าเล่าเรียน</a></li>
 
-<li>
-<a href="careers.html">
-แนวทางอาชีพ
-</a>
-</li>
+<li><a href="further-study.html">การศึกษาต่อ</a></li>
 
-<li>
-<a href="tuition.html">
-ค่าเล่าเรียน
-</a>
-</li>
+<li><a href="contact.html">ติดต่อ</a></li>
 
-<li>
-<a href="further-study.html">
-การศึกษาต่อ
-</a>
-</li>
-
-<li>
-<a href="contact.html">
-ติดต่อ
-</a>
-</li>
+<li><a href="lecturers.html">อาจารย์</a></li>
 
 </ul>
 
@@ -1226,9 +1091,7 @@ href="index.html">
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1237,54 +1100,29 @@ href="index.html">
 <div class="hero-content">
 
 <div class="hero-label">
-
-BACHELOR OF INFORMATION SCIENCE
-
+    BACHELOR OF INFORMATION SCIENCE
 </div>
 
-
 <h2>
-
-DIGITAL
-<br>
-
-<span>
-CONTENT
-</span>
-
-<br>
-
-AND MEDIA
-
+    DIGITAL<br>
+    <span>CONTENT</span><br>
+    AND MEDIA
 </h2>
 
-
 <p>
-
-หลักสูตรที่ผสมผสานความคิดสร้างสรรค์
-เทคโนโลยีดิจิทัล การออกแบบ และการจัดการคอนเทนต์
-เพื่อเตรียมความพร้อมสู่การทำงานในอุตสาหกรรมดิจิทัล
-
+    หลักสูตรที่ผสมผสานความคิดสร้างสรรค์
+    เทคโนโลยีดิจิทัล การออกแบบ และการจัดการคอนเทนต์
+    เพื่อเตรียมความพร้อมสู่การทำงานในอุตสาหกรรมดิจิทัล
 </p>
-
 
 <div class="hero-buttons">
 
-<a
-href="about.html"
-class="btn btn-orange">
-
-รู้จักหลักสูตร
-
+<a href="about.html" class="btn btn-orange">
+    รู้จักหลักสูตร
 </a>
 
-
-<a
-href="curriculum.html"
-class="btn btn-white">
-
-ดูโครงสร้างหลักสูตร
-
+<a href="curriculum.html" class="btn btn-white">
+    ดูโครงสร้างหลักสูตร
 </a>
 
 </div>
@@ -1296,63 +1134,30 @@ class="btn btn-white">
 </section>
 
 
-<!-- =========================
-     STATS
-========================= -->
+<!-- STATS -->
 
 <section class="stats">
 
 <div class="stats-inner">
 
 <div class="stat">
-
-<strong>
-123
-</strong>
-
-<span>
-หน่วยกิตตลอดหลักสูตร
-</span>
-
+    <strong>123</strong>
+    <span>หน่วยกิตตลอดหลักสูตร</span>
 </div>
 
-
 <div class="stat">
-
-<strong>
-25,000
-</strong>
-
-<span>
-บาท / ภาคการศึกษา
-</span>
-
+    <strong>25,000</strong>
+    <span>บาท / ภาคการศึกษา</span>
 </div>
 
-
 <div class="stat">
-
-<strong>
-8+
-</strong>
-
-<span>
-เดือนประสบการณ์ปฏิบัติงาน
-</span>
-
+    <strong>8+</strong>
+    <span>เดือนประสบการณ์ปฏิบัติงาน</span>
 </div>
 
-
 <div class="stat">
-
-<strong>
-4
-</strong>
-
-<span>
-แนวทางประกอบอาชีพ
-</span>
-
+    <strong>4</strong>
+    <span>แนวทางประกอบอาชีพ</span>
 </div>
 
 </div>
@@ -1360,16 +1165,13 @@ class="btn btn-white">
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
 <section class="about">
 
 <div class="container">
 
 <div class="about-grid">
-
 
 <div class="about-image">
 
@@ -1379,9 +1181,7 @@ alt="Digital Content and Media">
 
 <div class="image-label">
 
-<strong>
-DCM
-</strong>
+<strong>DCM</strong>
 
 <span>
 Digital Content and Media
@@ -1394,60 +1194,37 @@ Digital Content and Media
 
 <div class="about-content">
 
-<small>
-ABOUT THE PROGRAM
-</small>
+<small>ABOUT THE PROGRAM</small>
 
 <h2>
-
 เรียนรู้จากความคิดสร้างสรรค์
 สู่โลกดิจิทัล
-
 </h2>
 
-
 <p>
-
 หลักสูตรสารสนเทศศาสตรบัณฑิต
 สาขาดิจิทัลคอนเทนต์และสื่อ
 มุ่งผลิตบัณฑิตให้มีสมรรถนะด้านดิจิทัลคอนเทนต์
 และสามารถใช้เทคโนโลยีสารสนเทศดิจิทัล
 ในการสร้างสรรค์และพัฒนางาน
-
 </p>
-
 
 <ul class="check-list">
 
-<li>
-การออกแบบและผลิต Digital Content
-</li>
+<li>การออกแบบและผลิต Digital Content</li>
 
-<li>
-การจัดการสื่อและสารสนเทศดิจิทัล
-</li>
+<li>การจัดการสื่อและสารสนเทศดิจิทัล</li>
 
-<li>
-Digital Marketing Content
-</li>
+<li>Digital Marketing Content</li>
 
-<li>
-Digital Collection และ Digital GLAM
-</li>
+<li>Digital Collection และ Digital GLAM</li>
 
-<li>
-เทคโนโลยีสำหรับการจัดการคอนเทนต์
-</li>
+<li>เทคโนโลยีสำหรับการจัดการคอนเทนต์</li>
 
 </ul>
 
-
-<a
-href="about.html"
-class="btn btn-orange">
-
-อ่านรายละเอียดหลักสูตร
-
+<a href="about.html" class="btn btn-orange">
+    อ่านรายละเอียดหลักสูตร
 </a>
 
 </div>
@@ -1459,9 +1236,7 @@ class="btn btn-orange">
 </section>
 
 
-<!-- =========================
-     HIGHLIGHTS
-========================= -->
+<!-- HIGHLIGHTS -->
 
 <section>
 
@@ -1469,9 +1244,7 @@ class="btn btn-orange">
 
 <div class="section-heading">
 
-<small>
-WHY DCM?
-</small>
+<small>WHY DCM?</small>
 
 <h2>
 จุดเด่นของหลักสูตร
@@ -1487,16 +1260,11 @@ WHY DCM?
 
 <div class="highlight-grid">
 
-
 <div class="highlight-card">
 
-<div class="card-number">
-01
-</div>
+<div class="card-number">01</div>
 
-<h3>
-Digital Content
-</h3>
+<h3>Digital Content</h3>
 
 <p>
 เรียนรู้การออกแบบ พัฒนา และเผยแพร่
@@ -1508,13 +1276,9 @@ Digital Content
 
 <div class="highlight-card">
 
-<div class="card-number">
-02
-</div>
+<div class="card-number">02</div>
 
-<h3>
-Work-based Education
-</h3>
+<h3>Work-based Education</h3>
 
 <p>
 เรียนรู้จากประสบการณ์จริง
@@ -1527,13 +1291,9 @@ Work-based Education
 
 <div class="highlight-card">
 
-<div class="card-number">
-03
-</div>
+<div class="card-number">03</div>
 
-<h3>
-Digital Technology
-</h3>
+<h3>Digital Technology</h3>
 
 <p>
 ประยุกต์ใช้เทคโนโลยีดิจิทัล
@@ -1545,13 +1305,9 @@ Digital Technology
 
 <div class="highlight-card">
 
-<div class="card-number">
-04
-</div>
+<div class="card-number">04</div>
 
-<h3>
-Digital Citizenship
-</h3>
+<h3>Digital Citizenship</h3>
 
 <p>
 ส่งเสริมความรับผิดชอบ
@@ -1563,13 +1319,9 @@ Digital Citizenship
 
 <div class="highlight-card">
 
-<div class="card-number">
-05
-</div>
+<div class="card-number">05</div>
 
-<h3>
-Creative Design
-</h3>
+<h3>Creative Design</h3>
 
 <p>
 พัฒนาทักษะด้านการออกแบบ
@@ -1581,13 +1333,9 @@ Creative Design
 
 <div class="highlight-card">
 
-<div class="card-number">
-06
-</div>
+<div class="card-number">06</div>
 
-<h3>
-Career Ready
-</h3>
+<h3>Career Ready</h3>
 
 <p>
 พัฒนาทักษะให้สอดคล้องกับ
@@ -1596,7 +1344,6 @@ Career Ready
 
 </div>
 
-
 </div>
 
 </div>
@@ -1604,9 +1351,7 @@ Career Ready
 </section>
 
 
-<!-- =========================
-     LEARNING TRACKS
-========================= -->
+<!-- LEARNING TRACKS -->
 
 <section class="tracks">
 
@@ -1614,9 +1359,7 @@ Career Ready
 
 <div class="section-heading">
 
-<small>
-LEARNING TRACKS
-</small>
+<small>LEARNING TRACKS</small>
 
 <h2>
 กลุ่มวิชาที่สามารถต่อยอด
@@ -1631,12 +1374,9 @@ LEARNING TRACKS
 
 <div class="track-grid">
 
-
 <div class="track">
 
-<div class="track-number">
-TRACK 01
-</div>
+<div class="track-number">TRACK 01</div>
 
 <h3>
 Online Learning Development
@@ -1652,9 +1392,7 @@ Online Learning Development
 
 <div class="track">
 
-<div class="track-number">
-TRACK 02
-</div>
+<div class="track-number">TRACK 02</div>
 
 <h3>
 Digital Marketing Content
@@ -1670,9 +1408,7 @@ Digital Marketing Content
 
 <div class="track">
 
-<div class="track-number">
-TRACK 03
-</div>
+<div class="track-number">TRACK 03</div>
 
 <h3>
 Digital Collections
@@ -1688,9 +1424,7 @@ Digital Collections
 
 <div class="track">
 
-<div class="track-number">
-TRACK 04
-</div>
+<div class="track-number">TRACK 04</div>
 
 <h3>
 Content Management Technology
@@ -1703,7 +1437,6 @@ Content Management Technology
 
 </div>
 
-
 </div>
 
 </div>
@@ -1711,9 +1444,7 @@ Content Management Technology
 </section>
 
 
-<!-- =========================
-     CAREERS
-========================= -->
+<!-- CAREERS -->
 
 <section>
 
@@ -1721,9 +1452,7 @@ Content Management Technology
 
 <div class="section-heading">
 
-<small>
-CAREER PATH
-</small>
+<small>CAREER PATH</small>
 
 <h2>
 เรียนจบแล้วทำงานอะไร?
@@ -1738,7 +1467,6 @@ CAREER PATH
 
 <div class="career-grid">
 
-
 <div class="career-card">
 
 <img
@@ -1747,9 +1475,7 @@ alt="Content Creator">
 
 <div class="career-content">
 
-<span>
-01
-</span>
+<span>01</span>
 
 <h3>
 Digital Content Creator
@@ -1773,9 +1499,7 @@ alt="Web Content Manager">
 
 <div class="career-content">
 
-<span>
-02
-</span>
+<span>02</span>
 
 <h3>
 Web Content Manager
@@ -1799,9 +1523,7 @@ alt="Digital Collection">
 
 <div class="career-content">
 
-<span>
-03
-</span>
+<span>03</span>
 
 <h3>
 Digital Collection Developer
@@ -1825,9 +1547,7 @@ alt="Web Designer">
 
 <div class="career-content">
 
-<span>
-04
-</span>
+<span>04</span>
 
 <h3>
 Web Designer
@@ -1842,21 +1562,14 @@ Web Designer
 
 </div>
 
-
 </div>
-
 
 <br>
 
-
 <div style="text-align:center;">
 
-<a
-href="careers.html"
-class="btn btn-orange">
-
+<a href="careers.html" class="btn btn-orange">
 ดูเส้นทางอาชีพทั้งหมด →
-
 </a>
 
 </div>
@@ -1866,9 +1579,7 @@ class="btn btn-orange">
 </section>
 
 
-<!-- =========================
-     TIMELINE
-========================= -->
+<!-- TIMELINE -->
 
 <section class="timeline-section">
 
@@ -1876,9 +1587,7 @@ class="btn btn-orange">
 
 <div class="section-heading">
 
-<small>
-LEARNING JOURNEY
-</small>
+<small>LEARNING JOURNEY</small>
 
 <h2>
 เส้นทางการเรียนรู้
@@ -1900,9 +1609,7 @@ LEARNING JOURNEY
 
 <div class="timeline-box">
 
-<small>
-YEAR 01
-</small>
+<small>YEAR 01</small>
 
 <h3>
 พื้นฐานดิจิทัลและการออกแบบ
@@ -1924,9 +1631,7 @@ YEAR 01
 
 <div class="timeline-box">
 
-<small>
-YEAR 02
-</small>
+<small>YEAR 02</small>
 
 <h3>
 Digital Content & Media
@@ -1948,9 +1653,7 @@ Digital Content & Media
 
 <div class="timeline-box">
 
-<small>
-YEAR 03
-</small>
+<small>YEAR 03</small>
 
 <h3>
 เลือกกลุ่มวิชาที่สนใจ
@@ -1973,9 +1676,7 @@ Digital Marketing, Digital Collection
 
 <div class="timeline-box">
 
-<small>
-YEAR 04
-</small>
+<small>YEAR 04</small>
 
 <h3>
 ประสบการณ์การทำงานจริง
@@ -1998,9 +1699,7 @@ YEAR 04
 </section>
 
 
-<!-- =========================
-     GALLERY
-========================= -->
+<!-- GALLERY -->
 
 <section>
 
@@ -2008,9 +1707,7 @@ YEAR 04
 
 <div class="section-heading">
 
-<small>
-DCM GALLERY
-</small>
+<small>DCM GALLERY</small>
 
 <h2>
 บรรยากาศและกิจกรรม
@@ -2044,9 +1741,7 @@ alt="DCM Activity">
 </section>
 
 
-<!-- =========================
-     FAQ
-========================= -->
+<!-- FAQ -->
 
 <section class="about">
 
@@ -2054,9 +1749,7 @@ alt="DCM Activity">
 
 <div class="section-heading">
 
-<small>
-FAQ
-</small>
+<small>FAQ</small>
 
 <h2>
 คำถามที่พบบ่อย
@@ -2074,23 +1767,14 @@ FAQ
 
 <div class="faq-item">
 
-<button
-class="faq-question"
-onclick="toggleFAQ(this)">
-
+<button class="faq-question" onclick="toggleFAQ(this)">
 ค่าเล่าเรียนเท่าไหร่?
-
-<span>
-+
-</span>
-
+<span>+</span>
 </button>
 
 <div class="faq-answer">
-
 ค่าเล่าเรียนประมาณ 25,000 บาทต่อภาคการศึกษา
 และประมาณ 200,000 บาทตลอดหลักสูตร
-
 </div>
 
 </div>
@@ -2098,22 +1782,13 @@ onclick="toggleFAQ(this)">
 
 <div class="faq-item">
 
-<button
-class="faq-question"
-onclick="toggleFAQ(this)">
-
+<button class="faq-question" onclick="toggleFAQ(this)">
 หลักสูตรเรียนทั้งหมดกี่หน่วยกิต?
-
-<span>
-+
-</span>
-
+<span>+</span>
 </button>
 
 <div class="faq-answer">
-
 หลักสูตรมีจำนวนทั้งหมด 123 หน่วยกิต
-
 </div>
 
 </div>
@@ -2121,24 +1796,15 @@ onclick="toggleFAQ(this)">
 
 <div class="faq-item">
 
-<button
-class="faq-question"
-onclick="toggleFAQ(this)">
-
+<button class="faq-question" onclick="toggleFAQ(this)">
 เรียนจบแล้วทำงานอะไรได้บ้าง?
-
-<span>
-+
-</span>
-
+<span>+</span>
 </button>
 
 <div class="faq-answer">
-
 ตัวอย่างแนวทางอาชีพ ได้แก่ Digital Content Creator /
 Content Specialist, Web Content Manager,
 Digital Collection Developer และ Web Designer
-
 </div>
 
 </div>
@@ -2146,23 +1812,14 @@ Digital Collection Developer และ Web Designer
 
 <div class="faq-item">
 
-<button
-class="faq-question"
-onclick="toggleFAQ(this)">
-
+<button class="faq-question" onclick="toggleFAQ(this)">
 มีการฝึกงานหรือปฏิบัติงานจริงหรือไม่?
-
-<span>
-+
-</span>
-
+<span>+</span>
 </button>
 
 <div class="faq-answer">
-
 หลักสูตรมีการจัดการศึกษาแบบบูรณาการกับการทำงาน
 และมีประสบการณ์ปฏิบัติงานในองค์กรอย่างน้อย 8 เดือน
-
 </div>
 
 </div>
@@ -2170,24 +1827,15 @@ onclick="toggleFAQ(this)">
 
 <div class="faq-item">
 
-<button
-class="faq-question"
-onclick="toggleFAQ(this)">
-
+<button class="faq-question" onclick="toggleFAQ(this)">
 สามารถเรียนต่อระดับปริญญาโทได้หรือไม่?
-
-<span>
-+
-</span>
-
+<span>+</span>
 </button>
 
 <div class="faq-answer">
-
 สามารถศึกษาต่อระดับปริญญาโทและปริญญาเอก
 ใน Computer Science, Information Technology
 หรือสาขาที่เกี่ยวข้องได้
-
 </div>
 
 </div>
@@ -2195,24 +1843,15 @@ onclick="toggleFAQ(this)">
 
 <div class="faq-item">
 
-<button
-class="faq-question"
-onclick="toggleFAQ(this)">
-
+<button class="faq-question" onclick="toggleFAQ(this)">
 จบแล้วสามารถทำงานด้าน UX/UI ได้ไหม?
-
-<span>
-+
-</span>
-
+<span>+</span>
 </button>
 
 <div class="faq-answer">
-
 ทักษะด้านการออกแบบและเทคโนโลยีดิจิทัล
 สามารถนำไปต่อยอดสู่งานด้าน UI/UX และ Web Design
 ได้ โดยขึ้นอยู่กับการพัฒนาทักษะและผลงานเพิ่มเติมของผู้เรียน
-
 </div>
 
 </div>
@@ -2225,16 +1864,13 @@ onclick="toggleFAQ(this)">
 </section>
 
 
-<!-- =========================
-     CONTACT CTA
-========================= -->
+<!-- CONTACT CTA -->
 
 <section class="contact-cta">
 
 <div class="container">
 
 <div class="contact-grid">
-
 
 <div>
 
@@ -2250,12 +1886,8 @@ onclick="toggleFAQ(this)">
 
 <br>
 
-<a
-href="contact.html"
-class="btn btn-white">
-
+<a href="contact.html" class="btn btn-white">
 ติดต่อสาขา →
-
 </a>
 
 </div>
@@ -2264,58 +1896,29 @@ class="btn btn-white">
 <div class="contact-info">
 
 <div>
-
-<strong>
-สาขา:
-</strong>
-
+<strong>สาขา:</strong>
 Digital Content and Media
-
 </div>
 
-
 <div>
-
-<strong>
-สำนักวิชา:
-</strong>
-
+<strong>สำนักวิชา:</strong>
 สำนักวิชาสารสนเทศศาสตร์
-
 </div>
 
-
 <div>
-
-<strong>
-มหาวิทยาลัย:
-</strong>
-
+<strong>มหาวิทยาลัย:</strong>
 มหาวิทยาลัยวลัยลักษณ์
-
 </div>
 
-
 <div>
-
-<strong>
-โทรศัพท์:
-</strong>
-
+<strong>โทรศัพท์:</strong>
 075-672204
-
 </div>
 
-
 <div>
-
-<strong>
-สถานที่:
-</strong>
-
+<strong>สถานที่:</strong>
 222 ตำบลไทยบุรี อำเภอท่าศาลา
 จังหวัดนครศรีธรรมราช 80160
-
 </div>
 
 </div>
@@ -2327,14 +1930,11 @@ Digital Content and Media
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
 <div class="footer-inner">
-
 
 <div class="footer-col">
 
@@ -2354,57 +1954,35 @@ Digital Content and Media
 
 <div class="footer-col">
 
-<h3>
-เว็บไซต์
-</h3>
+<h3>เว็บไซต์</h3>
 
-<a href="index.html">
-หน้าหลัก
-</a>
+<a href="index.html">หน้าหลัก</a>
 
-<a href="about.html">
-เกี่ยวกับหลักสูตร
-</a>
+<a href="about.html">เกี่ยวกับหลักสูตร</a>
 
-<a href="learning-outcomes.html">
-ผลลัพธ์การเรียนรู้
-</a>
+<a href="learning-outcomes.html">ผลลัพธ์การเรียนรู้</a>
 
-<a href="curriculum.html">
-โครงสร้างหลักสูตร
-</a>
+<a href="curriculum.html">โครงสร้างหลักสูตร</a>
 
-<a href="careers.html">
-แนวทางอาชีพ
-</a>
+<a href="careers.html">แนวทางอาชีพ</a>
 
 </div>
 
 
 <div class="footer-col">
 
-<h3>
-ข้อมูลเพิ่มเติม
-</h3>
+<h3>ข้อมูลเพิ่มเติม</h3>
 
-<a href="tuition.html">
-ค่าเล่าเรียน
-</a>
+<a href="tuition.html">ค่าเล่าเรียน</a>
 
-<a href="further-study.html">
-การศึกษาต่อ
-</a>
+<a href="further-study.html">การศึกษาต่อ</a>
 
-<a href="contact.html">
-ติดต่อสาขา
-</a>
+<a href="contact.html">ติดต่อสาขา</a>
 
-<a
-href="https://informatics.wu.ac.th/"
-target="_blank">
+<a href="lecturers.html">อาจารย์ประจำหลักสูตร</a>
 
+<a href="https://informatics.wu.ac.th/" target="_blank">
 เว็บไซต์สำนักวิชาสารสนเทศศาสตร์ ↗
-
 </a>
 
 </div>
@@ -2422,9 +2000,7 @@ School of Informatics, Walailak University
 </footer>
 
 
-<!-- =========================
-     CHAT BUTTON
-========================= -->
+<!-- CHAT BUTTON -->
 
 <button
 class="chat-button"
@@ -2436,14 +2012,9 @@ aria-label="เปิด DCM Assistant">
 </button>
 
 
-<!-- =========================
-     CHAT BOX
-========================= -->
+<!-- CHAT BOX -->
 
-<div
-class="chat-box"
-id="chatBox">
-
+<div class="chat-box" id="chatBox">
 
 <div class="chat-header">
 
@@ -2451,55 +2022,31 @@ id="chatBox">
 🟧 DCM Assistant
 </strong>
 
-<button
-class="chat-close"
-onclick="toggleChat()">
-
+<button class="chat-close" onclick="toggleChat()">
 ×
-
 </button>
 
 </div>
 
 
-<div
-class="chat-body"
-id="chatBody">
+<div class="chat-body" id="chatBody">
 
 <div class="bot-message">
 
-สวัสดีครับ 👋
-<br><br>
+สวัสดีครับ 👋<br><br>
 
-ผมคือ <b>DCM Assistant</b>
+ผมคือ DCM Assistant
 สามารถถามเกี่ยวกับหลักสูตร
 Digital Content and Media ได้ครับ
 
 <br><br>
 
-ตัวอย่างคำถาม
-
-<br>
-
-• ค่าเทอมเท่าไหร่?
-<br>
-
-• เรียนกี่หน่วยกิต?
-<br>
-
-• จบแล้วทำงานอะไร?
-<br>
-
-• หลักสูตรเรียนอะไรบ้าง?
-<br>
-
-• มีวิชาโทอะไร?
-<br>
-
+เช่น<br>
+• ค่าเทอมเท่าไหร่?<br>
+• เรียนกี่หน่วยกิต?<br>
+• จบแล้วทำงานอะไร?<br>
+• มีวิชาอะไรบ้าง?<br>
 • เรียนต่อได้ไหม?
-<br>
-
-• ติดต่อสาขาได้ที่ไหน?
 
 </div>
 
@@ -2514,12 +2061,8 @@ type="text"
 placeholder="ถามเกี่ยวกับหลักสูตร..."
 onkeydown="if(event.key==='Enter') sendMessage()">
 
-<button
-id="sendButton"
-onclick="sendMessage()">
-
+<button onclick="sendMessage()">
 ➤
-
 </button>
 
 </div>
@@ -2528,7 +2071,6 @@ onclick="sendMessage()">
 
 
 <script>
-
 
 /* =========================
    MOBILE MENU
@@ -2571,7 +2113,7 @@ function toggleFAQ(button){
 
 
 /* =========================
-   CHATBOT OPEN / CLOSE
+   CHATBOT
 ========================= */
 
 function toggleChat(){
@@ -2579,7 +2121,7 @@ function toggleChat(){
     const box =
     document.getElementById("chatBox");
 
-    if(box.style.display === "block"){
+    if(box.style.display==="block"){
 
         box.style.display="none";
 
@@ -2596,10 +2138,6 @@ function toggleChat(){
 }
 
 
-/* =========================
-   ADD CHAT MESSAGE
-========================= */
-
 function addChatMessage(text,type){
 
     const body =
@@ -2609,290 +2147,99 @@ function addChatMessage(text,type){
     document.createElement("div");
 
     div.className =
-        type === "user"
-        ? "user-message"
-        : "bot-message";
+    type==="user"
+    ? "user-message"
+    : "bot-message";
 
-    div.innerHTML = text;
+    div.innerHTML=text;
 
     body.appendChild(div);
 
     body.scrollTop =
-        body.scrollHeight;
+    body.scrollHeight;
 
 }
 
 
-/* =========================
-   ESCAPE HTML
-========================= */
+function sendMessage(){
 
-function escapeHTML(text){
+    const input = document.getElementById("chatInput");
+    const question = input.value.trim();
 
-    return text
+    if(!question) return;
 
-        .replace(/&/g,"&amp;")
-
-        .replace(/</g,"&lt;")
-
-        .replace(/>/g,"&gt;")
-
-        .replace(/"/g,"&quot;")
-
-        .replace(/'/g,"&#039;");
-
-}
-
-
-/* =========================
-   FORMAT GEMINI RESPONSE
-========================= */
-
-function formatBotResponse(text){
-
-    let safeText =
-        escapeHTML(String(text));
-
-    /*
-     * อนุญาตเฉพาะ HTML tag
-     * ที่ต้องการให้แสดงผลจริง
-     */
-    safeText = safeText.replace(
-        /&lt;(\/?)(strong|b|br)&gt;/gi,
-        "<$1$2>"
-    );
-
-    /*
-     * รองรับการขึ้นบรรทัดใหม่
-     */
-    safeText = safeText.replace(
-        /\n/g,
-        "<br>"
-    );
-
-    return safeText;
-}
-
-
-/* =========================
-   GEMINI API CHAT
-========================= */
-
-async function sendMessage(){
-
-    const input =
-        document.getElementById("chatInput");
-
-    const sendButton =
-        document.getElementById("sendButton");
-
-    const question =
-        input.value.trim();
-
-
-    if(!question){
-
-        return;
-
-    }
-
-
-    /* แสดงคำถามของผู้ใช้ */
-
-    addChatMessage(
-        escapeHTML(question),
-        "user"
-    );
-
-
-    /* ล้างช่อง */
-
+    addChatMessage(question,"user");
     input.value="";
 
+    const loadingId = "bot-loading-" + Date.now();
+    const body = document.getElementById("chatBody");
 
-    /* ป้องกันส่งซ้ำ */
-
-    input.disabled=true;
-
-    sendButton.disabled=true;
-
-
-    /* =========================
-       LOADING
-    ========================= */
-
-    const body =
-        document.getElementById("chatBody");
-
-    const loading =
-        document.createElement("div");
-
-    loading.className =
-        "bot-message";
-
-    loading.id =
-        "chatLoading";
-
-    loading.innerHTML =
-        "กำลังค้นหาข้อมูลให้ครับ... ⏳";
-
+    const loading = document.createElement("div");
+    loading.className = "bot-message";
+    loading.id = loadingId;
+    loading.textContent = "กำลังค้นหาข้อมูลให้ครับ... ⏳";
 
     body.appendChild(loading);
+    body.scrollTop = body.scrollHeight;
 
-    body.scrollTop =
-        body.scrollHeight;
+    fetch("/api/chat", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            message: question
+        })
+    })
+    .then(async response => {
 
+        const data = await response.json();
 
-    try{
-
-
-        /* =========================
-           CALL SERVER API
-        ========================= */
-
-        const response =
-            await fetch(
-                "/api/chat",
-                {
-
-                    method:"POST",
-
-                    headers:{
-                        "Content-Type":
-                        "application/json"
-                    },
-
-                    body:JSON.stringify({
-
-                        message:question
-
-                    })
-
-                }
-            );
-
-
-        /* =========================
-           READ RESPONSE
-        ========================= */
-
-        const data =
-            await response.json();
-
-
-        /* ลบ Loading */
-
-        const oldLoading =
-            document.getElementById(
-                "chatLoading"
-            );
-
-
-        if(oldLoading){
-
-            oldLoading.remove();
-
-        }
-
-
-        /* =========================
-           ERROR
-        ========================= */
+        const oldLoading = document.getElementById(loadingId);
+        if(oldLoading) oldLoading.remove();
 
         if(!response.ok){
-
-            throw new Error(
-
-                data.error ||
-                "ไม่สามารถเชื่อมต่อ Gemini API ได้"
-
-            );
-
+            throw new Error(data.error || "ไม่สามารถเชื่อมต่อ Gemini ได้");
         }
 
+        addChatMessage(
+            formatBotMessage(data.reply || "ขออภัยครับ ไม่พบคำตอบที่เหมาะสม"),
+            "bot"
+        );
+    })
+    .catch(error => {
 
-        /* =========================
-           GEMINI RESPONSE
-        ========================= */
-
-        const reply =
-            data.reply ||
-            "ขออภัยครับ ตอนนี้ยังไม่พบคำตอบ";
-
+        const oldLoading = document.getElementById(loadingId);
+        if(oldLoading) oldLoading.remove();
 
         addChatMessage(
-
-            formatBotResponse(reply),
-
+            "ขออภัยครับ ตอนนี้ระบบ AI ยังไม่สามารถตอบได้<br><br>" +
+            "กรุณาตรวจสอบ Gemini API และ Render ครับ",
             "bot"
-
         );
 
+        console.error("DCM Assistant Error:", error);
+    });
+}
 
-    }catch(error){
+function formatBotMessage(text){
+    if(!text) return "";
 
+    const escaped = escapeHTML(text);
 
-        /* ลบ Loading */
+    return escaped
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+        .replace(/\*(.*?)\*/g, "<em>$1</em>")
+        .replace(/\n/g, "<br>");
+}
 
-        const oldLoading =
-            document.getElementById(
-                "chatLoading"
-            );
-
-
-        if(oldLoading){
-
-            oldLoading.remove();
-
-        }
-
-
-        console.error(
-            "DCM Gemini Error:",
-            error
-        );
-
-
-        /* =========================
-           ERROR MESSAGE
-        ========================= */
-
-        addChatMessage(
-
-            "ขออภัยครับ ตอนนี้ระบบ AI " +
-            "ยังไม่สามารถตอบได้ 😥" +
-
-            "<br><br>" +
-
-            "กรุณาตรวจสอบว่า " +
-            "Render ทำงานอยู่ และ " +
-            "Gemini API เชื่อมต่อเรียบร้อยแล้วครับ",
-
-            "bot"
-
-        );
-
-    }
-
-
-    /* =========================
-       ENABLE INPUT
-    ========================= */
-
-    finally{
-
-        input.disabled=false;
-
-        sendButton.disabled=false;
-
-        input.focus();
-
-    }
-
+function escapeHTML(text){
+    const div = document.createElement("div");
+    div.textContent = String(text);
+    return div.innerHTML;
 }
 
 </script>
-
 
 </body>
 </html>
