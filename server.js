@@ -29,8 +29,8 @@ const ai = GEMINI_API_KEY
     })
   : null;
 
-// อัปเดตโมเดลเป็น gemini-3.8-flash ตามคำแนะนำของ Google API
-const GEMINI_MODEL = "gemini-3.8-flash";
+// สลับมาใช้ gemini-2.5-pro เพื่อหลีกเลี่ยงปัญหาคิวแน่น (503 High Demand)
+const GEMINI_MODEL = "gemini-2.5-pro";
 
 // =====================================================
 // EXPRESS
