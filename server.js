@@ -29,8 +29,8 @@ const ai = GEMINI_API_KEY
     })
   : null;
 
-// สลับมาใช้ gemini-2.5-pro เพื่อหลีกเลี่ยงปัญหาคิวแน่น (503 High Demand)
-const GEMINI_MODEL = "gemini-2.5-pro";
+// เปลี่ยนเป็นชื่อโมเดลที่ Google แนะนำใน Error Message ล่าสุด
+const GEMINI_MODEL = "gemini-3.1-pro-preview";
 
 // =====================================================
 // EXPRESS
