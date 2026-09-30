@@ -27,8 +27,8 @@ const groq = GROQ_API_KEY
   ? new Groq({ apiKey: GROQ_API_KEY })
   : null;
 
-// แก้ไขชื่อโมเดลเป็น llama3-8b-8192 (โมเดลมาตรฐาน Groq ที่ใช้งานได้ฟรีแน่นอน)
-const GROQ_MODEL = "llama3-8b-8192";
+// ใช้โมเดล llama-3.1-8b-instant ที่ใช้งานได้จริงและตอบสนองได้รวดเร็ว
+const GROQ_MODEL = "llama-3.1-8b-instant";
 
 // =====================================================
 // EXPRESS
